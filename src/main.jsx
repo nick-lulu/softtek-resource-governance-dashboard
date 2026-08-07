@@ -126,11 +126,25 @@ function App() {
   const manualShare = data.q3_forecast.manual_projects_confirmed / totals.q3_planned;
   const manualTrace = data.manual_projects.reduce((sum, row) => sum + row.q2_actual, 0);
   const annualOperations = data.annual_operations;
+  const confirmedCscopProjects = data.manual_projects
+    .filter((row) => row.project_id.startsWith("CSCOP-"))
+    .reduce((sum, row) => sum + row.q3_planned, 0);
+  const confirmedNonCscopProjects = data.manual_projects
+    .filter((row) => !row.project_id.startsWith("CSCOP-"))
+    .reduce((sum, row) => sum + row.q3_planned, 0);
+  const q3SourceBaseline = data.q3_forecast.source_named_resource_plan - data.q3_forecast.manual_projects_source_plan;
+  const q3CscopSourceBaseline = cscopTotals.q3_planned - confirmedCscopProjects;
+  const q3NonCscopSourceBaseline = nonCscopTotals.q3_planned - confirmedNonCscopProjects - annualOperations.quarter_totals.Q3;
   const unassignedConfirmedUplift = totals.q3_planned - data.q3_forecast.named_resource_plan_with_annual_operations;
   const summaryTotals = summaryScope === "all" ? totals : summaryScope === "cscop" ? cscopTotals : nonCscopTotals;
   const summaryLabel = summaryScope === "all" ? "Overall" : summaryScope === "cscop" ? "CSCOP" : "Non-CSCOP";
   const summaryQ1Gap = summaryTotals.q1_actual - summaryTotals.q1_planned;
   const summaryQ2Gap = summaryTotals.q2_actual - summaryTotals.q2_planned;
+  const summaryQ3Note = summaryScope === "all"
+    ? `${formatMd(q3SourceBaseline)} MD source baseline + ${formatMd(data.q3_forecast.manual_projects_confirmed)} MD confirmed projects + ${formatMd(annualOperations.quarter_totals.Q3)} MD annual operations`
+    : summaryScope === "cscop"
+      ? `${formatMd(q3CscopSourceBaseline)} MD source baseline + ${formatMd(confirmedCscopProjects)} MD confirmed projects`
+      : `${formatMd(q3NonCscopSourceBaseline)} MD source BAU + ${formatMd(confirmedNonCscopProjects)} MD CVE (CSCOP pending) + ${formatMd(annualOperations.quarter_totals.Q3)} MD annual operations`;
   const q1CscopCoverage = cscopTotals.q1_actual / totals.q1_actual;
   const q2CscopCoverage = cscopTotals.q2_actual / totals.q2_actual;
   const q3CscopCoverage = cscopTotals.q3_planned / totals.q3_planned;
@@ -174,7 +188,7 @@ function App() {
         <Kpi icon={Users} label="Quarterly Capacity Benchmark" value={`${data.resource_count} people / ${formatMd(capacity, 0)} MD`} note="20 days x 3 months; Yola Liang excluded" />
         <Kpi icon={BarChart3} label={`Q1 ${summaryLabel} Actual vs Planned`} value={`${formatMd(summaryTotals.q1_actual)} / ${formatMd(summaryTotals.q1_planned)} MD`} note={`${signedMd(summaryQ1Gap)} variance`} tone="blue" />
         <Kpi icon={Target} label={`Q2 ${summaryLabel} Actual vs Planned`} value={`${formatMd(summaryTotals.q2_actual)} / ${formatMd(summaryTotals.q2_planned)} MD`} note={`${signedMd(summaryQ2Gap)} variance`} tone="amber" />
-        <Kpi icon={Gauge} label={`Q3 ${summaryLabel} Forecast`} value={`${formatMd(summaryTotals.q3_planned)} MD`} note={`${formatMd(data.q3_forecast.manual_projects_confirmed)} MD projects + ${formatMd(data.q3_forecast.annual_operations_named_plan)} MD operating baseline`} tone="green" />
+        <Kpi icon={Gauge} label={`Q3 ${summaryLabel} Forecast`} value={`${formatMd(summaryTotals.q3_planned)} MD`} note={summaryQ3Note} tone="green" />
       </section>
 
       <section className="summary-grid">
