@@ -164,7 +164,7 @@ function App() {
       </header>
 
       <section className="kpis">
-        <Kpi icon={Users} label="Quarterly Capacity Benchmark" value={`${data.resource_count} people / ${formatMd(capacity, 0)} MD`} note="20 days x 3 months; Echo Fang, Ayla Hou and Yola Liang excluded" />
+        <Kpi icon={Users} label="Quarterly Capacity Benchmark" value={`${data.resource_count} people / ${formatMd(capacity, 0)} MD`} note="20 working days x 3 months" />
         <Kpi icon={BarChart3} label={`Q1 ${summaryLabel} Actual vs Planned`} value={`${formatMd(summaryTotals.q1_actual)} / ${formatMd(summaryTotals.q1_planned)} MD`} note={`${signedMd(summaryQ1Gap)} variance`} tone="blue" />
         <Kpi icon={Target} label={`Q2 ${summaryLabel} Actual vs Planned`} value={`${formatMd(summaryTotals.q2_actual)} / ${formatMd(summaryTotals.q2_planned)} MD`} note={`${signedMd(summaryQ2Gap)} variance`} tone="amber" />
         <Kpi icon={Gauge} label={`Q3 ${summaryLabel} Forecast`} value={`${formatMd(summaryTotals.q3_planned)} MD`} note={summaryQ3Note} tone="green" />
