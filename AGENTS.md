@@ -6,7 +6,7 @@ This is an independent Vite/React dashboard for Softtek resource planning. Do no
 
 ## Data rules
 
-- Q1 is February through April 2026; Q2 is May through July; Q3 is August through October.
+- Q1 is February through April 2026; Q2 is May through July; Q3 is August through October; Q4 is November 2026 through January 2027.
 - One MD equals eight hours.
 - Define the cohort from the Actual workbook's 15 Softtek people.
 - Exclude Yola Liang from all counts and effort because the person has only one zero-hour planning record.
@@ -19,6 +19,7 @@ This is an independent Vite/React dashboard for Softtek resource planning. Do no
 - Manual Q2 project traces are project-level confirmed values and must not be added again to portfolio Actual.
 - Manual Q3 project forecasts replace source plan for the same project and must not be double-counted.
 - Keep manual project demand unassigned at person level until an explicit resource allocation is provided.
+- Treat the FY26 Incident, Problem and Change baseline as Non-CSCOP. Allocate the annual MD equally across all four quarters and assign it to Ryan Xu (Ops Lead), Jiarui Yang (Ops TL), Jacky Zhong (Ops BA), Ruby Yang (L1.5 Lead) and Lucy Cao (L1.5 Engineer).
 
 ## Commands
 

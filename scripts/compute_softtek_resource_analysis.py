@@ -14,6 +14,7 @@ QUARTERS = {
     "Q1": (pd.Timestamp("2026-02-01"), pd.Timestamp("2026-04-30")),
     "Q2": (pd.Timestamp("2026-05-01"), pd.Timestamp("2026-07-31")),
     "Q3": (pd.Timestamp("2026-08-01"), pd.Timestamp("2026-10-31")),
+    "Q4": (pd.Timestamp("2026-11-01"), pd.Timestamp("2027-01-31")),
 }
 DEDICATED_QA = ["Daisy Tang", "Mengyi Zhou", "Harry Shi", "Jade Zhang"]
 OPERATION_EXCLUSIONS = {"Nick Han", "Ryan Xu", "Jacky Zhong"}
@@ -25,6 +26,40 @@ MANUAL_PROJECTS = [
     {"project": "Helios embedded XXL JOB update", "project_id": "CSCOP-953", "q2_actual": 5.75, "q3_planned": 8.88},
     {"project": "cve-2026-4-973 fix", "project_id": "CSCOP pending", "q2_actual": 0.00, "q3_planned": 7.50},
 ]
+ANNUAL_OPERATION_WORK = [
+    {
+        "work_type": "Incident",
+        "annual_md": 71.50,
+        "resource_md": {"Ryan Xu": 5.00, "Jiarui Yang": 12.00, "Jacky Zhong": 20.00, "Ruby Yang": 15.00, "Lucy Cao": 19.50},
+        "quarter_md": {"Q1": 17.87, "Q2": 17.87, "Q3": 17.88, "Q4": 17.88},
+    },
+    {
+        "work_type": "Problem",
+        "annual_md": 9.00,
+        "resource_md": {"Ryan Xu": 1.00, "Jiarui Yang": 1.00, "Jacky Zhong": 1.00, "Ruby Yang": 2.00, "Lucy Cao": 4.00},
+        "quarter_md": {"Q1": 2.25, "Q2": 2.25, "Q3": 2.25, "Q4": 2.25},
+    },
+    {
+        "work_type": "Change",
+        "annual_md": 30.59,
+        "resource_md": {"Ryan Xu": 1.00, "Jiarui Yang": 8.00, "Jacky Zhong": 0.00, "Ruby Yang": 6.00, "Lucy Cao": 15.59},
+        "quarter_md": {"Q1": 7.65, "Q2": 7.65, "Q3": 7.64, "Q4": 7.65},
+    },
+]
+OPERATION_ROLES = {
+    "Ryan Xu": "Ops Lead",
+    "Jiarui Yang": "Ops TL",
+    "Jacky Zhong": "Ops BA",
+    "Ruby Yang": "L1.5 Lead",
+    "Lucy Cao": "L1.5 Engineer",
+}
+ANNUAL_OPERATION_RESOURCE_QUARTERS = {
+    "Ryan Xu": {"Q1": 1.75, "Q2": 1.75, "Q3": 1.75, "Q4": 1.75},
+    "Jiarui Yang": {"Q1": 5.25, "Q2": 5.25, "Q3": 5.25, "Q4": 5.25},
+    "Jacky Zhong": {"Q1": 5.25, "Q2": 5.25, "Q3": 5.25, "Q4": 5.25},
+    "Ruby Yang": {"Q1": 5.75, "Q2": 5.75, "Q3": 5.75, "Q4": 5.75},
+    "Lucy Cao": {"Q1": 9.77, "Q2": 9.77, "Q3": 9.77, "Q4": 9.78},
+}
 
 
 def normalize(series: pd.Series) -> pd.Series:
@@ -154,9 +189,9 @@ def main() -> None:
                 scoped_plan = person_plan[person_plan["cscop"].eq(scope_value)]
                 row[f"{q}_{scope}_actual"] = md(actual_hours(scoped_actual["date"], scoped_actual["hours"], start, end))
                 row[f"{q}_{scope}_planned"] = md(allocated_plan_hours(scoped_plan, start, end))
-        row["status"] = resource_status(row)
-        row["current_read"] = current_read(row)
         resources.append(row)
+
+    source_named_q3 = round(sum(row["q3_planned"] for row in resources), 2)
 
     totals = {}
     cscop_totals = {}
@@ -173,6 +208,34 @@ def main() -> None:
             plan_scope = plan_frame[plan_frame["cscop"].eq(scope_value)]
             target[f"{q}_actual"] = md(actual_hours(actual_scope["date"], actual_scope["hours"], start, end))
             target[f"{q}_planned"] = md(allocated_plan_hours(plan_scope, start, end))
+
+    annual_operation_total = round(sum(item["annual_md"] for item in ANNUAL_OPERATION_WORK), 2)
+    annual_resource_totals = {
+        name: round(sum(item["resource_md"].get(name, 0) for item in ANNUAL_OPERATION_WORK), 2)
+        for name in OPERATION_ROLES
+    }
+    quarter_operation_totals = {
+        quarter: round(sum(item["quarter_md"][quarter] for item in ANNUAL_OPERATION_WORK), 2)
+        for quarter in QUARTERS
+    }
+    resource_by_name = {row["name"]: row for row in resources}
+    for quarter in QUARTERS:
+        q = quarter.lower()
+        totals[f"{q}_planned"] = round(totals[f"{q}_planned"] + quarter_operation_totals[quarter], 2)
+        non_cscop_totals[f"{q}_planned"] = round(non_cscop_totals[f"{q}_planned"] + quarter_operation_totals[quarter], 2)
+        for name in annual_resource_totals:
+            allocation = ANNUAL_OPERATION_RESOURCE_QUARTERS[name][quarter]
+            row = resource_by_name[name]
+            row[f"annual_ops_{q}_planned"] = round(allocation, 4)
+            row[f"{q}_planned"] = round(row[f"{q}_planned"] + allocation, 2)
+            row[f"{q}_non_cscop_planned"] = round(row[f"{q}_non_cscop_planned"] + allocation, 2)
+
+    for row in resources:
+        row["annual_ops_fy26_planned"] = annual_resource_totals.get(row["name"], 0)
+        for quarter in QUARTERS:
+            row.setdefault(f"annual_ops_{quarter.lower()}_planned", 0)
+        row["status"] = resource_status(row)
+        row["current_read"] = current_read(row)
 
     project_rows = []
     for quarter, (start, end) in QUARTERS.items():
@@ -203,6 +266,20 @@ def main() -> None:
                 "actual": md(item.hours_actual),
                 "planned": md(item.hours_planned),
                 "confirmed_manual": False,
+                "manual_type": None,
+            })
+
+    for item in ANNUAL_OPERATION_WORK:
+        for quarter in QUARTERS:
+            project_rows.append({
+                "quarter": quarter,
+                "project_id": "Annual operating baseline",
+                "project": item["work_type"],
+                "cscop": False,
+                "actual": 0.0,
+                "planned": item["quarter_md"][quarter],
+                "confirmed_manual": True,
+                "manual_type": "annual_operation",
             })
 
     manual_deltas = []
@@ -222,6 +299,7 @@ def main() -> None:
                 "actual": confirmed_value if field == "actual" else source_actual,
                 "planned": confirmed_value if field == "planned" else source_planned,
                 "confirmed_manual": True,
+                "manual_type": "confirmed_project",
             })
             manual_deltas.append({
                 "quarter": quarter,
@@ -241,19 +319,36 @@ def main() -> None:
     cscop_totals["q3_planned"] = round(cscop_totals["q3_planned"] + cscop_delta, 2)
     non_cscop_totals["q3_planned"] = round(totals["q3_planned"] - cscop_totals["q3_planned"], 2)
 
-    source_named_q3 = round(sum(row["q3_planned"] for row in resources), 2)
+    named_q3_with_annual_operations = round(sum(row["q3_planned"] for row in resources), 2)
     confirmed_manual_q3 = round(sum(item["q3_planned"] for item in MANUAL_PROJECTS), 2)
     manual_source_q3 = round(sum(item["source_value"] for item in manual_deltas if item["quarter"] == "Q3"), 2)
 
     monthly = []
-    for month in pd.period_range("2026-02", "2026-10", freq="M"):
+    monthly_operation_md = annual_operation_total / 12
+    for month in pd.period_range("2026-02", "2027-01", freq="M"):
         start = month.start_time
         end = month.end_time
         monthly.append({
             "month": month.strftime("%b"),
             "actual": md(actual_hours(actual_frame["date"], actual_frame["hours"], start, end)),
-            "planned": md(allocated_plan_hours(plan_frame, start, end)),
+            "planned": round(md(allocated_plan_hours(plan_frame, start, end)) + monthly_operation_md, 2),
         })
+
+    annual_operation_resources = [
+        {
+            "name": name,
+            "role": OPERATION_ROLES[name],
+            "annual_md": annual_md,
+            "quarter_md": ANNUAL_OPERATION_RESOURCE_QUARTERS[name],
+        }
+        for name, annual_md in annual_resource_totals.items()
+    ]
+    annual_operation_categories = [
+        {
+            **item,
+        }
+        for item in ANNUAL_OPERATION_WORK
+    ]
 
     output = {
         "as_of": actual_frame["date"].max().strftime("%Y-%m-%d"),
@@ -272,8 +367,18 @@ def main() -> None:
         "projects": sorted(project_rows, key=lambda row: (row["quarter"], -(row["actual"] + row["planned"]))),
         "manual_projects": MANUAL_PROJECTS,
         "manual_reconciliation": manual_deltas,
+        "annual_operations": {
+            "annual_total_md": annual_operation_total,
+            "quarter_totals": quarter_operation_totals,
+            "allocation_method": "FY26 annual demand allocated evenly across Q1-Q4, with 0.01 MD rounding balanced across quarters",
+            "classification": "Non-CSCOP",
+            "categories": annual_operation_categories,
+            "resources": annual_operation_resources,
+        },
         "q3_forecast": {
             "source_named_resource_plan": source_named_q3,
+            "annual_operations_named_plan": quarter_operation_totals["Q3"],
+            "named_resource_plan_with_annual_operations": named_q3_with_annual_operations,
             "manual_projects_confirmed": confirmed_manual_q3,
             "manual_projects_source_plan": manual_source_q3,
             "confirmed_portfolio_plan": totals["q3_planned"],
@@ -283,6 +388,7 @@ def main() -> None:
             "md_hours": 8,
             "quarterly_capacity_md": len(roster) * 20 * 3,
             "plan_allocation": "Task planHours prorated across business days in each quarter",
+            "annual_operation_allocation": "FY26 Incident, Problem and Change demand allocated equally across four fiscal quarters and assigned to named roles",
             "manual_actual_treatment": "Project trace only; not added again to portfolio actual",
             "manual_forecast_treatment": "Confirmed project total replaces source plan for the same project",
         },

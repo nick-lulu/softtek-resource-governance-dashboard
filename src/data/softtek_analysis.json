@@ -41,11 +41,13 @@
   ],
   "totals": {
     "q1_actual": 492.87,
-    "q1_planned": 326.97,
+    "q1_planned": 354.74,
     "q2_actual": 703.33,
-    "q2_planned": 732.53,
+    "q2_planned": 760.3,
     "q3_actual": 0.0,
-    "q3_planned": 499.01
+    "q3_planned": 526.78,
+    "q4_actual": 0.0,
+    "q4_planned": 312.96
   },
   "cscop_totals": {
     "q1_actual": 205.09,
@@ -53,15 +55,19 @@
     "q2_actual": 355.15,
     "q2_planned": 361.63,
     "q3_actual": 0.0,
-    "q3_planned": 190.15
+    "q3_planned": 190.15,
+    "q4_actual": 0.0,
+    "q4_planned": 0.88
   },
   "non_cscop_totals": {
     "q1_actual": 287.77,
-    "q1_planned": 199.5,
+    "q1_planned": 227.27,
     "q2_actual": 348.18,
-    "q2_planned": 370.9,
+    "q2_planned": 398.67,
     "q3_actual": 0.0,
-    "q3_planned": 308.86
+    "q3_planned": 336.63,
+    "q4_actual": 0.0,
+    "q4_planned": 312.07
   },
   "dedicated_qa_totals": {
     "q1_actual": 97.84,
@@ -85,11 +91,11 @@
   },
   "operation_resource_totals": {
     "q1_actual": 261.65,
-    "q1_planned": 207.81,
+    "q1_planned": 228.58,
     "q2_actual": 283.56,
-    "q2_planned": 320.53,
+    "q2_planned": 341.3,
     "q3_actual": 0.0,
-    "q3_planned": 207.49,
+    "q3_planned": 228.26,
     "q1_cscop_actual": 62.75,
     "q1_cscop_planned": 56.88,
     "q2_cscop_actual": 68.35,
@@ -97,11 +103,11 @@
     "q3_cscop_actual": 0.0,
     "q3_cscop_planned": 36.94,
     "q1_non_cscop_actual": 198.88,
-    "q1_non_cscop_planned": 150.91,
+    "q1_non_cscop_planned": 171.68,
     "q2_non_cscop_actual": 215.22,
-    "q2_non_cscop_planned": 210.49,
+    "q2_non_cscop_planned": 231.26,
     "q3_non_cscop_actual": 0.0,
-    "q3_non_cscop_planned": 170.56
+    "q3_non_cscop_planned": 191.33
   },
   "resources": [
     {
@@ -126,6 +132,17 @@
       "q3_cscop_planned": 7.87,
       "q3_non_cscop_actual": 0.0,
       "q3_non_cscop_planned": 9.95,
+      "q4_actual": 0.0,
+      "q4_planned": 9.65,
+      "q4_cscop_actual": 0.0,
+      "q4_cscop_planned": 0.51,
+      "q4_non_cscop_actual": 0.0,
+      "q4_non_cscop_planned": 9.14,
+      "annual_ops_fy26_planned": 0,
+      "annual_ops_q1_planned": 0,
+      "annual_ops_q2_planned": 0,
+      "annual_ops_q3_planned": 0,
+      "annual_ops_q4_planned": 0,
       "status": "Medium",
       "current_read": "Named Q3 allocation exists"
     },
@@ -151,6 +168,17 @@
       "q3_cscop_planned": 2.91,
       "q3_non_cscop_actual": 0.0,
       "q3_non_cscop_planned": 0.0,
+      "q4_actual": 0.0,
+      "q4_planned": 0.0,
+      "q4_cscop_actual": 0.0,
+      "q4_cscop_planned": 0.0,
+      "q4_non_cscop_actual": 0.0,
+      "q4_non_cscop_planned": 0.0,
+      "annual_ops_fy26_planned": 0,
+      "annual_ops_q1_planned": 0,
+      "annual_ops_q2_planned": 0,
+      "annual_ops_q3_planned": 0,
+      "annual_ops_q4_planned": 0,
       "status": "Medium",
       "current_read": "Q3 named allocation is light vs Q2 actual"
     },
@@ -176,6 +204,17 @@
       "q3_cscop_planned": 0.24,
       "q3_non_cscop_actual": 0.0,
       "q3_non_cscop_planned": 51.75,
+      "q4_actual": 0.0,
+      "q4_planned": 51.75,
+      "q4_cscop_actual": 0.0,
+      "q4_cscop_planned": 0.0,
+      "q4_non_cscop_actual": 0.0,
+      "q4_non_cscop_planned": 51.75,
+      "annual_ops_fy26_planned": 0,
+      "annual_ops_q1_planned": 0,
+      "annual_ops_q2_planned": 0,
+      "annual_ops_q3_planned": 0,
+      "annual_ops_q4_planned": 0,
       "status": "Medium",
       "current_read": "Named Q3 allocation exists"
     },
@@ -201,6 +240,17 @@
       "q3_cscop_planned": 3.17,
       "q3_non_cscop_actual": 0.0,
       "q3_non_cscop_planned": 0.0,
+      "q4_actual": 0.0,
+      "q4_planned": 0.0,
+      "q4_cscop_actual": 0.0,
+      "q4_cscop_planned": 0.0,
+      "q4_non_cscop_actual": 0.0,
+      "q4_non_cscop_planned": 0.0,
+      "annual_ops_fy26_planned": 0,
+      "annual_ops_q1_planned": 0,
+      "annual_ops_q2_planned": 0,
+      "annual_ops_q3_planned": 0,
+      "annual_ops_q4_planned": 0,
       "status": "High",
       "current_read": "Q3 named allocation is light vs Q2 actual"
     },
@@ -209,23 +259,34 @@
       "space": "Operation",
       "group": "Other Softtek",
       "q1_actual": 45.06,
-      "q1_planned": 26.4,
+      "q1_planned": 31.65,
       "q1_cscop_actual": 22.19,
       "q1_cscop_planned": 16.99,
       "q1_non_cscop_actual": 22.88,
-      "q1_non_cscop_planned": 9.41,
+      "q1_non_cscop_planned": 14.66,
       "q2_actual": 62.38,
-      "q2_planned": 76.45,
+      "q2_planned": 81.7,
       "q2_cscop_actual": 36.22,
       "q2_cscop_planned": 60.0,
       "q2_non_cscop_actual": 26.16,
-      "q2_non_cscop_planned": 16.44,
+      "q2_non_cscop_planned": 21.69,
       "q3_actual": 0.0,
-      "q3_planned": 51.44,
+      "q3_planned": 56.69,
       "q3_cscop_actual": 0.0,
       "q3_cscop_planned": 35.56,
       "q3_non_cscop_actual": 0.0,
-      "q3_non_cscop_planned": 15.89,
+      "q3_non_cscop_planned": 21.14,
+      "q4_actual": 0.0,
+      "q4_planned": 20.64,
+      "q4_cscop_actual": 0.0,
+      "q4_cscop_planned": 0.13,
+      "q4_non_cscop_actual": 0.0,
+      "q4_non_cscop_planned": 20.51,
+      "annual_ops_q1_planned": 5.25,
+      "annual_ops_q2_planned": 5.25,
+      "annual_ops_q3_planned": 5.25,
+      "annual_ops_q4_planned": 5.25,
+      "annual_ops_fy26_planned": 21.0,
       "status": "High",
       "current_read": "Named Q3 allocation exists"
     },
@@ -251,6 +312,17 @@
       "q3_cscop_planned": 1.66,
       "q3_non_cscop_actual": 0.0,
       "q3_non_cscop_planned": 0.0,
+      "q4_actual": 0.0,
+      "q4_planned": 0.0,
+      "q4_cscop_actual": 0.0,
+      "q4_cscop_planned": 0.0,
+      "q4_non_cscop_actual": 0.0,
+      "q4_non_cscop_planned": 0.0,
+      "annual_ops_fy26_planned": 0,
+      "annual_ops_q1_planned": 0,
+      "annual_ops_q2_planned": 0,
+      "annual_ops_q3_planned": 0,
+      "annual_ops_q4_planned": 0,
       "status": "High",
       "current_read": "Q3 named allocation is light vs Q2 actual"
     },
@@ -276,6 +348,17 @@
       "q3_cscop_planned": 0.51,
       "q3_non_cscop_actual": 0.0,
       "q3_non_cscop_planned": 37.01,
+      "q4_actual": 0.0,
+      "q4_planned": 36.98,
+      "q4_cscop_actual": 0.0,
+      "q4_cscop_planned": 0.0,
+      "q4_non_cscop_actual": 0.0,
+      "q4_non_cscop_planned": 36.98,
+      "annual_ops_fy26_planned": 0,
+      "annual_ops_q1_planned": 0,
+      "annual_ops_q2_planned": 0,
+      "annual_ops_q3_planned": 0,
+      "annual_ops_q4_planned": 0,
       "status": "High",
       "current_read": "Named Q3 allocation exists"
     },
@@ -284,23 +367,34 @@
       "space": "Operation",
       "group": "Operation Resource",
       "q1_actual": 44.51,
-      "q1_planned": 27.52,
+      "q1_planned": 32.77,
       "q1_cscop_actual": 20.66,
       "q1_cscop_planned": 16.88,
       "q1_non_cscop_actual": 23.85,
-      "q1_non_cscop_planned": 10.64,
+      "q1_non_cscop_planned": 15.89,
       "q2_actual": 59.97,
-      "q2_planned": 68.72,
+      "q2_planned": 73.97,
       "q2_cscop_actual": 32.22,
       "q2_cscop_planned": 49.95,
       "q2_non_cscop_actual": 27.75,
-      "q2_non_cscop_planned": 18.77,
+      "q2_non_cscop_planned": 24.02,
       "q3_actual": 0.0,
-      "q3_planned": 40.04,
+      "q3_planned": 45.29,
       "q3_cscop_actual": 0.0,
       "q3_cscop_planned": 26.58,
       "q3_non_cscop_actual": 0.0,
-      "q3_non_cscop_planned": 13.46,
+      "q3_non_cscop_planned": 18.71,
+      "q4_actual": 0.0,
+      "q4_planned": 18.33,
+      "q4_cscop_actual": 0.0,
+      "q4_cscop_planned": 0.0,
+      "q4_non_cscop_actual": 0.0,
+      "q4_non_cscop_planned": 18.33,
+      "annual_ops_q1_planned": 5.25,
+      "annual_ops_q2_planned": 5.25,
+      "annual_ops_q3_planned": 5.25,
+      "annual_ops_q4_planned": 5.25,
+      "annual_ops_fy26_planned": 21.0,
       "status": "High",
       "current_read": "Named Q3 allocation exists"
     },
@@ -326,6 +420,17 @@
       "q3_cscop_planned": 11.57,
       "q3_non_cscop_actual": 0.0,
       "q3_non_cscop_planned": 34.37,
+      "q4_actual": 0.0,
+      "q4_planned": 31.81,
+      "q4_cscop_actual": 0.0,
+      "q4_cscop_planned": 0.0,
+      "q4_non_cscop_actual": 0.0,
+      "q4_non_cscop_planned": 31.81,
+      "annual_ops_fy26_planned": 0,
+      "annual_ops_q1_planned": 0,
+      "annual_ops_q2_planned": 0,
+      "annual_ops_q3_planned": 0,
+      "annual_ops_q4_planned": 0,
       "status": "High",
       "current_read": "Named Q3 allocation exists"
     },
@@ -351,6 +456,17 @@
       "q3_cscop_planned": 3.97,
       "q3_non_cscop_actual": 0.0,
       "q3_non_cscop_planned": 3.34,
+      "q4_actual": 0.0,
+      "q4_planned": 3.4,
+      "q4_cscop_actual": 0.0,
+      "q4_cscop_planned": 0.06,
+      "q4_non_cscop_actual": 0.0,
+      "q4_non_cscop_planned": 3.34,
+      "annual_ops_fy26_planned": 0,
+      "annual_ops_q1_planned": 0,
+      "annual_ops_q2_planned": 0,
+      "annual_ops_q3_planned": 0,
+      "annual_ops_q4_planned": 0,
       "status": "Medium",
       "current_read": "Q3 named allocation is light vs Q2 actual"
     },
@@ -359,24 +475,35 @@
       "space": "Operation",
       "group": "Operation Resource",
       "q1_actual": 49.72,
-      "q1_planned": 48.61,
+      "q1_planned": 58.38,
       "q1_cscop_actual": 8.72,
       "q1_cscop_planned": 9.17,
       "q1_non_cscop_actual": 41.0,
-      "q1_non_cscop_planned": 39.44,
+      "q1_non_cscop_planned": 49.21,
       "q2_actual": 62.06,
-      "q2_planned": 64.57,
+      "q2_planned": 74.34,
       "q2_cscop_actual": 14.69,
       "q2_cscop_planned": 21.49,
       "q2_non_cscop_actual": 47.38,
-      "q2_non_cscop_planned": 43.08,
+      "q2_non_cscop_planned": 52.85,
       "q3_actual": 0.0,
-      "q3_planned": 43.33,
+      "q3_planned": 53.1,
       "q3_cscop_actual": 0.0,
       "q3_cscop_planned": 3.89,
       "q3_non_cscop_actual": 0.0,
-      "q3_non_cscop_planned": 39.44,
-      "status": "Low",
+      "q3_non_cscop_planned": 49.21,
+      "q4_actual": 0.0,
+      "q4_planned": 49.19,
+      "q4_cscop_actual": 0.0,
+      "q4_cscop_planned": 0.0,
+      "q4_non_cscop_actual": 0.0,
+      "q4_non_cscop_planned": 49.19,
+      "annual_ops_q1_planned": 9.77,
+      "annual_ops_q2_planned": 9.77,
+      "annual_ops_q3_planned": 9.77,
+      "annual_ops_q4_planned": 9.78,
+      "annual_ops_fy26_planned": 39.09,
+      "status": "High",
       "current_read": "Named Q3 allocation exists"
     },
     {
@@ -401,6 +528,17 @@
       "q3_cscop_planned": 3.42,
       "q3_non_cscop_actual": 0.0,
       "q3_non_cscop_planned": 0.0,
+      "q4_actual": 0.0,
+      "q4_planned": 0.0,
+      "q4_cscop_actual": 0.0,
+      "q4_cscop_planned": 0.0,
+      "q4_non_cscop_actual": 0.0,
+      "q4_non_cscop_planned": 0.0,
+      "annual_ops_fy26_planned": 0,
+      "annual_ops_q1_planned": 0,
+      "annual_ops_q2_planned": 0,
+      "annual_ops_q3_planned": 0,
+      "annual_ops_q4_planned": 0,
       "status": "High",
       "current_read": "Q3 named allocation is light vs Q2 actual"
     },
@@ -426,6 +564,17 @@
       "q3_cscop_planned": 1.78,
       "q3_non_cscop_actual": 0.0,
       "q3_non_cscop_planned": 34.23,
+      "q4_actual": 0.0,
+      "q4_planned": 26.23,
+      "q4_cscop_actual": 0.0,
+      "q4_cscop_planned": 0.0,
+      "q4_non_cscop_actual": 0.0,
+      "q4_non_cscop_planned": 26.23,
+      "annual_ops_fy26_planned": 0,
+      "annual_ops_q1_planned": 0,
+      "annual_ops_q2_planned": 0,
+      "annual_ops_q3_planned": 0,
+      "annual_ops_q4_planned": 0,
       "status": "Medium",
       "current_read": "Named Q3 allocation exists"
     },
@@ -434,23 +583,34 @@
       "space": "Operation",
       "group": "Operation Resource",
       "q1_actual": 41.76,
-      "q1_planned": 31.98,
+      "q1_planned": 37.73,
       "q1_cscop_actual": 0.5,
       "q1_cscop_planned": 0.22,
       "q1_non_cscop_actual": 41.26,
-      "q1_non_cscop_planned": 31.76,
+      "q1_non_cscop_planned": 37.51,
       "q2_actual": 52.78,
-      "q2_planned": 54.2,
+      "q2_planned": 59.95,
       "q2_cscop_actual": 1.66,
       "q2_cscop_planned": 6.12,
       "q2_non_cscop_actual": 51.12,
-      "q2_non_cscop_planned": 48.08,
+      "q2_non_cscop_planned": 53.83,
       "q3_actual": 0.0,
-      "q3_planned": 27.31,
+      "q3_planned": 33.06,
       "q3_cscop_actual": 0.0,
       "q3_cscop_planned": 1.75,
       "q3_non_cscop_actual": 0.0,
-      "q3_non_cscop_planned": 25.56,
+      "q3_non_cscop_planned": 31.31,
+      "q4_actual": 0.0,
+      "q4_planned": 30.05,
+      "q4_cscop_actual": 0.0,
+      "q4_cscop_planned": 0.05,
+      "q4_non_cscop_actual": 0.0,
+      "q4_non_cscop_planned": 30.0,
+      "annual_ops_q1_planned": 5.75,
+      "annual_ops_q2_planned": 5.75,
+      "annual_ops_q3_planned": 5.75,
+      "annual_ops_q4_planned": 5.75,
+      "annual_ops_fy26_planned": 23.0,
       "status": "Medium",
       "current_read": "Named Q3 allocation exists"
     },
@@ -459,23 +619,34 @@
       "space": "Operation",
       "group": "Other Softtek",
       "q1_actual": 33.28,
-      "q1_planned": 32.0,
+      "q1_planned": 33.75,
       "q1_cscop_actual": 5.84,
       "q1_cscop_planned": 10.0,
       "q1_non_cscop_actual": 27.44,
-      "q1_non_cscop_planned": 22.0,
+      "q1_non_cscop_planned": 23.75,
       "q2_actual": 37.19,
-      "q2_planned": 96.5,
+      "q2_planned": 98.25,
       "q2_cscop_actual": 8.88,
       "q2_cscop_planned": 43.17,
       "q2_non_cscop_actual": 28.31,
-      "q2_non_cscop_planned": 53.33,
+      "q2_non_cscop_planned": 55.08,
       "q3_actual": 0.0,
-      "q3_planned": 48.26,
+      "q3_planned": 50.01,
       "q3_cscop_actual": 0.0,
       "q3_cscop_planned": 11.91,
       "q3_non_cscop_actual": 0.0,
-      "q3_non_cscop_planned": 36.35,
+      "q3_non_cscop_planned": 38.1,
+      "q4_actual": 0.0,
+      "q4_planned": 34.93,
+      "q4_cscop_actual": 0.0,
+      "q4_cscop_planned": 0.13,
+      "q4_non_cscop_actual": 0.0,
+      "q4_non_cscop_planned": 34.8,
+      "annual_ops_q1_planned": 1.75,
+      "annual_ops_q2_planned": 1.75,
+      "annual_ops_q3_planned": 1.75,
+      "annual_ops_q4_planned": 1.75,
+      "annual_ops_fy26_planned": 7.0,
       "status": "High",
       "current_read": "Named Q3 allocation exists"
     }
@@ -488,7 +659,8 @@
       "cscop": false,
       "actual": 178.39,
       "planned": 161.37,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -497,7 +669,8 @@
       "cscop": false,
       "actual": 33.72,
       "planned": 21.37,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -506,7 +679,8 @@
       "cscop": false,
       "actual": 33.58,
       "planned": 8.91,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -515,7 +689,8 @@
       "cscop": true,
       "actual": 25.91,
       "planned": 4.87,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -524,7 +699,8 @@
       "cscop": true,
       "actual": 27.88,
       "planned": 0.38,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -533,7 +709,8 @@
       "cscop": true,
       "actual": 13.31,
       "planned": 11.58,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -542,7 +719,8 @@
       "cscop": false,
       "actual": 17.78,
       "planned": 5.54,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -551,7 +729,8 @@
       "cscop": true,
       "actual": 14.56,
       "planned": 8.68,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -560,7 +739,18 @@
       "cscop": true,
       "actual": 17.5,
       "planned": 1.81,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "Annual operating baseline",
+      "project": "Incident",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 17.87,
+      "confirmed_manual": true,
+      "manual_type": "annual_operation"
     },
     {
       "quarter": "Q1",
@@ -569,7 +759,8 @@
       "cscop": true,
       "actual": 14.38,
       "planned": 1.25,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -578,7 +769,8 @@
       "cscop": false,
       "actual": 13.8,
       "planned": 1.34,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -587,7 +779,8 @@
       "cscop": true,
       "actual": 6.03,
       "planned": 6.35,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -596,7 +789,8 @@
       "cscop": true,
       "actual": 7.5,
       "planned": 3.86,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -605,7 +799,8 @@
       "cscop": true,
       "actual": 5.53,
       "planned": 4.47,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -614,7 +809,8 @@
       "cscop": true,
       "actual": 4.66,
       "planned": 5.31,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -623,7 +819,8 @@
       "cscop": true,
       "actual": 3.25,
       "planned": 6.57,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -632,7 +829,8 @@
       "cscop": true,
       "actual": 2.66,
       "planned": 6.57,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -641,7 +839,8 @@
       "cscop": true,
       "actual": 1.25,
       "planned": 7.55,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -650,7 +849,8 @@
       "cscop": true,
       "actual": 3.53,
       "planned": 4.65,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -659,7 +859,18 @@
       "cscop": true,
       "actual": 3.25,
       "planned": 4.89,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "Annual operating baseline",
+      "project": "Change",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 7.65,
+      "confirmed_manual": true,
+      "manual_type": "annual_operation"
     },
     {
       "quarter": "Q1",
@@ -668,7 +879,8 @@
       "cscop": true,
       "actual": 6.06,
       "planned": 0.25,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -677,7 +889,8 @@
       "cscop": true,
       "actual": 2.72,
       "planned": 2.95,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -686,7 +899,8 @@
       "cscop": true,
       "actual": 2.69,
       "planned": 2.55,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -695,7 +909,8 @@
       "cscop": false,
       "actual": 4.56,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -704,7 +919,8 @@
       "cscop": true,
       "actual": 2.06,
       "planned": 2.34,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -713,7 +929,8 @@
       "cscop": true,
       "actual": 1.38,
       "planned": 2.94,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -722,7 +939,8 @@
       "cscop": true,
       "actual": 1.12,
       "planned": 3.02,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -731,7 +949,8 @@
       "cscop": true,
       "actual": 0.5,
       "planned": 3.47,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -740,7 +959,8 @@
       "cscop": true,
       "actual": 3.78,
       "planned": 0.03,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -749,7 +969,8 @@
       "cscop": true,
       "actual": 3.53,
       "planned": 0.04,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -758,7 +979,8 @@
       "cscop": true,
       "actual": 2.38,
       "planned": 0.72,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -767,7 +989,8 @@
       "cscop": true,
       "actual": 1.25,
       "planned": 1.77,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -776,7 +999,8 @@
       "cscop": true,
       "actual": 2.12,
       "planned": 0.7,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -785,7 +1009,8 @@
       "cscop": true,
       "actual": 1.53,
       "planned": 1.2,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -794,7 +1019,8 @@
       "cscop": true,
       "actual": 2.09,
       "planned": 0.57,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -803,7 +1029,8 @@
       "cscop": true,
       "actual": 0.25,
       "planned": 2.34,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -812,7 +1039,8 @@
       "cscop": true,
       "actual": 0.25,
       "planned": 2.3,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -821,7 +1049,8 @@
       "cscop": true,
       "actual": 0.38,
       "planned": 2.06,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -830,7 +1059,8 @@
       "cscop": true,
       "actual": 2.19,
       "planned": 0.09,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -839,7 +1069,18 @@
       "cscop": true,
       "actual": 0.25,
       "planned": 2.03,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "Annual operating baseline",
+      "project": "Problem",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 2.25,
+      "confirmed_manual": true,
+      "manual_type": "annual_operation"
     },
     {
       "quarter": "Q1",
@@ -848,7 +1089,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 2.23,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -857,7 +1099,8 @@
       "cscop": true,
       "actual": 1.97,
       "planned": 0.25,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -866,7 +1109,8 @@
       "cscop": true,
       "actual": 0.03,
       "planned": 2.16,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -875,7 +1119,8 @@
       "cscop": true,
       "actual": 1.97,
       "planned": 0.06,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -884,7 +1129,8 @@
       "cscop": false,
       "actual": 2.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -893,7 +1139,8 @@
       "cscop": true,
       "actual": 0.5,
       "planned": 1.1,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -902,7 +1149,8 @@
       "cscop": false,
       "actual": 1.5,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -911,7 +1159,8 @@
       "cscop": true,
       "actual": 0.62,
       "planned": 0.84,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -920,7 +1169,8 @@
       "cscop": true,
       "actual": 1.34,
       "planned": 0.05,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -929,7 +1179,8 @@
       "cscop": true,
       "actual": 1.0,
       "planned": 0.39,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -938,7 +1189,8 @@
       "cscop": true,
       "actual": 0.94,
       "planned": 0.43,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -947,7 +1199,8 @@
       "cscop": true,
       "actual": 0.09,
       "planned": 1.23,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -956,7 +1209,8 @@
       "cscop": true,
       "actual": 0.09,
       "planned": 1.19,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -965,7 +1219,8 @@
       "cscop": true,
       "actual": 0.75,
       "planned": 0.48,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -974,7 +1229,8 @@
       "cscop": false,
       "actual": 1.14,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -983,7 +1239,8 @@
       "cscop": true,
       "actual": 0.44,
       "planned": 0.73,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -992,7 +1249,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 1.14,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1001,7 +1259,8 @@
       "cscop": true,
       "actual": 1.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1010,7 +1269,8 @@
       "cscop": true,
       "actual": 0.66,
       "planned": 0.36,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1019,7 +1279,8 @@
       "cscop": true,
       "actual": 0.47,
       "planned": 0.48,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1028,7 +1289,8 @@
       "cscop": true,
       "actual": 0.75,
       "planned": 0.15,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1037,7 +1299,8 @@
       "cscop": true,
       "actual": 0.56,
       "planned": 0.31,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1046,7 +1309,8 @@
       "cscop": true,
       "actual": 0.56,
       "planned": 0.28,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1055,7 +1319,8 @@
       "cscop": true,
       "actual": 0.62,
       "planned": 0.05,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1064,7 +1329,8 @@
       "cscop": true,
       "actual": 0.5,
       "planned": 0.14,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1073,7 +1339,8 @@
       "cscop": true,
       "actual": 0.62,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1082,7 +1349,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.59,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1091,7 +1359,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.51,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1100,7 +1369,8 @@
       "cscop": true,
       "actual": 0.25,
       "planned": 0.26,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1109,7 +1379,8 @@
       "cscop": true,
       "actual": 0.5,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1118,7 +1389,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.39,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1127,7 +1399,8 @@
       "cscop": true,
       "actual": 0.12,
       "planned": 0.25,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1136,7 +1409,8 @@
       "cscop": false,
       "actual": 0.28,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1145,7 +1419,8 @@
       "cscop": false,
       "actual": 0.22,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1154,7 +1429,8 @@
       "cscop": true,
       "actual": 0.19,
       "planned": 0.11,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1163,7 +1439,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.27,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1172,7 +1449,8 @@
       "cscop": false,
       "actual": 0.12,
       "planned": 0.14,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1181,7 +1459,8 @@
       "cscop": true,
       "actual": 0.19,
       "planned": 0.07,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1190,7 +1469,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.26,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1199,7 +1479,8 @@
       "cscop": true,
       "actual": 0.25,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1208,7 +1489,8 @@
       "cscop": false,
       "actual": 0.16,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1217,7 +1499,8 @@
       "cscop": false,
       "actual": 0.16,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1226,7 +1509,8 @@
       "cscop": true,
       "actual": 0.19,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1235,7 +1519,8 @@
       "cscop": false,
       "actual": 0.06,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1244,7 +1529,8 @@
       "cscop": false,
       "actual": 0.06,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1253,7 +1539,8 @@
       "cscop": false,
       "actual": 0.06,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1262,7 +1549,8 @@
       "cscop": false,
       "actual": 0.06,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1271,7 +1559,8 @@
       "cscop": false,
       "actual": 0.06,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1280,7 +1569,8 @@
       "cscop": false,
       "actual": 0.06,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1289,7 +1579,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.13,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1298,7 +1589,8 @@
       "cscop": true,
       "actual": 0.12,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1307,7 +1599,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.1,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1316,7 +1609,8 @@
       "cscop": true,
       "actual": 0.06,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1325,7 +1619,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.06,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1334,7 +1629,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.05,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1343,7 +1639,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.04,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1352,7 +1649,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.04,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1361,7 +1659,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.02,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1370,7 +1669,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1379,7 +1679,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1388,7 +1689,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1397,7 +1699,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1406,7 +1709,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1415,7 +1719,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1424,7 +1729,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1433,7 +1739,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1442,7 +1749,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1451,7 +1759,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1460,7 +1769,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1469,7 +1779,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1478,7 +1789,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1487,7 +1799,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1496,7 +1809,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1505,7 +1819,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1514,7 +1829,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1523,7 +1839,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1532,7 +1849,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1541,7 +1859,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1550,7 +1869,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1559,7 +1879,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1568,7 +1889,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1577,7 +1899,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q1",
@@ -1586,7 +1909,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1595,7 +1919,8 @@
       "cscop": false,
       "actual": 198.97,
       "planned": 194.06,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1604,7 +1929,8 @@
       "cscop": false,
       "actual": 71.69,
       "planned": 103.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1613,7 +1939,8 @@
       "cscop": true,
       "actual": 58.03,
       "planned": 32.12,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1622,7 +1949,8 @@
       "cscop": false,
       "actual": 29.21,
       "planned": 28.41,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1631,7 +1959,8 @@
       "cscop": false,
       "actual": 19.31,
       "planned": 34.98,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1640,7 +1969,8 @@
       "cscop": true,
       "actual": 4.5,
       "planned": 28.24,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1649,7 +1979,8 @@
       "cscop": true,
       "actual": 24.34,
       "planned": 1.39,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1658,7 +1989,8 @@
       "cscop": true,
       "actual": 22.75,
       "planned": 1.96,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1667,7 +1999,8 @@
       "cscop": true,
       "actual": 9.53,
       "planned": 15.13,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1676,7 +2009,8 @@
       "cscop": true,
       "actual": 3.66,
       "planned": 20.79,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1685,7 +2019,8 @@
       "cscop": true,
       "actual": 18.22,
       "planned": 1.67,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1694,7 +2029,8 @@
       "cscop": true,
       "actual": 12.44,
       "planned": 7.3,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1703,7 +2039,8 @@
       "cscop": true,
       "actual": 0.25,
       "planned": 19.17,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1712,7 +2049,18 @@
       "cscop": true,
       "actual": 10.97,
       "planned": 8.42,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "Annual operating baseline",
+      "project": "Incident",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 17.87,
+      "confirmed_manual": true,
+      "manual_type": "annual_operation"
     },
     {
       "quarter": "Q2",
@@ -1721,7 +2069,8 @@
       "cscop": true,
       "actual": 10.03,
       "planned": 6.51,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1730,7 +2079,8 @@
       "cscop": true,
       "actual": 5.88,
       "planned": 9.69,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1739,7 +2089,8 @@
       "cscop": false,
       "actual": 8.5,
       "planned": 6.29,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1748,7 +2099,8 @@
       "cscop": true,
       "actual": 7.56,
       "planned": 7.18,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1757,7 +2109,8 @@
       "cscop": true,
       "actual": 12.44,
       "planned": 0.24,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1766,7 +2119,8 @@
       "cscop": true,
       "actual": 4.97,
       "planned": 7.55,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1775,7 +2129,8 @@
       "cscop": true,
       "actual": 1.47,
       "planned": 11.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1784,7 +2139,8 @@
       "cscop": true,
       "actual": 3.81,
       "planned": 8.66,
-      "confirmed_manual": true
+      "confirmed_manual": true,
+      "manual_type": "confirmed_project"
     },
     {
       "quarter": "Q2",
@@ -1793,7 +2149,8 @@
       "cscop": true,
       "actual": 2.91,
       "planned": 9.47,
-      "confirmed_manual": true
+      "confirmed_manual": true,
+      "manual_type": "confirmed_project"
     },
     {
       "quarter": "Q2",
@@ -1802,7 +2159,8 @@
       "cscop": false,
       "actual": 9.25,
       "planned": 2.97,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1811,7 +2169,8 @@
       "cscop": true,
       "actual": 11.47,
       "planned": 0.62,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1820,7 +2179,8 @@
       "cscop": true,
       "actual": 11.38,
       "planned": 0.51,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1829,7 +2189,8 @@
       "cscop": true,
       "actual": 0.16,
       "planned": 11.31,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1838,7 +2199,8 @@
       "cscop": true,
       "actual": 2.0,
       "planned": 9.44,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1847,7 +2209,8 @@
       "cscop": true,
       "actual": 0.75,
       "planned": 9.72,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1856,7 +2219,8 @@
       "cscop": true,
       "actual": 1.62,
       "planned": 8.41,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1865,7 +2229,8 @@
       "cscop": true,
       "actual": 5.75,
       "planned": 3.87,
-      "confirmed_manual": true
+      "confirmed_manual": true,
+      "manual_type": "confirmed_project"
     },
     {
       "quarter": "Q2",
@@ -1874,7 +2239,8 @@
       "cscop": true,
       "actual": 4.38,
       "planned": 4.95,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1883,7 +2249,8 @@
       "cscop": true,
       "actual": 5.91,
       "planned": 3.36,
-      "confirmed_manual": true
+      "confirmed_manual": true,
+      "manual_type": "confirmed_project"
     },
     {
       "quarter": "Q2",
@@ -1892,7 +2259,8 @@
       "cscop": true,
       "actual": 3.97,
       "planned": 5.05,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1901,7 +2269,8 @@
       "cscop": true,
       "actual": 5.34,
       "planned": 2.94,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1910,7 +2279,8 @@
       "cscop": true,
       "actual": 4.12,
       "planned": 4.15,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1919,7 +2289,18 @@
       "cscop": true,
       "actual": 1.28,
       "planned": 6.77,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "Annual operating baseline",
+      "project": "Change",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 7.65,
+      "confirmed_manual": true,
+      "manual_type": "annual_operation"
     },
     {
       "quarter": "Q2",
@@ -1928,7 +2309,8 @@
       "cscop": true,
       "actual": 2.78,
       "planned": 4.78,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1937,7 +2319,8 @@
       "cscop": true,
       "actual": 6.81,
       "planned": 0.3,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1946,7 +2329,8 @@
       "cscop": true,
       "actual": 6.03,
       "planned": 1.02,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1955,7 +2339,8 @@
       "cscop": true,
       "actual": 2.25,
       "planned": 4.7,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1964,7 +2349,8 @@
       "cscop": true,
       "actual": 3.5,
       "planned": 3.32,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1973,7 +2359,8 @@
       "cscop": true,
       "actual": 1.5,
       "planned": 5.22,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1982,7 +2369,8 @@
       "cscop": true,
       "actual": 2.19,
       "planned": 4.49,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -1991,7 +2379,8 @@
       "cscop": true,
       "actual": 2.62,
       "planned": 3.89,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2000,7 +2389,8 @@
       "cscop": true,
       "actual": 1.5,
       "planned": 4.82,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2009,7 +2399,8 @@
       "cscop": true,
       "actual": 1.38,
       "planned": 4.24,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2018,7 +2409,8 @@
       "cscop": true,
       "actual": 1.62,
       "planned": 3.95,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2027,7 +2419,8 @@
       "cscop": true,
       "actual": 1.12,
       "planned": 4.44,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2036,7 +2429,8 @@
       "cscop": true,
       "actual": 2.19,
       "planned": 3.11,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2045,7 +2439,8 @@
       "cscop": true,
       "actual": 3.25,
       "planned": 2.01,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2054,7 +2449,8 @@
       "cscop": true,
       "actual": 4.78,
       "planned": 0.23,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2063,7 +2459,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 5.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2072,7 +2469,8 @@
       "cscop": true,
       "actual": 4.52,
       "planned": 0.15,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2081,7 +2479,8 @@
       "cscop": false,
       "actual": 4.59,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2090,7 +2489,8 @@
       "cscop": true,
       "actual": 0.48,
       "planned": 4.04,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2099,7 +2499,8 @@
       "cscop": true,
       "actual": 2.84,
       "planned": 1.5,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2108,7 +2509,8 @@
       "cscop": true,
       "actual": 2.38,
       "planned": 1.91,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2117,7 +2519,8 @@
       "cscop": true,
       "actual": 2.94,
       "planned": 1.15,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2126,7 +2529,8 @@
       "cscop": true,
       "actual": 2.34,
       "planned": 1.58,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2135,7 +2539,8 @@
       "cscop": true,
       "actual": 2.25,
       "planned": 1.63,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2144,7 +2549,8 @@
       "cscop": true,
       "actual": 0.96,
       "planned": 2.65,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2153,7 +2559,8 @@
       "cscop": true,
       "actual": 0.75,
       "planned": 2.32,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2162,7 +2569,8 @@
       "cscop": true,
       "actual": 2.59,
       "planned": 0.23,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2171,7 +2579,8 @@
       "cscop": true,
       "actual": 2.74,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2180,7 +2589,8 @@
       "cscop": true,
       "actual": 2.22,
       "planned": 0.48,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2189,7 +2599,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 2.49,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2198,7 +2609,18 @@
       "cscop": true,
       "actual": 1.09,
       "planned": 1.18,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "Annual operating baseline",
+      "project": "Problem",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 2.25,
+      "confirmed_manual": true,
+      "manual_type": "annual_operation"
     },
     {
       "quarter": "Q2",
@@ -2207,7 +2629,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 2.21,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2216,7 +2639,8 @@
       "cscop": true,
       "actual": 1.53,
       "planned": 0.37,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2225,7 +2649,8 @@
       "cscop": true,
       "actual": 1.59,
       "planned": 0.16,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2234,7 +2659,8 @@
       "cscop": true,
       "actual": 0.06,
       "planned": 1.58,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2243,7 +2669,8 @@
       "cscop": true,
       "actual": 0.84,
       "planned": 0.72,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2252,7 +2679,8 @@
       "cscop": true,
       "actual": 1.06,
       "planned": 0.35,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2261,7 +2689,8 @@
       "cscop": true,
       "actual": 0.12,
       "planned": 1.27,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2270,7 +2699,8 @@
       "cscop": false,
       "actual": 1.28,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2279,7 +2709,8 @@
       "cscop": true,
       "actual": 0.94,
       "planned": 0.42,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2288,7 +2719,8 @@
       "cscop": true,
       "actual": 0.53,
       "planned": 0.8,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2297,7 +2729,8 @@
       "cscop": true,
       "actual": 0.69,
       "planned": 0.54,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2306,7 +2739,8 @@
       "cscop": true,
       "actual": 0.59,
       "planned": 0.62,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2315,7 +2749,8 @@
       "cscop": true,
       "actual": 0.53,
       "planned": 0.46,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2324,7 +2759,8 @@
       "cscop": false,
       "actual": 0.69,
       "planned": 0.26,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2333,7 +2769,8 @@
       "cscop": true,
       "actual": 0.09,
       "planned": 0.85,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2342,7 +2779,8 @@
       "cscop": false,
       "actual": 0.88,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2351,7 +2789,8 @@
       "cscop": true,
       "actual": 0.47,
       "planned": 0.4,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2360,7 +2799,8 @@
       "cscop": false,
       "actual": 0.75,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2369,7 +2809,8 @@
       "cscop": false,
       "actual": 0.66,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2378,7 +2819,8 @@
       "cscop": true,
       "actual": 0.06,
       "planned": 0.62,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2387,7 +2829,8 @@
       "cscop": false,
       "actual": 0.59,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2396,7 +2839,8 @@
       "cscop": false,
       "actual": 0.53,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2405,7 +2849,8 @@
       "cscop": true,
       "actual": 0.06,
       "planned": 0.54,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2414,7 +2859,8 @@
       "cscop": true,
       "actual": 0.06,
       "planned": 0.54,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2423,7 +2869,8 @@
       "cscop": true,
       "actual": 0.09,
       "planned": 0.51,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2432,7 +2879,8 @@
       "cscop": false,
       "actual": 0.47,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2441,7 +2889,8 @@
       "cscop": false,
       "actual": 0.44,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2450,7 +2899,8 @@
       "cscop": true,
       "actual": 0.21,
       "planned": 0.29,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2459,7 +2909,8 @@
       "cscop": true,
       "actual": 0.25,
       "planned": 0.25,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2468,7 +2919,8 @@
       "cscop": true,
       "actual": 0.12,
       "planned": 0.3,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2477,7 +2929,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.38,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2486,7 +2939,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.38,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2495,7 +2949,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.38,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2504,7 +2959,8 @@
       "cscop": false,
       "actual": 0.28,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2513,7 +2969,8 @@
       "cscop": true,
       "actual": 0.09,
       "planned": 0.26,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2522,7 +2979,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.35,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2531,7 +2989,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.31,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2540,7 +2999,8 @@
       "cscop": true,
       "actual": 0.16,
       "planned": 0.1,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2549,7 +3009,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.25,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2558,7 +3019,8 @@
       "cscop": true,
       "actual": 0.12,
       "planned": 0.12,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2567,7 +3029,8 @@
       "cscop": true,
       "actual": 0.12,
       "planned": 0.11,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2576,7 +3039,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.16,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2585,7 +3049,8 @@
       "cscop": false,
       "actual": 0.09,
       "planned": 0.06,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2594,7 +3059,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.12,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2603,7 +3069,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.12,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2612,7 +3079,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.12,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2621,7 +3089,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.12,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2630,7 +3099,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.12,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2639,7 +3109,8 @@
       "cscop": true,
       "actual": 0.12,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2648,7 +3119,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2657,7 +3129,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2666,7 +3139,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2675,7 +3149,8 @@
       "cscop": true,
       "actual": 0.06,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2684,7 +3159,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.04,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2693,7 +3169,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q2",
@@ -2702,7 +3179,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0,
-      "confirmed_manual": true
+      "confirmed_manual": true,
+      "manual_type": "confirmed_project"
     },
     {
       "quarter": "Q3",
@@ -2711,7 +3189,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 160.76,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2720,7 +3199,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 70.07,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2729,7 +3209,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 36.82,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2738,7 +3219,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 35.5,
-      "confirmed_manual": true
+      "confirmed_manual": true,
+      "manual_type": "confirmed_project"
     },
     {
       "quarter": "Q3",
@@ -2747,7 +3229,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 30.6,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2756,7 +3239,18 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 27.48,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "Annual operating baseline",
+      "project": "Incident",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 17.88,
+      "confirmed_manual": true,
+      "manual_type": "annual_operation"
     },
     {
       "quarter": "Q3",
@@ -2765,7 +3259,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 16.0,
-      "confirmed_manual": true
+      "confirmed_manual": true,
+      "manual_type": "confirmed_project"
     },
     {
       "quarter": "Q3",
@@ -2774,7 +3269,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 15.0,
-      "confirmed_manual": true
+      "confirmed_manual": true,
+      "manual_type": "confirmed_project"
     },
     {
       "quarter": "Q3",
@@ -2783,7 +3279,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 11.91,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2792,7 +3289,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 11.26,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2801,7 +3299,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 10.92,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2810,7 +3309,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 9.91,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2819,7 +3319,18 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 8.88,
-      "confirmed_manual": true
+      "confirmed_manual": true,
+      "manual_type": "confirmed_project"
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "Annual operating baseline",
+      "project": "Change",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 7.64,
+      "confirmed_manual": true,
+      "manual_type": "annual_operation"
     },
     {
       "quarter": "Q3",
@@ -2828,7 +3339,8 @@
       "cscop": false,
       "actual": 0,
       "planned": 7.5,
-      "confirmed_manual": true
+      "confirmed_manual": true,
+      "manual_type": "confirmed_project"
     },
     {
       "quarter": "Q3",
@@ -2837,7 +3349,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 4.56,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2846,7 +3359,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 4.53,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2855,7 +3369,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 4.45,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2864,7 +3379,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 3.97,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2873,7 +3389,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 3.8,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2882,7 +3399,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 3.6,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2891,7 +3409,18 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 3.13,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "Annual operating baseline",
+      "project": "Problem",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 2.25,
+      "confirmed_manual": true,
+      "manual_type": "annual_operation"
     },
     {
       "quarter": "Q3",
@@ -2900,7 +3429,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 1.62,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2909,7 +3439,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 1.3,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2918,7 +3449,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 1.18,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2927,7 +3459,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 1.12,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2936,7 +3469,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 1.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2945,7 +3479,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 1.06,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2954,7 +3489,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.65,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2963,7 +3499,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.64,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2972,7 +3509,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.62,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2981,7 +3519,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.58,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2990,7 +3529,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.54,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -2999,7 +3539,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.51,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3008,7 +3549,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.48,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3017,7 +3559,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.31,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3026,7 +3569,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.31,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3035,7 +3579,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.26,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3044,7 +3589,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.25,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3053,7 +3599,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.25,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3062,7 +3609,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.23,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3071,7 +3619,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.23,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3080,7 +3629,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.23,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3089,7 +3639,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.22,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3098,7 +3649,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.2,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3107,7 +3659,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.17,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3116,7 +3669,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.16,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3125,7 +3679,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.16,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3134,7 +3689,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.16,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3143,7 +3699,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.15,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3152,7 +3709,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.15,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3161,7 +3719,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.15,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3170,7 +3729,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.15,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3179,7 +3739,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.15,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3188,7 +3749,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.15,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3197,7 +3759,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.15,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3206,7 +3769,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.13,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3215,7 +3779,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.13,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3224,7 +3789,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.12,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3233,7 +3799,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.1,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3242,7 +3809,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.1,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3251,7 +3819,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.1,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3260,7 +3829,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.1,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3269,7 +3839,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.1,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3278,7 +3849,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.1,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3287,7 +3859,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.1,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3296,7 +3869,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.1,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3305,7 +3879,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.09,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3314,7 +3889,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3323,7 +3899,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3332,7 +3909,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3341,7 +3919,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3350,7 +3929,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3359,7 +3939,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3368,7 +3949,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3377,7 +3959,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3386,7 +3969,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3395,7 +3979,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3404,7 +3989,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3413,7 +3999,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3422,7 +4009,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3431,7 +4019,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.08,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3440,7 +4029,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.06,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3449,7 +4039,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.06,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3458,7 +4049,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.05,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3467,7 +4059,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.05,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3476,7 +4069,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.05,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3485,7 +4079,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.05,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3494,7 +4089,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.05,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3503,7 +4099,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.02,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3512,7 +4109,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3521,7 +4119,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3530,7 +4129,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3539,7 +4139,8 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3548,7 +4149,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3557,7 +4159,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3566,7 +4169,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3575,7 +4179,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3584,7 +4189,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3593,7 +4199,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3602,7 +4209,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3611,7 +4219,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3620,7 +4229,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3629,7 +4239,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3638,7 +4249,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3647,7 +4259,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3656,7 +4269,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3665,7 +4279,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3674,7 +4289,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3683,7 +4299,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3692,7 +4309,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3701,7 +4319,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3710,7 +4329,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3719,7 +4339,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3728,7 +4349,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3737,7 +4359,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3746,7 +4369,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3755,7 +4379,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3764,7 +4389,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3773,7 +4399,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3782,7 +4409,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3791,7 +4419,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3800,7 +4429,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3809,7 +4439,8 @@
       "cscop": true,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
     },
     {
       "quarter": "Q3",
@@ -3818,7 +4449,1268 @@
       "cscop": false,
       "actual": 0.0,
       "planned": 0.0,
-      "confirmed_manual": false
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 157.92,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Operation Resource Pool",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 59.27,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "CCB",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 36.77,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Portfolio Mgmt Resource Pool",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 27.23,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "Annual operating baseline",
+      "project": "Incident",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 17.88,
+      "confirmed_manual": true,
+      "manual_type": "annual_operation"
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "Annual operating baseline",
+      "project": "Change",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 7.65,
+      "confirmed_manual": true,
+      "manual_type": "annual_operation"
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "Annual operating baseline",
+      "project": "Problem",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 2.25,
+      "confirmed_manual": true,
+      "manual_type": "annual_operation"
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Timesheet DevOps",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 1.62,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "WBS Support Resource Pool",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.64,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-978",
+      "project": "Improve store facility maintenance process",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.31,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-313",
+      "project": "Privacy Review",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.16,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-847",
+      "project": "New SSC Admin外派人员门禁",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.16,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Baison",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - CAP",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Cainiao",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - EY",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Hand",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Helios",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Kingdee",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Linezone",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - TW",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - VT",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Weaver",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-894",
+      "project": "Tenancy Agreement Foundation",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-969",
+      "project": "KS & GZ DC: RFID Inbound",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1017",
+      "project": "Store to Home | Express Delivery",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.06,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-961",
+      "project": "UCS - Inventory for Product Sibling",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.05,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Corporate Resource Pool",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "Fulfillment Resource Pool",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "QA Resource Pool",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "No CSCOP",
+      "project": "WBS Import",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP- 925",
+      "project": "Store to Store Rebalance -  Channel to Channel Pilot - Discovery",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1000",
+      "project": "Weekly report manual generation",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1003",
+      "project": "Store Clustering: CN Adoption CR",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1005",
+      "project": "Omni System password policy enhance",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1007",
+      "project": "Demand Factors PBI enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1008",
+      "project": "SFS Store Rollout – 9 Store Q2",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1010",
+      "project": "[MDM] Timestamp & Dummy Indicator",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1011",
+      "project": "[MDM] Product Sibling",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1015",
+      "project": "On order OTP",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1016",
+      "project": "Reporting adoption to 3rd DC R3",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1023",
+      "project": "SSOT Output - CN SKU Attribute",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1029",
+      "project": "Douyin live traffic data scraping automation",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1033",
+      "project": "Reprice on MDM",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1037",
+      "project": "Legacy to New Pipeline Migration",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1040",
+      "project": "Litigation Management",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1041",
+      "project": "Hemming - SF WayBill Generatio",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1042",
+      "project": "OTB Report CR",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1043",
+      "project": "TA system enhance",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1044",
+      "project": "VAT data mapping issues",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1045",
+      "project": "Automatic CP BU Reformat & Buy Dump Sync",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1050",
+      "project": "Align SCM/Corporate Operation Support Model and Scope",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-1052",
+      "project": "CR_Employee referral report",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-390",
+      "project": "3rd DC Foundation - Return Routing",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-417",
+      "project": "3rd DC Foundation - PO Release",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-465",
+      "project": "Carton receiving process Delivery",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-683",
+      "project": "Petty Cash",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-683 - CDM-3375",
+      "project": "Helios - Location Data Integration",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-713",
+      "project": "3rd DC Foundation - RFID: Inbound with PO & DC Transfer",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-757",
+      "project": "Sample Hub Phase 2 | Function optimization",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-785",
+      "project": "Store Clustering SU27 Women / CN Adoption",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-810",
+      "project": "CR : E2P Enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-851",
+      "project": "SSOT Output - CN CC and Class Attribute",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-878",
+      "project": "Store to Store Rebalance - Inner Region Pilot",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-881",
+      "project": "CR : APS Report",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-891",
+      "project": "Weather alert​",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-904",
+      "project": "Store Clustering CN Automation",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-905",
+      "project": "Legal Hub Dashboard Enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-907",
+      "project": "Trade Compliance Automation Tool - Customs Portal Enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-908",
+      "project": "Enhancement CR Q1 - AP WMP backend data",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-909",
+      "project": "Educator training optimization - E Learning",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-910",
+      "project": "Agile Fulfillment – FOH/BOH for MD and enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-910 - OF-2582",
+      "project": "FOH BOH Engine Re-open Date Integration",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-912",
+      "project": "B2B Inventory Buy - Phase I - Manual Order Creation",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-915",
+      "project": "China People Data Compliance Project - PI Data governance for external vendor",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-916",
+      "project": "Avature Enhancement Q1 - Offer Letter Template&Field Enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-920",
+      "project": "API Governance - T1 Discovery",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-921",
+      "project": "IP Protection Phase 1 - Source Code Delivery",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-922",
+      "project": "China People Data Compliance Project - External Candidate Sensitive Data Collection in Avature",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-924",
+      "project": "OTB Report",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-926",
+      "project": "Inventory Efficiency Tool： inventory segmentation enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-930",
+      "project": "FY26 Event 618",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-932",
+      "project": "FY26 Summer MD",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-934",
+      "project": "Helios AI",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-935",
+      "project": "China Service Center",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-935-OF-2609",
+      "project": "Service Center- FTW related label data",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-938",
+      "project": "CR : Chart Attribute Change",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-939",
+      "project": "Price Portal enhancement: MD pricing Phase 1 Retail MD",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-941",
+      "project": "Store Portal Enhancement - One Page Profile Enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-943",
+      "project": "Franchise Rolling",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-944",
+      "project": "Keystone Rollout 2 - Impact Analysis",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-945",
+      "project": "SFS Operation Handover from Hand to EHC",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-946",
+      "project": "SFS | Omni Booster for SFS Business Impact in Store Achievement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-949",
+      "project": "Employee contact signing process risk elimination",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-951",
+      "project": "Carton Receiving/DC to Store Portal | Reports Update",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-952",
+      "project": "Outlets Stores Forecast for Sales Driven",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-953",
+      "project": "Helios embedded XXL JOB update",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-954",
+      "project": "SFS Store Rollout – 9 Store Q1",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-956",
+      "project": "SFS | JD channel",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-958",
+      "project": "Reduce the usage cost of ACK",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-959",
+      "project": "New Outbound LSP Integration for Retail",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-965",
+      "project": "3rd DC Foundation - 3rd DC : Inbound Release",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-965 - OF-2510",
+      "project": "3rd DC - PDC/VDC Location Data Regression Support",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-965 - OF-2511",
+      "project": "3rd DC - MDM-Store Product LWH data from WMS",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-965 - OF-2512",
+      "project": "3rd DC - WWMT Kafka Integration Support",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-965 - OF-2513",
+      "project": "3rd DC - Location Address Integration Support",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-965 - OF-2576",
+      "project": "3rd DC: Inbound Release - Price Data Integration",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-966",
+      "project": "3rd DC Foundation - 3rd DC : Outbound Release",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-967",
+      "project": "Reporting Adoption for 3rd DC R2",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-968",
+      "project": "3rd DC Foundation - RFID: Outbound",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-970",
+      "project": "KS & GZ DC RFID: Outbound",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-971",
+      "project": "Price Portal enhancement: MD pricing Phase2 EC MD",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-974",
+      "project": "Store Visit Reports",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-975",
+      "project": "Monthly People Safety Walkthrough",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-979",
+      "project": "IAM Cleanup",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-981",
+      "project": "Regional Organization Accuracy in Store Portal",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-984",
+      "project": "DC to Province Mapping data EDE Publish",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-985",
+      "project": "Store Portal Data 字段&逻辑调整",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-988",
+      "project": "Databricks Workspace切换",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-990",
+      "project": "IP Protection - Baison Omni",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-991",
+      "project": "IP Protection - Samplehub-WMS",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-993",
+      "project": "GEC Portal - Share Service Portal Integration",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-995",
+      "project": "IP Protection Phase 2 - Pipeline Migration",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-997",
+      "project": "UCS - Inventory Service",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "CSCOP-999",
+      "project": "SSOT- HMT TS Data Feasibility Check",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
+    },
+    {
+      "quarter": "Q4",
+      "project_id": "Operation",
+      "project": "Daily Operation - TA",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false,
+      "manual_type": null
     }
   ],
   "manual_projects": [
@@ -3935,63 +5827,202 @@
       "delta": 7.5
     }
   ],
+  "annual_operations": {
+    "annual_total_md": 111.09,
+    "quarter_totals": {
+      "Q1": 27.77,
+      "Q2": 27.77,
+      "Q3": 27.77,
+      "Q4": 27.78
+    },
+    "allocation_method": "FY26 annual demand allocated evenly across Q1-Q4, with 0.01 MD rounding balanced across quarters",
+    "classification": "Non-CSCOP",
+    "categories": [
+      {
+        "work_type": "Incident",
+        "annual_md": 71.5,
+        "resource_md": {
+          "Ryan Xu": 5.0,
+          "Jiarui Yang": 12.0,
+          "Jacky Zhong": 20.0,
+          "Ruby Yang": 15.0,
+          "Lucy Cao": 19.5
+        },
+        "quarter_md": {
+          "Q1": 17.87,
+          "Q2": 17.87,
+          "Q3": 17.88,
+          "Q4": 17.88
+        }
+      },
+      {
+        "work_type": "Problem",
+        "annual_md": 9.0,
+        "resource_md": {
+          "Ryan Xu": 1.0,
+          "Jiarui Yang": 1.0,
+          "Jacky Zhong": 1.0,
+          "Ruby Yang": 2.0,
+          "Lucy Cao": 4.0
+        },
+        "quarter_md": {
+          "Q1": 2.25,
+          "Q2": 2.25,
+          "Q3": 2.25,
+          "Q4": 2.25
+        }
+      },
+      {
+        "work_type": "Change",
+        "annual_md": 30.59,
+        "resource_md": {
+          "Ryan Xu": 1.0,
+          "Jiarui Yang": 8.0,
+          "Jacky Zhong": 0.0,
+          "Ruby Yang": 6.0,
+          "Lucy Cao": 15.59
+        },
+        "quarter_md": {
+          "Q1": 7.65,
+          "Q2": 7.65,
+          "Q3": 7.64,
+          "Q4": 7.65
+        }
+      }
+    ],
+    "resources": [
+      {
+        "name": "Ryan Xu",
+        "role": "Ops Lead",
+        "annual_md": 7.0,
+        "quarter_md": {
+          "Q1": 1.75,
+          "Q2": 1.75,
+          "Q3": 1.75,
+          "Q4": 1.75
+        }
+      },
+      {
+        "name": "Jiarui Yang",
+        "role": "Ops TL",
+        "annual_md": 21.0,
+        "quarter_md": {
+          "Q1": 5.25,
+          "Q2": 5.25,
+          "Q3": 5.25,
+          "Q4": 5.25
+        }
+      },
+      {
+        "name": "Jacky Zhong",
+        "role": "Ops BA",
+        "annual_md": 21.0,
+        "quarter_md": {
+          "Q1": 5.25,
+          "Q2": 5.25,
+          "Q3": 5.25,
+          "Q4": 5.25
+        }
+      },
+      {
+        "name": "Ruby Yang",
+        "role": "L1.5 Lead",
+        "annual_md": 23.0,
+        "quarter_md": {
+          "Q1": 5.75,
+          "Q2": 5.75,
+          "Q3": 5.75,
+          "Q4": 5.75
+        }
+      },
+      {
+        "name": "Lucy Cao",
+        "role": "L1.5 Engineer",
+        "annual_md": 39.09,
+        "quarter_md": {
+          "Q1": 9.77,
+          "Q2": 9.77,
+          "Q3": 9.77,
+          "Q4": 9.78
+        }
+      }
+    ]
+  },
   "q3_forecast": {
     "source_named_resource_plan": 418.11,
+    "annual_operations_named_plan": 27.77,
+    "named_resource_plan_with_annual_operations": 445.88,
     "manual_projects_confirmed": 82.88,
     "manual_projects_source_plan": 1.98,
-    "confirmed_portfolio_plan": 499.01
+    "confirmed_portfolio_plan": 526.78
   },
   "monthly": [
     {
       "month": "Feb",
       "actual": 103.09,
-      "planned": 47.45
+      "planned": 56.71
     },
     {
       "month": "Mar",
       "actual": 193.17,
-      "planned": 81.96
+      "planned": 91.22
     },
     {
       "month": "Apr",
       "actual": 196.61,
-      "planned": 197.55
+      "planned": 206.81
     },
     {
       "month": "May",
       "actual": 213.86,
-      "planned": 207.63
+      "planned": 216.89
     },
     {
       "month": "Jun",
       "actual": 238.44,
-      "planned": 256.2
+      "planned": 265.46
     },
     {
       "month": "Jul",
       "actual": 251.03,
-      "planned": 268.7
+      "planned": 277.96
     },
     {
       "month": "Aug",
       "actual": 0.0,
-      "planned": 197.24
+      "planned": 206.5
     },
     {
       "month": "Sep",
       "actual": 0.0,
-      "planned": 113.02
+      "planned": 122.28
     },
     {
       "month": "Oct",
       "actual": 0.0,
-      "planned": 107.85
+      "planned": 117.11
+    },
+    {
+      "month": "Nov",
+      "actual": 0.0,
+      "planned": 102.43
+    },
+    {
+      "month": "Dec",
+      "actual": 0.0,
+      "planned": 110.85
+    },
+    {
+      "month": "Jan",
+      "actual": 0.0,
+      "planned": 99.68
     }
   ],
   "methodology": {
     "md_hours": 8,
     "quarterly_capacity_md": 900,
     "plan_allocation": "Task planHours prorated across business days in each quarter",
+    "annual_operation_allocation": "FY26 Incident, Problem and Change demand allocated equally across four fiscal quarters and assigned to named roles",
     "manual_actual_treatment": "Project trace only; not added again to portfolio actual",
     "manual_forecast_treatment": "Confirmed project total replaces source plan for the same project"
   }

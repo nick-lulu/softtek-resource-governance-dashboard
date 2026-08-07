@@ -66,6 +66,15 @@ h2 { color: #202833; font-size: 16px; font-weight: 700; line-height: 1.25; lette
 .dedicated-summary small { display: block; margin-top: 8px; color: #747e89; font-size: 11px; line-height: 1.35; }
 .governance-band { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; padding: 13px 16px; color: #5d6874; font-size: 12px; }
 .governance-band strong { color: #29323d; }
+.annual-summary { display: grid; grid-template-columns: 1.25fr repeat(4, minmax(0, 1fr)); border-bottom: 1px solid #e1e4e7; }
+.annual-summary > div { min-height: 86px; padding: 15px 16px; border-right: 1px solid #e1e4e7; }
+.annual-summary > div:last-child { border-right: 0; }
+.annual-summary span { display: block; color: #6c7682; font-size: 11px; font-weight: 700; }
+.annual-summary strong { display: block; margin-top: 10px; color: #202833; font-size: 20px; }
+.allocation-note { padding: 12px 16px; border-bottom: 1px solid #e1e4e7; color: #687381; font-size: 12px; line-height: 1.5; }
+.annual-detail-grid { display: grid; grid-template-columns: 1.1fr .9fr; }
+.annual-detail-grid > div:first-child { border-right: 1px solid #e1e4e7; }
+.annual-detail-grid table { min-width: 560px; }
 .core-split-overview { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 1px solid #e1e4e7; background: #fafafa; }
 .core-split-overview > div { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 12px 16px; border-right: 1px solid #e1e4e7; color: #5d6874; font-size: 12px; }
 .core-split-overview > div:last-child { border-right: 0; }
@@ -98,6 +107,11 @@ footer svg { flex: 0 0 auto; color: #56766f; }
 @media (max-width: 1120px) {
   main { width: min(100vw - 24px, 960px); }
   .kpis, .summary-grid, .dedicated-summary, .core-split-overview { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .annual-summary { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .annual-summary > div:nth-child(3) { border-right: 0; }
+  .annual-summary > div:nth-child(-n + 3) { border-bottom: 1px solid #e1e4e7; }
+  .annual-detail-grid { grid-template-columns: 1fr; }
+  .annual-detail-grid > div:first-child { border-right: 0; border-bottom: 1px solid #e1e4e7; }
   .kpi:nth-child(2) { border-right: 0; }
   .kpi:nth-child(-n + 2) { border-bottom: 1px solid #e0e3e6; }
 }
@@ -110,11 +124,13 @@ footer svg { flex: 0 0 auto; color: #56766f; }
   .summary-tabs button { flex: 1; min-width: 0; }
   .download { width: 100%; }
   h1 { font-size: 25px; }
-  .kpis, .summary-grid, .dedicated-summary, .core-split-overview { grid-template-columns: 1fr; }
+  .kpis, .summary-grid, .dedicated-summary, .core-split-overview, .annual-summary { grid-template-columns: 1fr; }
   .kpi { border-right: 0; border-bottom: 1px solid #e0e3e6; }
   .kpi:last-child { border-bottom: 0; }
   .dedicated-summary div, .dedicated-summary p { border-right: 0; border-bottom: 1px solid #e5e7eb; }
   .core-split-overview > div { border-right: 0; border-bottom: 1px solid #e5e7eb; }
+  .annual-summary > div, .annual-summary > div:nth-child(3) { border-right: 0; border-bottom: 1px solid #e1e4e7; }
+  .annual-summary > div:last-child { border-bottom: 0; }
   .panel-title { align-items: flex-start; flex-wrap: wrap; }
   .panel-controls { width: 100%; align-items: stretch; flex-direction: column; }
   .scope-tabs { width: 100%; }

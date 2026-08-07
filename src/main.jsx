@@ -12,6 +12,7 @@ const signedMd = (value) => `${Number(value) >= 0 ? "+" : ""}${formatMd(value)} 
 const pct = (value) => `${(Number(value || 0) * 100).toFixed(0)}%`;
 
 function projectRead(row, quarter) {
+  if (row.manual_type === "annual_operation") return "FY26 baseline allocated evenly across quarters";
   if (row.confirmed_manual) return quarter === "Q3" ? "Confirmed Q3 forecast" : "Confirmed Q2 trace";
   if (quarter === "Q3") return "Source forecast baseline";
   if (row.planned === 0 && row.actual > 0) return "Actual recorded without plan";
@@ -41,12 +42,14 @@ function downloadDetail() {
   const columns = [
     "Resource", "Group", "Space", "Status", "Q1 Actual", "Q1 Planned", "Q2 Actual", "Q2 Planned", "Q3 Named Forecast",
     "Q1 CSCOP Actual", "Q1 CSCOP Planned", "Q2 CSCOP Actual", "Q2 CSCOP Planned", "Q3 CSCOP Forecast",
-    "Q1 Non-CSCOP Actual", "Q1 Non-CSCOP Planned", "Q2 Non-CSCOP Actual", "Q2 Non-CSCOP Planned", "Q3 Non-CSCOP Forecast", "Current Read",
+    "Q1 Non-CSCOP Actual", "Q1 Non-CSCOP Planned", "Q2 Non-CSCOP Actual", "Q2 Non-CSCOP Planned", "Q3 Non-CSCOP Forecast",
+    "FY26 Incident Problem Change", "Q1 Annual Ops", "Q2 Annual Ops", "Q3 Annual Ops", "Q4 Annual Ops", "Current Read",
   ];
   const rows = data.resources.map((row) => [
     row.name, row.group, row.space, row.status, row.q1_actual, row.q1_planned, row.q2_actual, row.q2_planned, row.q3_planned,
     row.q1_cscop_actual, row.q1_cscop_planned, row.q2_cscop_actual, row.q2_cscop_planned, row.q3_cscop_planned,
-    row.q1_non_cscop_actual, row.q1_non_cscop_planned, row.q2_non_cscop_actual, row.q2_non_cscop_planned, row.q3_non_cscop_planned, row.current_read,
+    row.q1_non_cscop_actual, row.q1_non_cscop_planned, row.q2_non_cscop_actual, row.q2_non_cscop_planned, row.q3_non_cscop_planned,
+    row.annual_ops_fy26_planned, row.annual_ops_q1_planned, row.annual_ops_q2_planned, row.annual_ops_q3_planned, row.annual_ops_q4_planned, row.current_read,
   ]);
   const csv = [columns, ...rows]
     .map((row) => row.map((value) => `"${String(value).replaceAll('"', '""')}"`).join(","))
@@ -122,7 +125,8 @@ function App() {
   const q3VsQ2Actual = totals.q3_planned / totals.q2_actual;
   const manualShare = data.q3_forecast.manual_projects_confirmed / totals.q3_planned;
   const manualTrace = data.manual_projects.reduce((sum, row) => sum + row.q2_actual, 0);
-  const unassignedConfirmedUplift = totals.q3_planned - data.q3_forecast.source_named_resource_plan;
+  const annualOperations = data.annual_operations;
+  const unassignedConfirmedUplift = totals.q3_planned - data.q3_forecast.named_resource_plan_with_annual_operations;
   const summaryTotals = summaryScope === "all" ? totals : summaryScope === "cscop" ? cscopTotals : nonCscopTotals;
   const summaryLabel = summaryScope === "all" ? "Overall" : summaryScope === "cscop" ? "CSCOP" : "Non-CSCOP";
   const summaryQ1Gap = summaryTotals.q1_actual - summaryTotals.q1_planned;
@@ -154,7 +158,7 @@ function App() {
         <div>
           <p className="eyebrow">Lululemon Portfolio Resource Planning</p>
           <h1>Softtek Resource Reality</h1>
-          <p className="subtitle">Q1 and Q2 validate actual effort against planned MD. Q3 combines the source forecast with five confirmed project forecasts.</p>
+          <p className="subtitle">Q1 and Q2 validate actual effort against planned MD. Q3 combines the source forecast, five confirmed project forecasts and the quarterly share of the FY26 operating baseline.</p>
         </div>
         <div className="hero-actions">
           <div className="tabs summary-tabs" role="tablist" aria-label="Portfolio summary scope">
@@ -170,7 +174,7 @@ function App() {
         <Kpi icon={Users} label="Quarterly Capacity Benchmark" value={`${data.resource_count} people / ${formatMd(capacity, 0)} MD`} note="20 days x 3 months; Yola Liang excluded" />
         <Kpi icon={BarChart3} label={`Q1 ${summaryLabel} Actual vs Planned`} value={`${formatMd(summaryTotals.q1_actual)} / ${formatMd(summaryTotals.q1_planned)} MD`} note={`${signedMd(summaryQ1Gap)} variance`} tone="blue" />
         <Kpi icon={Target} label={`Q2 ${summaryLabel} Actual vs Planned`} value={`${formatMd(summaryTotals.q2_actual)} / ${formatMd(summaryTotals.q2_planned)} MD`} note={`${signedMd(summaryQ2Gap)} variance`} tone="amber" />
-        <Kpi icon={Gauge} label={`Q3 ${summaryLabel} Forecast`} value={`${formatMd(summaryTotals.q3_planned)} MD`} note={`${formatMd(data.q3_forecast.manual_projects_confirmed)} MD confirmed manual projects included`} tone="green" />
+        <Kpi icon={Gauge} label={`Q3 ${summaryLabel} Forecast`} value={`${formatMd(summaryTotals.q3_planned)} MD`} note={`${formatMd(data.q3_forecast.manual_projects_confirmed)} MD projects + ${formatMd(data.q3_forecast.annual_operations_named_plan)} MD operating baseline`} tone="green" />
       </section>
 
       <section className="summary-grid">
@@ -179,7 +183,7 @@ function App() {
           <ul>
             <li><strong>Planning accuracy improved materially in Q2.</strong><span>Q1 actual reached {pct(q1Realization)} of plan ({signedMd(q1Gap)}), while Q2 reached {pct(q2Realization)} ({signedMd(q2Gap)}). Q2 is a much stronger planning baseline.</span></li>
             <li><strong>Q2 used most of the theoretical capacity visible in this model.</strong><span>Actual was {formatMd(totals.q2_actual)} MD, or {pct(totals.q2_actual / capacity)} of the {formatMd(capacity, 0)} MD gross benchmark; plan coverage was {pct(totals.q2_planned / capacity)}.</span></li>
-            <li><strong>Q3 demand is lower, but not empty.</strong><span>{formatMd(totals.q3_planned)} MD covers {pct(q3Coverage)} of gross capacity and {pct(q3VsQ2Actual)} of Q2 actual. The five confirmed projects contribute {formatMd(data.q3_forecast.manual_projects_confirmed)} MD ({pct(manualShare)} of Q3).</span></li>
+            <li><strong>Q3 demand is lower, but not empty.</strong><span>{formatMd(totals.q3_planned)} MD covers {pct(q3Coverage)} of gross capacity and {pct(q3VsQ2Actual)} of Q2 actual. The five confirmed projects contribute {formatMd(data.q3_forecast.manual_projects_confirmed)} MD ({pct(manualShare)} of Q3), with another {formatMd(annualOperations.quarter_totals.Q3)} MD from the annual operating baseline.</span></li>
           </ul>
         </article>
 
@@ -187,7 +191,7 @@ function App() {
           <div className="panel-title"><h2>Insight</h2><span className="unit">Decision view</span></div>
           <ul>
             <li><strong>Use Q2 as the operating baseline, not Q1.</strong><span>The Q2 plan-to-actual gap is only {formatMd(Math.abs(q2Gap))} MD ({pct(Math.abs(q2Gap) / totals.q2_planned)} of plan), while Q1 was under-planned by {formatMd(q1Gap)} MD.</span></li>
-            <li><strong>Convert the Q3 forecast into named person-month allocation.</strong><span>The portfolio has {formatMd(totals.q3_planned)} MD forecast; {formatMd(unassignedConfirmedUplift)} MD of confirmed uplift is not yet reflected in the named resource plan. Reconcile demand to person, month and remaining capacity before vendor decisions.</span></li>
+            <li><strong>Convert the Q3 project forecast into named person-month allocation.</strong><span>The annual Incident / Problem / Change baseline is already assigned to five named roles. The remaining {formatMd(unassignedConfirmedUplift)} MD confirmed project uplift still needs person and month allocation before vendor decisions.</span></li>
             <li><strong>Close the CSCOP governance gap before execution.</strong><span>The five Q2 traces total {formatMd(manualTrace)} MD. CVE has {formatMd(7.5)} MD Q3 demand but no confirmed CSCOP ID; assign the ID and owner before work starts.</span></li>
           </ul>
         </article>
@@ -202,6 +206,51 @@ function App() {
           <p>About half of Q2 actual is Non-CSCOP. Confirm whether this is valid Operation / BAU effort or project work that still needs a CSCOP ID.</p>
         </div>
         <div className="governance-band"><strong>Non-CSCOP:</strong><span>Q1 {formatMd(nonCscopTotals.q1_actual)} / {formatMd(nonCscopTotals.q1_planned)} MD</span><span>Q2 {formatMd(nonCscopTotals.q2_actual)} / {formatMd(nonCscopTotals.q2_planned)} MD</span><span>Q3 forecast {formatMd(nonCscopTotals.q3_planned)} MD</span></div>
+      </section>
+
+      <section className="panel annual-operations-panel">
+        <div className="panel-title">
+          <h2>FY26 Incident / Problem / Change Baseline</h2>
+          <span className="unit">Named roles · Non-CSCOP</span>
+        </div>
+        <div className="annual-summary">
+          <div><span>FY26 Annual Demand</span><strong>{formatMd(annualOperations.annual_total_md, 2)} MD</strong></div>
+          {["Q1", "Q2", "Q3", "Q4"].map((quarter) => (
+            <div key={quarter}><span>{quarter} Allocated Plan</span><strong>{formatMd(annualOperations.quarter_totals[quarter], 2)} MD</strong></div>
+          ))}
+        </div>
+        <p className="allocation-note">Annual demand is distributed evenly across Lulu FY26 quarters because no monthly seasonality was provided. A 0.01 MD rounding balance keeps every quarterly and annual total reconciled. These amounts are included in each quarter's Non-CSCOP planned MD.</p>
+        <div className="annual-detail-grid">
+          <div className="table-wrap compact-table">
+            <table>
+              <thead><tr><th>Work Type</th><th>FY26</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr></thead>
+              <tbody>
+                {annualOperations.categories.map((row) => (
+                  <tr key={row.work_type}>
+                    <td><strong>{row.work_type}</strong></td>
+                    <td>{formatMd(row.annual_md, 2)} MD</td>
+                    {["Q1", "Q2", "Q3", "Q4"].map((quarter) => <td key={quarter}>{formatMd(row.quarter_md[quarter], 2)} MD</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="table-wrap compact-table">
+            <table>
+              <thead><tr><th>Role</th><th>Resource</th><th>FY26</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr></thead>
+              <tbody>
+                {annualOperations.resources.map((row) => (
+                  <tr key={row.name}>
+                    <td>{row.role}</td>
+                    <td><strong>{row.name}</strong></td>
+                    <td>{formatMd(row.annual_md, 2)} MD</td>
+                    {["Q1", "Q2", "Q3", "Q4"].map((quarter) => <td key={quarter}>{formatMd(row.quarter_md[quarter], 2)} MD</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
 
       <section className="summary-grid">
@@ -220,7 +269,7 @@ function App() {
           <div className="action-list">
             <div><AlertTriangle size={18} /><span><strong>PM / Project owner</strong>Reconcile the 82.88 MD confirmed projects; assign the {formatMd(unassignedConfirmedUplift)} MD uplift to names and months.</span></div>
             <div><AlertTriangle size={18} /><span><strong>Governance owner</strong>Create or confirm the CSCOP ID for cve-2026-4-973 fix.</span></div>
-            <div><CheckCircle2 size={18} /><span><strong>Resource owner</strong>Use Q2 plan realization as the baseline and review Q3 coverage weekly.</span></div>
+            <div><CheckCircle2 size={18} /><span><strong>Resource owner</strong>Review the 27.77 MD quarterly Incident / Problem / Change baseline against actual workload and adjust the next-quarter split when a seasonal pattern becomes visible.</span></div>
           </div>
         </article>
       </section>
@@ -265,7 +314,7 @@ function App() {
                 return (
                   <tr key={`${row.quarter}-${row.project_id}-${row.project}`}>
                     <td><span className={row.cscop ? "project-id" : "operation-id"}>{row.project_id}</span></td>
-                    <td><strong>{row.project}</strong>{row.confirmed_manual && <small>Confirmed manual input</small>}</td>
+                    <td><strong>{row.project}</strong>{row.confirmed_manual && <small>{row.manual_type === "annual_operation" ? "FY26 annual baseline" : "Confirmed manual input"}</small>}</td>
                     <td>{projectQuarter === "Q3" ? "Not started" : `${formatMd(row.actual)} MD`}</td>
                     <td>{formatMd(row.planned)} MD</td>
                     <td className={variance > 0 ? "negative" : "positive"}>{projectQuarter === "Q3" ? "-" : signedMd(variance)}</td>
@@ -307,7 +356,7 @@ function App() {
         </div>
       </section>
 
-      <footer><CheckCircle2 size={16} />Source cut-off: {data.as_of}. Q1 = Feb-Apr, Q2 = May-Jul, Q3 = Aug-Oct. 1 MD = 8 hours. Plan hours are prorated by business-day overlap.</footer>
+      <footer><CheckCircle2 size={16} />Source cut-off: {data.as_of}. Q1 = Feb-Apr, Q2 = May-Jul, Q3 = Aug-Oct, Q4 = Nov-Jan. 1 MD = 8 hours. Source plan is prorated by business-day overlap; the FY26 operating baseline is split evenly by quarter.</footer>
     </main>
   );
 }
