@@ -18,7 +18,7 @@ QUARTERS = {
 }
 DEDICATED_QA = ["Daisy Tang", "Mengyi Zhou", "Harry Shi", "Jade Zhang"]
 OPERATION_EXCLUSIONS = {"Nick Han", "Ryan Xu", "Jacky Zhong"}
-EXCLUDED_RESOURCES = {"Yola Liang"}
+EXCLUDED_RESOURCES = {"Yola Liang", "Echo Fang", "Ayla Hou"}
 MANUAL_PROJECTS = [
     {"project": "Legacy to New Pipeline Migration", "project_id": "CSCOP-1037", "q2_actual": 5.91, "q3_planned": 16.00},
     {"project": "IP Protection - Baison Omni", "project_id": "CSCOP-990", "q2_actual": 2.91, "q3_planned": 35.50},

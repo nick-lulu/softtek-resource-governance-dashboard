@@ -11,19 +11,6 @@ const formatMd = (value, digits = 1) =>
 const signedMd = (value) => `${Number(value) >= 0 ? "+" : ""}${formatMd(value)} MD`;
 const pct = (value) => `${(Number(value || 0) * 100).toFixed(0)}%`;
 
-function projectRead(row, quarter) {
-  if (row.manual_type === "annual_operation") return "FY26 baseline allocated evenly across quarters";
-  if (row.confirmed_manual) return quarter === "Q3" ? "Confirmed Q3 forecast" : "Confirmed Q2 trace";
-  if (quarter === "Q3") return "Source forecast baseline";
-  if (row.planned === 0 && row.actual > 0) return "Actual recorded without plan";
-  if (row.actual === 0 && row.planned > 0) return "Plan not reflected in Actual";
-  if (row.planned === 0) return "No effort recorded";
-  const varianceRate = (row.actual - row.planned) / row.planned;
-  if (varianceRate > 0.2) return "Actual materially above plan";
-  if (varianceRate < -0.2) return "Actual materially below plan";
-  return "Plan broadly aligned";
-}
-
 function Kpi({ icon: Icon, label, value, note, tone = "" }) {
   return (
     <section className={`kpi ${tone}`}>
@@ -111,8 +98,6 @@ function GroupSection({ title, names, subtitle, description }) {
 }
 
 function App() {
-  const [projectQuarter, setProjectQuarter] = useState("Q3");
-  const [projectScope, setProjectScope] = useState("cscop");
   const [resourceScope, setResourceScope] = useState("cscop");
   const [summaryScope, setSummaryScope] = useState("all");
   const { totals, cscop_totals: cscopTotals, non_cscop_totals: nonCscopTotals } = data;
@@ -144,7 +129,7 @@ function App() {
     ? `${formatMd(q3SourceBaseline)} MD source baseline + ${formatMd(data.q3_forecast.manual_projects_confirmed)} MD confirmed projects + ${formatMd(annualOperations.quarter_totals.Q3)} MD annual operations`
     : summaryScope === "cscop"
       ? `${formatMd(q3CscopSourceBaseline)} MD source baseline + ${formatMd(confirmedCscopProjects)} MD confirmed projects`
-      : `${formatMd(q3NonCscopSourceBaseline)} MD source BAU + ${formatMd(confirmedNonCscopProjects)} MD CVE (CSCOP pending) + ${formatMd(annualOperations.quarter_totals.Q3)} MD annual operations`;
+      : `${formatMd(q3NonCscopSourceBaseline)} MD existing Daily Operation + ${formatMd(confirmedNonCscopProjects)} MD CVE (CSCOP pending) + ${formatMd(annualOperations.quarter_totals.Q3)} MD annual operations`;
   const q1CscopCoverage = cscopTotals.q1_actual / totals.q1_actual;
   const q2CscopCoverage = cscopTotals.q2_actual / totals.q2_actual;
   const q3CscopCoverage = cscopTotals.q3_planned / totals.q3_planned;
@@ -157,12 +142,6 @@ function App() {
   const detailRows = useMemo(
     () => [...data.resources].sort((a, b) => (b.q1_actual + b.q2_actual) - (a.q1_actual + a.q2_actual)),
     [],
-  );
-  const projectRows = useMemo(
-    () => data.projects
-      .filter((row) => row.quarter === projectQuarter && row.cscop === (projectScope === "cscop"))
-      .slice(0, 12),
-    [projectQuarter, projectScope],
   );
   const scopedResourceValue = (row, quarter, type) => row[`${quarter}_${resourceScope}_${type}`] || 0;
 
@@ -185,7 +164,7 @@ function App() {
       </header>
 
       <section className="kpis">
-        <Kpi icon={Users} label="Quarterly Capacity Benchmark" value={`${data.resource_count} people / ${formatMd(capacity, 0)} MD`} note="20 days x 3 months; Yola Liang excluded" />
+        <Kpi icon={Users} label="Quarterly Capacity Benchmark" value={`${data.resource_count} people / ${formatMd(capacity, 0)} MD`} note="20 days x 3 months; Echo Fang, Ayla Hou and Yola Liang excluded" />
         <Kpi icon={BarChart3} label={`Q1 ${summaryLabel} Actual vs Planned`} value={`${formatMd(summaryTotals.q1_actual)} / ${formatMd(summaryTotals.q1_planned)} MD`} note={`${signedMd(summaryQ1Gap)} variance`} tone="blue" />
         <Kpi icon={Target} label={`Q2 ${summaryLabel} Actual vs Planned`} value={`${formatMd(summaryTotals.q2_actual)} / ${formatMd(summaryTotals.q2_planned)} MD`} note={`${signedMd(summaryQ2Gap)} variance`} tone="amber" />
         <Kpi icon={Gauge} label={`Q3 ${summaryLabel} Forecast`} value={`${formatMd(summaryTotals.q3_planned)} MD`} note={summaryQ3Note} tone="green" />
@@ -300,46 +279,11 @@ function App() {
       <GroupSection
         title="Operation Resource Reality"
         names={data.operation_resource_names}
-        subtitle="Echo · Jenny · Jiarui · Liv · Lucy · Ruby"
+        subtitle="Jenny · Jiarui · Liv · Lucy · Ruby"
         description={(scope) => scope === "cscop"
-          ? `The six Operation resources recorded ${formatMd(data.operation_resource_totals.q2_cscop_actual)} MD CSCOP actual in Q2 versus ${formatMd(data.operation_resource_totals.q2_cscop_planned)} MD planned. Validate which Q3 projects require named allocation.`
+          ? `The five Operation resources recorded ${formatMd(data.operation_resource_totals.q2_cscop_actual)} MD CSCOP actual in Q2 versus ${formatMd(data.operation_resource_totals.q2_cscop_planned)} MD planned. Validate which Q3 projects require named allocation.`
           : `Non-CSCOP is the main workload for this group: ${formatMd(data.operation_resource_totals.q2_non_cscop_actual)} MD actual in Q2. Confirm that this is genuine Operation / BAU demand.`}
       />
-
-      <section className="panel project-panel">
-        <div className="panel-title">
-          <h2>Project Effort Detail</h2>
-          <div className="panel-controls">
-            <div className="tabs scope-tabs" role="tablist" aria-label="Project ID scope">
-              <button className={projectScope === "cscop" ? "active" : ""} type="button" onClick={() => setProjectScope("cscop")}>CSCOP Projects</button>
-              <button className={projectScope === "non_cscop" ? "active" : ""} type="button" onClick={() => setProjectScope("non_cscop")}>Non-CSCOP</button>
-            </div>
-            <div className="tabs" role="tablist" aria-label="Project quarter">
-              {["Q1", "Q2", "Q3"].map((quarter) => <button key={quarter} className={projectQuarter === quarter ? "active" : ""} type="button" onClick={() => setProjectQuarter(quarter)}>{quarter}</button>)}
-            </div>
-          </div>
-        </div>
-        <div className="table-wrap project-table">
-          <table>
-            <thead><tr><th>Project ID</th><th>Project</th><th>Actual MD</th><th>Planned / Forecast MD</th><th>Variance</th><th>Read</th></tr></thead>
-            <tbody>
-              {projectRows.map((row) => {
-                const variance = row.actual - row.planned;
-                return (
-                  <tr key={`${row.quarter}-${row.project_id}-${row.project}`}>
-                    <td><span className={row.cscop ? "project-id" : "operation-id"}>{row.project_id}</span></td>
-                    <td><strong>{row.project}</strong>{row.confirmed_manual && <small>{row.manual_type === "annual_operation" ? "FY26 annual baseline" : "Confirmed manual input"}</small>}</td>
-                    <td>{projectQuarter === "Q3" ? "Not started" : `${formatMd(row.actual)} MD`}</td>
-                    <td>{formatMd(row.planned)} MD</td>
-                    <td className={variance > 0 ? "negative" : "positive"}>{projectQuarter === "Q3" ? "-" : signedMd(variance)}</td>
-                    <td>{projectRead(row, projectQuarter)}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-      </section>
 
       <section className="panel resource-panel">
         <div className="panel-title">

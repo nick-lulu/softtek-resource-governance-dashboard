@@ -8,9 +8,9 @@ This is an independent Vite/React dashboard for Softtek resource planning. Do no
 
 - Q1 is February through April 2026; Q2 is May through July; Q3 is August through October; Q4 is November 2026 through January 2027.
 - One MD equals eight hours.
-- Define the cohort from the Actual workbook's 15 Softtek people.
+- Define the reporting cohort from the Actual workbook, then exclude Echo Fang and Ayla Hou by governance decision.
 - Exclude Yola Liang from all counts and effort because the person has only one zero-hour planning record.
-- Match planning rows to the fixed 15-person cohort; do not include unrelated Softtek teams.
+- Match planning rows to the fixed 13-person cohort; do not include unrelated Softtek teams.
 - Prorate task-level `planHours` by business-day overlap when tasks cross quarter boundaries.
 - Treat project IDs beginning with `CSCOP-` as formal project effort.
 - Keep Operation and blank IDs in Non-CSCOP.

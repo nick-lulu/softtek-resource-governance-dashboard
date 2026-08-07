@@ -5,12 +5,12 @@ from pathlib import Path
 
 
 EXPECTED_ROSTER = {
-    "Ayla Hou", "Daisy Tang", "Echo Fang", "Harry Shi", "Jacky Zhong",
-    "Jade Zhang", "Jenny Qian", "Jiarui Yang", "Leah Li", "Liv Cao",
+    "Daisy Tang", "Harry Shi", "Jacky Zhong", "Jade Zhang", "Jenny Qian",
+    "Jiarui Yang", "Leah Li", "Liv Cao",
     "Lucy Cao", "Mengyi Zhou", "Nick Han", "Ruby Yang", "Ryan Xu",
 }
 EXPECTED_QA = {"Daisy Tang", "Mengyi Zhou", "Harry Shi", "Jade Zhang"}
-EXPECTED_OPERATION = {"Echo Fang", "Jenny Qian", "Jiarui Yang", "Liv Cao", "Lucy Cao", "Ruby Yang"}
+EXPECTED_OPERATION = {"Jenny Qian", "Jiarui Yang", "Liv Cao", "Lucy Cao", "Ruby Yang"}
 EXPECTED_ANNUAL_OPERATION_RESOURCES = {"Ryan Xu", "Jiarui Yang", "Jacky Zhong", "Ruby Yang", "Lucy Cao"}
 
 
@@ -20,12 +20,12 @@ def close(left: float, right: float, tolerance: float = 0.03) -> bool:
 
 if __name__ == "__main__":
     data = json.loads(Path("src/data/softtek_analysis.json").read_text(encoding="utf-8"))
-    assert data["resource_count"] == 15
+    assert data["resource_count"] == 13
     assert set(data["roster"]) == EXPECTED_ROSTER
-    assert "Yola Liang" not in data["roster"]
+    assert {"Yola Liang", "Echo Fang", "Ayla Hou"}.isdisjoint(data["roster"])
     assert set(data["dedicated_qa_names"]) == EXPECTED_QA
     assert set(data["operation_resource_names"]) == EXPECTED_OPERATION
-    assert len(data["resources"]) == 15
+    assert len(data["resources"]) == 13
 
     for quarter in ("q1", "q2", "q3", "q4"):
         for measure in ("actual", "planned"):
