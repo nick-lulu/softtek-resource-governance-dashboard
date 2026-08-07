@@ -1,0 +1,3998 @@
+{
+  "as_of": "2026-07-31",
+  "source": {
+    "plan": "计划工时数据2026-08-06.xlsx",
+    "actual": "Ops team填报工时(1.1-7.31).xlsx"
+  },
+  "resource_count": 15,
+  "roster": [
+    "Ayla Hou",
+    "Daisy Tang",
+    "Echo Fang",
+    "Harry Shi",
+    "Jacky Zhong",
+    "Jade Zhang",
+    "Jenny Qian",
+    "Jiarui Yang",
+    "Leah Li",
+    "Liv Cao",
+    "Lucy Cao",
+    "Mengyi Zhou",
+    "Nick Han",
+    "Ruby Yang",
+    "Ryan Xu"
+  ],
+  "excluded_resources": [
+    "Yola Liang"
+  ],
+  "dedicated_qa_names": [
+    "Daisy Tang",
+    "Mengyi Zhou",
+    "Harry Shi",
+    "Jade Zhang"
+  ],
+  "operation_resource_names": [
+    "Echo Fang",
+    "Jenny Qian",
+    "Jiarui Yang",
+    "Liv Cao",
+    "Lucy Cao",
+    "Ruby Yang"
+  ],
+  "totals": {
+    "q1_actual": 492.87,
+    "q1_planned": 326.97,
+    "q2_actual": 703.33,
+    "q2_planned": 732.53,
+    "q3_actual": 0.0,
+    "q3_planned": 499.01
+  },
+  "cscop_totals": {
+    "q1_actual": 205.09,
+    "q1_planned": 127.46,
+    "q2_actual": 355.15,
+    "q2_planned": 361.63,
+    "q3_actual": 0.0,
+    "q3_planned": 190.15
+  },
+  "non_cscop_totals": {
+    "q1_actual": 287.77,
+    "q1_planned": 199.5,
+    "q2_actual": 348.18,
+    "q2_planned": 370.9,
+    "q3_actual": 0.0,
+    "q3_planned": 308.86
+  },
+  "dedicated_qa_totals": {
+    "q1_actual": 97.84,
+    "q1_planned": 22.25,
+    "q2_actual": 178.75,
+    "q2_planned": 57.17,
+    "q3_actual": 0.0,
+    "q3_planned": 11.16,
+    "q1_cscop_actual": 94.78,
+    "q1_cscop_planned": 22.19,
+    "q2_cscop_actual": 176.87,
+    "q2_cscop_planned": 57.17,
+    "q3_cscop_actual": 0.0,
+    "q3_cscop_planned": 11.16,
+    "q1_non_cscop_actual": 3.06,
+    "q1_non_cscop_planned": 0.06,
+    "q2_non_cscop_actual": 1.88,
+    "q2_non_cscop_planned": 0.0,
+    "q3_non_cscop_actual": 0.0,
+    "q3_non_cscop_planned": 0.0
+  },
+  "operation_resource_totals": {
+    "q1_actual": 261.65,
+    "q1_planned": 207.81,
+    "q2_actual": 283.56,
+    "q2_planned": 320.53,
+    "q3_actual": 0.0,
+    "q3_planned": 207.49,
+    "q1_cscop_actual": 62.75,
+    "q1_cscop_planned": 56.88,
+    "q2_cscop_actual": 68.35,
+    "q2_cscop_planned": 110.04,
+    "q3_cscop_actual": 0.0,
+    "q3_cscop_planned": 36.94,
+    "q1_non_cscop_actual": 198.88,
+    "q1_non_cscop_planned": 150.91,
+    "q2_non_cscop_actual": 215.22,
+    "q2_non_cscop_planned": 210.49,
+    "q3_non_cscop_actual": 0.0,
+    "q3_non_cscop_planned": 170.56
+  },
+  "resources": [
+    {
+      "name": "Ayla Hou",
+      "space": "Portfolio Mgmt",
+      "group": "Other Softtek",
+      "q1_actual": 4.94,
+      "q1_planned": 9.18,
+      "q1_cscop_actual": 2.91,
+      "q1_cscop_planned": 6.43,
+      "q1_non_cscop_actual": 2.03,
+      "q1_non_cscop_planned": 2.75,
+      "q2_actual": 35.28,
+      "q2_planned": 36.06,
+      "q2_cscop_actual": 17.56,
+      "q2_cscop_planned": 27.22,
+      "q2_non_cscop_actual": 17.72,
+      "q2_non_cscop_planned": 8.84,
+      "q3_actual": 0.0,
+      "q3_planned": 17.82,
+      "q3_cscop_actual": 0.0,
+      "q3_cscop_planned": 7.87,
+      "q3_non_cscop_actual": 0.0,
+      "q3_non_cscop_planned": 9.95,
+      "status": "Medium",
+      "current_read": "Named Q3 allocation exists"
+    },
+    {
+      "name": "Daisy Tang",
+      "space": "Product",
+      "group": "Dedicated QA",
+      "q1_actual": 13.72,
+      "q1_planned": 16.81,
+      "q1_cscop_actual": 13.66,
+      "q1_cscop_planned": 16.75,
+      "q1_non_cscop_actual": 0.06,
+      "q1_non_cscop_planned": 0.06,
+      "q2_actual": 15.62,
+      "q2_planned": 12.77,
+      "q2_cscop_actual": 15.62,
+      "q2_cscop_planned": 12.77,
+      "q2_non_cscop_actual": 0.0,
+      "q2_non_cscop_planned": 0.0,
+      "q3_actual": 0.0,
+      "q3_planned": 2.91,
+      "q3_cscop_actual": 0.0,
+      "q3_cscop_planned": 2.91,
+      "q3_non_cscop_actual": 0.0,
+      "q3_non_cscop_planned": 0.0,
+      "status": "Medium",
+      "current_read": "Q3 named allocation is light vs Q2 actual"
+    },
+    {
+      "name": "Echo Fang",
+      "space": "Operation",
+      "group": "Operation Resource",
+      "q1_actual": 54.02,
+      "q1_planned": 53.4,
+      "q1_cscop_actual": 0.25,
+      "q1_cscop_planned": 0.25,
+      "q1_non_cscop_actual": 53.77,
+      "q1_non_cscop_planned": 53.14,
+      "q2_actual": 51.12,
+      "q2_planned": 58.19,
+      "q2_cscop_actual": 0.69,
+      "q2_cscop_planned": 3.31,
+      "q2_non_cscop_actual": 50.44,
+      "q2_non_cscop_planned": 54.88,
+      "q3_actual": 0.0,
+      "q3_planned": 51.99,
+      "q3_cscop_actual": 0.0,
+      "q3_cscop_planned": 0.24,
+      "q3_non_cscop_actual": 0.0,
+      "q3_non_cscop_planned": 51.75,
+      "status": "Medium",
+      "current_read": "Named Q3 allocation exists"
+    },
+    {
+      "name": "Harry Shi",
+      "space": "Fulfillment",
+      "group": "Dedicated QA",
+      "q1_actual": 39.62,
+      "q1_planned": 4.75,
+      "q1_cscop_actual": 38.81,
+      "q1_cscop_planned": 4.75,
+      "q1_non_cscop_actual": 0.81,
+      "q1_non_cscop_planned": 0.0,
+      "q2_actual": 70.5,
+      "q2_planned": 17.09,
+      "q2_cscop_actual": 69.62,
+      "q2_cscop_planned": 17.09,
+      "q2_non_cscop_actual": 0.88,
+      "q2_non_cscop_planned": 0.0,
+      "q3_actual": 0.0,
+      "q3_planned": 3.17,
+      "q3_cscop_actual": 0.0,
+      "q3_cscop_planned": 3.17,
+      "q3_non_cscop_actual": 0.0,
+      "q3_non_cscop_planned": 0.0,
+      "status": "High",
+      "current_read": "Q3 named allocation is light vs Q2 actual"
+    },
+    {
+      "name": "Jacky Zhong",
+      "space": "Operation",
+      "group": "Other Softtek",
+      "q1_actual": 45.06,
+      "q1_planned": 26.4,
+      "q1_cscop_actual": 22.19,
+      "q1_cscop_planned": 16.99,
+      "q1_non_cscop_actual": 22.88,
+      "q1_non_cscop_planned": 9.41,
+      "q2_actual": 62.38,
+      "q2_planned": 76.45,
+      "q2_cscop_actual": 36.22,
+      "q2_cscop_planned": 60.0,
+      "q2_non_cscop_actual": 26.16,
+      "q2_non_cscop_planned": 16.44,
+      "q3_actual": 0.0,
+      "q3_planned": 51.44,
+      "q3_cscop_actual": 0.0,
+      "q3_cscop_planned": 35.56,
+      "q3_non_cscop_actual": 0.0,
+      "q3_non_cscop_planned": 15.89,
+      "status": "High",
+      "current_read": "Named Q3 allocation exists"
+    },
+    {
+      "name": "Jade Zhang",
+      "space": "Corporate",
+      "group": "Dedicated QA",
+      "q1_actual": 2.5,
+      "q1_planned": 0.5,
+      "q1_cscop_actual": 0.5,
+      "q1_cscop_planned": 0.5,
+      "q1_non_cscop_actual": 2.0,
+      "q1_non_cscop_planned": 0.0,
+      "q2_actual": 32.66,
+      "q2_planned": 9.35,
+      "q2_cscop_actual": 31.66,
+      "q2_cscop_planned": 9.35,
+      "q2_non_cscop_actual": 1.0,
+      "q2_non_cscop_planned": 0.0,
+      "q3_actual": 0.0,
+      "q3_planned": 1.66,
+      "q3_cscop_actual": 0.0,
+      "q3_cscop_planned": 1.66,
+      "q3_non_cscop_actual": 0.0,
+      "q3_non_cscop_planned": 0.0,
+      "status": "High",
+      "current_read": "Q3 named allocation is light vs Q2 actual"
+    },
+    {
+      "name": "Jenny Qian",
+      "space": "Operation",
+      "group": "Operation Resource",
+      "q1_actual": 59.88,
+      "q1_planned": 39.17,
+      "q1_cscop_actual": 26.56,
+      "q1_cscop_planned": 25.97,
+      "q1_non_cscop_actual": 33.31,
+      "q1_non_cscop_planned": 13.19,
+      "q2_actual": 37.22,
+      "q2_planned": 61.27,
+      "q2_cscop_actual": 12.53,
+      "q2_cscop_planned": 21.3,
+      "q2_non_cscop_actual": 24.69,
+      "q2_non_cscop_planned": 39.97,
+      "q3_actual": 0.0,
+      "q3_planned": 37.52,
+      "q3_cscop_actual": 0.0,
+      "q3_cscop_planned": 0.51,
+      "q3_non_cscop_actual": 0.0,
+      "q3_non_cscop_planned": 37.01,
+      "status": "High",
+      "current_read": "Named Q3 allocation exists"
+    },
+    {
+      "name": "Jiarui Yang",
+      "space": "Operation",
+      "group": "Operation Resource",
+      "q1_actual": 44.51,
+      "q1_planned": 27.52,
+      "q1_cscop_actual": 20.66,
+      "q1_cscop_planned": 16.88,
+      "q1_non_cscop_actual": 23.85,
+      "q1_non_cscop_planned": 10.64,
+      "q2_actual": 59.97,
+      "q2_planned": 68.72,
+      "q2_cscop_actual": 32.22,
+      "q2_cscop_planned": 49.95,
+      "q2_non_cscop_actual": 27.75,
+      "q2_non_cscop_planned": 18.77,
+      "q3_actual": 0.0,
+      "q3_planned": 40.04,
+      "q3_cscop_actual": 0.0,
+      "q3_cscop_planned": 26.58,
+      "q3_non_cscop_actual": 0.0,
+      "q3_non_cscop_planned": 13.46,
+      "status": "High",
+      "current_read": "Named Q3 allocation exists"
+    },
+    {
+      "name": "Leah Li",
+      "space": "Portfolio Mgmt",
+      "group": "Other Softtek",
+      "q1_actual": 50.11,
+      "q1_planned": 22.37,
+      "q1_cscop_actual": 16.62,
+      "q1_cscop_planned": 12.43,
+      "q1_non_cscop_actual": 33.49,
+      "q1_non_cscop_planned": 9.93,
+      "q2_actual": 46.61,
+      "q2_planned": 84.35,
+      "q2_cscop_actual": 24.16,
+      "q2_cscop_planned": 50.37,
+      "q2_non_cscop_actual": 22.46,
+      "q2_non_cscop_planned": 33.98,
+      "q3_actual": 0.0,
+      "q3_planned": 45.93,
+      "q3_cscop_actual": 0.0,
+      "q3_cscop_planned": 11.57,
+      "q3_non_cscop_actual": 0.0,
+      "q3_non_cscop_planned": 34.37,
+      "status": "High",
+      "current_read": "Named Q3 allocation exists"
+    },
+    {
+      "name": "Liv Cao",
+      "space": "Operation",
+      "group": "Operation Resource",
+      "q1_actual": 11.76,
+      "q1_planned": 7.13,
+      "q1_cscop_actual": 6.06,
+      "q1_cscop_planned": 4.39,
+      "q1_non_cscop_actual": 5.69,
+      "q1_non_cscop_planned": 2.74,
+      "q2_actual": 20.41,
+      "q2_planned": 13.58,
+      "q2_cscop_actual": 6.56,
+      "q2_cscop_planned": 7.87,
+      "q2_non_cscop_actual": 13.84,
+      "q2_non_cscop_planned": 5.71,
+      "q3_actual": 0.0,
+      "q3_planned": 7.3,
+      "q3_cscop_actual": 0.0,
+      "q3_cscop_planned": 3.97,
+      "q3_non_cscop_actual": 0.0,
+      "q3_non_cscop_planned": 3.34,
+      "status": "Medium",
+      "current_read": "Q3 named allocation is light vs Q2 actual"
+    },
+    {
+      "name": "Lucy Cao",
+      "space": "Operation",
+      "group": "Operation Resource",
+      "q1_actual": 49.72,
+      "q1_planned": 48.61,
+      "q1_cscop_actual": 8.72,
+      "q1_cscop_planned": 9.17,
+      "q1_non_cscop_actual": 41.0,
+      "q1_non_cscop_planned": 39.44,
+      "q2_actual": 62.06,
+      "q2_planned": 64.57,
+      "q2_cscop_actual": 14.69,
+      "q2_cscop_planned": 21.49,
+      "q2_non_cscop_actual": 47.38,
+      "q2_non_cscop_planned": 43.08,
+      "q3_actual": 0.0,
+      "q3_planned": 43.33,
+      "q3_cscop_actual": 0.0,
+      "q3_cscop_planned": 3.89,
+      "q3_non_cscop_actual": 0.0,
+      "q3_non_cscop_planned": 39.44,
+      "status": "Low",
+      "current_read": "Named Q3 allocation exists"
+    },
+    {
+      "name": "Mengyi Zhou",
+      "space": "Fulfillment",
+      "group": "Dedicated QA",
+      "q1_actual": 42.0,
+      "q1_planned": 0.19,
+      "q1_cscop_actual": 41.81,
+      "q1_cscop_planned": 0.19,
+      "q1_non_cscop_actual": 0.19,
+      "q1_non_cscop_planned": 0.0,
+      "q2_actual": 59.97,
+      "q2_planned": 17.96,
+      "q2_cscop_actual": 59.97,
+      "q2_cscop_planned": 17.96,
+      "q2_non_cscop_actual": 0.0,
+      "q2_non_cscop_planned": 0.0,
+      "q3_actual": 0.0,
+      "q3_planned": 3.42,
+      "q3_cscop_actual": 0.0,
+      "q3_cscop_planned": 3.42,
+      "q3_non_cscop_actual": 0.0,
+      "q3_non_cscop_planned": 0.0,
+      "status": "High",
+      "current_read": "Q3 named allocation is light vs Q2 actual"
+    },
+    {
+      "name": "Nick Han",
+      "space": "Operation",
+      "group": "Other Softtek",
+      "q1_actual": 0.0,
+      "q1_planned": 6.97,
+      "q1_cscop_actual": 0.0,
+      "q1_cscop_planned": 2.53,
+      "q1_non_cscop_actual": 0.0,
+      "q1_non_cscop_planned": 4.44,
+      "q2_actual": 59.56,
+      "q2_planned": 61.45,
+      "q2_cscop_actual": 23.12,
+      "q2_cscop_planned": 13.66,
+      "q2_non_cscop_actual": 36.44,
+      "q2_non_cscop_planned": 47.8,
+      "q3_actual": 0.0,
+      "q3_planned": 36.01,
+      "q3_cscop_actual": 0.0,
+      "q3_cscop_planned": 1.78,
+      "q3_non_cscop_actual": 0.0,
+      "q3_non_cscop_planned": 34.23,
+      "status": "Medium",
+      "current_read": "Named Q3 allocation exists"
+    },
+    {
+      "name": "Ruby Yang",
+      "space": "Operation",
+      "group": "Operation Resource",
+      "q1_actual": 41.76,
+      "q1_planned": 31.98,
+      "q1_cscop_actual": 0.5,
+      "q1_cscop_planned": 0.22,
+      "q1_non_cscop_actual": 41.26,
+      "q1_non_cscop_planned": 31.76,
+      "q2_actual": 52.78,
+      "q2_planned": 54.2,
+      "q2_cscop_actual": 1.66,
+      "q2_cscop_planned": 6.12,
+      "q2_non_cscop_actual": 51.12,
+      "q2_non_cscop_planned": 48.08,
+      "q3_actual": 0.0,
+      "q3_planned": 27.31,
+      "q3_cscop_actual": 0.0,
+      "q3_cscop_planned": 1.75,
+      "q3_non_cscop_actual": 0.0,
+      "q3_non_cscop_planned": 25.56,
+      "status": "Medium",
+      "current_read": "Named Q3 allocation exists"
+    },
+    {
+      "name": "Ryan Xu",
+      "space": "Operation",
+      "group": "Other Softtek",
+      "q1_actual": 33.28,
+      "q1_planned": 32.0,
+      "q1_cscop_actual": 5.84,
+      "q1_cscop_planned": 10.0,
+      "q1_non_cscop_actual": 27.44,
+      "q1_non_cscop_planned": 22.0,
+      "q2_actual": 37.19,
+      "q2_planned": 96.5,
+      "q2_cscop_actual": 8.88,
+      "q2_cscop_planned": 43.17,
+      "q2_non_cscop_actual": 28.31,
+      "q2_non_cscop_planned": 53.33,
+      "q3_actual": 0.0,
+      "q3_planned": 48.26,
+      "q3_cscop_actual": 0.0,
+      "q3_cscop_planned": 11.91,
+      "q3_non_cscop_actual": 0.0,
+      "q3_non_cscop_planned": 36.35,
+      "status": "High",
+      "current_read": "Named Q3 allocation exists"
+    }
+  ],
+  "projects": [
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation",
+      "cscop": false,
+      "actual": 178.39,
+      "planned": 161.37,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Operation Resource Pool",
+      "cscop": false,
+      "actual": 33.72,
+      "planned": 21.37,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Portfolio Mgmt Resource Pool",
+      "cscop": false,
+      "actual": 33.58,
+      "planned": 8.91,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-465",
+      "project": "Carton receiving process Delivery",
+      "cscop": true,
+      "actual": 25.91,
+      "planned": 4.87,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-965",
+      "project": "3rd DC Foundation - 3rd DC : Inbound Release",
+      "cscop": true,
+      "actual": 27.88,
+      "planned": 0.38,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-921",
+      "project": "IP Protection Phase 1 - Source Code Delivery",
+      "cscop": true,
+      "actual": 13.31,
+      "planned": 11.58,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "CCB",
+      "cscop": false,
+      "actual": 17.78,
+      "planned": 5.54,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-920",
+      "project": "API Governance - T1 Discovery",
+      "cscop": true,
+      "actual": 14.56,
+      "planned": 8.68,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-969",
+      "project": "KS & GZ DC: RFID Inbound",
+      "cscop": true,
+      "actual": 17.5,
+      "planned": 1.81,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-417",
+      "project": "3rd DC Foundation - PO Release",
+      "cscop": true,
+      "actual": 14.38,
+      "planned": 1.25,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Timesheet DevOps",
+      "cscop": false,
+      "actual": 13.8,
+      "planned": 1.34,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-939",
+      "project": "Price Portal enhancement: MD pricing Phase 1 Retail MD",
+      "cscop": true,
+      "actual": 6.03,
+      "planned": 6.35,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-785",
+      "project": "Store Clustering SU27 Women / CN Adoption",
+      "cscop": true,
+      "actual": 7.5,
+      "planned": 3.86,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-924",
+      "project": "OTB Report",
+      "cscop": true,
+      "actual": 5.53,
+      "planned": 4.47,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-390",
+      "project": "3rd DC Foundation - Return Routing",
+      "cscop": true,
+      "actual": 4.66,
+      "planned": 5.31,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-967",
+      "project": "Reporting Adoption for 3rd DC R2",
+      "cscop": true,
+      "actual": 3.25,
+      "planned": 6.57,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-956",
+      "project": "SFS | JD channel",
+      "cscop": true,
+      "actual": 2.66,
+      "planned": 6.57,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-881",
+      "project": "CR : APS Report",
+      "cscop": true,
+      "actual": 1.25,
+      "planned": 7.55,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-932",
+      "project": "FY26 Summer MD",
+      "cscop": true,
+      "actual": 3.53,
+      "planned": 4.65,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-945",
+      "project": "SFS Operation Handover from Hand to EHC",
+      "cscop": true,
+      "actual": 3.25,
+      "planned": 4.89,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-910",
+      "project": "Agile Fulfillment – FOH/BOH for MD and enhancement",
+      "cscop": true,
+      "actual": 6.06,
+      "planned": 0.25,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-930",
+      "project": "FY26 Event 618",
+      "cscop": true,
+      "actual": 2.72,
+      "planned": 2.95,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-953",
+      "project": "Helios embedded XXL JOB update",
+      "cscop": true,
+      "actual": 2.69,
+      "planned": 2.55,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "WBS Import",
+      "cscop": false,
+      "actual": 4.56,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-958",
+      "project": "Reduce the usage cost of ACK",
+      "cscop": true,
+      "actual": 2.06,
+      "planned": 2.34,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-979",
+      "project": "IAM Cleanup",
+      "cscop": true,
+      "actual": 1.38,
+      "planned": 2.94,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-988",
+      "project": "Databricks Workspace切换",
+      "cscop": true,
+      "actual": 1.12,
+      "planned": 3.02,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1016",
+      "project": "Reporting adoption to 3rd DC R3",
+      "cscop": true,
+      "actual": 0.5,
+      "planned": 3.47,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-934",
+      "project": "Helios AI",
+      "cscop": true,
+      "actual": 3.78,
+      "planned": 0.03,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-313",
+      "project": "Privacy Review",
+      "cscop": true,
+      "actual": 3.53,
+      "planned": 0.04,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-683",
+      "project": "Petty Cash",
+      "cscop": true,
+      "actual": 2.38,
+      "planned": 0.72,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-916",
+      "project": "Avature Enhancement Q1 - Offer Letter Template&Field Enhancement",
+      "cscop": true,
+      "actual": 1.25,
+      "planned": 1.77,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-951",
+      "project": "Carton Receiving/DC to Store Portal | Reports Update",
+      "cscop": true,
+      "actual": 2.12,
+      "planned": 0.7,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-949",
+      "project": "Employee contact signing process risk elimination",
+      "cscop": true,
+      "actual": 1.53,
+      "planned": 1.2,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-891",
+      "project": "Weather alert​",
+      "cscop": true,
+      "actual": 2.09,
+      "planned": 0.57,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-922",
+      "project": "China People Data Compliance Project - External Candidate Sensitive Data Collection in Avature",
+      "cscop": true,
+      "actual": 0.25,
+      "planned": 2.34,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-975",
+      "project": "Monthly People Safety Walkthrough",
+      "cscop": true,
+      "actual": 0.25,
+      "planned": 2.3,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-954",
+      "project": "SFS Store Rollout – 9 Store Q1",
+      "cscop": true,
+      "actual": 0.38,
+      "planned": 2.06,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-847",
+      "project": "New SSC Admin外派人员门禁",
+      "cscop": true,
+      "actual": 2.19,
+      "planned": 0.09,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-974",
+      "project": "Store Visit Reports",
+      "cscop": true,
+      "actual": 0.25,
+      "planned": 2.03,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-908",
+      "project": "Enhancement CR Q1 - AP WMP backend data",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 2.23,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-713",
+      "project": "3rd DC Foundation - RFID: Inbound with PO & DC Transfer",
+      "cscop": true,
+      "actual": 1.97,
+      "planned": 0.25,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1017",
+      "project": "Store to Home | Express Delivery",
+      "cscop": true,
+      "actual": 0.03,
+      "planned": 2.16,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-757",
+      "project": "Sample Hub Phase 2 | Function optimization",
+      "cscop": true,
+      "actual": 1.97,
+      "planned": 0.06,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "QA Resource Pool",
+      "cscop": false,
+      "actual": 2.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-965 - OF-2513",
+      "project": "3rd DC - Location Address Integration Support",
+      "cscop": true,
+      "actual": 0.5,
+      "planned": 1.1,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Fulfillment Resource Pool",
+      "cscop": false,
+      "actual": 1.5,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-965 - OF-2510",
+      "project": "3rd DC - PDC/VDC Location Data Regression Support",
+      "cscop": true,
+      "actual": 0.62,
+      "planned": 0.84,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-894",
+      "project": "Tenancy Agreement Foundation",
+      "cscop": true,
+      "actual": 1.34,
+      "planned": 0.05,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-912",
+      "project": "B2B Inventory Buy - Phase I - Manual Order Creation",
+      "cscop": true,
+      "actual": 1.0,
+      "planned": 0.39,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-965 - OF-2576",
+      "project": "3rd DC: Inbound Release - Price Data Integration",
+      "cscop": true,
+      "actual": 0.94,
+      "planned": 0.43,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-990",
+      "project": "IP Protection - Baison Omni",
+      "cscop": true,
+      "actual": 0.09,
+      "planned": 1.23,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-991",
+      "project": "IP Protection - Samplehub-WMS",
+      "cscop": true,
+      "actual": 0.09,
+      "planned": 1.19,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-910 - OF-2582",
+      "project": "FOH BOH Engine Re-open Date Integration",
+      "cscop": true,
+      "actual": 0.75,
+      "planned": 0.48,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "WBS Support Resource Pool",
+      "cscop": false,
+      "actual": 1.14,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-965 - OF-2512",
+      "project": "3rd DC - WWMT Kafka Integration Support",
+      "cscop": true,
+      "actual": 0.44,
+      "planned": 0.73,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-995",
+      "project": "IP Protection Phase 2 - Pipeline Migration",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 1.14,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-968",
+      "project": "3rd DC Foundation - RFID: Outbound",
+      "cscop": true,
+      "actual": 1.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-971",
+      "project": "Price Portal enhancement: MD pricing Phase2 EC MD",
+      "cscop": true,
+      "actual": 0.66,
+      "planned": 0.36,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-965 - OF-2511",
+      "project": "3rd DC - MDM-Store Product LWH data from WMS",
+      "cscop": true,
+      "actual": 0.47,
+      "planned": 0.48,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-970",
+      "project": "KS & GZ DC RFID: Outbound",
+      "cscop": true,
+      "actual": 0.75,
+      "planned": 0.15,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-851",
+      "project": "SSOT Output - CN CC and Class Attribute",
+      "cscop": true,
+      "actual": 0.56,
+      "planned": 0.31,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-907",
+      "project": "Trade Compliance Automation Tool - Customs Portal Enhancement",
+      "cscop": true,
+      "actual": 0.56,
+      "planned": 0.28,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-938",
+      "project": "CR : Chart Attribute Change",
+      "cscop": true,
+      "actual": 0.62,
+      "planned": 0.05,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-904",
+      "project": "Store Clustering CN Automation",
+      "cscop": true,
+      "actual": 0.5,
+      "planned": 0.14,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-878",
+      "project": "Store to Store Rebalance - Inner Region Pilot",
+      "cscop": true,
+      "actual": 0.62,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-909",
+      "project": "Educator training optimization - E Learning",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.59,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1008",
+      "project": "SFS Store Rollout – 9 Store Q2",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.51,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-946",
+      "project": "SFS | Omni Booster for SFS Business Impact in Store Achievement",
+      "cscop": true,
+      "actual": 0.25,
+      "planned": 0.26,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-935",
+      "project": "China Service Center",
+      "cscop": true,
+      "actual": 0.5,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-966",
+      "project": "3rd DC Foundation - 3rd DC : Outbound Release",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.39,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-961",
+      "project": "UCS - Inventory for Product Sibling",
+      "cscop": true,
+      "actual": 0.12,
+      "planned": 0.25,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Hand",
+      "cscop": false,
+      "actual": 0.28,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - EY",
+      "cscop": false,
+      "actual": 0.22,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-993",
+      "project": "GEC Portal - Share Service Portal Integration",
+      "cscop": true,
+      "actual": 0.19,
+      "planned": 0.11,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-905",
+      "project": "Legal Hub Dashboard Enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.27,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Linezone",
+      "cscop": false,
+      "actual": 0.12,
+      "planned": 0.14,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-683 - CDM-3375",
+      "project": "Helios - Location Data Integration",
+      "cscop": true,
+      "actual": 0.19,
+      "planned": 0.07,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-943",
+      "project": "Franchise Rolling",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.26,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-810",
+      "project": "CR : E2P Enhancement",
+      "cscop": true,
+      "actual": 0.25,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Helios",
+      "cscop": false,
+      "actual": 0.16,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - VT",
+      "cscop": false,
+      "actual": 0.16,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-944",
+      "project": "Keystone Rollout 2 - Impact Analysis",
+      "cscop": true,
+      "actual": 0.19,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Baison",
+      "cscop": false,
+      "actual": 0.06,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - CAP",
+      "cscop": false,
+      "actual": 0.06,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Cainiao",
+      "cscop": false,
+      "actual": 0.06,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Kingdee",
+      "cscop": false,
+      "actual": 0.06,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - TW",
+      "cscop": false,
+      "actual": 0.06,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Weaver",
+      "cscop": false,
+      "actual": 0.06,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-952",
+      "project": "Outlets Stores Forecast for Sales Driven",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.13,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-926",
+      "project": "Inventory Efficiency Tool： inventory segmentation enhancement",
+      "cscop": true,
+      "actual": 0.12,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-978",
+      "project": "Improve store facility maintenance process",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.1,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1003",
+      "project": "Store Clustering: CN Adoption CR",
+      "cscop": true,
+      "actual": 0.06,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-984",
+      "project": "DC to Province Mapping data EDE Publish",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.06,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-985",
+      "project": "Store Portal Data 字段&逻辑调整",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.05,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1010",
+      "project": "[MDM] Timestamp & Dummy Indicator",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.04,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1011",
+      "project": "[MDM] Product Sibling",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.04,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-981",
+      "project": "Regional Organization Accuracy in Store Portal",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.02,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "No CSCOP",
+      "project": "Corporate Resource Pool",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP- 925",
+      "project": "Store to Store Rebalance -  Channel to Channel Pilot - Discovery",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1000",
+      "project": "Weekly report manual generation",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1005",
+      "project": "Omni System password policy enhance",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1007",
+      "project": "Demand Factors PBI enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1015",
+      "project": "On order OTP",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1023",
+      "project": "SSOT Output - CN SKU Attribute",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1029",
+      "project": "Douyin live traffic data scraping automation",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1033",
+      "project": "Reprice on MDM",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1037",
+      "project": "Legacy to New Pipeline Migration",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1040",
+      "project": "Litigation Management",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1041",
+      "project": "Hemming - SF WayBill Generatio",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1042",
+      "project": "OTB Report CR",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1043",
+      "project": "TA system enhance",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1044",
+      "project": "VAT data mapping issues",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1045",
+      "project": "Automatic CP BU Reformat & Buy Dump Sync",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1050",
+      "project": "Align SCM/Corporate Operation Support Model and Scope",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-1052",
+      "project": "CR_Employee referral report",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-915",
+      "project": "China People Data Compliance Project - PI Data governance for external vendor",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-935-OF-2609",
+      "project": "Service Center- FTW related label data",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-941",
+      "project": "Store Portal Enhancement - One Page Profile Enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-959",
+      "project": "New Outbound LSP Integration for Retail",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-997",
+      "project": "UCS - Inventory Service",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "CSCOP-999",
+      "project": "SSOT- HMT TS Data Feasibility Check",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q1",
+      "project_id": "Operation",
+      "project": "Daily Operation - TA",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation",
+      "cscop": false,
+      "actual": 198.97,
+      "planned": 194.06,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Operation Resource Pool",
+      "cscop": false,
+      "actual": 71.69,
+      "planned": 103.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-966",
+      "project": "3rd DC Foundation - 3rd DC : Outbound Release",
+      "cscop": true,
+      "actual": 58.03,
+      "planned": 32.12,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Portfolio Mgmt Resource Pool",
+      "cscop": false,
+      "actual": 29.21,
+      "planned": 28.41,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "CCB",
+      "cscop": false,
+      "actual": 19.31,
+      "planned": 34.98,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-967",
+      "project": "Reporting Adoption for 3rd DC R2",
+      "cscop": true,
+      "actual": 4.5,
+      "planned": 28.24,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-965",
+      "project": "3rd DC Foundation - 3rd DC : Inbound Release",
+      "cscop": true,
+      "actual": 24.34,
+      "planned": 1.39,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-935",
+      "project": "China Service Center",
+      "cscop": true,
+      "actual": 22.75,
+      "planned": 1.96,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-930",
+      "project": "FY26 Event 618",
+      "cscop": true,
+      "actual": 9.53,
+      "planned": 15.13,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-952",
+      "project": "Outlets Stores Forecast for Sales Driven",
+      "cscop": true,
+      "actual": 3.66,
+      "planned": 20.79,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-970",
+      "project": "KS & GZ DC RFID: Outbound",
+      "cscop": true,
+      "actual": 18.22,
+      "planned": 1.67,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-971",
+      "project": "Price Portal enhancement: MD pricing Phase2 EC MD",
+      "cscop": true,
+      "actual": 12.44,
+      "planned": 7.3,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1029",
+      "project": "Douyin live traffic data scraping automation",
+      "cscop": true,
+      "actual": 0.25,
+      "planned": 19.17,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-921",
+      "project": "IP Protection Phase 1 - Source Code Delivery",
+      "cscop": true,
+      "actual": 10.97,
+      "planned": 8.42,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-907",
+      "project": "Trade Compliance Automation Tool - Customs Portal Enhancement",
+      "cscop": true,
+      "actual": 10.03,
+      "planned": 6.51,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-945",
+      "project": "SFS Operation Handover from Hand to EHC",
+      "cscop": true,
+      "actual": 5.88,
+      "planned": 9.69,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Timesheet DevOps",
+      "cscop": false,
+      "actual": 8.5,
+      "planned": 6.29,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-932",
+      "project": "FY26 Summer MD",
+      "cscop": true,
+      "actual": 7.56,
+      "planned": 7.18,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-713",
+      "project": "3rd DC Foundation - RFID: Inbound with PO & DC Transfer",
+      "cscop": true,
+      "actual": 12.44,
+      "planned": 0.24,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-995",
+      "project": "IP Protection Phase 2 - Pipeline Migration",
+      "cscop": true,
+      "actual": 4.97,
+      "planned": 7.55,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1016",
+      "project": "Reporting adoption to 3rd DC R3",
+      "cscop": true,
+      "actual": 1.47,
+      "planned": 11.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-991",
+      "project": "IP Protection - Samplehub-WMS",
+      "cscop": true,
+      "actual": 3.81,
+      "planned": 8.66,
+      "confirmed_manual": true
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-990",
+      "project": "IP Protection - Baison Omni",
+      "cscop": true,
+      "actual": 2.91,
+      "planned": 9.47,
+      "confirmed_manual": true
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "WBS Support Resource Pool",
+      "cscop": false,
+      "actual": 9.25,
+      "planned": 2.97,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-891",
+      "project": "Weather alert​",
+      "cscop": true,
+      "actual": 11.47,
+      "planned": 0.62,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-390",
+      "project": "3rd DC Foundation - Return Routing",
+      "cscop": true,
+      "actual": 11.38,
+      "planned": 0.51,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1008",
+      "project": "SFS Store Rollout – 9 Store Q2",
+      "cscop": true,
+      "actual": 0.16,
+      "planned": 11.31,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-810",
+      "project": "CR : E2P Enhancement",
+      "cscop": true,
+      "actual": 2.0,
+      "planned": 9.44,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-881",
+      "project": "CR : APS Report",
+      "cscop": true,
+      "actual": 0.75,
+      "planned": 9.72,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-938",
+      "project": "CR : Chart Attribute Change",
+      "cscop": true,
+      "actual": 1.62,
+      "planned": 8.41,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-953",
+      "project": "Helios embedded XXL JOB update",
+      "cscop": true,
+      "actual": 5.75,
+      "planned": 3.87,
+      "confirmed_manual": true
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-924",
+      "project": "OTB Report",
+      "cscop": true,
+      "actual": 4.38,
+      "planned": 4.95,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1037",
+      "project": "Legacy to New Pipeline Migration",
+      "cscop": true,
+      "actual": 5.91,
+      "planned": 3.36,
+      "confirmed_manual": true
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-958",
+      "project": "Reduce the usage cost of ACK",
+      "cscop": true,
+      "actual": 3.97,
+      "planned": 5.05,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-939",
+      "project": "Price Portal enhancement: MD pricing Phase 1 Retail MD",
+      "cscop": true,
+      "actual": 5.34,
+      "planned": 2.94,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-984",
+      "project": "DC to Province Mapping data EDE Publish",
+      "cscop": true,
+      "actual": 4.12,
+      "planned": 4.15,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-954",
+      "project": "SFS Store Rollout – 9 Store Q1",
+      "cscop": true,
+      "actual": 1.28,
+      "planned": 6.77,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-956",
+      "project": "SFS | JD channel",
+      "cscop": true,
+      "actual": 2.78,
+      "planned": 4.78,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-313",
+      "project": "Privacy Review",
+      "cscop": true,
+      "actual": 6.81,
+      "planned": 0.3,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-969",
+      "project": "KS & GZ DC: RFID Inbound",
+      "cscop": true,
+      "actual": 6.03,
+      "planned": 1.02,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1005",
+      "project": "Omni System password policy enhance",
+      "cscop": true,
+      "actual": 2.25,
+      "planned": 4.7,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-908",
+      "project": "Enhancement CR Q1 - AP WMP backend data",
+      "cscop": true,
+      "actual": 3.5,
+      "planned": 3.32,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-978",
+      "project": "Improve store facility maintenance process",
+      "cscop": true,
+      "actual": 1.5,
+      "planned": 5.22,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-997",
+      "project": "UCS - Inventory Service",
+      "cscop": true,
+      "actual": 2.19,
+      "planned": 4.49,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-785",
+      "project": "Store Clustering SU27 Women / CN Adoption",
+      "cscop": true,
+      "actual": 2.62,
+      "planned": 3.89,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-974",
+      "project": "Store Visit Reports",
+      "cscop": true,
+      "actual": 1.5,
+      "planned": 4.82,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-975",
+      "project": "Monthly People Safety Walkthrough",
+      "cscop": true,
+      "actual": 1.38,
+      "planned": 4.24,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-959",
+      "project": "New Outbound LSP Integration for Retail",
+      "cscop": true,
+      "actual": 1.62,
+      "planned": 3.95,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1052",
+      "project": "CR_Employee referral report",
+      "cscop": true,
+      "actual": 1.12,
+      "planned": 4.44,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-979",
+      "project": "IAM Cleanup",
+      "cscop": true,
+      "actual": 2.19,
+      "planned": 3.11,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1033",
+      "project": "Reprice on MDM",
+      "cscop": true,
+      "actual": 3.25,
+      "planned": 2.01,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-968",
+      "project": "3rd DC Foundation - RFID: Outbound",
+      "cscop": true,
+      "actual": 4.78,
+      "planned": 0.23,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1050",
+      "project": "Align SCM/Corporate Operation Support Model and Scope",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 5.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-851",
+      "project": "SSOT Output - CN CC and Class Attribute",
+      "cscop": true,
+      "actual": 4.52,
+      "planned": 0.15,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "WBS Import",
+      "cscop": false,
+      "actual": 4.59,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-943",
+      "project": "Franchise Rolling",
+      "cscop": true,
+      "actual": 0.48,
+      "planned": 4.04,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-985",
+      "project": "Store Portal Data 字段&逻辑调整",
+      "cscop": true,
+      "actual": 2.84,
+      "planned": 1.5,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-920",
+      "project": "API Governance - T1 Discovery",
+      "cscop": true,
+      "actual": 2.38,
+      "planned": 1.91,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1003",
+      "project": "Store Clustering: CN Adoption CR",
+      "cscop": true,
+      "actual": 2.94,
+      "planned": 1.15,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-916",
+      "project": "Avature Enhancement Q1 - Offer Letter Template&Field Enhancement",
+      "cscop": true,
+      "actual": 2.34,
+      "planned": 1.58,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-683",
+      "project": "Petty Cash",
+      "cscop": true,
+      "actual": 2.25,
+      "planned": 1.63,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-915",
+      "project": "China People Data Compliance Project - PI Data governance for external vendor",
+      "cscop": true,
+      "actual": 0.96,
+      "planned": 2.65,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1007",
+      "project": "Demand Factors PBI enhancement",
+      "cscop": true,
+      "actual": 0.75,
+      "planned": 2.32,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-910",
+      "project": "Agile Fulfillment – FOH/BOH for MD and enhancement",
+      "cscop": true,
+      "actual": 2.59,
+      "planned": 0.23,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-935-OF-2609",
+      "project": "Service Center- FTW related label data",
+      "cscop": true,
+      "actual": 2.74,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-847",
+      "project": "New SSC Admin外派人员门禁",
+      "cscop": true,
+      "actual": 2.22,
+      "planned": 0.48,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1017",
+      "project": "Store to Home | Express Delivery",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 2.49,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-912",
+      "project": "B2B Inventory Buy - Phase I - Manual Order Creation",
+      "cscop": true,
+      "actual": 1.09,
+      "planned": 1.18,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1015",
+      "project": "On order OTP",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 2.21,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-417",
+      "project": "3rd DC Foundation - PO Release",
+      "cscop": true,
+      "actual": 1.53,
+      "planned": 0.37,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-894",
+      "project": "Tenancy Agreement Foundation",
+      "cscop": true,
+      "actual": 1.59,
+      "planned": 0.16,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-988",
+      "project": "Databricks Workspace切换",
+      "cscop": true,
+      "actual": 0.06,
+      "planned": 1.58,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-904",
+      "project": "Store Clustering CN Automation",
+      "cscop": true,
+      "actual": 0.84,
+      "planned": 0.72,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-934",
+      "project": "Helios AI",
+      "cscop": true,
+      "actual": 1.06,
+      "planned": 0.35,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-465",
+      "project": "Carton receiving process Delivery",
+      "cscop": true,
+      "actual": 0.12,
+      "planned": 1.27,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Helios",
+      "cscop": false,
+      "actual": 1.28,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-941",
+      "project": "Store Portal Enhancement - One Page Profile Enhancement",
+      "cscop": true,
+      "actual": 0.94,
+      "planned": 0.42,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-949",
+      "project": "Employee contact signing process risk elimination",
+      "cscop": true,
+      "actual": 0.53,
+      "planned": 0.8,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1010",
+      "project": "[MDM] Timestamp & Dummy Indicator",
+      "cscop": true,
+      "actual": 0.69,
+      "planned": 0.54,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-981",
+      "project": "Regional Organization Accuracy in Store Portal",
+      "cscop": true,
+      "actual": 0.59,
+      "planned": 0.62,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1011",
+      "project": "[MDM] Product Sibling",
+      "cscop": true,
+      "actual": 0.53,
+      "planned": 0.46,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Corporate Resource Pool",
+      "cscop": false,
+      "actual": 0.69,
+      "planned": 0.26,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-910 - OF-2582",
+      "project": "FOH BOH Engine Re-open Date Integration",
+      "cscop": true,
+      "actual": 0.09,
+      "planned": 0.85,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Fulfillment Resource Pool",
+      "cscop": false,
+      "actual": 0.88,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-905",
+      "project": "Legal Hub Dashboard Enhancement",
+      "cscop": true,
+      "actual": 0.47,
+      "planned": 0.4,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - EY",
+      "cscop": false,
+      "actual": 0.75,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Kingdee",
+      "cscop": false,
+      "actual": 0.66,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-683 - CDM-3375",
+      "project": "Helios - Location Data Integration",
+      "cscop": true,
+      "actual": 0.06,
+      "planned": 0.62,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - CAP",
+      "cscop": false,
+      "actual": 0.59,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - VT",
+      "cscop": false,
+      "actual": 0.53,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-965 - OF-2510",
+      "project": "3rd DC - PDC/VDC Location Data Regression Support",
+      "cscop": true,
+      "actual": 0.06,
+      "planned": 0.54,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-993",
+      "project": "GEC Portal - Share Service Portal Integration",
+      "cscop": true,
+      "actual": 0.06,
+      "planned": 0.54,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-909",
+      "project": "Educator training optimization - E Learning",
+      "cscop": true,
+      "actual": 0.09,
+      "planned": 0.51,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Weaver",
+      "cscop": false,
+      "actual": 0.47,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Baison",
+      "cscop": false,
+      "actual": 0.44,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1023",
+      "project": "SSOT Output - CN SKU Attribute",
+      "cscop": true,
+      "actual": 0.21,
+      "planned": 0.29,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-926",
+      "project": "Inventory Efficiency Tool： inventory segmentation enhancement",
+      "cscop": true,
+      "actual": 0.25,
+      "planned": 0.25,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1040",
+      "project": "Litigation Management",
+      "cscop": true,
+      "actual": 0.12,
+      "planned": 0.3,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-965 - OF-2511",
+      "project": "3rd DC - MDM-Store Product LWH data from WMS",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.38,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-965 - OF-2512",
+      "project": "3rd DC - WWMT Kafka Integration Support",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.38,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-965 - OF-2513",
+      "project": "3rd DC - Location Address Integration Support",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.38,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - TW",
+      "cscop": false,
+      "actual": 0.28,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-951",
+      "project": "Carton Receiving/DC to Store Portal | Reports Update",
+      "cscop": true,
+      "actual": 0.09,
+      "planned": 0.26,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-999",
+      "project": "SSOT- HMT TS Data Feasibility Check",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.35,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-965 - OF-2576",
+      "project": "3rd DC: Inbound Release - Price Data Integration",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.31,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-961",
+      "project": "UCS - Inventory for Product Sibling",
+      "cscop": true,
+      "actual": 0.16,
+      "planned": 0.1,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP- 925",
+      "project": "Store to Store Rebalance -  Channel to Channel Pilot - Discovery",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.25,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-922",
+      "project": "China People Data Compliance Project - External Candidate Sensitive Data Collection in Avature",
+      "cscop": true,
+      "actual": 0.12,
+      "planned": 0.12,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-946",
+      "project": "SFS | Omni Booster for SFS Business Impact in Store Achievement",
+      "cscop": true,
+      "actual": 0.12,
+      "planned": 0.11,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-757",
+      "project": "Sample Hub Phase 2 | Function optimization",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.16,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "Operation",
+      "project": "Daily Operation - TA",
+      "cscop": false,
+      "actual": 0.09,
+      "planned": 0.06,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1041",
+      "project": "Hemming - SF WayBill Generatio",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.12,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1042",
+      "project": "OTB Report CR",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.12,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1043",
+      "project": "TA system enhance",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.12,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1044",
+      "project": "VAT data mapping issues",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.12,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1045",
+      "project": "Automatic CP BU Reformat & Buy Dump Sync",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.12,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-944",
+      "project": "Keystone Rollout 2 - Impact Analysis",
+      "cscop": true,
+      "actual": 0.12,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Cainiao",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Hand",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Linezone",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-878",
+      "project": "Store to Store Rebalance - Inner Region Pilot",
+      "cscop": true,
+      "actual": 0.06,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP-1000",
+      "project": "Weekly report manual generation",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.04,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "No CSCOP",
+      "project": "QA Resource Pool",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q2",
+      "project_id": "CSCOP pending",
+      "project": "cve-2026-4-973 fix",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0,
+      "confirmed_manual": true
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 160.76,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Operation Resource Pool",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 70.07,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "CCB",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 36.82,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-990",
+      "project": "IP Protection - Baison Omni",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 35.5,
+      "confirmed_manual": true
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Portfolio Mgmt Resource Pool",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 30.6,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1029",
+      "project": "Douyin live traffic data scraping automation",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 27.48,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1037",
+      "project": "Legacy to New Pipeline Migration",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 16.0,
+      "confirmed_manual": true
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-991",
+      "project": "IP Protection - Samplehub-WMS",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 15.0,
+      "confirmed_manual": true
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-938",
+      "project": "CR : Chart Attribute Change",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 11.91,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-966",
+      "project": "3rd DC Foundation - 3rd DC : Outbound Release",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 11.26,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-810",
+      "project": "CR : E2P Enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 10.92,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1016",
+      "project": "Reporting adoption to 3rd DC R3",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 9.91,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-953",
+      "project": "Helios embedded XXL JOB update",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 8.88,
+      "confirmed_manual": true
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP pending",
+      "project": "cve-2026-4-973 fix",
+      "cscop": false,
+      "actual": 0,
+      "planned": 7.5,
+      "confirmed_manual": true
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-390",
+      "project": "3rd DC Foundation - Return Routing",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 4.56,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-974",
+      "project": "Store Visit Reports",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 4.53,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-975",
+      "project": "Monthly People Safety Walkthrough",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 4.45,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-978",
+      "project": "Improve store facility maintenance process",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 3.97,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-908",
+      "project": "Enhancement CR Q1 - AP WMP backend data",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 3.8,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-959",
+      "project": "New Outbound LSP Integration for Retail",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 3.6,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-943",
+      "project": "Franchise Rolling",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 3.13,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Timesheet DevOps",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 1.62,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-915",
+      "project": "China People Data Compliance Project - PI Data governance for external vendor",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 1.3,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-967",
+      "project": "Reporting Adoption for 3rd DC R2",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 1.18,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1033",
+      "project": "Reprice on MDM",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 1.12,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-935",
+      "project": "China Service Center",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 1.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-952",
+      "project": "Outlets Stores Forecast for Sales Driven",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 1.06,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-997",
+      "project": "UCS - Inventory Service",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.65,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "WBS Support Resource Pool",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.64,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-971",
+      "project": "Price Portal enhancement: MD pricing Phase2 EC MD",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.62,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-881",
+      "project": "CR : APS Report",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.58,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1005",
+      "project": "Omni System password policy enhance",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.54,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-785",
+      "project": "Store Clustering SU27 Women / CN Adoption",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.51,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-907",
+      "project": "Trade Compliance Automation Tool - Customs Portal Enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.48,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-847",
+      "project": "New SSC Admin外派人员门禁",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.31,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-985",
+      "project": "Store Portal Data 字段&逻辑调整",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.31,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-313",
+      "project": "Privacy Review",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.26,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-891",
+      "project": "Weather alert​",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.25,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-910 - OF-2582",
+      "project": "FOH BOH Engine Re-open Date Integration",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.25,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-949",
+      "project": "Employee contact signing process risk elimination",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.23,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-956",
+      "project": "SFS | JD channel",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.23,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-969",
+      "project": "KS & GZ DC: RFID Inbound",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.23,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-945",
+      "project": "SFS Operation Handover from Hand to EHC",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.22,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-954",
+      "project": "SFS Store Rollout – 9 Store Q1",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.2,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-970",
+      "project": "KS & GZ DC RFID: Outbound",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.17,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1008",
+      "project": "SFS Store Rollout – 9 Store Q2",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.16,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-934",
+      "project": "Helios AI",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.16,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-984",
+      "project": "DC to Province Mapping data EDE Publish",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.16,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1023",
+      "project": "SSOT Output - CN SKU Attribute",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.15,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-894",
+      "project": "Tenancy Agreement Foundation",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.15,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-904",
+      "project": "Store Clustering CN Automation",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.15,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-916",
+      "project": "Avature Enhancement Q1 - Offer Letter Template&Field Enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.15,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-961",
+      "project": "UCS - Inventory for Product Sibling",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.15,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-965 - OF-2510",
+      "project": "3rd DC - PDC/VDC Location Data Regression Support",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.15,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-993",
+      "project": "GEC Portal - Share Service Portal Integration",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.15,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-910",
+      "project": "Agile Fulfillment – FOH/BOH for MD and enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.13,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-999",
+      "project": "SSOT- HMT TS Data Feasibility Check",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.13,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1015",
+      "project": "On order OTP",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.12,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-683 - CDM-3375",
+      "project": "Helios - Location Data Integration",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.1,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-924",
+      "project": "OTB Report",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.1,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-932",
+      "project": "FY26 Summer MD",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.1,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-939",
+      "project": "Price Portal enhancement: MD pricing Phase 1 Retail MD",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.1,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-965 - OF-2511",
+      "project": "3rd DC - MDM-Store Product LWH data from WMS",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.1,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-965 - OF-2512",
+      "project": "3rd DC - WWMT Kafka Integration Support",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.1,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-965 - OF-2513",
+      "project": "3rd DC - Location Address Integration Support",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.1,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-968",
+      "project": "3rd DC Foundation - RFID: Outbound",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.1,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-905",
+      "project": "Legal Hub Dashboard Enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.09,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Baison",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - CAP",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Cainiao",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - EY",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Hand",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Helios",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Kingdee",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Linezone",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - TW",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - VT",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Daily Operation - Weaver",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-417",
+      "project": "3rd DC Foundation - PO Release",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-465",
+      "project": "Carton receiving process Delivery",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-965",
+      "project": "3rd DC Foundation - 3rd DC : Inbound Release",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.08,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP- 925",
+      "project": "Store to Store Rebalance -  Channel to Channel Pilot - Discovery",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.06,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-713",
+      "project": "3rd DC Foundation - RFID: Inbound with PO & DC Transfer",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.06,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-683",
+      "project": "Petty Cash",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.05,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-757",
+      "project": "Sample Hub Phase 2 | Function optimization",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.05,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-851",
+      "project": "SSOT Output - CN CC and Class Attribute",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.05,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-965 - OF-2576",
+      "project": "3rd DC: Inbound Release - Price Data Integration",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.05,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-981",
+      "project": "Regional Organization Accuracy in Store Portal",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.05,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1000",
+      "project": "Weekly report manual generation",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.02,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Corporate Resource Pool",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "Fulfillment Resource Pool",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "QA Resource Pool",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "No CSCOP",
+      "project": "WBS Import",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1003",
+      "project": "Store Clustering: CN Adoption CR",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1007",
+      "project": "Demand Factors PBI enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1010",
+      "project": "[MDM] Timestamp & Dummy Indicator",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1011",
+      "project": "[MDM] Product Sibling",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1017",
+      "project": "Store to Home | Express Delivery",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1040",
+      "project": "Litigation Management",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1041",
+      "project": "Hemming - SF WayBill Generatio",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1042",
+      "project": "OTB Report CR",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1043",
+      "project": "TA system enhance",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1044",
+      "project": "VAT data mapping issues",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1045",
+      "project": "Automatic CP BU Reformat & Buy Dump Sync",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1050",
+      "project": "Align SCM/Corporate Operation Support Model and Scope",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-1052",
+      "project": "CR_Employee referral report",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-878",
+      "project": "Store to Store Rebalance - Inner Region Pilot",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-909",
+      "project": "Educator training optimization - E Learning",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-912",
+      "project": "B2B Inventory Buy - Phase I - Manual Order Creation",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-920",
+      "project": "API Governance - T1 Discovery",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-921",
+      "project": "IP Protection Phase 1 - Source Code Delivery",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-922",
+      "project": "China People Data Compliance Project - External Candidate Sensitive Data Collection in Avature",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-926",
+      "project": "Inventory Efficiency Tool： inventory segmentation enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-930",
+      "project": "FY26 Event 618",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-935-OF-2609",
+      "project": "Service Center- FTW related label data",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-941",
+      "project": "Store Portal Enhancement - One Page Profile Enhancement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-944",
+      "project": "Keystone Rollout 2 - Impact Analysis",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-946",
+      "project": "SFS | Omni Booster for SFS Business Impact in Store Achievement",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-951",
+      "project": "Carton Receiving/DC to Store Portal | Reports Update",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-958",
+      "project": "Reduce the usage cost of ACK",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-979",
+      "project": "IAM Cleanup",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-988",
+      "project": "Databricks Workspace切换",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "CSCOP-995",
+      "project": "IP Protection Phase 2 - Pipeline Migration",
+      "cscop": true,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    },
+    {
+      "quarter": "Q3",
+      "project_id": "Operation",
+      "project": "Daily Operation - TA",
+      "cscop": false,
+      "actual": 0.0,
+      "planned": 0.0,
+      "confirmed_manual": false
+    }
+  ],
+  "manual_projects": [
+    {
+      "project": "Legacy to New Pipeline Migration",
+      "project_id": "CSCOP-1037",
+      "q2_actual": 5.91,
+      "q3_planned": 16.0
+    },
+    {
+      "project": "IP Protection - Baison Omni",
+      "project_id": "CSCOP-990",
+      "q2_actual": 2.91,
+      "q3_planned": 35.5
+    },
+    {
+      "project": "IP Protection - Samplehub-WMS",
+      "project_id": "CSCOP-991",
+      "q2_actual": 3.81,
+      "q3_planned": 15.0
+    },
+    {
+      "project": "Helios embedded XXL JOB update",
+      "project_id": "CSCOP-953",
+      "q2_actual": 5.75,
+      "q3_planned": 8.88
+    },
+    {
+      "project": "cve-2026-4-973 fix",
+      "project_id": "CSCOP pending",
+      "q2_actual": 0.0,
+      "q3_planned": 7.5
+    }
+  ],
+  "manual_reconciliation": [
+    {
+      "quarter": "Q2",
+      "field": "actual",
+      "project": "Legacy to New Pipeline Migration",
+      "source_value": 2.94,
+      "confirmed_value": 5.91,
+      "delta": 2.97
+    },
+    {
+      "quarter": "Q3",
+      "field": "planned",
+      "project": "Legacy to New Pipeline Migration",
+      "source_value": 0.0,
+      "confirmed_value": 16.0,
+      "delta": 16.0
+    },
+    {
+      "quarter": "Q2",
+      "field": "actual",
+      "project": "IP Protection - Baison Omni",
+      "source_value": 4.09,
+      "confirmed_value": 2.91,
+      "delta": -1.18
+    },
+    {
+      "quarter": "Q3",
+      "field": "planned",
+      "project": "IP Protection - Baison Omni",
+      "source_value": 1.02,
+      "confirmed_value": 35.5,
+      "delta": 34.48
+    },
+    {
+      "quarter": "Q2",
+      "field": "actual",
+      "project": "IP Protection - Samplehub-WMS",
+      "source_value": 5.62,
+      "confirmed_value": 3.81,
+      "delta": -1.81
+    },
+    {
+      "quarter": "Q3",
+      "field": "planned",
+      "project": "IP Protection - Samplehub-WMS",
+      "source_value": 0.0,
+      "confirmed_value": 15.0,
+      "delta": 15.0
+    },
+    {
+      "quarter": "Q2",
+      "field": "actual",
+      "project": "Helios embedded XXL JOB update",
+      "source_value": 6.75,
+      "confirmed_value": 5.75,
+      "delta": -1.0
+    },
+    {
+      "quarter": "Q3",
+      "field": "planned",
+      "project": "Helios embedded XXL JOB update",
+      "source_value": 0.96,
+      "confirmed_value": 8.88,
+      "delta": 7.92
+    },
+    {
+      "quarter": "Q2",
+      "field": "actual",
+      "project": "cve-2026-4-973 fix",
+      "source_value": 0,
+      "confirmed_value": 0.0,
+      "delta": 0.0
+    },
+    {
+      "quarter": "Q3",
+      "field": "planned",
+      "project": "cve-2026-4-973 fix",
+      "source_value": 0,
+      "confirmed_value": 7.5,
+      "delta": 7.5
+    }
+  ],
+  "q3_forecast": {
+    "source_named_resource_plan": 418.11,
+    "manual_projects_confirmed": 82.88,
+    "manual_projects_source_plan": 1.98,
+    "confirmed_portfolio_plan": 499.01
+  },
+  "monthly": [
+    {
+      "month": "Feb",
+      "actual": 103.09,
+      "planned": 47.45
+    },
+    {
+      "month": "Mar",
+      "actual": 193.17,
+      "planned": 81.96
+    },
+    {
+      "month": "Apr",
+      "actual": 196.61,
+      "planned": 197.55
+    },
+    {
+      "month": "May",
+      "actual": 213.86,
+      "planned": 207.63
+    },
+    {
+      "month": "Jun",
+      "actual": 238.44,
+      "planned": 256.2
+    },
+    {
+      "month": "Jul",
+      "actual": 251.03,
+      "planned": 268.7
+    },
+    {
+      "month": "Aug",
+      "actual": 0.0,
+      "planned": 197.24
+    },
+    {
+      "month": "Sep",
+      "actual": 0.0,
+      "planned": 113.02
+    },
+    {
+      "month": "Oct",
+      "actual": 0.0,
+      "planned": 107.85
+    }
+  ],
+  "methodology": {
+    "md_hours": 8,
+    "quarterly_capacity_md": 900,
+    "plan_allocation": "Task planHours prorated across business days in each quarter",
+    "manual_actual_treatment": "Project trace only; not added again to portfolio actual",
+    "manual_forecast_treatment": "Confirmed project total replaces source plan for the same project"
+  }
+}
