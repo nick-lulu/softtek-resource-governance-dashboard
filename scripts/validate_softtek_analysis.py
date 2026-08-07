@@ -10,7 +10,7 @@ EXPECTED_ROSTER = {
     "Lucy Cao", "Mengyi Zhou", "Nick Han", "Ruby Yang", "Ryan Xu",
 }
 EXPECTED_QA = {"Daisy Tang", "Mengyi Zhou", "Harry Shi", "Jade Zhang"}
-EXPECTED_OPERATION = {"Jenny Qian", "Jiarui Yang", "Liv Cao", "Lucy Cao", "Ruby Yang"}
+EXPECTED_OPERATION = {"Jiarui Yang", "Liv Cao", "Lucy Cao", "Ruby Yang"}
 EXPECTED_ANNUAL_OPERATION_RESOURCES = {"Ryan Xu", "Jiarui Yang", "Jacky Zhong", "Ruby Yang", "Lucy Cao"}
 
 

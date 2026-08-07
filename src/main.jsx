@@ -234,9 +234,9 @@ function App() {
       <GroupSection
         title="Operation Resource Reality"
         names={data.operation_resource_names}
-        subtitle="Jenny · Jiarui · Liv · Lucy · Ruby"
+        subtitle="Jiarui · Liv · Lucy · Ruby"
         description={(scope) => scope === "cscop"
-          ? `The five Operation resources recorded ${formatMd(data.operation_resource_totals.q2_cscop_actual)} MD CSCOP actual in Q2 versus ${formatMd(data.operation_resource_totals.q2_cscop_planned)} MD planned. Validate which Q3 projects require named allocation.`
+          ? `The four Operation resources recorded ${formatMd(data.operation_resource_totals.q2_cscop_actual)} MD CSCOP actual in Q2 versus ${formatMd(data.operation_resource_totals.q2_cscop_planned)} MD planned. Validate which Q3 projects require named allocation.`
           : `Non-CSCOP is the main workload for this group: ${formatMd(data.operation_resource_totals.q2_non_cscop_actual)} MD actual in Q2. Confirm that this is genuine Operation / BAU demand.`}
       />
 

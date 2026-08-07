@@ -17,7 +17,7 @@ QUARTERS = {
     "Q4": (pd.Timestamp("2026-11-01"), pd.Timestamp("2027-01-31")),
 }
 DEDICATED_QA = ["Daisy Tang", "Mengyi Zhou", "Harry Shi", "Jade Zhang"]
-OPERATION_EXCLUSIONS = {"Nick Han", "Ryan Xu", "Jacky Zhong"}
+OPERATION_EXCLUSIONS = {"Nick Han", "Ryan Xu", "Jacky Zhong", "Jenny Qian"}
 EXCLUDED_RESOURCES = {"Yola Liang", "Echo Fang", "Ayla Hou"}
 MANUAL_PROJECTS = [
     {"project": "Legacy to New Pipeline Migration", "project_id": "CSCOP-1037", "q2_actual": 5.91, "q3_planned": 16.00},

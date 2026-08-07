@@ -15,7 +15,7 @@ This is an independent Vite/React dashboard for Softtek resource planning. Do no
 - Treat project IDs beginning with `CSCOP-` as formal project effort.
 - Keep Operation and blank IDs in Non-CSCOP.
 - Keep Daisy Tang, Mengyi Zhou, Harry Shi and Jade Zhang in the Dedicated QA module.
-- Define Operation Resources from the Operation space, excluding Nick Han, Ryan Xu and Jacky Zhong.
+- Define Operation Resources from the Operation space, excluding Nick Han, Ryan Xu, Jacky Zhong and Jenny Qian. Jenny remains in the overall resource scope.
 - Manual Q2 project traces are project-level confirmed values and must not be added again to portfolio Actual.
 - Manual Q3 project forecasts replace source plan for the same project and must not be double-counted.
 - Keep manual project demand unassigned at person level until an explicit resource allocation is provided.

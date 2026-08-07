@@ -32,7 +32,6 @@
     "Jade Zhang"
   ],
   "operation_resource_names": [
-    "Jenny Qian",
     "Jiarui Yang",
     "Liv Cao",
     "Lucy Cao",
@@ -89,24 +88,24 @@
     "q3_non_cscop_planned": 0.0
   },
   "operation_resource_totals": {
-    "q1_actual": 207.63,
-    "q1_planned": 175.18,
-    "q2_actual": 232.44,
-    "q2_planned": 283.11,
+    "q1_actual": 147.75,
+    "q1_planned": 136.01,
+    "q2_actual": 195.22,
+    "q2_planned": 221.84,
     "q3_actual": 0.0,
-    "q3_planned": 176.27,
-    "q1_cscop_actual": 62.5,
-    "q1_cscop_planned": 56.63,
-    "q2_cscop_actual": 67.66,
-    "q2_cscop_planned": 106.73,
+    "q3_planned": 138.75,
+    "q1_cscop_actual": 35.94,
+    "q1_cscop_planned": 30.66,
+    "q2_cscop_actual": 55.13,
+    "q2_cscop_planned": 85.43,
     "q3_cscop_actual": 0.0,
-    "q3_cscop_planned": 36.7,
-    "q1_non_cscop_actual": 145.11,
-    "q1_non_cscop_planned": 118.54,
-    "q2_non_cscop_actual": 164.78,
-    "q2_non_cscop_planned": 176.38,
+    "q3_cscop_planned": 36.19,
+    "q1_non_cscop_actual": 111.8,
+    "q1_non_cscop_planned": 105.35,
+    "q2_non_cscop_actual": 140.09,
+    "q2_non_cscop_planned": 136.41,
     "q3_non_cscop_actual": 0.0,
-    "q3_non_cscop_planned": 139.58
+    "q3_non_cscop_planned": 102.57
   },
   "resources": [
     {
@@ -256,7 +255,7 @@
     {
       "name": "Jenny Qian",
       "space": "Operation",
-      "group": "Operation Resource",
+      "group": "Other Softtek",
       "q1_actual": 59.88,
       "q1_planned": 39.17,
       "q1_cscop_actual": 26.56,

@@ -11,7 +11,7 @@ React dashboard for validating Softtek planned effort, actual timesheets and Q3 
 - Cohort: 13 Softtek people after excluding Echo Fang and Ayla Hou from the reporting scope
 - Exclusion: Yola Liang also remains excluded because the person has one zero-hour planning record
 - Dedicated QA: Daisy Tang, Mengyi Zhou, Harry Shi and Jade Zhang
-- Operation Resources: Operation team excluding Nick Han, Ryan Xu and Jacky Zhong
+- Operation Resources: Jiarui Yang, Liv Cao, Lucy Cao and Ruby Yang; Jenny Qian remains in overall detail only
 - Governance split: formal projects with a `CSCOP-` project ID vs Non-CSCOP effort
 - Conversion: 1 MD = 8 hours
 - Capacity benchmark: 13 people x 20 working days x 3 months = 780 gross MD per quarter
