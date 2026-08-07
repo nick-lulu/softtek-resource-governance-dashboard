@@ -201,51 +201,6 @@ function App() {
         <div className="governance-band"><strong>Non-CSCOP:</strong><span>Q1 {formatMd(nonCscopTotals.q1_actual)} / {formatMd(nonCscopTotals.q1_planned)} MD</span><span>Q2 {formatMd(nonCscopTotals.q2_actual)} / {formatMd(nonCscopTotals.q2_planned)} MD</span><span>Q3 forecast {formatMd(nonCscopTotals.q3_planned)} MD</span></div>
       </section>
 
-      <section className="panel annual-operations-panel">
-        <div className="panel-title">
-          <h2>FY26 Incident / Problem / Change Baseline</h2>
-          <span className="unit">Named roles · Non-CSCOP</span>
-        </div>
-        <div className="annual-summary">
-          <div><span>FY26 Annual Demand</span><strong>{formatMd(annualOperations.annual_total_md, 2)} MD</strong></div>
-          {["Q1", "Q2", "Q3", "Q4"].map((quarter) => (
-            <div key={quarter}><span>{quarter} Allocated Plan</span><strong>{formatMd(annualOperations.quarter_totals[quarter], 2)} MD</strong></div>
-          ))}
-        </div>
-        <p className="allocation-note">Annual demand is distributed evenly across Lulu FY26 quarters because no monthly seasonality was provided. A 0.01 MD rounding balance keeps every quarterly and annual total reconciled. These amounts are included in each quarter's Non-CSCOP planned MD.</p>
-        <div className="annual-detail-grid">
-          <div className="table-wrap compact-table">
-            <table>
-              <thead><tr><th>Work Type</th><th>FY26</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr></thead>
-              <tbody>
-                {annualOperations.categories.map((row) => (
-                  <tr key={row.work_type}>
-                    <td><strong>{row.work_type}</strong></td>
-                    <td>{formatMd(row.annual_md, 2)} MD</td>
-                    {["Q1", "Q2", "Q3", "Q4"].map((quarter) => <td key={quarter}>{formatMd(row.quarter_md[quarter], 2)} MD</td>)}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <div className="table-wrap compact-table">
-            <table>
-              <thead><tr><th>Role</th><th>Resource</th><th>FY26</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr></thead>
-              <tbody>
-                {annualOperations.resources.map((row) => (
-                  <tr key={row.name}>
-                    <td>{row.role}</td>
-                    <td><strong>{row.name}</strong></td>
-                    <td>{formatMd(row.annual_md, 2)} MD</td>
-                    {["Q1", "Q2", "Q3", "Q4"].map((quarter) => <td key={quarter}>{formatMd(row.quarter_md[quarter], 2)} MD</td>)}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
       <section className="summary-grid">
         <article className="panel chart-panel">
           <div className="panel-title"><h2>Quarter View</h2><span className="unit">MD</span></div>
