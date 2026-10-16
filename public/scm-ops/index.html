@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SCM Ops Resource & Settlement</title><style>
+:root{font-family:Aptos,'Segoe UI','Microsoft YaHei',Arial,sans-serif;color:#202833;background:#f5f5f5;font-synthesis:none}*{box-sizing:border-box}body{margin:0}main{max-width:1400px;margin:auto;padding:32px 24px 40px}h1,h2,p{margin:0}h1{font-size:32px;line-height:1.2}h2{font-size:16px}button,input,select{font:inherit}button{cursor:pointer}header{display:flex;justify-content:space-between;gap:20px;margin-bottom:22px}.eyebrow{font-size:11px;color:#397169;font-weight:700;margin-bottom:8px}.subtitle{font-size:14px;color:#657180;margin-top:9px;line-height:1.6}.actions{display:flex;align-items:start;gap:10px;flex-shrink:0}.btn{border:1px solid #c9ced4;background:#fff;color:#303a46;border-radius:4px;padding:9px 13px;font-size:12px}.tabs{display:flex;background:#f2f3f4;border:1px solid #cfd4d9;padding:2px;border-radius:4px;gap:2px}.tabs button{border:0;background:transparent;padding:7px 13px;color:#68727d;font-size:12px;border-radius:2px}.tabs button.active{background:#35404c;color:white}.kpis{display:grid;grid-template-columns:repeat(4,1fr);background:white;border:1px solid #d6dadd;border-radius:4px;margin-bottom:16px}.kpi{padding:20px 22px;border-right:1px solid #e0e3e6}.kpi:last-child{border:0}.kpi label{font-size:11px;color:#687381;font-weight:700}.kpi strong{display:block;font-size:29px;margin:20px 0 9px;font-variant-numeric:tabular-nums}.kpi small{font-size:12px;color:#6f7985}.negative{color:#9b4848!important}.positive{color:#467268!important}.grid{display:grid;grid-template-columns:0.95fr 1.05fr;gap:16px;margin-bottom:16px}.panel{background:#fff;border:1px solid #d6dadd;border-radius:4px;margin-bottom:16px;min-width:0}.grid>.panel{margin:0}.title{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 18px;border-bottom:1px solid #e1e4e7;min-height:56px}.unit{font-size:12px;color:#737d88}.insights{padding:18px;display:grid;gap:19px}.insights article{border-left:2px solid #a9b2b9;padding-left:13px}.insights b{font-size:14px}.insights p{font-size:13px;color:#687381;line-height:1.65;margin-top:5px}.badge{font-size:12px;color:#687381}.badge:before{content:'';display:inline-block;width:7px;height:7px;background:#b85b5b;border-radius:50%;margin-right:7px}.chart{padding:18px}.barrow{display:grid;grid-template-columns:124px 1fr 64px;align-items:center;gap:12px;font-size:12px;margin:12px 0}.track{height:15px;background:#f1f3f4;display:flex}.bar{background:#687f78;height:100%;min-width:1px}.bar.red{background:#b66e68}.legend{display:flex;gap:20px;color:#737d88;font-size:11px;margin-top:18px}.legend i{display:inline-block;width:8px;height:8px;margin-right:5px;background:#687f78}.legend i.red{background:#b66e68}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;white-space:nowrap}th,td{padding:12px 14px;border-bottom:1px solid #e3e6e8;text-align:right;font-size:13px;font-variant-numeric:tabular-nums}th{background:#f6f7f8;font-size:11px;color:#4d5864;font-weight:700}td:first-child,th:first-child{text-align:left}td strong{display:block;color:#202833;font-weight:600}td small{display:block;font-size:11px;color:#7a848f;margin-top:4px}tbody tr:hover{background:#fafbfb}tfoot td{font-weight:700;background:#fafafa}td.left,th.left{text-align:left}.link{border:0;padding:0;background:transparent;color:#397169;text-align:left;font-weight:600}.link:hover{text-decoration:underline}.selected{background:#eef4f2!important}.band{padding:13px 18px;font-size:12px;color:#657180;line-height:1.7;border-top:1px solid #e5e7eb}.summary{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #e5e7eb}.summary>div{padding:16px;border-right:1px solid #e5e7eb}.summary label{display:block;font-size:11px;color:#6c7682}.summary strong{display:block;margin:10px 0 6px;font-size:21px}.summary small{font-size:11px;color:#747e89}.controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap}select,input{border:1px solid #cfd4d9;background:#fff;border-radius:3px;padding:7px 9px;font-size:12px;color:#4d5864}input{width:210px}.matrix td,.matrix th{padding:10px;font-size:11px}.matrix .heat{background:rgba(102,128,120,var(--a));color:#273c35}.project-name{max-width:290px;white-space:normal;font-size:12px}.pill{font-size:11px;border-left:2px solid #a7adb3;padding-left:7px;color:#69737d}footer{padding:14px 16px;border:1px solid #d6dadd;border-radius:4px;background:#fff;font-size:12px;color:#737d88;line-height:1.7}details{font-size:12px;line-height:1.8;color:#687381}summary{cursor:pointer;font-weight:600;color:#4d5864}details p{margin-top:10px}.hidden{display:none!important}.empty{text-align:center;padding:30px;color:#7a848f}.hint{padding:12px 18px;font-size:12px;color:#687381}section{scroll-margin-top:15px}button:focus-visible,a:focus-visible{outline:2px solid #397169;outline-offset:3px}@media(max-width:1050px){header{flex-direction:column}.kpis{grid-template-columns:repeat(2,1fr)}.kpi{border-bottom:1px solid #e0e3e6}.grid{grid-template-columns:1fr}.summary{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){main{padding:20px 10px}h1{font-size:25px}.title{flex-wrap:wrap}.actions{flex-wrap:wrap}.kpi{padding:16px}.kpi strong{font-size:24px}.barrow{grid-template-columns:110px 1fr 55px}.tabs button{padding:7px 10px}}@media print{.actions,.controls,.tabs{display:none}main{max-width:none;padding:0}.panel{break-inside:avoid}.table-wrap{overflow:visible}body{background:white}}
+</style></head><body><main>
+<header><div><p class="eyebrow">LULULEMON · SCM OPS · FY26 RESOURCE GOVERNANCE</p><h1>SCM Ops Resource & Settlement</h1><p class="subtitle">Ops 哪些人员需要补结算，缺口有多少<br>September source · FY26 全年口径 · 单位：人天（MD）</p></div><div class="actions"><div class="tabs" id="nav"><button class="active" data-go="overview">Summary</button><button data-go="roles">Role gap</button><button data-go="unsettled">Unsettled</button></div><button class="btn" id="download">↓ 导出数据</button></div></header>
+<div id="overview" class="kpis"></div>
+<div class="grid"><section class="panel"><div class="title"><h2>Takeaway · 管理摘要</h2><span class="badge">结算缺口待处理</span></div><div class="insights" id="insights"></div></section><section class="panel"><div class="title"><h2>FY26 待补结算 · 人员 / 角色组</h2><span class="unit">应结算 − 合同结算 / MD</span></div><div class="chart" id="gapchart"></div></section></div>
+<section class="panel" id="roles"><div class="title"><h2>Ops 补结算清单</h2><div class="controls"><span class="unit">缺口为正；合同盈余为负</span><div class="tabs" id="roleScope"><button data-value="all">全部角色</button><button class="active" data-value="gap">需补结算</button></div></div></div><div class="table-wrap"><table><thead><tr><th>人员 / 合同角色</th><th>FY26 应结算</th><th>FY26 合同结算</th><th>Gap / MD</th><th>合同覆盖率</th><th class="left">当前判断</th></tr></thead><tbody id="roleRows"></tbody><tfoot id="roleTotal"></tfoot></table></div><div class="band">补结算 = FY26 应结算 − FY26 合同结算（正数）。多人角色组仅能确定组内合计，源表没有个人合同拆分，不能直接平分。Financial Specialist 的 190.61 MD 保留原表公式口径，人员引用差异待核对。合同盈余能否调剂需另行确认。</div></section>
+<section class="panel" id="unsettled"><div class="title"><h2>Unsettled projects · 未结算项目</h2><span class="unit">截图范围 · project view 第 3–29 行</span></div><div class="summary" id="projectSummary"></div><div class="title"><div class="controls"><input id="search" aria-label="搜索项目" placeholder="搜索项目编号 / 名称"><select id="type" aria-label="项目类型"><option value="all">全部类型</option><option>Project</option><option>Handover</option></select><select id="status" aria-label="项目状态"><option value="all">全部状态</option></select></div><span class="unit" id="filterCount"></span></div><div class="table-wrap" style="max-height:460px"><table><thead><tr><th>项目编号 / 名称</th><th class="left">类型</th><th class="left">状态</th><th>实际人天</th><th>含管理分摊</th><th>实际成本 / ¥</th><th class="left">全部投入人员 / MD</th></tr></thead><tbody id="projectRows"></tbody></table></div><div class="band">未结算范围由提供的截图确定，包含 Done、Not Start、Hold、Cancel 及状态空白记录；项目状态与结算状态分别展示。筛选同步更新本区汇总、下方个人投入汇总。</div></section>
+<section class="panel"><div class="title"><h2>未结算项目投入 · 按人员汇总</h2><span class="unit">Actual / MD</span></div><div id="peopleChart" class="chart"></div><div class="band">本区为截图项目中每个人已投入、尚待结算的人天。它与上方 FY26 全年合同缺口口径不同，不重复相加。项目筛选会同步更新本区。</div></section>
+<section class="panel"><div class="title"><h2>Source & methodology · 数据口径</h2><span class="unit">Sep workbook · 人员补结算版</span></div><div class="band"><details><summary>查看数据来源、计算方式与待核对项</summary><p>来源：团队UT and Cost 分析 Sep.xlsx。角色应结算：FY26 Resource view!L135:Q141；合同结算：AN135:AR141。项目及个人：project view!A3:AA29，逐条匹配用户截图。读取 Excel 已保存数值，未修改或重新计算源文件。</p><p>FY26 应结算区包含全年估算，因此不能与项目 Actual 或截至 9 月的历史投入直接相加。角色净缺口 = ΣFY26 应结算 − Σ合同结算；正缺口合计与盈余分别显示，未结算项目实际人天不再叠加到角色 gap。</p><p>项目实际人天取 G 列，含管理分摊取 M 列（源表系数 1.238）；成本分别取 H / N 列。个人实际人天取 R:AA，已核对个人明细合计 = 项目 G 列合计 = 40.09375 MD。管理分摊没有个人分配明细，不对个人进行推算。</p><p id="sourceIssue"></p><p>人员映射沿用源表角色分组：Ops Leader = Ryan；Ops PM = Jenny + Nick；Ops TL = Jiarui；Ops BA = Jacky；L1.5 leader = Lucy；L1.5 engineer = Ruby + Echo；Financial Specialist = Leah + Ayla。源表 Financial Specialist 的 Q141 公式实际引用 Ryan + Leah 的历史人天再加 120，与分组标签不一致；本版保留源表 338.06875 MD，待业务确认后调整。</p><p>源表 project view 的 O 列存在 #N/A，本看板不使用该匹配列。数值保留完整精度计算、显示两位小数，展示值相加可能有 0.01 的四舍五入差异。</p></details></div></section>
+<footer>SCM Ops Resource Governance · FY26 · 数据来源：团队UT and Cost 分析 Sep.xlsx · 1 MD = 8 hours · 人员补结算版</footer>
+</main><script id="source-data" type="application/json">{
+  "roles": [
+    {
+      "role": "Ops Leader",
+      "members": "Ryan Xu",
+      "due": 82.63,
+      "contract": 131.0231444878,
+      "gap": -48.393144487800015,
+      "dueParts": [
+        9.505350098926202,
+        12.394499999999999,
+        51.230599999999995,
+        9.700131863248462
+      ],
+      "contractParts": [
+        15.00325,
+        56.676894487800006,
+        59.342999999999996
+      ],
+      "sourceRow": 135,
+      "note": "合同签署人天多余结算人天，转移到有缺口的角色"
+    },
+    {
+      "role": "Ops PM",
+      "members": "Jenny Qian + Nick Han",
+      "due": 248,
+      "contract": 66.82158499282353,
+      "gap": 181.17841500717645,
+      "dueParts": [
+        105.648,
+        33.96601421701422,
+        21.48630015461038,
+        86.8
+      ],
+      "contractParts": [
+        47.5,
+        13.603584992823532,
+        5.718
+      ],
+      "sourceRow": 136,
+      "note": "- 未结算项目人天16.5\n- 项目预算被压缩\n- CCB工作未得到结算"
+    },
+    {
+      "role": "Ops TL",
+      "members": "Jiarui Yang",
+      "due": 203.7375,
+      "contract": 171.07664594545884,
+      "gap": 32.660854054541176,
+      "dueParts": [
+        45.0259875,
+        78.43893750000001,
+        80.4763125,
+        0
+      ],
+      "contractParts": [
+        33.5,
+        117.32664594545882,
+        20.25
+      ],
+      "sourceRow": 137,
+      "note": "- 未结算项目人天7.44"
+    },
+    {
+      "role": "Ops BA",
+      "members": "Jacky Zhong",
+      "due": 224.3125,
+      "contract": 197.23964594545882,
+      "gap": 27.07285405454118,
+      "dueParts": [
+        23.743298731159317,
+        117.02054374642805,
+        82.79319103008152,
+        0
+      ],
+      "contractParts": [
+        19.493000000000002,
+        136.49664594545882,
+        41.25
+      ],
+      "sourceRow": 138,
+      "note": "- 未结算项目人天8.56"
+    },
+    {
+      "role": "L1.5 leader",
+      "members": "Lucy Cao",
+      "due": 231.405,
+      "contract": 234.01504044345452,
+      "gap": -2.6100404434545226,
+      "dueParts": [
+        36.93574897798119,
+        7.776389622085488,
+        185.818215,
+        0
+      ],
+      "contractParts": [
+        25.0905,
+        82.97254044345455,
+        125.952
+      ],
+      "sourceRow": 139,
+      "note": "合同签署人天多余结算人天，转移到有缺口的角色"
+    },
+    {
+      "role": "L1.5 engineer",
+      "members": "Ruby Yang + Echo Fang",
+      "due": 370,
+      "contract": 423.7246444878,
+      "gap": -53.72464448779999,
+      "dueParts": [
+        0,
+        7.4,
+        362.59999999999997,
+        0
+      ],
+      "contractParts": [
+        0.5,
+        129.0596444878,
+        294.165
+      ],
+      "sourceRow": 140,
+      "note": "合同签署人天多余结算人天，转移到有缺口的角色"
+    },
+    {
+      "role": "Financial Specialist",
+      "members": "Leah Li + Ayla Hou",
+      "due": 338.06875,
+      "contract": 147.45400000000004,
+      "gap": 190.61475,
+      "dueParts": [
+        150.26530985563073,
+        0,
+        21.2760503548573,
+        166.527389789512
+      ],
+      "contractParts": [
+        19.443,
+        112.27900000000001,
+        15.732
+      ],
+      "sourceRow": 141,
+      "note": "- 未结算项目人天6.41\n- CCB 工作未得到结算"
+    }
+  ],
+  "projects": [
+    {
+      "id": "CSCOP-881",
+      "name": "CR : APS Report",
+      "type": "Handover",
+      "status": "Done",
+      "actual": 1.5,
+      "managed": 1.857,
+      "cost": 3787.5,
+      "managedCost": 4688.925,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0.0625,
+        "Ayla Hou": 0.09375,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0.4375,
+        "Jenny Qian": 0.25,
+        "Leah Li": 0.65625,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 3
+    },
+    {
+      "id": "CSCOP-904",
+      "name": "Store Clustering CN Automation",
+      "type": "Handover",
+      "status": "Done",
+      "actual": 1.34375,
+      "managed": 1.6635625,
+      "cost": 2825,
+      "managedCost": 3497.35,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0.90625,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0,
+        "Jenny Qian": 0.375,
+        "Leah Li": 0.0625,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 4
+    },
+    {
+      "id": "CSCOP-1007",
+      "name": "Demand Factors PBI enhancement",
+      "type": "Handover",
+      "status": "Done",
+      "actual": 0.75,
+      "managed": 0.9285,
+      "cost": 2475,
+      "managedCost": 3064.05,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0.6875,
+        "Jenny Qian": 0,
+        "Leah Li": 0,
+        "Lucy Cao": 0.0625,
+        "Nick Han": 0
+      },
+      "sourceRow": 5
+    },
+    {
+      "id": "CSCOP-965 - OF-2576",
+      "name": "3rd DC: Inbound Release - Price Data Integration",
+      "type": "Handover",
+      "status": "Done",
+      "actual": 0.75,
+      "managed": 0.9285,
+      "cost": 1537.5,
+      "managedCost": 1903.425,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0.1875,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0,
+        "Jenny Qian": 0.1875,
+        "Leah Li": 0.375,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 6
+    },
+    {
+      "id": "CSCOP-1010",
+      "name": "[MDM] Timestamp & Dummy Indicator",
+      "type": "Handover",
+      "status": "Done",
+      "actual": 0.6875,
+      "managed": 0.851125,
+      "cost": 2262.5,
+      "managedCost": 2800.975,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0.25,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0.375,
+        "Jenny Qian": 0,
+        "Leah Li": 0,
+        "Lucy Cao": 0.0625,
+        "Nick Han": 0
+      },
+      "sourceRow": 7
+    },
+    {
+      "id": "CSCOP-1017",
+      "name": "Store to Home | Express Delivery",
+      "type": "Handover",
+      "status": "Not Start",
+      "actual": 1.15625,
+      "managed": 1.4314375,
+      "cost": 1106.25,
+      "managedCost": 1369.5375,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0,
+        "Jenny Qian": 0.03125,
+        "Leah Li": 1.125,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 8
+    },
+    {
+      "id": "CSCOP-1023",
+      "name": "SSOT Output - CN SKU Attribute",
+      "type": "Handover",
+      "status": "Not Start",
+      "actual": 0.96875,
+      "managed": 1.1993125,
+      "cost": 1343.75,
+      "managedCost": 1663.5625,
+      "people": {
+        "Ruby Yang": 0.125,
+        "Jiarui Yang": 0.21875,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0.125,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0.3125,
+        "Jenny Qian": 0,
+        "Leah Li": 0.1875,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 9
+    },
+    {
+      "id": "CSCOP-981",
+      "name": "Regional Organization Accuracy in Store Portal",
+      "type": "Handover",
+      "status": "Done",
+      "actual": 0.59375,
+      "managed": 0.7350625,
+      "cost": 1943.75,
+      "managedCost": 2406.3625,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0.21875,
+        "Jenny Qian": 0.3125,
+        "Leah Li": 0,
+        "Lucy Cao": 0.0625,
+        "Nick Han": 0
+      },
+      "sourceRow": 10
+    },
+    {
+      "id": "CSCOP-1011",
+      "name": "[MDM] Product Sibling",
+      "type": "Handover",
+      "status": "Done",
+      "actual": 0.53125,
+      "managed": 0.6576875,
+      "cost": 1806.25,
+      "managedCost": 2236.1375,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0.25,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0.28125,
+        "Jenny Qian": 0,
+        "Leah Li": 0,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 11
+    },
+    {
+      "id": "CSCOP-878",
+      "name": "Store to Store Rebalance - Inner Region Pilot",
+      "type": "Handover",
+      "status": "未填写",
+      "actual": 0.5,
+      "managed": 0.619,
+      "cost": 1625,
+      "managedCost": 2011.75,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0,
+        "Jenny Qian": 0.4375,
+        "Leah Li": 0,
+        "Lucy Cao": 0.0625,
+        "Nick Han": 0
+      },
+      "sourceRow": 12
+    },
+    {
+      "id": "CSCOP-908",
+      "name": "Enhancement CR Q1 - AP WMP backend data",
+      "type": "Handover",
+      "status": "In process",
+      "actual": 0.75,
+      "managed": 0.9285,
+      "cost": 800,
+      "managedCost": 990.4,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0.125,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0.25,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0.125,
+        "Jenny Qian": 0,
+        "Leah Li": 0.25,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 13
+    },
+    {
+      "id": "CSCOP-926",
+      "name": "Inventory Efficiency Tool： inventory segmentation enhancement",
+      "type": "Handover",
+      "status": "未填写",
+      "actual": 0.375,
+      "managed": 0.46425,
+      "cost": 1275,
+      "managedCost": 1578.45,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0,
+        "Jenny Qian": 0.375,
+        "Leah Li": 0,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 14
+    },
+    {
+      "id": "CSCOP-946",
+      "name": "SFS | Omni Booster for SFS Business Impact in Store Achievement",
+      "type": "Handover",
+      "status": "未填写",
+      "actual": 0.375,
+      "managed": 0.46425,
+      "cost": 1275,
+      "managedCost": 1578.45,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0,
+        "Jenny Qian": 0.375,
+        "Leah Li": 0,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 15
+    },
+    {
+      "id": "CSCOP-965 - OF-2513",
+      "name": "3rd DC - Location Address Integration Support",
+      "type": "Handover",
+      "status": "Done",
+      "actual": 0.375,
+      "managed": 0.46425,
+      "cost": 1275,
+      "managedCost": 1578.45,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0,
+        "Jenny Qian": 0.375,
+        "Leah Li": 0,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 16
+    },
+    {
+      "id": "CSCOP-944",
+      "name": "Keystone Rollout 2 - Impact Analysis",
+      "type": "Handover",
+      "status": "Not Start",
+      "actual": 0.6875,
+      "managed": 0.851125,
+      "cost": 837.5,
+      "managedCost": 1036.825,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0.125,
+        "Jenny Qian": 0.0625,
+        "Leah Li": 0.5,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 17
+    },
+    {
+      "id": "CSCOP-961",
+      "name": "UCS - Inventory for Product Sibling ",
+      "type": "Handover",
+      "status": "Done",
+      "actual": 0.28125,
+      "managed": 0.3481875,
+      "cost": 787.5,
+      "managedCost": 974.925,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0.09375,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0,
+        "Jenny Qian": 0.1875,
+        "Leah Li": 0,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 18
+    },
+    {
+      "id": "CSCOP-683 - CDM-3375",
+      "name": "Helios - Location Data Integration",
+      "type": "Handover",
+      "status": "未填写",
+      "actual": 0.25,
+      "managed": 0.3095,
+      "cost": 850,
+      "managedCost": 1052.3,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0,
+        "Jenny Qian": 0.25,
+        "Leah Li": 0,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 19
+    },
+    {
+      "id": "CSCOP-917",
+      "name": "Monthly Store Sales Report Preparation",
+      "type": "Handover",
+      "status": "Not Start",
+      "actual": 0.875,
+      "managed": 1.08325,
+      "cost": 400,
+      "managedCost": 495.2,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0.25,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0,
+        "Jenny Qian": 0,
+        "Leah Li": 0.5625,
+        "Lucy Cao": 0.0625,
+        "Nick Han": 0
+      },
+      "sourceRow": 20
+    },
+    {
+      "id": "CSCOP-965 - OF-2510",
+      "name": "3rd DC - PDC/VDC Location Data Regression Support",
+      "type": "Handover",
+      "status": "Done",
+      "actual": 0.25,
+      "managed": 0.3095,
+      "cost": 850,
+      "managedCost": 1052.3,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0,
+        "Jenny Qian": 0.25,
+        "Leah Li": 0,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 21
+    },
+    {
+      "id": "CSCOP-993",
+      "name": "GEC Portal - Share Service Portal Integration",
+      "type": "Handover",
+      "status": "Done",
+      "actual": 0.25,
+      "managed": 0.3095,
+      "cost": 850,
+      "managedCost": 1052.3,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0,
+        "Jenny Qian": 0.25,
+        "Leah Li": 0,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 22
+    },
+    {
+      "id": "CSCOP-965 - OF-2512",
+      "name": "3rd DC - WWMT Kafka Integration Support",
+      "type": "Handover",
+      "status": "Done",
+      "actual": 0.21875,
+      "managed": 0.2708125,
+      "cost": 743.75,
+      "managedCost": 920.7625,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0,
+        "Jenny Qian": 0.21875,
+        "Leah Li": 0,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 23
+    },
+    {
+      "id": "CSCOP-965 - OF-2511",
+      "name": "3rd DC - MDM-Store Product LWH data from WMS",
+      "type": "Handover",
+      "status": "Done",
+      "actual": 0.1875,
+      "managed": 0.232125,
+      "cost": 637.5,
+      "managedCost": 789.225,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0,
+        "Jenny Qian": 0.1875,
+        "Leah Li": 0,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 24
+    },
+    {
+      "id": "CSCOP-909",
+      "name": "Educator training optimization - E Learning",
+      "type": "Handover",
+      "status": "Not Start",
+      "actual": 1.125,
+      "managed": 1.39275,
+      "cost": 318.75,
+      "managedCost": 394.6125,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0.25,
+        "Ryan Xu": 0,
+        "Ayla Hou": 0.375,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0,
+        "Jenny Qian": 0.09375,
+        "Leah Li": 0.40625,
+        "Lucy Cao": 0,
+        "Nick Han": 0
+      },
+      "sourceRow": 25
+    },
+    {
+      "id": "CSCOP-953",
+      "name": "Helios embedded XXL JOB update",
+      "type": "Project",
+      "status": "Hold",
+      "actual": 11.40625,
+      "managed": 14.1209375,
+      "cost": 38931.25,
+      "managedCost": 48196.8875,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 0.28125,
+        "Ryan Xu": 0.3125,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 2.53125,
+        "Jenny Qian": 3,
+        "Leah Li": 0,
+        "Lucy Cao": 0.03125,
+        "Nick Han": 5.25
+      },
+      "sourceRow": 26
+    },
+    {
+      "id": "CSCOP-958",
+      "name": "Reduce the usage cost of ACK",
+      "type": "Project",
+      "status": "Cancel",
+      "actual": 6.03125,
+      "managed": 7.4666875,
+      "cost": 20468.75,
+      "managedCost": 25340.3125,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 1.875,
+        "Ryan Xu": 0.0625,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 2.5625,
+        "Jenny Qian": 1.46875,
+        "Leah Li": 0,
+        "Lucy Cao": 0.0625,
+        "Nick Han": 0
+      },
+      "sourceRow": 27
+    },
+    {
+      "id": "CSCOP-1061",
+      "name": "Corporate Solution - DR Discovery",
+      "type": "Project",
+      "status": "Hold",
+      "actual": 4.3125,
+      "managed": 5.338875,
+      "cost": 14700,
+      "managedCost": 18198.6,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 2.4375,
+        "Ryan Xu": 0.0625,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0.5625,
+        "Jenny Qian": 0,
+        "Leah Li": 0,
+        "Lucy Cao": 0,
+        "Nick Han": 1.25
+      },
+      "sourceRow": 28
+    },
+    {
+      "id": "CSCOP-979",
+      "name": "IAM Cleanup",
+      "type": "Project",
+      "status": "Cancel",
+      "actual": 3.5625,
+      "managed": 4.410375,
+      "cost": 12168.75,
+      "managedCost": 15064.9125,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 1.75,
+        "Ryan Xu": 0.15625,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0.34375,
+        "Jenny Qian": 1.28125,
+        "Leah Li": 0,
+        "Lucy Cao": 0.03125,
+        "Nick Han": 0
+      },
+      "sourceRow": 29
+    }
+  ],
+  "source": "团队UT and Cost 分析 Sep.xlsx",
+  "people": [
+    "Ruby Yang",
+    "Jiarui Yang",
+    "Ryan Xu",
+    "Ayla Hou",
+    "Echo Fang",
+    "Jacky Zhong",
+    "Jenny Qian",
+    "Leah Li",
+    "Lucy Cao",
+    "Nick Han"
+  ]
+}</script><script>
+const D=JSON.parse(document.getElementById('source-data').textContent),$=id=>document.getElementById(id),fmt=n=>n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}),sum=(a,k)=>a.reduce((s,r)=>s+(typeof k==='function'?k(r):r[k]),0),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const due=sum(D.roles,'due'),contract=sum(D.roles,'contract'),gap=due-contract,gross=sum(D.roles,r=>Math.max(r.gap,0)),surplus=sum(D.roles,r=>Math.max(-r.gap,0));
+let roleFilter='gap';
+$('overview').innerHTML=[['FY26 应结算人天',due,'7 个角色 · 含全年估算'],['FY26 合同结算人天',contract,`合同覆盖率 ${fmt(contract/due*100)}%`],['需补结算人天（4 组）',gross,`合同盈余 ${fmt(surplus)} MD；净缺口 ${fmt(gap)} MD`],['未结算项目实际人天',sum(D.projects,'actual'),'27 条记录 · 含管理分摊 '+fmt(sum(D.projects,'managed'))+' MD']].map((x,i)=>`<div class="kpi"><label>${x[0]}</label><strong class="${i===2?'negative':''}">${fmt(x[1])}<span style="font-size:13px;font-weight:400;color:#879099"> MD</span></strong><small>${x[2]}</small></div>`).join('');
+const ccb=sum(D.roles,r=>r.dueParts[3]);
+$('insights').innerHTML=`<article><b>优先补结算：Leah + Ayla、Jenny + Nick</b><p>Leah Li + Ayla Hou：${fmt(D.roles[6].gap)} MD（Financial Specialist，源表公式待核对）；Jenny Qian + Nick Han：${fmt(D.roles[1].gap)} MD（Ops PM）。两组缺口合计占正缺口的 ${fmt((D.roles[6].gap+D.roles[1].gap)/gross*100)}%。</p></article><article><b>另需补结算：Jiarui ${fmt(D.roles[2].gap)}、Jacky ${fmt(D.roles[3].gap)} MD</b><p>四组正缺口合计 ${fmt(gross)} MD。Ryan、Lucy、Ruby + Echo 所属角色暂无正缺口，合同盈余共 ${fmt(surplus)} MD；扣除盈余后的净缺口为 ${fmt(gap)} MD。</p></article><article><b>截图内未结算项目：实际投入 ${fmt(sum(D.projects,'actual'))} MD</b><p>按人员完整核对后，Jenny ${fmt(sum(D.projects,p=>p.people['Jenny Qian']))}、Jacky ${fmt(sum(D.projects,p=>p.people['Jacky Zhong']))}、Jiarui ${fmt(sum(D.projects,p=>p.people['Jiarui Yang']))}、Nick ${fmt(sum(D.projects,p=>p.people['Nick Han']))} MD 投入最多。此口径不再加到全年缺口。</p></article>`;
+const pending=[...D.roles].filter(r=>r.gap>0).sort((a,b)=>b.gap-a.gap),maxGap=pending[0].gap;
+$('gapchart').innerHTML=pending.map(r=>`<div class="barrow" style="grid-template-columns:minmax(140px,1fr) minmax(90px,1fr) 64px"><span>${esc(r.members)}<small style="display:block;color:#7a848f;margin-top:3px">${esc(r.role)}${r.members.includes('+')?' · 组内合计':''}</small></span><div class="track"><div class="bar red" style="width:${r.gap/maxGap*100}%"></div></div><b class="negative" style="text-align:right">${fmt(r.gap)}</b></div>`).join('')+'<div class="band">多人角色组需补的是组内合计；个人拆分待合同明细确认。Financial Specialist 数值待核对源表公式。</div>';
+function renderRoles(){const rs=D.roles.filter(r=>roleFilter==='all'||r.gap>0).sort((a,b)=>b.gap-a.gap);$('roleRows').innerHTML=rs.map(r=>`<tr><td><strong>${esc(r.members)}</strong><small>${esc(r.role)}${r.members.includes('+')?' · 组内合计':''}</small></td><td>${fmt(r.due)}</td><td>${fmt(r.contract)}</td><td class="${r.gap>0?'negative':'positive'}">${r.gap>0?'+':''}${fmt(r.gap)}</td><td>${fmt(r.contract/r.due*100)}%</td><td class="left">${r.gap>0?(r.role==='Financial Specialist'?'待补结算 · 源表公式待核对':r.members.includes('+')?'待补结算 · 个人拆分待确认':'待补结算'):'暂无正缺口 · 合同有盈余'}</td></tr>`).join('');const d=sum(rs,'due'),c=sum(rs,'contract');$('roleTotal').innerHTML=`<tr><td>${roleFilter==='all'?'全部角色净额':'需补结算合计'}</td><td>${fmt(d)}</td><td>${fmt(c)}</td><td class="negative">+${fmt(d-c)}</td><td>${fmt(c/d*100)}%</td><td></td></tr>`}
+document.querySelectorAll('#roleScope button').forEach(b=>b.onclick=()=>{roleFilter=b.dataset.value;document.querySelectorAll('#roleScope button').forEach(x=>x.classList.toggle('active',x===b));renderRoles()});
+function filtered(){const q=$('search').value.toLowerCase();return D.projects.filter(p=>(p.id+' '+p.name).toLowerCase().includes(q)&&($('type').value==='all'||p.type===$('type').value)&&($('status').value==='all'||p.status===$('status').value))}
+function renderProjects(){const ps=filtered(),a=sum(ps,'actual');$('filterCount').textContent=`${ps.length} / ${D.projects.length} 条记录`;$('projectSummary').innerHTML=[['实际投入',fmt(a)+' MD','个人明细可完全核对'],['含管理分摊',fmt(sum(ps,'managed'))+' MD','管理分摊 '+fmt(sum(ps,'managed')-a)+' MD'],['实际成本','¥ '+fmt(sum(ps,'cost')),'含管理成本 ¥ '+fmt(sum(ps,'managedCost'))],['项目类型',`${ps.filter(p=>p.type==='Project').length} Project / ${ps.filter(p=>p.type==='Handover').length} Handover`,'按当前筛选范围汇总']].map(x=>`<div><label>${x[0]}</label><strong>${x[1]}</strong><small>${x[2]}</small></div>`).join('');$('projectRows').innerHTML=ps.map(p=>`<tr><td><strong>${esc(p.id)}</strong><small class="project-name">${esc(p.name)}</small></td><td class="left">${p.type}</td><td class="left"><span class="pill">${esc(p.status)}</span></td><td>${fmt(p.actual)}</td><td>${fmt(p.managed)}</td><td>${fmt(p.cost)}</td><td class="left" style="white-space:normal;min-width:240px;max-width:420px;line-height:1.9">${Object.entries(p.people).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]).map(x=>`${esc(x[0])} ${fmt(x[1])}`).join(' / ')}</td></tr>`).join('')||'<tr><td colspan="7" class="empty">没有匹配的项目</td></tr>';const people=D.people.map(name=>({name,total:sum(ps,p=>p.people[name])})).sort((a,b)=>b.total-a.total),max=people[0].total||1;$('peopleChart').innerHTML=people.map(p=>`<div class="barrow"><span>${esc(p.name)}</span><div class="track"><div class="bar" style="width:${p.total/max*100}%;min-width:0"></div></div><b style="text-align:right">${fmt(p.total)}</b></div>`).join('')+'<div class="band">当前范围合计：'+fmt(a)+' MD</div>'}
+Array.from(new Set(D.projects.map(p=>p.status))).forEach(s=>{const o=document.createElement('option');o.textContent=s;$('status').append(o)});['search','type','status'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',renderProjects));
+$('sourceIssue').textContent=`源表分维度合计为 ${fmt(sum(D.roles,r=>sum(r.dueParts,x=>x)))} MD，与 Q135:Q141 全年合计 ${fmt(due)} MD 相差 ${fmt(sum(D.roles,r=>sum(r.dueParts,x=>x))-due)} MD。原表分配比例未全部归一，本版保留原值；角色 gap 统一使用 Q 列 FY26 总计。`;
+document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('active',x===b));$(b.dataset.go).scrollIntoView({behavior:'smooth'})});
+$('download').onclick=()=>{const rows=[['Role','Members','FY26 due MD','FY26 contract MD','Gap MD'],...D.roles.map(r=>[r.role,r.members,r.due,r.contract,r.gap]),[],['Project','Name','Type','Status','Actual MD','Including management MD','Actual cost CNY',...D.people],...filtered().map(p=>[p.id,p.name,p.type,p.status,p.actual,p.managed,p.cost,...D.people.map(n=>p.people[n])])];const csv='\uFEFF'+rows.map(r=>r.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\r\n'),url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='SCM_Ops_FY26_Settlement.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+renderRoles();renderProjects();
+</script></body></html>
+
