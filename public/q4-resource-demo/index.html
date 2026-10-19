@@ -1,37 +1,1686 @@
-<!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Q4 Resource Planning · Template Demo</title><style>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>MP&A · Hong Min Resource Planning</title><style>
 :root{font-family:Aptos,'Segoe UI','Microsoft YaHei',Arial,sans-serif;color:#202833;background:#f5f5f5;font-synthesis:none}*{box-sizing:border-box}body{margin:0}main{max-width:1400px;margin:auto;padding:32px 24px 44px}h1,h2,p{margin:0}h1{font-size:32px;line-height:1.2}h2{font-size:16px}button,input,select{font:inherit}button{cursor:pointer}.hero{display:flex;justify-content:space-between;align-items:start;gap:24px;margin-bottom:20px}.eyebrow{color:#397169;font-size:11px;font-weight:700;margin-bottom:8px}.subtitle{font-size:14px;color:#657180;margin-top:10px;line-height:1.6}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:1px solid #c9ced4;border-radius:4px;background:#fff;padding:9px 13px;color:#303a46;font-size:12px}.demo{background:#fcf8ef;border:1px solid #dfd3b9;border-radius:4px;padding:12px 16px;color:#765f3d;font-size:12px;line-height:1.7;margin-bottom:16px}.demo strong{font-weight:700}.kpis{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #d6dadd;border-radius:4px;background:white;margin-bottom:16px}.kpi{padding:20px 22px;border-right:1px solid #e0e3e6}.kpi:last-child{border:0}.kpi label{font-size:11px;color:#687381;font-weight:700}.kpi strong{display:block;margin:20px 0 9px;font-size:28px;font-variant-numeric:tabular-nums}.kpi span{font-size:13px;font-weight:400;color:#73808c}.kpi small{color:#6f7985;font-size:12px}.panel{background:#fff;border:1px solid #d6dadd;border-radius:4px;margin-bottom:16px;min-width:0}.title{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;min-height:56px;padding:14px 18px;border-bottom:1px solid #e1e4e7}.unit{font-size:12px;color:#737d88}.filters{display:flex;align-items:center;gap:9px;flex-wrap:wrap}input,select{border:1px solid #cfd4d9;background:white;border-radius:3px;padding:7px 10px;font-size:12px;color:#4d5864}input{width:200px}.tabs{display:flex;padding:2px;border:1px solid #cfd4d9;border-radius:4px;background:#f2f3f4}.tabs button{padding:6px 11px;font-size:12px;color:#68727d;border:0;background:transparent;border-radius:2px}.tabs button.active{background:#35404c;color:#fff}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;white-space:nowrap}th,td{padding:13px 16px;border-bottom:1px solid #e3e6e8;text-align:right;font-size:13px;font-variant-numeric:tabular-nums}th{background:#f6f7f8;font-size:11px;color:#4d5864;font-weight:700;text-align:right}td:first-child,th:first-child,td.left,th.left{text-align:left}td strong{display:block;font-weight:600}td small{display:block;margin-top:4px;font-size:11px;color:#7a848f}tbody tr:hover{background:#fafbfb}tbody tr.selected{background:#eef4f2}tfoot td{background:#fafafa;font-weight:700}.link{border:0;background:transparent;color:#397169;padding:0;text-align:left;font-weight:600}.link:hover{text-decoration:underline}.planned{color:#946e3e}.ongoing{color:#467268}.badge{border-left:2px solid #b6c4bd;padding-left:7px;color:#64716a;font-size:11px}.badge.tbd{border-color:#c5a778;color:#8d6c3e}.band{padding:12px 18px;font-size:12px;color:#687381;line-height:1.7}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.legend{display:flex;gap:16px;font-size:11px;color:#687381}.legend i{display:inline-block;width:8px;height:8px;background:#668078;margin-right:5px}.legend i.amber{background:#b69a70}.chart{padding:13px 18px 18px}.chartrow{display:grid;grid-template-columns:130px 1fr 75px;gap:12px;align-items:center;margin:14px 0;font-size:12px}.track{display:flex;background:#eff1f2;height:16px}.segment{height:100%;background:#668078}.segment.planned{background:#b69a70}.value{text-align:right;font-variant-numeric:tabular-nums}.detail-summary{display:flex;gap:30px;padding:16px 18px;border-bottom:1px solid #e1e4e7;flex-wrap:wrap}.detail-summary span{display:block;font-size:11px;color:#6c7682}.detail-summary strong{display:block;margin-top:7px;font-size:20px;font-variant-numeric:tabular-nums}.detail-summary small{font-size:11px;color:#747e89}.notes{display:grid;gap:16px;padding:18px}.notes article{border-left:2px solid #a9b2b9;padding-left:13px}.notes b{font-size:13px}.notes p{font-size:12px;color:#687381;margin-top:5px;line-height:1.7}.empty{text-align:center;color:#7a848f;padding:30px}.pill{display:inline-block;font-size:11px;padding:3px 7px;background:#edf3f0;color:#467268;border-radius:3px}.pill.planned{background:#f6f0e7;color:#946e3e}section{scroll-margin-top:16px}button:focus-visible{outline:2px solid #397169;outline-offset:3px}@media(max-width:1100px){.hero{flex-direction:column}.kpis{grid-template-columns:repeat(2,1fr)}.kpi:nth-child(-n+2){border-bottom:1px solid #e0e3e6}.kpi:nth-child(2){border-right:0}.grid{grid-template-columns:1fr}}@media(max-width:600px){main{padding:20px 10px}h1{font-size:25px}.kpi{padding:16px}.kpi strong{font-size:24px}.title{align-items:start}.filters{width:100%}input{width:100%}.chartrow{grid-template-columns:105px 1fr 65px}.tabs{flex-wrap:wrap}.detail-summary{gap:20px}.actions{width:100%}}@media print{.actions,.filters{display:none}main{padding:0}.panel{break-inside:avoid}body{background:white}.table-wrap{overflow:visible}}
-</style></head><body><main>
-<header class="hero"><div><p class="eyebrow">LULULEMON · DOMAIN RESOURCE PLANNING · TEMPLATE DEMO</p><h1>FY26 Q4 Resource Outlook</h1><p class="subtitle">MP&amp;A · 按 Resource 查看 Ongoing 剩余需求与 Planned 新增需求<br>Q4 = Nov 2026 – Jan 2027 · 1 MD = 8 hours</p></div><div class="actions"><button class="btn" id="goList">Resource list</button><button class="btn" id="export">↓ 导出示例数据</button></div></header>
-<div class="demo"><strong>DEMO · 模板确认版</strong>　全部人员代号、项目、安排状态和数字均为模拟示例，不代表实际资源承诺。Ongoing 也属于未来工作量预测；Planned 为候选新增需求。</div>
-<section class="kpis" id="kpis" aria-label="当前筛选范围需求汇总"></section>
-<section class="panel" id="resources"><div class="title"><div><h2>Resource List · 人员需求总览</h2><span class="unit">一人一行；未确定人选的资源位单列</span></div><div class="filters"><input id="search" aria-label="搜索资源" placeholder="搜索 Resource / Role"><select id="role" aria-label="筛选角色"><option value="all">全部角色</option><option>PM</option><option>BA</option><option>Architecture</option><option>Develop</option><option>QA</option></select></div></div>
-<div class="table-wrap"><table><thead><tr><th>Resource</th><th class="left">Role</th><th>Ongoing 剩余需求<small style="display:block;margin-top:4px">人天 / 小时</small></th><th>Planned 新增预估<small style="display:block;margin-top:4px">人天 / 小时</small></th><th>全部候选启动情景<small style="display:block;margin-top:4px">人天 / 小时</small></th><th class="left">资源安排</th></tr></thead><tbody id="resourceRows"></tbody><tfoot id="resourceTotal"></tfoot></table></div><div class="band">点击 Resource 查看项目与角色分配。合并角色的任务分别计量后汇总到本人；同一任务不重复计算。“全部候选启动情景”仅展示需求情景，不代表已确认安排。</div></section>
-<div class="grid"><section class="panel"><div class="title"><h2>Resource Demand · 每位资源投入</h2><div class="legend"><span><i></i>Ongoing</span><span><i class="amber"></i>Planned</span></div></div><div class="chart" id="chart"></div><div class="band">单位：MD · 按当前资源清单筛选范围汇总</div></section><section class="panel"><div class="title"><h2>Planning Read · 看板阅读方式</h2><span class="unit">先看人员，再追溯项目</span></div><div class="notes"><article><b>Ongoing：已启动项目的 Q4 剩余投入</b><p>按人员、角色和剩余工作量评估。排期和人员安排需单独确认。</p></article><article><b>Planned：尚未启动项目的 Q4 预估投入</b><p>列出拟安排角色、人员或待补位资源；估算变化后更新，不计为已锁定。</p></article><article><b>人天与小时使用同一份分配数据</b><p>小时由人天乘以 8 自动换算。资源是否足够，需要另与该人员 Q4 可用容量对比。</p></article></div></section></div>
-<section class="panel" id="detail"><div class="title"><h2 id="detailTitle">Resource A · 项目与角色来源</h2><div class="tabs" id="detailFilter"><button class="active" data-scope="all">全部来源</button><button data-scope="ongoing">Ongoing</button><button data-scope="planned">Planned</button></div></div><div id="detailSummary" class="detail-summary" aria-live="polite"></div><div class="table-wrap"><table><thead><tr><th>示例项目</th><th class="left">Q4 需求类别</th><th class="left">Role</th><th>Q4 人天</th><th>Q4 小时</th><th class="left">分配口径</th></tr></thead><tbody id="detailRows"></tbody></table></div></section>
-</main><script>
-const $=id=>document.getElementById(id),fmt=n=>n.toLocaleString('en-US',{maximumFractionDigits:2,minimumFractionDigits:1}),sum=(a,f)=>a.reduce((v,x)=>v+f(x),0),escape=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const allocations=[
-['Resource A','PM','ongoing','示例项目 · SSOT Enhancement',4],['Resource A','PM','ongoing','示例项目 · Price Portal',2],['Resource A','PM','planned','示例项目 · Image Integration',3],
-['Resource B','BA','ongoing','示例项目 · SSOT Enhancement',3],['Resource B','BA','planned','示例项目 · Image Integration',5],['Resource B','BA','planned','示例项目 · Data Governance',4],
-['Resource C','Architecture','ongoing','示例项目 · SSOT Enhancement',2],['Resource C','Architecture','ongoing','示例项目 · Price Portal',2],['Resource C','Architecture','planned','示例项目 · Image Integration',2],['Resource C','Architecture','planned','示例项目 · Data Governance',3],
-['Resource D','Develop','ongoing','示例项目 · SSOT Enhancement',2],['Resource D','Develop','planned','示例项目 · Image Integration',8],
-['Resource E','PM','ongoing','示例项目 · Price Portal',5],['Resource E','BA','ongoing','示例项目 · Price Portal',10],
-['Resource F','PM','planned','示例项目 · Image Integration',3],['Resource F','PM','planned','示例项目 · Data Governance',5],
-['TBD · QA','QA','ongoing','示例项目 · Price Portal',2],['TBD · QA','QA','planned','示例项目 · Image Integration',4]
-].map(([person,role,type,project,md])=>({person,role,type,project,md}));
-let person='Resource A',scope='all';
-function data(){const q=$('search').value.toLowerCase(),r=$('role').value;return allocations.filter(x=>(r==='all'||x.role===r)&&(x.person+' '+x.role).toLowerCase().includes(q))}
-function grouped(xs){return [...new Set(xs.map(x=>x.person))].map(name=>{const a=xs.filter(x=>x.person===name);return {name,roles:[...new Set(a.map(x=>x.role))].join(' / '),ongoing:sum(a,x=>x.type==='ongoing'?x.md:0),planned:sum(a,x=>x.type==='planned'?x.md:0)}})}
-function render(){const a=data(),rows=grouped(a),ongoing=sum(a,x=>x.type==='ongoing'?x.md:0),planned=sum(a,x=>x.type==='planned'?x.md:0);if(!rows.some(r=>r.name===person))person=rows[0]?.name||'';
-$('kpis').innerHTML=[['NAMED RESOURCES',rows.filter(r=>!r.name.startsWith('TBD')).length,'人',`${rows.filter(r=>r.name.startsWith('TBD')).length} 个待补位资源位`],['ONGOING · Q4 剩余投入',ongoing,'MD',fmt(ongoing*8)+' hours'],['PLANNED · 候选新增投入',planned,'MD',fmt(planned*8)+' hours'],['全部候选启动 · 需求情景',ongoing+planned,'MD',fmt((ongoing+planned)*8)+' hours · 非资源承诺']].map(x=>`<div class="kpi"><label>${x[0]}</label><strong>${fmt(x[1])} <span>${x[2]}</span></strong><small>${x[3]}</small></div>`).join('');
-$('resourceRows').innerHTML=rows.map(r=>`<tr class="${r.name===person?'selected':''}"><td><button class="link" data-person="${r.name}">${r.name}</button><small>${r.name.startsWith('TBD')?'未确定人选 · 资源位':'示例人员'}</small></td><td class="left">${r.roles}</td><td><strong class="ongoing">${fmt(r.ongoing)} MD</strong><small>${fmt(r.ongoing*8)} h</small></td><td><strong class="planned">${fmt(r.planned)} MD</strong><small>${fmt(r.planned*8)} h</small></td><td><strong>${fmt(r.ongoing+r.planned)} MD</strong><small>${fmt((r.ongoing+r.planned)*8)} h</small></td><td class="left"><span class="badge ${r.name.startsWith('TBD')?'tbd':''}">${r.name.startsWith('TBD')?'待补位':'拟安排 · 待确认'}</span></td></tr>`).join('')||'<tr><td colspan="6" class="empty">没有匹配的资源</td></tr>';
-$('resourceTotal').innerHTML=`<tr><td>当前范围合计</td><td></td><td>${fmt(ongoing)} MD<small>${fmt(ongoing*8)} h</small></td><td>${fmt(planned)} MD<small>${fmt(planned*8)} h</small></td><td>${fmt(ongoing+planned)} MD<small>${fmt((ongoing+planned)*8)} h</small></td><td></td></tr>`;
-const max=Math.max(1,...rows.map(r=>r.ongoing+r.planned));$('chart').innerHTML=[...rows].sort((a,b)=>(b.ongoing+b.planned)-(a.ongoing+a.planned)).map(r=>`<div class="chartrow"><span>${r.name}</span><div class="track"><div class="segment" style="width:${r.ongoing/max*100}%"></div><div class="segment planned" style="width:${r.planned/max*100}%"></div></div><span class="value">${fmt(r.ongoing+r.planned)} MD</span></div>`).join('')||'<p class="empty">暂无数据</p>';
-document.querySelectorAll('[data-person]').forEach(b=>b.onclick=()=>{person=b.dataset.person;render()});renderDetail()}
-function renderDetail(){const a=data().filter(x=>x.person===person&&(scope==='all'||scope===x.type)),total=sum(a,x=>x.md);$('detailTitle').textContent=person?person+' · 项目与角色来源':'项目与角色来源';$('detailSummary').innerHTML=`<div><span>所选资源 · 当前类别合计</span><strong>${fmt(total)} MD</strong></div><div><span>对应小时</span><strong>${fmt(total*8)} h</strong></div><div><span>计量口径</span><strong style="font-size:14px">Q4 剩余 / 新增工作量</strong><small>同一人的不同角色分别计量</small></div>`;$('detailRows').innerHTML=a.map(x=>`<tr><td>${x.project}</td><td class="left"><span class="pill ${x.type==='planned'?'planned':''}">${x.type==='planned'?'Planned · 未启动':'Ongoing · 已启动'}</span></td><td class="left">${x.role}</td><td>${fmt(x.md)}</td><td>${fmt(x.md*8)}</td><td class="left">${x.type==='planned'?'初步预估 · 模拟数据':'剩余工作量估算 · 模拟数据'}</td></tr>`).join('')||'<tr><td colspan="6" class="empty">当前类别无分配</td></tr>'}
-document.querySelectorAll('[data-scope]').forEach(b=>b.onclick=()=>{scope=b.dataset.scope;document.querySelectorAll('[data-scope]').forEach(x=>x.classList.toggle('active',x===b));renderDetail()});$('search').oninput=render;$('role').onchange=render;$('goList').onclick=()=>$('resources').scrollIntoView({behavior:'smooth'});
-$('export').onclick=()=>{const csv='\uFEFF'+[['DEMO - simulated allocations only'],['Resource','Role','Q4 demand category','Demo project','Q4 MD','Q4 Hours'],...data().map(x=>[x.person,x.role,x.type,x.project,x.md,x.md*8])].map(r=>r.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\r\n'),url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='Q4_Resource_Template_DEMO.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+a.btn{text-decoration:none;display:inline-block}.board-nav{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}.board-nav a{font-size:12px;color:#657180;border:1px solid #d6dadd;background:#fff;border-radius:4px;padding:9px 13px;text-decoration:none}.board-nav a.current{background:#35404c;color:#fff}</style></head><body><main><nav class="board-nav" aria-label="独立看板"><a href="../scm-ops/">Softtek Ops · 资源结算看板</a><a class="current" href="./" aria-current="page">MP&A · Hong Min 资源规划</a></nav>
+<header class="hero"><div><p class="eyebrow">LULULEMON · MP&A DOMAIN · HONG MIN</p><h1>MP&A Q4 Resource Planning</h1><p class="subtitle">按 Hong Min 原表整理 · Resource / Role / 人天 / 小时<br>FY26 Q4 = Nov 2026 – Jan 2027 · 1 MD = 8 hours</p></div><div class="actions"><button class="btn" id="goList">Resource list</button><button class="btn" id="export">↓ 导出人员项目清单</button></div></header>
+<div class="demo"><strong>原表整理 · 模板预览</strong>　人员、角色、项目及已录入人天取自 MP&A Project List1019.xlsx。Q4 工作量尚未统一核准，保留“待核准”；“原表录入量”合并已填记录展示，不等于实际工时或 Q4 剩余需求。分组为初步整理，待 Domain Lead 确认。</div>
+<section class="kpis" id="kpis"></section>
+<section class="panel" id="resources"><div class="title"><div><h2>Resource List · 人员需求总览</h2><span class="unit">默认纳入延续候选、未启动候选和 Intake；Hold / Q3 收尾单独查看</span></div><div class="filters"><input id="search" aria-label="搜索资源" placeholder="搜索人员 / 角色"><select id="role" aria-label="筛选角色"><option value="all">全部角色</option><option>PO</option><option>PM</option><option>BA</option><option>Architecture</option><option>Develop</option><option>QA</option><option>待确认</option></select><select id="category" aria-label="项目需求类别"><option value="all">Q4 候选 + Intake</option><option value="ongoing">Ongoing · 延续候选</option><option value="planned">Planned · 未启动</option><option value="pending">Intake · 待归组</option><option value="hold">Hold · 待确认</option><option value="outside">预计 Q3 收尾</option><option value="everything">全部源项目</option></select></div></div><div class="table-wrap"><table><thead><tr><th>Resource</th><th class="left">Role</th><th>Ongoing · Q4<br>人天 / 小时</th><th>Planned · Q4<br>人天 / 小时</th><th>原表录入量<br>期间未统一 · MD / h</th><th class="left">安排 / 归组状态</th></tr></thead><tbody id="resourceRows"></tbody><tfoot id="resourceTotal"></tfoot></table></div><div class="band">“—”表示当前项目来源中未列该类需求；“待核准”不计为 0。多人共享角色或同一人员多角色时，保留源表关系，未推定新的人员分配。</div></section>
+<section class="panel" id="detail"><div class="title"><h2 id="detailTitle">人员项目来源</h2><div class="tabs"><button class="active" data-scope="all">全部来源</button><button data-scope="ongoing">Ongoing</button><button data-scope="planned">Planned</button><button data-scope="pending">Intake</button></div></div><div id="detailSummary" class="detail-summary"></div><div class="table-wrap"><table><thead><tr><th>项目</th><th class="left">需求分组</th><th class="left">本人角色</th><th>Q4 MD / h</th><th>原表已录入 MD / h</th><th class="left">原始记录</th></tr></thead><tbody id="detailRows"></tbody></table></div></section>
+<section class="panel"><div class="title"><h2>待确认范围 · Intake / Hold / Q3 收尾</h2><span class="unit">不自动视为已确认 Q4 需求</span></div><div class="table-wrap" style="max-height:360px"><table><thead><tr><th>项目</th><th class="left">原表 Stage</th><th class="left">整理分组</th><th>预计完成日期</th></tr></thead><tbody id="projectChecks"></tbody></table></div><div class="band">CSCOP-925 虽为 Intake，但已有录入人天，需确认实际执行情况。原表人员名称按明确别名合并；Dev / QA 等未指名记录保留为独立资源标识，未分给具体人员。</div></section>
+</main><script id="hong-min-data" type="application/json">{
+  "projects": [
+    {
+      "key": 3,
+      "name": "SSOT Output - CN CC and Class Attribute",
+      "id": "CSCOP-851",
+      "type": "outside",
+      "stage": "Handover",
+      "end": "2026-10-30"
+    },
+    {
+      "key": 4,
+      "name": "SSOT Output - CN SKU Attribute",
+      "id": "CSCOP-1023",
+      "type": "outside",
+      "stage": "Handover",
+      "end": "2026-10-30"
+    },
+    {
+      "key": 5,
+      "name": "HMT Adoption to SSOT Discovery",
+      "id": "CSCOP-999",
+      "type": "outside",
+      "stage": "Handover",
+      "end": "2026-10-30"
+    },
+    {
+      "key": 6,
+      "name": "Weekly report manual generation",
+      "id": "CSCOP-1000",
+      "type": "outside",
+      "stage": "Handover",
+      "end": "2026-10-30"
+    },
+    {
+      "key": 7,
+      "name": "In DC &HOD OTP",
+      "id": "CSCOP-1015",
+      "type": "outside",
+      "stage": "Handover",
+      "end": "2026-10-23"
+    },
+    {
+      "key": 8,
+      "name": "Store OTP",
+      "id": "CSCOP-1030",
+      "type": "outside",
+      "stage": "Handover",
+      "end": "2026-10-23"
+    },
+    {
+      "key": 9,
+      "name": "SSOT CR- CP Bottom Up Reformatting and Buy Dump Sync",
+      "id": "CSCOP-1045",
+      "type": "ongoing",
+      "stage": "Development",
+      "end": "2026-11-16"
+    },
+    {
+      "key": 10,
+      "name": "MD Price Portal User Experience & Data Accuracy Enhancement",
+      "id": "CSCOP-1068",
+      "type": "ongoing",
+      "stage": "Development",
+      "end": "2026-11-20"
+    },
+    {
+      "key": 11,
+      "name": "Channel Rebalance Tool",
+      "id": "CSCOP-925",
+      "type": "pending",
+      "stage": "Intake",
+      "end": "2027-01-29"
+    },
+    {
+      "key": 12,
+      "name": "Email Notification",
+      "id": "CSCOP-1098",
+      "type": "pending",
+      "stage": "Intake",
+      "end": null
+    },
+    {
+      "key": 13,
+      "name": "Assortment modernization - CN discovery",
+      "id": "CSCOP-1056",
+      "type": "pending",
+      "stage": "Intake",
+      "end": null
+    },
+    {
+      "key": 14,
+      "name": "Assortment modernization - APAC discovery",
+      "id": "CSCOP-1057",
+      "type": "pending",
+      "stage": "Intake",
+      "end": null
+    },
+    {
+      "key": 15,
+      "name": "PDAM-CnDAM Images Integration",
+      "id": "未填项目编号",
+      "type": "pending",
+      "stage": "Intake",
+      "end": null
+    },
+    {
+      "key": 16,
+      "name": "Pullback & MD Portal- HMT Rollout",
+      "id": "未填项目编号",
+      "type": "pending",
+      "stage": "Intake",
+      "end": null
+    },
+    {
+      "key": 17,
+      "name": "Product Image Integration & Automation",
+      "id": "CSCOP-888",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 18,
+      "name": "OTB phase 2-Add PV Table",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 19,
+      "name": "Product/Store/Other Metrics Automation Report",
+      "id": "CSCOP-1054",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 20,
+      "name": "SSOT Report display Optimization",
+      "id": "CSCOP-1049",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 21,
+      "name": "Data Ops Process(Cross Function)",
+      "id": "CSCOP-1074",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 22,
+      "name": "Data Exchange Guidance within Product",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 23,
+      "name": "Data Exchange Guidance Cross Function",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 24,
+      "name": "HMT Adoption to SSOT-Delivery",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 25,
+      "name": "SSOT enhancement-Cube Discovery",
+      "id": "CSCOP-1034",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 26,
+      "name": "SSOT Download Tool",
+      "id": "CSCOP-1069",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 27,
+      "name": "SSOT & Keystone Dependency",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 28,
+      "name": "Buy to Fixture",
+      "id": "CSCOP-1097",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 29,
+      "name": "Inventory Efficiency Tool Enhancement Phase 2",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 30,
+      "name": "Inventory Risk Alert",
+      "id": "CSCPVT-200",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 31,
+      "name": "Product Visualization Tool",
+      "id": "CSCOP-992",
+      "type": "hold",
+      "stage": "Hold",
+      "end": null
+    },
+    {
+      "key": 32,
+      "name": "Flow State",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 33,
+      "name": "Inventory  & Demand insight",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 34,
+      "name": "Automation Enhancement",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 35,
+      "name": "GLB PBI Enhancement - Glb Budget",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 36,
+      "name": "Global size planning discovery - CN Adoption",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 37,
+      "name": "Global MD Price PBI discovery - CN Adoption",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 38,
+      "name": "STRIDE:In-season demand forecasting-global adoption",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 39,
+      "name": "STRIDE:Size Planning-global adoption",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 40,
+      "name": "STRIDE:Transfer Engine to optimize CN allocation-global adoption",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 41,
+      "name": "Product MFP Data Integration from SSOT",
+      "id": "未填项目编号",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 42,
+      "name": "Dashboard for No Show Inventory at Store",
+      "id": "CSCOP-1019",
+      "type": "planned",
+      "stage": "NotStart",
+      "end": null
+    },
+    {
+      "key": 43,
+      "name": "Demand Forecast Accuracy Q3 CR(add franchise and other metrics)",
+      "id": "未填项目编号",
+      "type": "hold",
+      "stage": "Hold",
+      "end": null
+    },
+    {
+      "key": 44,
+      "name": "PSO& CC housekeeping",
+      "id": "CSCOP-1001",
+      "type": "hold",
+      "stage": "Hold",
+      "end": null
+    },
+    {
+      "key": 45,
+      "name": "Franchise Rolling",
+      "id": "CSCOP-943",
+      "type": "hold",
+      "stage": "Hold",
+      "end": null
+    },
+    {
+      "key": 46,
+      "name": "Corporate Sales Assortment Pool",
+      "id": "CSCOP-1002",
+      "type": "hold",
+      "stage": "Hold",
+      "end": null
+    }
+  ],
+  "assignments": [
+    {
+      "project": 3,
+      "person": "Ping Yang",
+      "role": "PO",
+      "type": "outside"
+    },
+    {
+      "project": 3,
+      "person": "Ada Yu",
+      "role": "PM",
+      "type": "outside"
+    },
+    {
+      "project": 3,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "outside"
+    },
+    {
+      "project": 3,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "outside"
+    },
+    {
+      "project": 4,
+      "person": "Ping Yang",
+      "role": "PO",
+      "type": "outside"
+    },
+    {
+      "project": 4,
+      "person": "Ada Yu",
+      "role": "PM",
+      "type": "outside"
+    },
+    {
+      "project": 4,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "outside"
+    },
+    {
+      "project": 4,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "outside"
+    },
+    {
+      "project": 4,
+      "person": "Monica Liu",
+      "role": "Develop",
+      "type": "outside"
+    },
+    {
+      "project": 5,
+      "person": "Ping Yang",
+      "role": "PO",
+      "type": "outside"
+    },
+    {
+      "project": 5,
+      "person": "Ada Yu",
+      "role": "PM",
+      "type": "outside"
+    },
+    {
+      "project": 5,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "outside"
+    },
+    {
+      "project": 5,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "outside"
+    },
+    {
+      "project": 5,
+      "person": "Monica Liu",
+      "role": "Develop",
+      "type": "outside"
+    },
+    {
+      "project": 5,
+      "person": "Zhihang",
+      "role": "待确认",
+      "type": "outside"
+    },
+    {
+      "project": 6,
+      "person": "Ada Yu",
+      "role": "PM",
+      "type": "outside"
+    },
+    {
+      "project": 6,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "outside"
+    },
+    {
+      "project": 6,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "outside"
+    },
+    {
+      "project": 7,
+      "person": "Ping Yang",
+      "role": "PM",
+      "type": "outside"
+    },
+    {
+      "project": 7,
+      "person": "Eunice Bi",
+      "role": "BA",
+      "type": "outside"
+    },
+    {
+      "project": 7,
+      "person": "NAM PBI team",
+      "role": "Develop",
+      "type": "outside"
+    },
+    {
+      "project": 8,
+      "person": "Ping Yang",
+      "role": "PM",
+      "type": "outside"
+    },
+    {
+      "project": 8,
+      "person": "Eunice Bi",
+      "role": "BA",
+      "type": "outside"
+    },
+    {
+      "project": 8,
+      "person": "NAM PBI team",
+      "role": "Develop",
+      "type": "outside"
+    },
+    {
+      "project": 9,
+      "person": "Ping Yang",
+      "role": "PO",
+      "type": "ongoing"
+    },
+    {
+      "project": 9,
+      "person": "Ada Yu",
+      "role": "PM",
+      "type": "ongoing"
+    },
+    {
+      "project": 9,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "ongoing"
+    },
+    {
+      "project": 9,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "ongoing"
+    },
+    {
+      "project": 9,
+      "person": "Monica Liu",
+      "role": "Develop",
+      "type": "ongoing"
+    },
+    {
+      "project": 9,
+      "person": "待指名 · Develop",
+      "role": "Develop",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Xian Wang",
+      "role": "PM",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Xian Wang",
+      "role": "BA",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Meihong Lin",
+      "role": "Develop",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Ada Yu",
+      "role": "待确认",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Nicole Yu",
+      "role": "待确认",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Hand · Develop 待指名",
+      "role": "Develop",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "待指名 · QA",
+      "role": "QA",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Monica Liu",
+      "role": "待确认",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "VT · Develop 待指名",
+      "role": "Develop",
+      "type": "ongoing"
+    },
+    {
+      "project": 11,
+      "person": "Kimi Zou",
+      "role": "PM",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "Cenfei Sun",
+      "role": "BA",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "Xin Luo",
+      "role": "Develop",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "Daisy",
+      "role": "QA",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "Ada Yu",
+      "role": "待确认",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "Nicole Yu",
+      "role": "待确认",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "Dong xing",
+      "role": "待确认",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "待指名 · Develop",
+      "role": "Develop",
+      "type": "pending"
+    },
+    {
+      "project": 12,
+      "person": "Ping Yang",
+      "role": "PO",
+      "type": "pending"
+    },
+    {
+      "project": 12,
+      "person": "Ada Yu",
+      "role": "PM",
+      "type": "pending"
+    },
+    {
+      "project": 12,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "pending"
+    },
+    {
+      "project": 12,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "pending"
+    },
+    {
+      "project": 12,
+      "person": "Monica Liu",
+      "role": "Develop",
+      "type": "pending"
+    },
+    {
+      "project": 13,
+      "person": "Eunice Bi",
+      "role": "PO",
+      "type": "pending"
+    },
+    {
+      "project": 13,
+      "person": "Ping Yang",
+      "role": "PM",
+      "type": "pending"
+    },
+    {
+      "project": 13,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "pending"
+    },
+    {
+      "project": 13,
+      "person": "Eunice Bi",
+      "role": "BA",
+      "type": "pending"
+    },
+    {
+      "project": 13,
+      "person": "待确认 · Develop",
+      "role": "Develop",
+      "type": "pending"
+    },
+    {
+      "project": 14,
+      "person": "Eunice Bi",
+      "role": "PO",
+      "type": "pending"
+    },
+    {
+      "project": 14,
+      "person": "Ping Yang",
+      "role": "PM",
+      "type": "pending"
+    },
+    {
+      "project": 14,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "pending"
+    },
+    {
+      "project": 14,
+      "person": "Eunice Bi",
+      "role": "BA",
+      "type": "pending"
+    },
+    {
+      "project": 14,
+      "person": "待确认 · Develop",
+      "role": "Develop",
+      "type": "pending"
+    },
+    {
+      "project": 15,
+      "person": "Eunice Bi",
+      "role": "PO",
+      "type": "pending"
+    },
+    {
+      "project": 15,
+      "person": "Ping Yang",
+      "role": "PM",
+      "type": "pending"
+    },
+    {
+      "project": 15,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "pending"
+    },
+    {
+      "project": 15,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "pending"
+    },
+    {
+      "project": 15,
+      "person": "Andy Yang",
+      "role": "Architecture",
+      "type": "pending"
+    },
+    {
+      "project": 15,
+      "person": "待确认 · Develop",
+      "role": "Develop",
+      "type": "pending"
+    },
+    {
+      "project": 16,
+      "person": "Eunice Bi",
+      "role": "PO",
+      "type": "pending"
+    },
+    {
+      "project": 16,
+      "person": "Ada Yu",
+      "role": "PM",
+      "type": "pending"
+    },
+    {
+      "project": 16,
+      "person": "Jessie Yan",
+      "role": "BA",
+      "type": "pending"
+    },
+    {
+      "project": 16,
+      "person": "Xian Wang",
+      "role": "BA",
+      "type": "pending"
+    },
+    {
+      "project": 16,
+      "person": "Baorui",
+      "role": "BA",
+      "type": "pending"
+    },
+    {
+      "project": 16,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "pending"
+    },
+    {
+      "project": 16,
+      "person": "Danyang Yin",
+      "role": "BA",
+      "type": "pending"
+    },
+    {
+      "project": 16,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "pending"
+    },
+    {
+      "project": 16,
+      "person": "Delong Li",
+      "role": "Develop",
+      "type": "pending"
+    },
+    {
+      "project": 16,
+      "person": "Meihong Lin",
+      "role": "Develop",
+      "type": "pending"
+    },
+    {
+      "project": 16,
+      "person": "Baorui",
+      "role": "Develop",
+      "type": "pending"
+    },
+    {
+      "project": 16,
+      "person": "Monica Liu",
+      "role": "Develop",
+      "type": "pending"
+    },
+    {
+      "project": 16,
+      "person": "Rowan Wu",
+      "role": "Develop",
+      "type": "pending"
+    },
+    {
+      "project": 16,
+      "person": "Daisy",
+      "role": "QA",
+      "type": "pending"
+    },
+    {
+      "project": 17,
+      "person": "Eunice Bi",
+      "role": "PO",
+      "type": "planned"
+    },
+    {
+      "project": 17,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 17,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 17,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "planned"
+    },
+    {
+      "project": 17,
+      "person": "Monica Liu",
+      "role": "Develop",
+      "type": "planned"
+    },
+    {
+      "project": 18,
+      "person": "Ping Yang",
+      "role": "PO",
+      "type": "planned"
+    },
+    {
+      "project": 18,
+      "person": "Ada Yu",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 18,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 18,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "planned"
+    },
+    {
+      "project": 18,
+      "person": "Monica Liu",
+      "role": "Develop",
+      "type": "planned"
+    },
+    {
+      "project": 18,
+      "person": "Daisy",
+      "role": "QA",
+      "type": "planned"
+    },
+    {
+      "project": 19,
+      "person": "Ping Yang",
+      "role": "PO",
+      "type": "planned"
+    },
+    {
+      "project": 19,
+      "person": "Ada Yu",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 19,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 19,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "planned"
+    },
+    {
+      "project": 19,
+      "person": "Monica Liu",
+      "role": "Develop",
+      "type": "planned"
+    },
+    {
+      "project": 20,
+      "person": "Ping Yang",
+      "role": "PO",
+      "type": "planned"
+    },
+    {
+      "project": 20,
+      "person": "Ada Yu",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 20,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 20,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "planned"
+    },
+    {
+      "project": 20,
+      "person": "Monica Liu",
+      "role": "Develop",
+      "type": "planned"
+    },
+    {
+      "project": 21,
+      "person": "Ping Yang",
+      "role": "PO",
+      "type": "planned"
+    },
+    {
+      "project": 21,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 21,
+      "person": "待确认 · BA",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 21,
+      "person": "待确认 · Architecture",
+      "role": "Architecture",
+      "type": "planned"
+    },
+    {
+      "project": 21,
+      "person": "待确认 · Develop",
+      "role": "Develop",
+      "type": "planned"
+    },
+    {
+      "project": 22,
+      "person": "Ping Yang",
+      "role": "PO",
+      "type": "planned"
+    },
+    {
+      "project": 22,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 22,
+      "person": "待确认 · BA",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 22,
+      "person": "待确认 · Architecture",
+      "role": "Architecture",
+      "type": "planned"
+    },
+    {
+      "project": 22,
+      "person": "待确认 · Develop",
+      "role": "Develop",
+      "type": "planned"
+    },
+    {
+      "project": 23,
+      "person": "Ping Yang",
+      "role": "PO",
+      "type": "planned"
+    },
+    {
+      "project": 23,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 23,
+      "person": "待确认 · BA",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 23,
+      "person": "待确认 · Architecture",
+      "role": "Architecture",
+      "type": "planned"
+    },
+    {
+      "project": 23,
+      "person": "待确认 · Develop",
+      "role": "Develop",
+      "type": "planned"
+    },
+    {
+      "project": 24,
+      "person": "Ping Yang",
+      "role": "PO",
+      "type": "planned"
+    },
+    {
+      "project": 24,
+      "person": "Ada Yu",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 24,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 24,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "planned"
+    },
+    {
+      "project": 24,
+      "person": "Monica Liu",
+      "role": "Develop",
+      "type": "planned"
+    },
+    {
+      "project": 25,
+      "person": "Ping Yang",
+      "role": "PO",
+      "type": "planned"
+    },
+    {
+      "project": 25,
+      "person": "Ada Yu",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 25,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 25,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "planned"
+    },
+    {
+      "project": 25,
+      "person": "Monica Liu",
+      "role": "Develop",
+      "type": "planned"
+    },
+    {
+      "project": 26,
+      "person": "Ping Yang",
+      "role": "PO",
+      "type": "planned"
+    },
+    {
+      "project": 26,
+      "person": "Ada Yu",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 26,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 26,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "planned"
+    },
+    {
+      "project": 26,
+      "person": "Monica Liu",
+      "role": "Develop",
+      "type": "planned"
+    },
+    {
+      "project": 27,
+      "person": "Eunice Bi",
+      "role": "PO",
+      "type": "planned"
+    },
+    {
+      "project": 27,
+      "person": "Kimi Zou",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 27,
+      "person": "Nicole Yu",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 27,
+      "person": "Rowan Wu",
+      "role": "Architecture",
+      "type": "planned"
+    },
+    {
+      "project": 27,
+      "person": "Monica Liu",
+      "role": "Develop",
+      "type": "planned"
+    },
+    {
+      "project": 28,
+      "person": "Eunice Bi",
+      "role": "PO",
+      "type": "planned"
+    },
+    {
+      "project": 28,
+      "person": "待确认 · PM",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 28,
+      "person": "Xian Wang",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 28,
+      "person": "待确认 · Architecture",
+      "role": "Architecture",
+      "type": "planned"
+    },
+    {
+      "project": 28,
+      "person": "待确认 · Develop",
+      "role": "Develop",
+      "type": "planned"
+    },
+    {
+      "project": 29,
+      "person": "Ada Yu",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 29,
+      "person": "Xian Wang",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 29,
+      "person": "待确认 · Architecture",
+      "role": "Architecture",
+      "type": "planned"
+    },
+    {
+      "project": 29,
+      "person": "待确认 · Develop",
+      "role": "Develop",
+      "type": "planned"
+    },
+    {
+      "project": 30,
+      "person": "Ping Yang",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 30,
+      "person": "Xian Wang",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 30,
+      "person": "待确认 · Architecture",
+      "role": "Architecture",
+      "type": "planned"
+    },
+    {
+      "project": 30,
+      "person": "待确认 · Develop",
+      "role": "Develop",
+      "type": "planned"
+    },
+    {
+      "project": 31,
+      "person": "Ada Yu",
+      "role": "PM",
+      "type": "hold"
+    },
+    {
+      "project": 32,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 32,
+      "person": "Eunice Bi",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 35,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 35,
+      "person": "Eunice Bi",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 36,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 36,
+      "person": "Eunice Bi",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 37,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 37,
+      "person": "Eunice Bi",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 38,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 38,
+      "person": "Eunice Bi",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 39,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 39,
+      "person": "Eunice Bi",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 40,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 40,
+      "person": "Eunice Bi",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 41,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 41,
+      "person": "Eunice Bi",
+      "role": "BA",
+      "type": "planned"
+    },
+    {
+      "project": 42,
+      "person": "Nick Han",
+      "role": "PM",
+      "type": "planned"
+    },
+    {
+      "project": 42,
+      "person": "Eunice Bi",
+      "role": "BA",
+      "type": "planned"
+    }
+  ],
+  "efforts": [
+    {
+      "project": 5,
+      "person": "Nicole Yu",
+      "md": 1.5,
+      "cell": "AE5",
+      "raw": "Nicole-1.5",
+      "type": "outside"
+    },
+    {
+      "project": 5,
+      "person": "Zhihang",
+      "md": 1.5,
+      "cell": "AE5",
+      "raw": "Zhihang-1.5",
+      "type": "outside"
+    },
+    {
+      "project": 6,
+      "person": "Ada Yu",
+      "md": 4.0,
+      "cell": "AD6",
+      "raw": "Ada-4",
+      "type": "outside"
+    },
+    {
+      "project": 6,
+      "person": "Nicole Yu",
+      "md": 9.0,
+      "cell": "AD6",
+      "raw": "Nicole-9",
+      "type": "outside"
+    },
+    {
+      "project": 6,
+      "person": "Rowan Wu",
+      "md": 9.0,
+      "cell": "AD6",
+      "raw": "Rowan-9",
+      "type": "outside"
+    },
+    {
+      "project": 9,
+      "person": "Ada Yu",
+      "md": 1.5,
+      "cell": "AD9",
+      "raw": "Ada - 1.5",
+      "type": "ongoing"
+    },
+    {
+      "project": 9,
+      "person": "Nicole Yu",
+      "md": 2.0,
+      "cell": "AD9",
+      "raw": "NIcole-2",
+      "type": "ongoing"
+    },
+    {
+      "project": 9,
+      "person": "Rowan Wu",
+      "md": 2.5,
+      "cell": "AD9",
+      "raw": "Rowan -2.5",
+      "type": "ongoing"
+    },
+    {
+      "project": 9,
+      "person": "待指名 · Develop",
+      "md": 6.5,
+      "cell": "AD9",
+      "raw": "Dev-6.5",
+      "type": "ongoing"
+    },
+    {
+      "project": 9,
+      "person": "Ada Yu",
+      "md": 1.5,
+      "cell": "AE9",
+      "raw": "Ada - 1.5",
+      "type": "ongoing"
+    },
+    {
+      "project": 9,
+      "person": "Nicole Yu",
+      "md": 1.0,
+      "cell": "AE9",
+      "raw": "NIcole-1",
+      "type": "ongoing"
+    },
+    {
+      "project": 9,
+      "person": "待指名 · Develop",
+      "md": 0.5,
+      "cell": "AE9",
+      "raw": "Dev-0.5",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Xian Wang",
+      "md": 7.0,
+      "cell": "AD10",
+      "raw": "Wangxian - 7",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Meihong Lin",
+      "md": 1.5,
+      "cell": "AD10",
+      "raw": "Meihong - 1.5",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Ada Yu",
+      "md": 2.0,
+      "cell": "AD10",
+      "raw": "Ada-2",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Nicole Yu",
+      "md": 0.5,
+      "cell": "AD10",
+      "raw": "Nicole-0.5",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Rowan Wu",
+      "md": 1.5,
+      "cell": "AD10",
+      "raw": "Rowan-1.5",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Xian Wang",
+      "md": 2.0,
+      "cell": "AE10",
+      "raw": "Wangxian - 2",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Xian Wang",
+      "md": 8.5,
+      "cell": "AE10",
+      "raw": "Wangxian  - 8.5",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Meihong Lin",
+      "md": 3.0,
+      "cell": "AE10",
+      "raw": "Meihong  - 3",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Hand · Develop 待指名",
+      "md": 17.5,
+      "cell": "AE10",
+      "raw": "Hand DEV - 17.5",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "待指名 · QA",
+      "md": 4.0,
+      "cell": "AE10",
+      "raw": "QA - 4",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "Monica Liu",
+      "md": 1.5,
+      "cell": "AE10",
+      "raw": "Monica-1.5",
+      "type": "ongoing"
+    },
+    {
+      "project": 10,
+      "person": "VT · Develop 待指名",
+      "md": 4.0,
+      "cell": "AE10",
+      "raw": "VT DEV-4",
+      "type": "ongoing"
+    },
+    {
+      "project": 11,
+      "person": "Ada Yu",
+      "md": 0.5,
+      "cell": "AD11",
+      "raw": "Ada - 0.5",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "Kimi Zou",
+      "md": 2.0,
+      "cell": "AD11",
+      "raw": "Kimi - 2",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "Rowan Wu",
+      "md": 1.5,
+      "cell": "AD11",
+      "raw": "Rowan -1.5",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "Ada Yu",
+      "md": 1.5,
+      "cell": "AE11",
+      "raw": "Ada -  1.5",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "Kimi Zou",
+      "md": 9.0,
+      "cell": "AE11",
+      "raw": "Kimi - 9",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "Nicole Yu",
+      "md": 3.0,
+      "cell": "AE11",
+      "raw": "Nicole-3",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "Dong xing",
+      "md": 1.0,
+      "cell": "AE11",
+      "raw": "Dong xing- 1",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "Rowan Wu",
+      "md": 3.5,
+      "cell": "AE11",
+      "raw": "Rowan -3.5",
+      "type": "pending"
+    },
+    {
+      "project": 11,
+      "person": "待指名 · Develop",
+      "md": 25.5,
+      "cell": "AE11",
+      "raw": "DEV - 25.5",
+      "type": "pending"
+    }
+  ],
+  "source": "MP&A Project List1019.xlsx",
+  "sourceSheet": "Wish List"
+}</script><script>const D=JSON.parse(document.getElementById('hong-min-data').textContent),$=id=>document.getElementById(id),fmt=n=>n.toLocaleString('en-US',{maximumFractionDigits:2}),sum=(a,f)=>a.reduce((n,x)=>n+f(x),0),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const labels={ongoing:'Ongoing · 延续候选',planned:'Planned · 未启动候选',pending:'Intake · 待归组',hold:'Hold · 重启待确认',outside:'预计 Q3 收尾'};
+let person='Ada Yu',scope='all';
+function included(){const t=$('category').value;return D.projects.filter(p=>t==='all'?['ongoing','planned','pending'].includes(p.type):t==='everything'||p.type===t)}
+function links(){const ps=new Set(included().map(p=>p.key)),q=$('search').value.toLowerCase(),role=$('role').value;return D.assignments.filter(a=>ps.has(a.project)&&(role==='all'||role===a.role)&&(a.person+' '+a.role).toLowerCase().includes(q))}
+function effortFor(name,a){const ids=new Set(a.filter(x=>x.person===name).map(x=>x.project));return D.efforts.filter(e=>e.person===name&&ids.has(e.project))}
+function render(){const a=links(),names=[...new Set(a.map(x=>x.person))].sort((x,y)=>x.localeCompare(y));if(!names.includes(person))person=names.includes('Ada Yu')?'Ada Yu':names[0]||'';
+const ps=included(),count=t=>ps.filter(p=>p.type===t).length;
+$('kpis').innerHTML=[['ONGOING · 延续候选',count('ongoing')+' 个','按阶段与完成日期初分，需 Lead 确认'],['PLANNED · 未启动候选',count('planned')+' 个','尚未确认 Q4 启动及人员安排'],['INTAKE · 待确认归组',count('pending')+' 个','已有 Intake，不等同于尚未执行'],['Q4 人天 / 小时','待核准','原表未提供统一 Q4 剩余工作量']].map(x=>`<div class="kpi"><label>${x[0]}</label><strong style="font-size:25px">${x[1]}</strong><small>${x[2]}</small></div>`).join('');
+function demand(xs,t){const n=new Set(xs.filter(x=>x.type===t).map(x=>x.project)).size;return n?`<strong class="${t==='planned'?'planned':'ongoing'}">待核准 MD / h</strong><small>${n} 个项目来源</small>`:'—'}
+$('resourceRows').innerHTML=names.map((name,i)=>{const own=a.filter(x=>x.person===name),eff=effortFor(name,a),recorded=sum(eff,x=>x.md),roles=[...new Set(own.map(x=>x.role))].join(' / '),pending=new Set(own.filter(x=>x.type==='pending').map(x=>x.project)).size;return `<tr class="${name===person?'selected':''}"><td><button class="link" data-person-index="${i}">${esc(name)}</button><small>${name.includes('待')?'待指名 / 待确认资源':'原表角色栏 / 人天记录'}</small></td><td class="left" style="white-space:normal;max-width:180px">${esc(roles)}</td><td>${demand(own,'ongoing')}</td><td>${demand(own,'planned')}</td><td>${eff.length?`<strong>${fmt(recorded)} MD</strong><small>${fmt(recorded*8)} h · 非 Q4 核准量</small>`:'待补 MD / h'}</td><td class="left"><span class="badge tbd">${pending?pending+' 个 Intake 待归组':'安排未确认'}</span></td></tr>`}).join('')||'<tr><td colspan="6" class="empty">无匹配人员</td></tr>';
+const es=names.flatMap(name=>effortFor(name,a));$('resourceTotal').innerHTML=`<tr><td>${names.length} 位人员 / 资源标识</td><td></td><td>待核准 MD / h</td><td>待核准 MD / h</td><td>${fmt(sum(es,x=>x.md))} MD<small>${fmt(sum(es,x=>x.md)*8)} h · 仅已录入部分</small></td><td></td></tr>`;
+document.querySelectorAll('[data-person-index]').forEach(b=>b.onclick=()=>{person=names[Number(b.dataset.personIndex)];render()});renderDetail();renderChecks()}
+function renderDetail(){const own=links().filter(a=>a.person===person&&(scope==='all'||a.type===scope)),ids=[...new Set(own.map(a=>a.project))],ps=ids.map(id=>D.projects.find(p=>p.key===id));$('detailTitle').textContent=(person||'Resource')+' · 项目与角色来源';$('detailSummary').innerHTML=`<div><span>当前项目来源</span><strong>${ps.length} 个</strong></div><div><span>Q4 人天 / 小时</span><strong>待核准</strong></div><div><span>源表</span><strong style="font-size:14px">Wish List · 原始角色与录入量</strong></div>`;
+$('detailRows').innerHTML=ps.map(p=>{const roles=[...new Set(own.filter(x=>x.project===p.key).map(x=>x.role))].join(' / '),eff=D.efforts.filter(e=>e.project===p.key&&e.person===person),n=sum(eff,x=>x.md);return `<tr><td style="white-space:normal;min-width:260px;max-width:400px"><strong>${esc(p.id)}</strong><small>${esc(p.name)}</small></td><td class="left"><span class="pill ${p.type==='planned'?'planned':''}">${labels[p.type]}</span><small>原表阶段：${esc(p.stage)}</small></td><td class="left">${esc(roles)}</td><td>待核准</td><td>${eff.length?fmt(n)+' MD / '+fmt(n*8)+' h':'待补'}</td><td class="left" style="white-space:normal;min-width:200px">${eff.length?eff.map(e=>esc(e.cell)+': '+esc(e.raw)).join('<br>'):'原表未填写本人的人天数'}<small>Wish List 第 ${p.key} 行</small></td></tr>`}).join('')||'<tr><td colspan="6" class="empty">当前类别无项目来源</td></tr>'}
+function renderChecks(){const ps=D.projects.filter(p=>['pending','hold','outside'].includes(p.type));$('projectChecks').innerHTML=ps.map(p=>`<tr><td><strong>${esc(p.id)}</strong><small style="white-space:normal;max-width:420px">${esc(p.name)}</small></td><td class="left">${esc(p.stage)}</td><td class="left">${labels[p.type]}</td><td>${p.end||'未填'}</td></tr>`).join('')}
+document.querySelectorAll('[data-scope]').forEach(b=>b.onclick=()=>{scope=b.dataset.scope;document.querySelectorAll('[data-scope]').forEach(x=>x.classList.toggle('active',x===b));renderDetail()});$('search').oninput=render;$('role').onchange=render;$('category').onchange=render;$('goList').onclick=()=>$('resources').scrollIntoView({behavior:'smooth'});
+$('export').onclick=()=>{const a=links(),rows=[['Resource','Role','Project ID','Project','Category','Q4 MD','Q4 Hours','Wish List Row'],...a.map(x=>{const p=D.projects.find(p=>p.key===x.project);return [x.person,x.role,p.id,p.name,labels[x.type],'待核准','待核准',p.key]})];const csv='\uFEFF'+rows.map(r=>r.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\r\n'),url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),aLink=document.createElement('a');aLink.href=url;aLink.download='MPA_Hong_Min_Resource_List.csv';aLink.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
 render();
 </script></body></html>
-
