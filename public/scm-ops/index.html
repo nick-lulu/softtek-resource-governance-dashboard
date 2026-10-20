@@ -6,7 +6,7 @@
 <div id="overview" class="kpis"></div>
 <section class="panel" id="settlementBasis"><div class="band"><strong>应结算人天 = 实际投入人天（包含未结算项目）+ 2026年10月至2027年1月预估人天。</strong><br><strong>2026年10月 Handover：</strong>项目已确定并排期。<br><strong>2026年11月至2027年1月 Handover：</strong>根据 Leah 提供的预算分配对比，识别已分配预算但尚未进行 Handover 的项目，形成预估。</div></section>
 <div class="grid"><section class="panel"><div class="title"><h2>Takeaway · 管理摘要</h2><span class="badge">结算缺口待处理</span></div><div class="insights" id="insights"></div></section><section class="panel"><div class="title"><h2>FY26 待补结算 · 人员 / 角色组</h2><span class="unit">应结算 − 合同结算 / MD</span></div><div class="chart" id="gapchart"></div></section></div>
-<section class="panel" id="roles"><div class="title"><h2>Ops 补结算清单</h2><div class="controls"><span class="unit">缺口为正；合同盈余为负</span><div class="tabs" id="roleScope"><button data-value="all">全部角色</button><button class="active" data-value="gap">需补结算</button></div></div></div><div class="table-wrap"><table><thead><tr><th>人员 / 合同角色</th><th>FY26 应结算</th><th>FY26 合同结算</th><th>Gap / MD</th><th>合同覆盖率</th><th class="left">当前判断</th></tr></thead><tbody id="roleRows"></tbody><tfoot id="roleTotal"></tfoot></table></div><div class="band">应结算 = 实际投入（含未结算项目）+ 2026年10月至2027年1月预估。补结算 = 应结算 − 合同结算（正数）。多人角色组仅能确定组内合计，源表没有个人合同拆分，不能直接平分。Financial Specialist 的 190.61 MD 保留原表公式口径，人员引用差异待核对。合同盈余能否调剂需另行确认。</div></section>
+<section class="panel" id="roles"><div class="title"><h2>Ops 补结算清单</h2><div class="controls"><span class="unit">缺口为正；合同盈余为负</span><div class="tabs" id="roleScope"><button data-value="all">全部角色</button><button class="active" data-value="gap">需补结算</button></div></div></div><div class="table-wrap"><table><thead><tr><th>人员 / 合同角色</th><th>FY26 应结算</th><th>FY26 合同结算</th><th>Gap / MD</th><th>合同覆盖率</th><th class="left">当前判断</th></tr></thead><tbody id="roleRows"></tbody><tfoot id="roleTotal"></tfoot></table></div><div class="band">应结算 = 实际投入（含未结算项目）+ 2026年10月至2027年1月预估。Jiarui Yang 按确认值调整为178人天，已含未结算项目7.44人天；当前合同171.08 + 7.44 = 178.52，与确认值相差0.52人天，待核对。补结算 = 应结算 − 合同结算（正数）。多人角色组仅能确定组内合计，源表没有个人合同拆分，不能直接平分。Financial Specialist 的 190.61 MD 保留原表公式口径，人员引用差异待核对。合同盈余能否调剂需另行确认。</div></section>
 <section class="panel" id="unsettled"><div class="title"><h2>Unsettled projects · 未结算项目</h2><span class="unit">截图范围 · project view 第 3–29 行</span></div><div class="summary" id="projectSummary"></div><div class="title"><div class="controls"><input id="search" aria-label="搜索项目" placeholder="搜索项目编号 / 名称"><select id="type" aria-label="项目类型"><option value="all">全部类型</option><option>Project</option><option>Handover</option></select><select id="status" aria-label="项目状态"><option value="all">全部状态</option></select></div><span class="unit" id="filterCount"></span></div><div class="table-wrap" style="max-height:460px"><table><thead><tr><th>项目编号 / 名称</th><th class="left">类型</th><th class="left">状态</th><th>实际人天</th><th>含管理分摊</th><th>实际成本 / ¥</th><th class="left">全部投入人员 / MD</th></tr></thead><tbody id="projectRows"></tbody></table></div><div class="band">下列未结算项目的实际投入已包含在 FY26 应结算人天中，不额外相加。范围由提供的截图确定，包含 Done、Not Start、Hold、Cancel 及状态空白记录；项目状态与结算状态分别展示。筛选同步更新本区汇总、下方个人投入汇总。</div></section>
 <section class="panel"><div class="title"><h2>未结算项目投入 · 按人员汇总</h2><span class="unit">Actual / MD</span></div><div id="peopleChart" class="chart"></div><div class="band">本区为已包含在应结算人天中的未结算实际投入，按人员展开。它是应结算实际投入的组成部分，不作为额外人天叠加。项目筛选会同步更新本区。</div></section>
 
@@ -55,9 +55,9 @@
     {
       "role": "Ops TL",
       "members": "Jiarui Yang",
-      "due": 203.7375,
+      "due": 178,
       "contract": 171.07664594545884,
-      "gap": 32.660854054541176,
+      "gap": 6.923354054541164,
       "dueParts": [
         45.0259875,
         78.43893750000001,
@@ -70,7 +70,7 @@
         20.25
       ],
       "sourceRow": 137,
-      "note": "- 未结算项目人天7.44"
+      "note": "应结算按确认值调整为178人天；未结算项目7.44人天已包含。原合同171.08 + 7.44 = 178.52，与确认值相差0.52人天，待核对。"
     },
     {
       "role": "Ops BA",
