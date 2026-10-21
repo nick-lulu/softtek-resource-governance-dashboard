@@ -6,8 +6,8 @@
 <div id="overview" class="kpis"></div>
 <section class="panel" id="settlementBasis"><div class="band"><strong>应结算人天 = 实际投入人天（包含未结算项目）+ 2026年10月至2027年1月预估人天。</strong><br><strong>2026年10月 Handover：</strong>项目已确定并排期。<br><strong>2026年11月至2027年1月 Handover：</strong>根据 Leah 提供的预算分配对比，识别已分配预算但尚未进行 Handover 的项目，形成预估。</div></section>
 <div class="grid"><section class="panel"><div class="title"><h2>Takeaway · 管理摘要</h2><span class="badge">结算缺口待处理</span></div><div class="insights" id="insights"></div></section><section class="panel"><div class="title"><h2>FY26 待补结算 · 人员 / 角色组</h2><span class="unit">应结算 − 合同结算 / MD</span></div><div class="chart" id="gapchart"></div></section></div>
-<section class="panel" id="roles"><div class="title"><h2>Ops 补结算清单</h2><div class="controls"><span class="unit">缺口为正；合同盈余为负</span><div class="tabs" id="roleScope"><button data-value="all">全部角色</button><button class="active" data-value="gap">需补结算</button></div></div></div><div class="table-wrap"><table><thead><tr><th>人员 / 合同角色</th><th>FY26 应结算</th><th>FY26 合同结算</th><th>Gap / MD</th><th>合同覆盖率</th><th class="left">当前判断</th></tr></thead><tbody id="roleRows"></tbody><tfoot id="roleTotal"></tfoot></table></div><div class="band">应结算 = 实际投入（含未结算项目）+ 2026年10月至2027年1月预估。Jiarui Yang 全年应结算沿用已确认的178人天，合同171.08人天，缺口6.92人天。未结算清单按本次确认范围更新，清单调整未自动冲减全年应结算。补结算 = 应结算 − 合同结算（正数）。多人角色组仅能确定组内合计，源表没有个人合同拆分，不能直接平分。Financial Specialist 的 190.61 MD 保留原表公式口径，人员引用差异待核对。合同盈余能否调剂需另行确认。</div></section>
-<section class="panel" id="unsettled"><div class="title"><h2>Unsettled projects · 未结算项目</h2><span class="unit">当前确认范围 · 26 条记录</span></div><div class="summary" id="projectSummary"></div><div class="title"><div class="controls"><input id="search" aria-label="搜索项目" placeholder="搜索项目编号 / 名称"><select id="type" aria-label="项目类型"><option value="all">全部类型</option><option>Project</option><option>Handover</option></select><select id="status" aria-label="项目状态"><option value="all">全部状态</option></select></div><span class="unit" id="filterCount"></span></div><div class="table-wrap" style="max-height:460px"><table><thead><tr><th>项目编号 / 名称</th><th class="left">类型</th><th class="left">状态</th><th>实际人天</th><th>含管理分摊（参考）</th><th>实际成本 / ¥</th><th class="left">全部投入人员 / MD</th></tr></thead><tbody id="projectRows"></tbody></table></div><div class="band">实际人天 = 下列人员投入之和；含管理分摊 = 实际人天 × 1.238（源表加计23.8%）。两列分开列示，以实际人天为人员投入口径，含分摊值为参考，不能相加。下列未结算项目的实际投入已包含在 FY26 应结算人天中，不额外相加。范围按本次确认调整，包含 Done、Not Start、Hold、Cancel 及状态空白记录；项目状态与结算状态分别展示。筛选同步更新本区汇总、下方个人投入汇总。</div></section>
+<section class="panel" id="roles"><div class="title"><h2>Ops 补结算清单</h2><div class="controls"><span class="unit">缺口为正；合同盈余为负</span><div class="tabs" id="roleScope"><button data-value="all">全部角色</button><button class="active" data-value="gap">需补结算</button></div></div></div><div class="table-wrap"><table><thead><tr><th>人员 / 合同角色</th><th>FY26 应结算</th><th>FY26 合同结算</th><th>Gap / MD</th><th>合同覆盖率</th><th class="left">当前判断</th></tr></thead><tbody id="roleRows"></tbody><tfoot id="roleTotal"></tfoot></table></div><div class="band">应结算 = 实际投入（含未结算项目）+ 2026年10月至2027年1月预估。Jiarui Yang 全年应结算沿用已确认的178人天，合同171.08人天，缺口6.92人天。未结算清单恢复原始27条历史记录，实际投入合计40.09人天，未重复叠加到全年应结算。补结算 = 应结算 − 合同结算（正数）。多人角色组仅能确定组内合计，源表没有个人合同拆分，不能直接平分。Financial Specialist 的 190.61 MD 保留原表公式口径，人员引用差异待核对。合同盈余能否调剂需另行确认。</div></section>
+<section class="panel" id="unsettled"><div class="title"><h2>Unsettled projects · 未结算项目</h2><span class="unit">原始未结算范围 · 27 条记录</span></div><div class="summary" id="projectSummary"></div><div class="title"><div class="controls"><input id="search" aria-label="搜索项目" placeholder="搜索项目编号 / 名称"><select id="type" aria-label="项目类型"><option value="all">全部类型</option><option>Project</option><option>Handover</option></select><select id="status" aria-label="项目状态"><option value="all">全部状态</option></select></div><span class="unit" id="filterCount"></span></div><div class="table-wrap" style="max-height:460px"><table><thead><tr><th>项目编号 / 名称</th><th class="left">类型</th><th class="left">状态</th><th>实际人天</th><th>含管理分摊（参考）</th><th>实际成本 / ¥</th><th class="left">全部投入人员 / MD</th></tr></thead><tbody id="projectRows"></tbody></table></div><div class="band">实际人天 = 下列人员投入之和；含管理分摊 = 实际人天 × 1.238（源表加计23.8%）。两列分开列示，以实际人天为人员投入口径，含分摊值为参考，不能相加。下列未结算项目的实际投入已包含在 FY26 应结算人天中，不额外相加。范围恢复原始27条历史记录（含 Helios embedded XXL JOB update 与 IAM Cleanup）；Helios CRs（CSCOP-1080）按最新Q4项目表单独展示，包含 Done、Not Start、Hold、Cancel 及状态空白记录；项目状态与结算状态分别展示。筛选同步更新本区汇总、下方个人投入汇总。</div></section>
 <section class="panel"><div class="title"><h2>未结算项目投入 · 按人员汇总</h2><span class="unit">Actual / MD</span></div><div id="peopleChart" class="chart"></div><div class="band">本区为已包含在应结算人天中的未结算实际投入，按人员展开。它是应结算实际投入的组成部分，不作为额外人天叠加。项目筛选会同步更新本区。</div></section>
 
 </main><script id="source-data" type="application/json">{
@@ -70,7 +70,7 @@
         20.25
       ],
       "sourceRow": 137,
-      "note": "全年应结算沿用确认值178人天；当前未结算清单范围已调整，未自动冲减全年应结算。"
+      "note": "全年应结算沿用确认值178人天；未结算清单恢复原始27条历史记录。"
     },
     {
       "role": "Ops BA",
@@ -685,24 +685,24 @@
     },
     {
       "id": "CSCOP-953",
-      "name": "Helios CRs",
+      "name": "Helios embedded XXL JOB update",
       "type": "Project",
       "status": "Hold",
-      "actual": 4.5,
-      "managed": 5.571,
-      "cost": 15300,
-      "managedCost": 18941.4,
+      "actual": 11.40625,
+      "managed": 14.1209375,
+      "cost": 38931.25,
+      "managedCost": 48196.8875,
       "people": {
         "Ruby Yang": 0,
-        "Jiarui Yang": 0,
-        "Ryan Xu": 0,
+        "Jiarui Yang": 0.28125,
+        "Ryan Xu": 0.3125,
         "Ayla Hou": 0,
         "Echo Fang": 0,
-        "Jacky Zhong": 2.5,
-        "Jenny Qian": 0,
+        "Jacky Zhong": 2.53125,
+        "Jenny Qian": 3,
         "Leah Li": 0,
-        "Lucy Cao": 0,
-        "Nick Han": 2
+        "Lucy Cao": 0.03125,
+        "Nick Han": 5.25
       },
       "sourceRow": 26
     },
@@ -751,6 +751,29 @@
         "Nick Han": 1.25
       },
       "sourceRow": 28
+    },
+    {
+      "id": "CSCOP-979",
+      "name": "IAM Cleanup",
+      "type": "Project",
+      "status": "Cancel",
+      "actual": 3.5625,
+      "managed": 4.410375,
+      "cost": 12168.75,
+      "managedCost": 15064.9125,
+      "people": {
+        "Ruby Yang": 0,
+        "Jiarui Yang": 1.75,
+        "Ryan Xu": 0.15625,
+        "Ayla Hou": 0,
+        "Echo Fang": 0,
+        "Jacky Zhong": 0.34375,
+        "Jenny Qian": 1.28125,
+        "Leah Li": 0,
+        "Lucy Cao": 0.03125,
+        "Nick Han": 0
+      },
+      "sourceRow": 29
     }
   ],
   "source": "团队UT and Cost 分析 Sep.xlsx",
@@ -770,7 +793,7 @@
 const D=JSON.parse(document.getElementById('source-data').textContent),$=id=>document.getElementById(id),fmt=n=>n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}),sum=(a,k)=>a.reduce((s,r)=>s+(typeof k==='function'?k(r):r[k]),0),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const due=sum(D.roles,'due'),contract=sum(D.roles,'contract'),gap=due-contract,gross=sum(D.roles,r=>Math.max(r.gap,0)),surplus=sum(D.roles,r=>Math.max(-r.gap,0));
 let roleFilter='gap';
-$('overview').innerHTML=[['FY26 应结算人天',due,'实际投入（含未结算）+ 2026年10月至2027年1月预估'],['FY26 合同结算人天',contract,`合同覆盖率 ${fmt(contract/due*100)}%`],['需补结算人天（4 组）',gross,`合同盈余 ${fmt(surplus)} MD；净缺口 ${fmt(gap)} MD`],['应结算内已含的未结算实际人天',sum(D.projects,'actual'),`${D.projects.length} 条记录 · 已包含在实际投入中，不重复叠加`]].map((x,i)=>`<div class="kpi"><label>${x[0]}</label><strong class="${i===2?'negative':''}">${fmt(x[1])}<span style="font-size:13px;font-weight:400;color:#879099"> MD</span></strong><small>${x[2]}</small></div>`).join('');
+$('overview').innerHTML=[['FY26 应结算人天',due,'实际投入（含未结算）+ 2026年10月至2027年1月预估'],['FY26 合同结算人天',contract,`合同覆盖率 ${fmt(contract/due*100)}%`],['需补充结算人天',gap,`正缺口合计 ${fmt(gross)} MD；合同盈余 ${fmt(surplus)} MD`],['应结算内已含的未结算实际人天',sum(D.projects,'actual'),`${D.projects.length} 条记录 · 已包含在实际投入中，不重复叠加`]].map((x,i)=>`<div class="kpi"><label>${x[0]}</label><strong class="${i===2?'negative':''}">${fmt(x[1])}<span style="font-size:13px;font-weight:400;color:#879099"> MD</span></strong><small>${x[2]}</small></div>`).join('');
 const ccb=sum(D.roles,r=>r.dueParts[3]);
 $('insights').innerHTML=`<article><b>应结算包含全部实际投入，未结算项目已计入</b><p>应结算 ${fmt(due)} MD = 实际投入人天（含未结算项目 ${fmt(sum(D.projects,'actual'))} MD）+ 2026年10月至2027年1月预估。未结算项目作为其中明细展示，不额外叠加。</p></article><article><b>10月 Handover 已确定并排期</b><p>2026年10月 Handover 对应已确定项目和排期，纳入10月预估。</p></article><article><b>11月至1月 Handover 按预算分配对比预估</b><p>依据 Leah 提供的预算分配对比，识别已分配预算但尚未进行 Handover 的项目，形成2026年11月至2027年1月的 Handover 人天预估。</p></article><article><b>应结算与合同结算对比，净缺口 ${fmt(gap)} MD</b><p>四组正缺口合计 ${fmt(gross)} MD；其他角色合同盈余 ${fmt(surplus)} MD。缺口集中于 Leah + Ayla（${fmt(D.roles[6].gap)} MD，源表公式待核对）和 Jenny + Nick（${fmt(D.roles[1].gap)} MD）；Jiarui ${fmt(D.roles[2].gap)}、Jacky ${fmt(D.roles[3].gap)} MD。盈余能否调剂需按合同确认。</p></article>`;
 const pending=[...D.roles].filter(r=>r.gap>0).sort((a,b)=>b.gap-a.gap),maxGap=pending[0].gap;
