@@ -57,7 +57,7 @@ section[aria-labelledby="dedicatedTitle"]{padding:20px 18px 16px}.dedicated-card
 <footer><span>FY26 Q4 · November 2026 – January 2027</span><span>MD = man-days · Confirmed personnel planning basis</span></footer>
 </main><dialog class="summary-dialog" id="detail" aria-labelledby="detailTitle"><div id="detailContent"></div></dialog><script>'use strict';
 const SummaryCore=(()=>{
- const aliases={'eunice bi':'Bi Yu','bi yu':'Bi Yu','xian wang':'Wang Xian','wang xian':'Wang Xian','ping yang':'Yang Ping','yang ping':'Yang Ping','daisy':'Daisy Tang','dasiy':'Daisy Tang','daisy tang':'Daisy Tang'};
+ const aliases={'harry':'Harry Shi','harry shi':'Harry Shi','mengyi':'Mengyi Zhou','mengyi zhou':'Mengyi Zhou','eunice bi':'Bi Yu','bi yu':'Bi Yu','xian wang':'Wang Xian','wang xian':'Wang Xian','ping yang':'Yang Ping','yang ping':'Yang Ping','daisy':'Daisy Tang','dasiy':'Daisy Tang','daisy tang':'Daisy Tang'};
  const number=x=>typeof x==='number'&&Number.isFinite(x),shared=r=>r.category==='Shared'||r.category==='Shared QA';
  function nameOf(n){const t=String(n||'').trim().replace(/\s+/g,' ');return aliases[t.toLowerCase()]||t}
  function keyOf(n){return nameOf(n).toLowerCase().replace(/\s+/g,'_')}
@@ -96,7 +96,14 @@ const PlanningData=(()=>{
   }
  }
 
- return {createDomains,ingest,read,isNamed,applyFinance};
+ 
+ async function applyQA(domains){
+  try{let tag=document.querySelector('script#qa-plan[type="application/json"]');if(!tag){const response=await fetch('../qa/index.html',{cache:'no-store'});if(!response.ok)throw Error('QA plan unavailable');tag=new DOMParser().parseFromString(await response.text(),'text/html').querySelector('script#qa-plan[type="application/json"]');}if(!tag)throw Error('QA plan missing');const plan=JSON.parse(tag.textContent);
+   for(const p of plan.projects){const d=domains.find(d=>d.id===p.domainId);if(!d||d.status==='unavailable')continue;const key=SummaryCore.keyOf(p.person);let r=d.resources.find(r=>r.key===key);if(!r){r={name:SummaryCore.nameOf(p.person),key,category:'Shared QA',roles:['QA'],md:null,projects:[],planReady:true,note:'Named QA project allocation confirmed by user; central QA pool.'};d.resources.push(r);}const same=x=>x.sourceKey===p.sourceKey||(x.role==='QA'&&((p.id&&x.id===p.id)||x.name.trim().toLowerCase()===p.name.trim().toLowerCase()));const replaced=r.projects.filter(same);const removed=replaced.reduce((s,x)=>s+(N(x.md)?x.md:0),0);r.projects=r.projects.filter(x=>!same(x));r.md=(N(r.md)?r.md:0)-removed+p.md;r.projects.push({...p,sourceCell:'User-confirmed QA plan · 2026-10-28',note:p.replaceExisting?'Confirmed replacement: 10 MD supersedes the prior 6 MD Keystone estimate. CSCOP-1063 retained from matched source.':'User-confirmed named QA project effort.'});r.planReady=true;r.qaSupplement=true;r.roles=[...new Set([...r.roles,'QA'])];d.roster=[...d.roster.filter(x=>x.key!==key),{...r,rawProjects:d.roster.find(x=>x.key===key)?.rawProjects||[]}];if(d.status!=='ready'){d.partialAllocations=true;d.message='Confirmed Finance and QA allocations included; remaining personnel planning is pending.';}
+   }for(const d of domains)d.qaPlanStatus='ready';
+  }catch{for(const d of domains)d.qaPlanStatus='unavailable';}
+ }
+return {createDomains,ingest,read,isNamed,applyFinance,applyQA};
 })();
 
 
@@ -108,8 +115,8 @@ const domains=PlanningData.createDomains();
 function readReference(key){try{const n=Number(localStorage.getItem(key));return Number.isFinite(n)&&n>=1&&n<=100?n:50}catch{return 50}}
 let sharedPeople=[],loading=false,dedicatedReference=readReference('q4-planning-dedicated-reference'),sharedReference=readReference('q4-planning-shared-reference');
 async function load(){if(loading)return;loading=true;$('refresh').disabled=true;$('loadStatus').textContent='Loading published domain data…';domains.forEach(d=>{d.status='loading';d.resources=[]});render();
- await Promise.all(domains.map(d=>PlanningData.read(d)));PlanningData.applyFinance(domains);
- loading=false;$('refresh').disabled=false;$('loadStatus').textContent='Published domain data refreshed · '+new Date().toLocaleString('en-GB',{timeZone:'Asia/Shanghai',hour12:false})+' (Shanghai)';render();}
+ await Promise.all(domains.map(d=>PlanningData.read(d)));PlanningData.applyFinance(domains);await PlanningData.applyQA(domains);
+ loading=false;$('refresh').disabled=false;$('loadStatus').textContent='Published domain data refreshed · '+new Date().toLocaleString('en-GB',{timeZone:'Asia/Shanghai',hour12:false})+' (Shanghai)'+(domains.some(d=>d.qaPlanStatus==='unavailable')?' · QA supplement unavailable; totals incomplete.':'');render();}
 function resourceTotal(rs){return SummaryCore.reportedTotal(rs)}
 function isQAResource(r){return r.category==='Shared QA'||(r.roles||[]).some(x=>/^QA(?:\s+Lead)?$/i.test(x))}
 function render(){sharedPeople=SummaryCore.aggregateShared(domains);const ready=domains.filter(d=>d.status==='ready'),resources=domains.filter(d=>d.status==='ready'||d.partialAllocations).flatMap(d=>d.resources),ded=resources.filter(r=>r.category==='Dedicated'&&!isQAResource(r)),sh=resources.filter(r=>SummaryCore.shared(r)&&!isQAResource(r)),qa=resources.filter(isQAResource),complete=ready.length===domains.length;
