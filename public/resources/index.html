@@ -83,10 +83,10 @@ const PlanningData=(()=>{
 
  
  async function applyQA(domains){
-  try{let tag=document.querySelector('script#qa-plan[type="application/json"]');if(!tag){const response=await fetch('../qa/index.html',{cache:'no-store'});if(!response.ok)throw Error('QA plan unavailable');tag=new DOMParser().parseFromString(await response.text(),'text/html').querySelector('script#qa-plan[type="application/json"]');}if(!tag)throw Error('QA plan missing');const plan=JSON.parse(tag.textContent);
-   for(const p of plan.projects){const d=domains.find(d=>d.id===p.domainId);if(!d||d.status==='unavailable')continue;const key=SummaryCore.keyOf(p.person);let r=d.resources.find(r=>r.key===key);if(!r){r={name:SummaryCore.nameOf(p.person),key,category:'Shared QA',roles:['QA'],md:null,projects:[],planReady:true,note:'Named QA project allocation confirmed by user; central QA pool.'};d.resources.push(r);}const same=x=>x.sourceKey===p.sourceKey||(x.role==='QA'&&((p.id&&x.id===p.id)||x.name.trim().toLowerCase()===p.name.trim().toLowerCase()));const replaced=r.projects.filter(same);const removed=replaced.reduce((s,x)=>s+(N(x.md)?x.md:0),0);r.projects=r.projects.filter(x=>!same(x));r.md=(N(r.md)?r.md:0)-removed+p.md;r.projects.push({...p,sourceCell:'User-confirmed QA plan · 2026-10-28',note:p.replaceExisting?'Confirmed replacement: 10 MD supersedes the prior 6 MD Keystone estimate. CSCOP-1063 retained from matched source.':'User-confirmed named QA project effort.'});r.planReady=true;r.qaSupplement=true;r.roles=[...new Set([...r.roles,'QA'])];d.roster=[...d.roster.filter(x=>x.key!==key),{...r,rawProjects:d.roster.find(x=>x.key===key)?.rawProjects||[]}];if(d.status!=='ready'){d.partialAllocations=true;d.message='Confirmed QA allocations included; remaining personnel planning is pending.';}
-   }for(const d of domains)d.qaPlanStatus='ready';
-  }catch{for(const d of domains)d.qaPlanStatus='unavailable';}
+ try{let tag=document.querySelector('script#qa-plan[type="application/json"]');if(!tag){const response=await fetch('../qa/index.html',{cache:'no-store'});if(!response.ok)throw Error('QA forecast unavailable');tag=new DOMParser().parseFromString(await response.text(),'text/html').querySelector('script#qa-plan[type="application/json"]');}if(!tag)throw Error('QA forecast missing');const plan=JSON.parse(tag.textContent);
+ for(const d of domains){const lead=d.resources.find(r=>(r.roles||[]).includes('QA Lead'));d.resources=d.resources.filter(r=>!(r.roles||[]).some(x=>/^QA(?:\s+Lead)?$/i.test(x)));d.roster=d.roster.filter(r=>!(r.roles||[]).some(x=>/^QA(?:\s+Lead)?$/i.test(x)));if(lead){const r={...lead,md:null,projects:[],nonProjectMD:null};d.resources.push(r);d.roster.push({...r,planReady:true});}if(d.raw?.allocations)d.raw.allocations=d.raw.allocations.filter(a=>a.role!=='QA'||a.category!=='Unassigned');}
+ for(const p of plan.projects){const d=domains.find(d=>d.id===p.domainId);if(!d)continue;const key=SummaryCore.keyOf(p.person);let r=d.resources.find(r=>r.key===key);if(!r){r={name:SummaryCore.nameOf(p.person),key,category:p.category,roles:['QA'],md:0,projects:[],planReady:true,nonProjectMD:null,note:'Final QA forecast · 29 Oct 2026.'};d.resources.push(r);}r.md+=p.md;r.projects.push({...p});r.qaSupplement=true;r.planReady=true;d.roster=[...d.roster.filter(x=>x.key!==key),{...r,rawProjects:[]}];if(d.status!=='ready')d.partialAllocations=true;d.qaFinalForecast=plan;}for(const d of domains)d.qaPlanStatus='ready';
+ }catch{for(const d of domains)d.qaPlanStatus='unavailable';}
  }
 return {createDomains,ingest,read,isNamed,applyFinance,applyQA};
 })();
@@ -134,5 +134,6 @@ for(const d of domains){const o=document.createElement('option');o.value=d.id;o.
 
 load();
 </script><script>(()=>{const scope=document.getElementById('portfolioScope');scope.addEventListener('change',()=>{location.href='../'+scope.value+'/'});const domain=document.getElementById('domain');if(domain){const add=()=>{if(!domain.querySelector('option[value="__qa__"]'))domain.insertAdjacentHTML('beforeend','<option value="__qa__">QA · all domains</option>')};add();new MutationObserver(add).observe(domain,{childList:true});domain.addEventListener('change',e=>{if(domain.value==='__qa__'){e.stopImmediatePropagation();location.href='../qa/'}},true)}})();</script></body></html>
+
 
 
