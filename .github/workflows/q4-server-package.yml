@@ -1,0 +1,39 @@
+name: Build Q4 Server Package
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/**'
+      - 'deployment/q4/**'
+      - '.github/workflows/q4-server-package.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build and validate standalone server package
+        run: python deployment/q4/package.py --output server-release --revision "$GITHUB_SHA"
+      - name: Validate startup script and Compose configuration
+        run: |
+          sh -n server-release/q4-planning-server/deploy.sh
+          docker compose --env-file server-release/q4-planning-server/.env.example -f server-release/q4-planning-server/compose.yaml config --quiet
+      - name: Validate web server configuration
+        run: docker run --rm -e SITE_ADDRESS=:80 -v "$PWD/server-release/q4-planning-server/Caddyfile:/etc/caddy/Caddyfile:ro" caddy:2-alpine caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile
+      - name: Store deployable package and checksum
+        uses: actions/upload-artifact@v4
+        with:
+          name: q4-planning-server
+          path: |
+            server-release/Q4-Planning-Aliyun-Ready.zip
+            server-release/SHA256SUMS.txt
+          if-no-files-found: error
+          retention-days: 30

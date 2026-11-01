@@ -1,0 +1,17 @@
+{$SITE_ADDRESS::80} {
+    root * /srv
+    encode gzip zstd
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy strict-origin-when-cross-origin
+        Cache-Control "no-cache"
+    }
+    @home path /
+    redir @home /summary/ 302
+    file_server
+}
+
+# Container-only readiness endpoint; this port is not published on the host.
+:8080 {
+    respond /healthz "ok" 200
+}

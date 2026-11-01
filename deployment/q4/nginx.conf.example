@@ -1,0 +1,13 @@
+# Alternative for a server already running Nginx. Copy site/ to /opt/q4-planning/site.
+# Set server_name to the real domain and let the existing TLS manager configure HTTPS.
+server {
+    listen 80;
+    server_name _;
+    root /opt/q4-planning/site;
+    index index.html;
+    charset utf-8;
+    add_header X-Content-Type-Options nosniff;
+    add_header Cache-Control "no-cache";
+    location = / { return 302 /summary/; }
+    location / { try_files $uri $uri/ =404; }
+}
