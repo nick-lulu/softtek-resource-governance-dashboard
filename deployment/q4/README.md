@@ -92,3 +92,5 @@ GitHub Actions 的 **Build Q4 Server Package** 工作流也会从当前 main 构
 发布前运行 node deployment/q4/build-portfolio-snapshot.mjs，使用现有 Summary 的同一套计算函数，从当前 domain、Finance 和最终 QA 数据生成内嵌快照及 public/assets/portfolio-data.json。GitHub Pages 工作流和服务器打包脚本均自动运行此步骤；打包环境需安装 Node.js 22 及 Python 3。
 
 Summary 首屏直接读取同版本快照，不再下载其他 domain 的完整 HTML。手动 Refresh 读取最新 JSON；快照缺失或无效时回退原来源页面。标签使用同版本内嵌数据，仅增强新增 DOM，筛选与明细无需反复扫描整个页面。所有源项目与人员计算口径保持不变。
+
+Resource List 和 QA 也使用发布时生成的独立快照。Resource List 保留全部人员、未分类人员和原表 Allocated/Remaining 来源明细，并用引用消除与人员计划重复的项目记录；QA 快照保留最终 QA 预测与 QA Lead。所有 domain 内嵌同版本标签，并预加载共用脚本。人员表格、角色表和 Kanban 按当前视图生成，切换视图与导出功能保留。
