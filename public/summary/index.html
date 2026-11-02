@@ -60,7 +60,7 @@ function personCSCOpIds(values){const ids=new Set();for(const value of values||[
 function personCSCOPCount(values){return personCSCOpIds(values).length}
 </script><script>'use strict';
 const SummaryCore=(()=>{
- const aliases={'harry':'Harry Shi','harry shi':'Harry Shi','mengyi':'Mengyi Zhou','mengyi zhou':'Mengyi Zhou','eunice bi':'Bi Yu','bi yu':'Bi Yu','xian wang':'Wang Xian','wang xian':'Wang Xian','ping yang':'Yang Ping','yang ping':'Yang Ping','daisy':'Daisy Tang','dasiy':'Daisy Tang','daisy tang':'Daisy Tang'};
+ const aliases={'nicole yu':'Nichole Yu','nichole yu':'Nichole Yu','harry':'Harry Shi','harry shi':'Harry Shi','mengyi':'Mengyi Zhou','mengyi zhou':'Mengyi Zhou','eunice bi':'Bi Yu','bi yu':'Bi Yu','xian wang':'Wang Xian','wang xian':'Wang Xian','ping yang':'Yang Ping','yang ping':'Yang Ping','daisy':'Daisy Tang','dasiy':'Daisy Tang','daisy tang':'Daisy Tang'};
  const number=x=>typeof x==='number'&&Number.isFinite(x),shared=r=>r.category==='Shared'||r.category==='Shared QA';
  function nameOf(n){const t=String(n||'').trim().replace(/\s+/g,' ');return aliases[t.toLowerCase()]||t}
  function keyOf(n){return nameOf(n).toLowerCase().replace(/\s+/g,'_')}
