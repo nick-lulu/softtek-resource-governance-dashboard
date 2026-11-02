@@ -65,6 +65,7 @@ def main():
     parser.add_argument('--revision', default='working-tree')
     args=parser.parse_args()
     repo=Path(__file__).resolve().parents[2]
+    subprocess.run(['node', str(repo/'deployment/q4/build-portfolio-snapshot.mjs')], check=True, stdout=subprocess.PIPE)
     out=Path(args.output).resolve()
     # Refuse reuse to avoid deleting or accidentally packaging unrelated files.
     out.mkdir(parents=True,exist_ok=False)

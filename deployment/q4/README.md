@@ -86,3 +86,9 @@ GitHub Actions 的 **Build Q4 Server Package** 工作流也会从当前 main 构
 - 本地打包验证：JSON、内部页面/资源链接、文件完整性、资源数值类型、页面脚本语法；发布版本写入 manifest.json。
 - 服务器到位后验证：容器配置、端口、DNS、证书、公开地址文件哈希、浏览器项目明细、Total Summary 和 Resource List 汇总。
 - 当前尚无服务器连接，不能提前确认实际阿里云部署或 HTTPS 已成功。部署时按服务器实况完成以上检查。
+
+## Summary 首屏加载优化
+
+发布前运行 node deployment/q4/build-portfolio-snapshot.mjs，使用现有 Summary 的同一套计算函数，从当前 domain、Finance 和最终 QA 数据生成内嵌快照及 public/assets/portfolio-data.json。GitHub Pages 工作流和服务器打包脚本均自动运行此步骤；打包环境需安装 Node.js 22 及 Python 3。
+
+Summary 首屏直接读取同版本快照，不再下载其他 domain 的完整 HTML。手动 Refresh 读取最新 JSON；快照缺失或无效时回退原来源页面。标签使用同版本内嵌数据，仅增强新增 DOM，筛选与明细无需反复扫描整个页面。所有源项目与人员计算口径保持不变。

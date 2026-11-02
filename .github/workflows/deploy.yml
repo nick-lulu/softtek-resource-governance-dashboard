@@ -36,6 +36,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Generate validated portfolio snapshot
+        run: node deployment/q4/build-portfolio-snapshot.mjs
+
       - name: Build
         run: pnpm run build
 
