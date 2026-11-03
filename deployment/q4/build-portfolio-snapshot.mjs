@@ -47,4 +47,29 @@ for(const [route,id,value,file]of [['resources','resources-snapshot',resourceBun
  const filePath=path.join(site,route,'index.html');await writeFile(filePath,embed(await readFile(filePath,'utf8'),id,value));await writeFile(path.join(site,'assets',file),JSON.stringify(value).replaceAll('<','\\u003c')+'\n');
 }
 for(const route of ['corporate','mpa','fulfillment','upstream-scm-mdm','q4-ops','q4-ops-plan-b']){const filePath=path.join(site,route,'index.html');await writeFile(filePath,embed(await readFile(filePath,'utf8'),'portfolio-labels',bundle.labels));}
+// Export the complete project register, including projects without named effort.
+// Keep separate source project rows even when they share a CSCOP reference.
+const clean=s=>String(s||'').trim().toLowerCase().replace(/[^a-z0-9]/g,'');
+const refs=p=>[...new Set([p.id,p.projectId,...(p.references||[])].filter(Boolean).flatMap(s=>{const out=[];for(const m of String(s).matchAll(/\b(?:CSCOP|CDM)-(\d+(?:\/\d+)*)/gi))for(const n of m[1].split('/'))out.push('CSCOP-'+n);return out;}))];
+const exportDomain=name=>name==='Supplychain SCM&MDM'?'Upstream SCM & MDM':name;
+const exportProjects=labels.projects.filter(p=>refs(p).length).map(p=>({...p,domain:exportDomain(p.domain),references:refs(p)}));
+const domainNames=Object.fromEntries(domains.map(d=>[d.id,d.name]));
+for(const [route,source]of Object.entries(sources)){
+ const domain=domainNames[route==='fulfillment'?'omni':route];
+ for(const p of source.projects||source.items||[]){
+  if(!refs(p).length)continue;
+  const match=exportProjects.find(x=>x.domain===domain&&clean(x.name)===clean(p.name));
+  if(!match)exportProjects.push({id:refs(p)[0],references:refs(p),name:p.name,domain,status:'',sourceStage:p.stage||'',market:p.market||'',type:p.type||'',typeStatus:'',recordKey:route+'-'+(p.row||p.key||p.name)});
+ }
+}
+const exportDetails=[];
+for(const d of domains)for(const r of d.resources)for(const p of r.projects||[]){
+ if(!refs(p).length)continue;
+ const candidates=exportProjects.filter(x=>x.domain===d.name&&x.references.some(id=>refs(p).includes(id)));
+ let project=candidates.find(x=>clean(x.name)===clean(p.name)||(x.aliases||[]).some(a=>clean(a)===clean(p.name)));
+ if(!project&&candidates.length===1)project=candidates[0];
+ if(!project){project={id:refs(p)[0],references:refs(p),name:p.name,domain:d.name,status:'',market:'',type:'',recordKey:d.id+'-'+p.name};exportProjects.push(project);}
+ exportDetails.push({references:refs(p),project:p.name,recordKey:project.recordKey||project.id,domain:d.name,person:r.name,role:p.role||'',category:r.category,md:typeof p.md==='number'?p.md:null,sourceCell:p.sourceCell||'',note:p.note||''});
+}
+await writeFile(path.join(site,'assets/cscop-export-data.json'),JSON.stringify({revision:bundle.revision,projects:exportProjects.map(p=>({key:p.recordKey||p.id,references:p.references,name:p.name,domain:p.domain,status:p.status||'',sourceStage:p.sourceStage||'',demandSource:p.market==='To confirm'?'':p.market||'',demandType:p.type||'',labelStatus:p.typeStatus||''})),details:exportDetails}).replaceAll('<','\\u003c')+'\n');
 console.log(JSON.stringify({status:'PASS',domains:domains.length,revision:bundle.revision,totalMD:Math.round(total*100)/100,snapshotBytes:Buffer.byteLength(serialized)}));
