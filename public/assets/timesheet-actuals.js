@@ -1,0 +1,10 @@
+(()=>{'use strict';
+const state={status:'not_configured',resources:[],lastSuccessfulSyncAt:null};
+const valid=data=>data?.schemaVersion===1&&data.period?.startDate==='2026-11-01'&&data.period?.endDate==='2027-01-31'&&data.hoursPerMD===8&&Array.isArray(data.resources)&&new Set(data.resources.map(r=>r.resourceKey)).size===data.resources.length&&data.resources.every(r=>typeof r.resourceKey==='string'&&typeof r.actualHours==='number'&&Number.isFinite(r.actualHours)&&r.actualHours>=0&&typeof r.actualMD==='number'&&Number.isFinite(r.actualMD)&&Math.abs(r.actualMD-r.actualHours/8)<1e-8);
+function person(p){if(!['ready','stale'].includes(state.status))return null;return state.resources.find(r=>r.resourceKey===p.key)||null;}
+function summary(ps){const matches=ps.map(p=>({p,a:person(p)})).filter(x=>x.a),comparable=matches.filter(x=>typeof x.p.total==='number');return {count:matches.length,total:matches.length?matches.reduce((s,x)=>s+x.a.actualMD,0):null,unspent:comparable.length?comparable.reduce((s,x)=>s+x.p.total-x.a.actualMD,0):null,comparable:comparable.length};}
+function note(p){const a=person(p);if(state.status==='stale')return 'Last successful sync · stale data';if(a)return 'All-domain '+(state.statusBasis||'reported')+' hours ÷ 8';return state.status==='ready'?'No total returned for this resource':state.status==='unavailable'?'Timesheet temporarily unavailable':state.status==='loading'?'Connecting to Timesheet':'Awaiting Timesheet API';}
+let loading=false;
+async function refresh(){if(loading||location.hostname.endsWith('.github.io'))return;loading=true;const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),45000);try{const r=await fetch('/api/v1/timesheet/actuals',{cache:'no-store',signal:controller.signal});if(!r.ok)throw Error('Timesheet API unavailable');const data=await r.json();if(!valid(data))throw Error('Invalid Timesheet contract');Object.assign(state,data);}catch(e){state.status=state.resources.length?'stale':'unavailable';}finally{loading=false;clearTimeout(timeout);document.dispatchEvent(new Event('timesheet-actuals'));}}
+window.TimesheetActuals={state,person,summary,note,refresh,valid};
+})();
