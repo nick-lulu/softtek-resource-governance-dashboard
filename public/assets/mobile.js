@@ -1,0 +1,13 @@
+(()=>{'use strict';
+const nav=document.querySelector('nav[aria-label="Domain navigation"]'),links=nav?.querySelector('.domain-links');
+if(!nav||!links)return;
+links.id='mobile-domain-pages';const button=document.createElement('button');button.type='button';button.className='mobile-menu-toggle';button.setAttribute('aria-controls',links.id);button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','Open page menu');button.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Menu</span>';nav.insertBefore(button,links);nav.classList.add('has-mobile-nav');
+function close(){nav.classList.remove('mobile-nav-open');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','Open page menu');}
+button.addEventListener('click',()=>{const open=!nav.classList.contains('mobile-nav-open');nav.classList.toggle('mobile-nav-open',open);button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'Close page menu':'Open page menu');});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('mobile-nav-open')){close();button.focus();}});
+document.addEventListener('click',e=>{if(!nav.contains(e.target))close();});links.addEventListener('click',e=>{if(e.target.closest('a'))close();});
+// Tables retain every field and scroll inside their own region on small screens.
+const wrapped='.table-wrap,.tablewrap,.table-scroll,.ur-table-scroll,.dialog-table-wrap,.mobile-table-scroll,.market-matrix';
+function wrapTables(roots){for(const root of roots){if(root.nodeType!==1)continue;const tables=root.matches('table')?[root]:[...root.querySelectorAll('table')];for(const table of tables){if(!table.isConnected||table.closest(wrapped))continue;const container=document.createElement('div');container.className='mobile-table-scroll';container.setAttribute('tabindex','0');container.setAttribute('role','region');container.setAttribute('aria-label','Scrollable project details');table.before(container);container.append(table);}}}
+wrapTables([document.body]);let frame;const pending=new Set();new MutationObserver(changes=>{for(const c of changes)for(const n of c.addedNodes)if(n.nodeType===1)pending.add(n);if(!pending.size)return;cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{const roots=[...pending];pending.clear();wrapTables(roots);});}).observe(document.body,{childList:true,subtree:true});
+})();
