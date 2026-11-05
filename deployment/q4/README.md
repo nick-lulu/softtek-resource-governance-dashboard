@@ -8,6 +8,7 @@
 
 | 地址 | 内容 |
 | --- | --- |
+| `/portfolio/` | Portfolio Overview：项目全景及 Q4 计划覆盖检查（Confluence 待接入） |
 | `/summary/` | Total Summary |
 | `/resources/` | Resource List |
 | `/corporate/` | Corporate |
@@ -17,7 +18,7 @@
 | `/qa/` | 所有 domain 的 QA 汇总 |
 | `/q4-ops/` | SCM Ops |
 | `/q4-ops-plan-b/` | Plan B |
-| `/project-labels/` | Project Labels |
+| `/project-labels/` | 旧入口，跳转 Portfolio Overview |
 
 无需服务器 Node.js 或前端编译。静态页面中的相对链接及跨域资源汇总均保持原逻辑，文件必须整体部署。表格数据为快照；网页内的个人本地草稿不会自动写回 GitHub，Timesheet Actual 仍维持现有连接状态。
 

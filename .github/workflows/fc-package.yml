@@ -19,6 +19,8 @@ jobs:
           python-version: '3.10'
       - name: Test Timesheet totals adapter
         run: python -m unittest discover -s deployment/fc/tests -v
+      - name: Test portfolio project reconciliation
+        run: node deployment/q4/test-portfolio-overview.cjs
       - name: Build matching FC ZIP
         run: python deployment/fc/package.py --output fc-release --revision "$GITHUB_SHA"
       - uses: actions/upload-artifact@v4

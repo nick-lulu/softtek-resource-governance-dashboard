@@ -72,4 +72,19 @@ for(const d of domains)for(const r of d.resources)for(const p of r.projects||[])
  exportDetails.push({references:refs(p),project:p.name,recordKey:project.recordKey||project.id,domain:d.name,person:r.name,role:p.role||'',category:r.category,md:typeof p.md==='number'?p.md:null,sourceCell:p.sourceCell||'',note:p.note||''});
 }
 await writeFile(path.join(site,'assets/cscop-export-data.json'),JSON.stringify({revision:bundle.revision,projects:exportProjects.map(p=>({key:p.recordKey||p.id,references:p.references,name:p.name,domain:p.domain,status:p.status||'',sourceStage:p.sourceStage||'',demandSource:p.market==='To confirm'?'':p.market||'',demandType:p.type||'',labelStatus:p.typeStatus||''})),details:exportDetails}).replaceAll('<','\\u003c')+'\n');
+// Inventory and plan coverage are separate from personnel totals. No network calls.
+const overviewPlans=[];
+for(const [route,source]of Object.entries(sources)){
+ const domain=domainNames[route==='fulfillment'?'omni':route];
+ for(const [i,p]of(source.projects||source.items||[]).entries()){
+  const label=labels.projects.find(l=>exportDomain(l.domain)===domain&&[l.name,...(l.aliases||[])].some(n=>clean(n)===clean(p.name)));
+  overviewPlans.push({...label,...p,key:route+'-'+(p.key||p.row||i),domain,references:refs(p),status:label?.status||'To confirm',sourceStage:p.stage||label?.sourceStage||'',sources:label?.sources||[source.source||'Domain planning source'],market:p.market||label?.market||'',type:p.type||label?.type||'',typeStatus:label?.typeStatus||'Suggested from project source'});
+ }
+}
+const overviewDetails=exportDetails.map(d=>{const exact=overviewPlans.filter(p=>p.domain===d.domain&&clean(p.name)===clean(d.project));return {...d,recordKey:exact.length===1?exact[0].key:d.recordKey};});
+const confluence=JSON.parse(await readFile(path.join(site,'assets/confluence-onepage-data.json'),'utf8'));
+if(confluence.schemaVersion!==1||!Array.isArray(confluence.domains)||!Array.isArray(confluence.projects))throw Error('Invalid One Page snapshot contract');
+for(const p of confluence.projects)if(!p.name||!['Corporate','MP&A','Fulfillment','Upstream SCM & MDM','SCM Ops'].includes(p.domain))throw Error('One Page project requires a known owning domain and project name');
+const overview={schemaVersion:1,revision:bundle.revision,asOf:'Source dates retained',plans:overviewPlans,labels:labels.projects.map(p=>({...p,domain:exportDomain(p.domain)})),details:overviewDetails,confluence};
+await writeFile(path.join(site,'assets/portfolio-overview-data.json'),JSON.stringify(overview).replaceAll('<','\\u003c')+'\n');
 console.log(JSON.stringify({status:'PASS',domains:domains.length,revision:bundle.revision,totalMD:Math.round(total*100)/100,snapshotBytes:Buffer.byteLength(serialized)}));

@@ -11,7 +11,7 @@ import zipfile
 from urllib.parse import urlsplit, unquote
 import posixpath
 
-ROUTES = ('summary', 'resources', 'corporate', 'upstream-scm-mdm', 'mpa',
+ROUTES = ('portfolio', 'summary', 'resources', 'corporate', 'upstream-scm-mdm', 'mpa',
           'fulfillment', 'qa', 'q4-ops', 'q4-ops-plan-b', 'project-labels')
 CONFIG = ('compose.yaml', 'Caddyfile', '.env.example', 'deploy.sh', 'check.py',
           'nginx.conf.example', 'README.md')
