@@ -22,5 +22,31 @@ function reconcile(data){const plans=data.plans||[],labels=data.labels||[],sync=
  for(const row of rows){const ds=(sync.domains||[]).find(d=>domain(d.name)===row.domain);row.syncAsOf=ds?.asOf||null;row.syncState=connected.includes(row.domain)?'ready':ds?.status==='stale'?'stale':'pending';if(row.origin==='planning'&&row.onePage==='pending'&&row.syncState==='ready')row.onePage='not-found';row.needsReview=row.coverage==='review'||!row.references.length||row.onePage==='not-found';}
  return {rows,connected,domainOrder:DOMAINS};
 }
-return {DOMAINS,domain,refs,match,reconcile};
+const GATES=[{key:'intake',name:'Intake',requirement:'BRD sign-off',checks:['brdSignOff']},{key:'feasibility',name:'Feasibility',requirement:'SOW signed',checks:['sowSigned']},{key:'dev',name:'Development',requirement:'Coding + TUAT completed',checks:['codingComplete','tuatComplete']},{key:'deploy',name:'Deploy',requirement:'Release completed',checks:['releaseComplete']},{key:'handover',name:'Handover',requirement:'Handover sign-off',checks:['handoverSignOff']}];
+const isoDate=v=>{if(typeof v!=='string'||!/^\d{4}-\d{2}-\d{2}(?:T.*)?$/.test(v))return null;const d=v.slice(0,10),parsed=new Date(d+'T00:00:00Z');return Number.isFinite(+parsed)&&parsed.toISOString().slice(0,10)===d?d:null;};
+function gateway(rows,gate,today){const values=rows.map(r=>({value:r.confluence?.gateways?.[gate.key]||r.gateways?.[gate.key]||{},row:r}));
+ const supplied=values.filter(x=>Object.keys(x.value).length),dates=(key)=>[...new Set(supplied.map(x=>isoDate(x.value[key])).filter(Boolean))],planned=dates('plannedDate'),actual=dates('actualDate');
+ if(!planned.length&&gate.key==='deploy')for(const r of rows){const date=isoDate(r.goLive);if(date&&!planned.includes(date))planned.push(date);}
+ const evidence={};let conflict=planned.length>1||actual.length>1;
+ // Completion must be documented together in one source record; never stitch
+ // Coding from one conflicting project row to TUAT from another project.
+ const completeRecords=supplied.filter(x=>gate.checks.every(c=>x.value.evidence?.[c]===true));
+ for(const check of gate.checks){const states=[...new Set(supplied.map(x=>x.value.evidence?.[check]).filter(x=>typeof x==='boolean'))];if(states.length>1)conflict=true;evidence[check]=states.length===1?states[0]:null;}
+ const projectNames=[...new Set(rows.map(r=>name(r.name)))],complete=completeRecords.length>0&&!conflict&&projectNames.every(n=>completeRecords.some(x=>name(x.row.name)===n)),plannedDate=planned.length===1?planned[0]:null,actualDate=actual.length===1?actual[0]:null,overdue=!!plannedDate&&plannedDate<today&&!complete&&!conflict;
+ return {...gate,plannedDate,actualDate,plannedDates:planned,actualDates:actual,evidence,complete,conflict,overdue,status:conflict?'Review':complete?'Complete':overdue?'Past target':supplied.length||plannedDate||actualDate?'Pending':'Not provided',dateBasis:!dates('plannedDate').length&&planned.length&&gate.key==='deploy'?'Go-live target from domain source':'Explicit gateway date',sources:supplied.map(x=>({domain:x.row.domain,project:x.row.name,plannedDate:isoDate(x.value.plannedDate),actualDate:isoDate(x.value.actualDate),evidence:x.value.evidence||{}}))};
+}
+function control(data,today=new Date().toISOString().slice(0,10)){const reconciled=reconcile(data),groups=new Map();
+ for(const r of reconciled.rows)for(const id of r.references){if(!groups.has(id))groups.set(id,[]);groups.get(id).push(r);}
+ const known=v=>v&&v!=='To confirm'&&v!=='Not specified';
+ const baseline=[...(data.plans||[]),...(data.labels||[])],findings=(data.confluence?.projects||[]).map(p=>{const ids=refs(p),same=new Set(baseline.filter(b=>domain(b.domain)===domain(p.domain)).flatMap(refs)),any=new Set(baseline.flatMap(refs)),missingReferences=ids.filter(id=>!any.has(id));return {...p,references:ids,missingReferences,presence:!ids.length?'review':ids.every(id=>same.has(id))?'present':missingReferences.length?'missing':'domain-review',planning:match(p,data.plans||[]).coverage};});
+ const projects=[...groups].map(([id,rows])=>{const owning=rows.filter(r=>r.domain!=='SCM Ops'),primary=owning.length?owning:rows,allNames=[...new Set(primary.map(r=>r.name))],domains=[...new Set(rows.map(r=>r.domain))].sort((a,b)=>DOMAINS.indexOf(a)-DOMAINS.indexOf(b));
+  const types=[...new Set(rows.map(r=>r.confluence?.demandSource||r.market||r.demandSource).filter(known))],intakes=[...new Set(rows.flatMap(r=>[r.confluence?.intakeNumber,r.intakeNumber,r.intake]).filter(v=>typeof v==='string'&&v.trim()&&/\d/.test(v)&&!/^(?:n\/?a|none|null|not provided|to confirm|tbd|tbc|pending|[-—])$/i.test(v.trim())).map(v=>v.trim()))];
+  const statuses=[...new Set(primary.map(r=>r.onePageStatus||r.status).filter(known))],coverage=primary.some(r=>r.coverage==='review')?'review':primary.every(r=>r.coverage==='planned')?'planned':primary.some(r=>r.coverage==='planned')?'partial':'unplanned';
+  const seenDetails=new Set(),allocations=(data.details||[]).filter(d=>refs({references:d.references}).includes(id)).filter(d=>{const key=JSON.stringify([d.domain,d.recordKey,d.person,d.role,d.sourceCell,d.md,d.project]);if(seenDetails.has(key))return false;seenDetails.add(key);return true;});
+  const gateways=GATES.map(g=>gateway(primary,g,today)),related=findings.filter(p=>p.references.includes(id)),sharedEffort=allocations.some(d=>(d.references||[]).length>1);
+  return {id,name:allNames[0],names:allNames,rows,primary,domains,types,intakes,hasIntake:intakes.length>0,status:statuses.length===1?statuses[0]:statuses.length?'Mixed source statuses':'Not provided',coverage,gateways,allocations,people:[...new Set(allocations.map(a=>a.person).filter(Boolean))],itemisedMD:allocations.some(a=>typeof a.md==='number')?Math.round(allocations.reduce((s,a)=>s+(typeof a.md==='number'?a.md:0),0)*100)/100:null,sharedEffort,onePage:related.length?'found':'unchecked',findings:related,needsReview:rows.some(r=>r.needsReview)||gateways.some(g=>g.conflict)||types.length>1,timelineMissing:gateways.some(g=>!g.plannedDate),overdue:gateways.some(g=>g.overdue),sourceOnly:related.some(p=>p.presence==='missing')&&coverage==='unplanned'};
+ });
+ return {projects,unreferenced:reconciled.rows.filter(r=>!r.references.length),findings,connected:reconciled.connected,rows:reconciled.rows};
+}
+return {DOMAINS,GATES,domain,refs,match,reconcile,isoDate,gateway,control};
 });
