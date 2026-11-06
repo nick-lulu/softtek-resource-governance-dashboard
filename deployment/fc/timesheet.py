@@ -34,7 +34,7 @@ def canonical(value):
 
 
 def number(value):
-    if isinstance(value, bool) or not isinstance(value, (int, float, str)):
+    if isinstance(value, bool) or not isinstance(value, (int, float, str, Decimal)):
         raise SourceError('invalid_actual_hours')
     try:
         result = Decimal(str(value))
@@ -60,6 +60,9 @@ class TimesheetService:
         self.last_success = None
         self.deadline = 0
         self.error = None
+        self.token = None
+        self.token_deadline = 0
+        self.generation = 0
         self.roster = {}
         source = site / 'assets/resource-list-data.json'
         if source.exists():
@@ -76,6 +79,9 @@ class TimesheetService:
         basis = self.env.get('TIMESHEET_STATUS_BASIS', '').strip().lower()
         if not url:
             return None, 'not_configured'
+        softtek = self.env.get('TIMESHEET_PROVIDER') == 'softtek'
+        if softtek:
+            basis = 'filled'
         if basis not in ('filled', 'submitted', 'approved'):
             return None, 'status_basis_required'
         parsed = urlsplit(url)
@@ -94,8 +100,97 @@ class TimesheetService:
             raise SourceError('invalid_configuration')
         if any(not isinstance(k, str) or not isinstance(v, str) or canonical(v) not in self.roster for k, v in mapping.items()):
             raise SourceError('invalid_resource_mapping')
+        if len(set(canonical(v) for v in mapping.values())) != len(mapping):
+            raise SourceError('multiple_emails_match_one_resource')
+        if softtek:
+            if parsed.path not in ('', '/'):
+                raise SourceError('source_base_url_required')
+            if not self.env.get('TIMESHEET_AK') or not self.env.get('TIMESHEET_SK'):
+                return None, 'source_authentication_not_configured'
+            if not mapping:
+                return None, 'resource_mapping_required'
+            if any(not re.fullmatch(r'[^\s@]+@[^\s@]+\.[^\s@]+', email) for email in mapping):
+                raise SourceError('invalid_email_mapping')
         return {'url': url, 'basis': basis, 'ttl': ttl, 'timeout': timeout,
-                'mapping': mapping}, None
+                'mapping': mapping, 'provider': 'softtek' if softtek else 'legacy'}, None
+
+    def softtek_post(self, config, path, payload, token=None):
+        headers = {'Content-Type': 'application/json', 'Accept': 'application/json'}
+        if token:
+            headers['Authorization'] = 'Bearer ' + token
+        request = Request(config['url'].rstrip('/') + path, headers=headers,
+                          data=json.dumps(payload).encode('utf8'), method='POST')
+        try:
+            with build_opener(NoRedirect).open(request, timeout=config['timeout']) as response:
+                body = response.read(1024 * 1024 + 1)
+            if len(body) > 1024 * 1024:
+                raise SourceError('source_response_too_large')
+            data = json.loads(body, parse_float=Decimal)
+        except HTTPError as exc:
+            raise SourceError('source_authentication_failed' if exc.code in (401, 403) else 'source_http_error') from None
+        except (URLError, TimeoutError, OSError):
+            raise SourceError('source_unavailable') from None
+        except (ValueError, UnicodeError):
+            raise SourceError('invalid_source_json') from None
+        if not isinstance(data, dict):
+            raise SourceError('invalid_source_contract')
+        # Softtek may return HTTP 200 with a business-level 401.
+        if data.get('code') != 200:
+            raise SourceError('source_authentication_failed' if data.get('code') == 401 else 'source_business_error')
+        return data.get('data')
+
+    def softtek_token(self, config):
+        if self.token and self.clock() < self.token_deadline:
+            return self.token
+        data = self.softtek_post(config, '/open-api/v1/token',
+                                 {'ak': self.env['TIMESHEET_AK'], 'sk': self.env['TIMESHEET_SK']})
+        if not isinstance(data, dict):
+            raise SourceError('invalid_token_response')
+        token, expires = data.get('access_token'), data.get('expires_in')
+        if not isinstance(token, str) or not token or '\r' in token or '\n' in token:
+            raise SourceError('invalid_token_response')
+        if isinstance(expires, bool) or not isinstance(expires, (int, Decimal)) or expires <= 0:
+            raise SourceError('invalid_token_response')
+        self.token, self.token_deadline = token, self.clock() + max(0, float(expires) - 60)
+        return token
+
+    def pull_softtek(self, config):
+        result = []
+        emails = sorted(config['mapping'])
+        started = time.monotonic()
+        for offset in range(0, len(emails), 100):
+            if time.monotonic() - started > 35:
+                raise SourceError('source_refresh_timeout')
+            batch = emails[offset:offset + 100]
+            payload = {'emails': batch, 'startDate': PERIOD['startDate'], 'endDate': PERIOD['endDate']}
+            for attempt in range(2):
+                try:
+                    rows = self.softtek_post(config, '/open-api/v1/hours/summary', payload,
+                                              self.softtek_token(config))
+                    break
+                except SourceError as exc:
+                    if str(exc) != 'source_authentication_failed' or attempt:
+                        raise
+                    self.token = None
+            if not isinstance(rows, list) or len(rows) != len(batch):
+                raise SourceError('incomplete_source_snapshot')
+            seen = set()
+            for row in rows:
+                if not isinstance(row, dict):
+                    raise SourceError('invalid_source_contract')
+                email = row.get('email')
+                if not isinstance(email, str) or email not in batch or email in seen:
+                    raise SourceError('unexpected_response_identity')
+                seen.add(email)
+                value = row.get('totalHours')
+                if isinstance(value, bool) or not isinstance(value, (int, float, Decimal)):
+                    raise SourceError('invalid_actual_hours')
+                hours = number(value)
+                key = canonical(config['mapping'][email])
+                result.append({'resourceKey': key, 'name': self.roster[key],
+                               'actualHours': float(hours), 'actualMD': float(hours / HOURS_PER_MD)})
+        return {'resources': sorted(result, key=lambda r: r['name']),
+                'matchedResourceCount': len(result), 'unmatchedResourceCount': 0}
 
     def fetch_page(self, config, page):
         if self.fetcher:
@@ -128,6 +223,8 @@ class TimesheetService:
             raise SourceError('invalid_source_json') from None
 
     def pull(self, config):
+        if config['provider'] == 'softtek':
+            return self.pull_softtek(config)
         result, employee_ids, resource_keys = [], set(), set()
         unmatched = 0
         snapshot_id = None
@@ -188,14 +285,19 @@ class TimesheetService:
         except SourceError as exc:
             config, pending = None, str(exc)
         base = {'schemaVersion': 1, 'period': PERIOD, 'hoursPerMD': 8,
-                'statusBasis': self.env.get('TIMESHEET_STATUS_BASIS') or None,
+                'statusBasis': config['basis'] if config else None,
                 'lastSuccessfulSyncAt': self.last_success,
-                'refreshMode': 'read-through', 'refreshIntervalSeconds': config['ttl'] if config else None}
+                'refreshMode': 'on-request' if config and config['provider'] == 'softtek' else 'read-through',
+                'refreshIntervalSeconds': 60 if config and config['provider'] == 'softtek' else config['ttl'] if config else None,
+                'rosterResourceCount': len(self.roster),
+                'configuredResourceCount': len(config['mapping']) if config else 0}
         if pending:
             return {**base, 'status': pending, 'resources': [], 'matchedResourceCount': 0,
                     'unmatchedResourceCount': 0}
+        generation = self.generation
         with self.lock:
-            if fetch and self.clock() >= self.deadline:
+            fresh_request = config['provider'] == 'softtek' and not self.error and generation == self.generation
+            if fetch and (fresh_request or self.clock() >= self.deadline):
                 try:
                     snapshot = self.pull(config)
                     # Replace the cumulative totals atomically, never add snapshots.
@@ -203,6 +305,7 @@ class TimesheetService:
                     self.last_success = datetime.now(timezone.utc).isoformat()
                     self.error = None
                     self.deadline = self.clock() + config['ttl']
+                    self.generation += 1
                 except SourceError as exc:
                     self.error = str(exc)
                     self.deadline = self.clock() + 30
