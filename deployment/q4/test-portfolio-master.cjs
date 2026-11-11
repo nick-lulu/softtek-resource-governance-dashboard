@@ -24,3 +24,7 @@ const jira={...master,sourceType:'jira',projects:[{id:'CSCOP-99',domain:'Unmappe
 assert.equal(C.reconcile(jira,fullPages).rows[0].state,'missing','an unassigned Jira issue absent from all five verified One Pages is missing without inventing an owning domain');
 assert.equal(C.reconcile(jira,onepage).rows[0].state,'unverified','incomplete source coverage cannot prove absence across all five domains');
 assert.equal(C.reconcile({...jira,projects:[{id:'CSCOP-1',domain:'Unmapped domain',name:'Alpha'}]},fullPages).rows[0].state,'review','unresolved multi-domain ownership is not a missing project');
+const confirmed={...jira,projects:[{id:'CSCOP-99',domain:'Corporate',name:'New Jira issue',assignee:'Bingbing Zhao',domainBasis:'User-confirmed Jira assignee mapping'}]};
+assert.equal(C.reconcile(confirmed,fullPages).rows[0].state,'missing','confirmed assignee ownership puts an absent issue into its owning-domain follow-up');
+const ownershipConflict={...confirmed,projects:[{...confirmed.projects[0],id:'CSCOP-1',domain:'Fulfillment',name:'Alpha'}]};
+assert.equal(C.reconcile(ownershipConflict,fullPages).rows[0].state,'review','a confirmed assignee domain conflicting with One Page is reviewed, never silently accepted');
