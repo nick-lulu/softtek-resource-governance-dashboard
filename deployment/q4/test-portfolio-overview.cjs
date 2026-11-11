@@ -36,3 +36,6 @@ assert.equal(C.control({...controlData,plans:[{...controlData.plans[0],intake:'N
 const onlyRegistered={...controlData,plans:[],labels:[controlData.plans[0]],confluence:{domains:[],projects:[{id:'CSCOP-9',name:'Alpha',domain:'Corporate'}]}};
 const found=C.control(onlyRegistered,'2026-11-05');assert.equal(found.findings[0].presence,'present');assert.equal(found.findings[0].planning,'unplanned');
 console.log('PASS: CSCOP grouping, intake validity, release targets, gateway evidence isolation, and dashboard presence vs resource planning.');
+assert.equal(C.gateway([{name:'Old plan',goLive:'2026-11-01',confluence:{name:'Current source',releaseText:'Jan,2027'}}],C.GATES[3],'2026-11-11').plannedDate,null,'a current coarse source target must not fall back to an obsolete exact planning date');
+assert.equal(C.control({plans:[{key:'x',domain:'Corporate',name:'Old name',references:['CSCOP-1']}],confluence:{domains:[],projects:[{name:'New source name',domain:'Corporate',references:['CSCOP-1'],status:'In Progress'}]}}).projects[0].name,'New source name','display the source project name when it differs from the allocation workbook');
+console.log('PASS: latest One Page names and dates take precedence over stale planning labels.');

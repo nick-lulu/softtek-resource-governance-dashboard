@@ -85,6 +85,6 @@ const overviewDetails=exportDetails.map(d=>{const exact=overviewPlans.filter(p=>
 const confluence=JSON.parse(await readFile(path.join(site,'assets/confluence-onepage-data.json'),'utf8'));
 if(confluence.schemaVersion!==1||!Array.isArray(confluence.domains)||!Array.isArray(confluence.projects))throw Error('Invalid One Page snapshot contract');
 for(const p of confluence.projects)if(!p.name||!['Corporate','MP&A','Fulfillment','Upstream SCM & MDM','SCM Ops'].includes(p.domain))throw Error('One Page project requires a known owning domain and project name');
-const overview={schemaVersion:1,revision:bundle.revision,asOf:'Source dates retained',plans:overviewPlans,labels:labels.projects.map(p=>({...p,domain:exportDomain(p.domain)})),details:overviewDetails,confluence};
+const overview={schemaVersion:1,revision:bundle.revision,asOf:'Source dates retained',plans:overviewPlans,labels:labels.projects.map(p=>({...p,domain:exportDomain(p.domain)})),details:overviewDetails,confluence:{...confluence,projects:[]}};
 await writeFile(path.join(site,'assets/portfolio-overview-data.json'),JSON.stringify(overview).replaceAll('<','\\u003c')+'\n');
 console.log(JSON.stringify({status:'PASS',domains:domains.length,revision:bundle.revision,totalMD:Math.round(total*100)/100,snapshotBytes:Buffer.byteLength(serialized)}));

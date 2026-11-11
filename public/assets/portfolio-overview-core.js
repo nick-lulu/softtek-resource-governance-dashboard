@@ -26,7 +26,7 @@ const GATES=[{key:'intake',name:'Intake',requirement:'BRD sign-off',checks:['brd
 const isoDate=v=>{if(typeof v!=='string'||!/^\d{4}-\d{2}-\d{2}(?:T.*)?$/.test(v))return null;const d=v.slice(0,10),parsed=new Date(d+'T00:00:00Z');return Number.isFinite(+parsed)&&parsed.toISOString().slice(0,10)===d?d:null;};
 function gateway(rows,gate,today){const values=rows.map(r=>({value:r.confluence?.gateways?.[gate.key]||r.gateways?.[gate.key]||{},row:r}));
  const supplied=values.filter(x=>Object.keys(x.value).length),dates=(key)=>[...new Set(supplied.map(x=>isoDate(x.value[key])).filter(Boolean))],planned=dates('plannedDate'),actual=dates('actualDate');
- if(!planned.length&&gate.key==='deploy')for(const r of rows){const date=isoDate(r.goLive);if(date&&!planned.includes(date))planned.push(date);}
+ if(!planned.length&&gate.key==='deploy')for(const r of rows){const date=r.confluence?null:isoDate(r.goLive);if(date&&!planned.includes(date))planned.push(date);}
  const evidence={};let conflict=planned.length>1||actual.length>1;
  // Completion must be documented together in one source record; never stitch
  // Coding from one conflicting project row to TUAT from another project.
@@ -39,7 +39,7 @@ function control(data,today=new Date().toISOString().slice(0,10)){const reconcil
  for(const r of reconciled.rows)for(const id of r.references){if(!groups.has(id))groups.set(id,[]);groups.get(id).push(r);}
  const known=v=>v&&v!=='To confirm'&&v!=='Not specified';
  const baseline=[...(data.plans||[]),...(data.labels||[])],findings=(data.confluence?.projects||[]).map(p=>{const ids=refs(p),same=new Set(baseline.filter(b=>domain(b.domain)===domain(p.domain)).flatMap(refs)),any=new Set(baseline.flatMap(refs)),missingReferences=ids.filter(id=>!any.has(id));return {...p,references:ids,missingReferences,presence:!ids.length?'review':ids.every(id=>same.has(id))?'present':missingReferences.length?'missing':'domain-review',planning:match(p,data.plans||[]).coverage};});
- const projects=[...groups].map(([id,rows])=>{const owning=rows.filter(r=>r.domain!=='SCM Ops'),primary=owning.length?owning:rows,allNames=[...new Set(primary.map(r=>r.name))],domains=[...new Set(rows.map(r=>r.domain))].sort((a,b)=>DOMAINS.indexOf(a)-DOMAINS.indexOf(b));
+ const projects=[...groups].map(([id,rows])=>{const owning=rows.filter(r=>r.domain!=='SCM Ops'),primary=owning.length?owning:rows,allNames=[...new Set(primary.map(r=>r.confluence?.name||r.name))],domains=[...new Set(rows.map(r=>r.domain))].sort((a,b)=>DOMAINS.indexOf(a)-DOMAINS.indexOf(b));
   const types=[...new Set(rows.map(r=>r.confluence?.demandSource||r.market||r.demandSource).filter(known))],intakes=[...new Set(rows.flatMap(r=>[r.confluence?.intakeNumber,r.intakeNumber,r.intake]).filter(v=>typeof v==='string'&&v.trim()&&/\d/.test(v)&&!/^(?:n\/?a|none|null|not provided|to confirm|tbd|tbc|pending|[-—])$/i.test(v.trim())).map(v=>v.trim()))];
   const statuses=[...new Set(primary.map(r=>r.onePageStatus||r.status).filter(known))],coverage=primary.some(r=>r.coverage==='review')?'review':primary.every(r=>r.coverage==='planned')?'planned':primary.some(r=>r.coverage==='planned')?'partial':'unplanned';
   const seenDetails=new Set(),allocations=(data.details||[]).filter(d=>refs({references:d.references}).includes(id)).filter(d=>{const key=JSON.stringify([d.domain,d.recordKey,d.person,d.role,d.sourceCell,d.md,d.project]);if(seenDetails.has(key))return false;seenDetails.add(key);return true;});
