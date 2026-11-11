@@ -5,7 +5,7 @@ This package does not replace the Q4 Resource Planning / Timesheet service.
 
 ## Source and interpretation
 
-Snapshot: Tech SCM Ops FY26, Confluence page 6178078750, version 399, captured 2026-11-11.
+Snapshot: Tech SCM Ops FY26, Confluence page 6178078750, version 400, captured 2026-11-11.
 27 named delivery cases: 24 PDCA and 3 CR. Wuhan has 13 named rows and one explicitly pending row,
 excluded from confirmed status counts. Transferred is separate from Complete.
 Operation Highlight defaults to 3 active cases; 57 historical cases are opt-in.

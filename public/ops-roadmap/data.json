@@ -1,8 +1,8 @@
 {
   "sourceUrl": "https://lululemon.atlassian.net/wiki/spaces/CSNCAS/pages/6178078750/Tech+SCM+Ops+FY26",
   "title": "Tech SCM Ops | FY26",
-  "version": 399,
-  "updatedAt": "2026-11-11T06:41:39.335Z",
+  "version": 400,
+  "updatedAt": "2026-11-11T08:52:21.803Z",
   "snapshotDate": "2026-11-11",
   "wuhanScope": 14,
   "records": [
@@ -291,11 +291,12 @@
       ],
       "sourceStatus": "TRANSFER Green",
       "status": "Transferred",
-      "releaseText": "预计12月中",
+      "releaseText": "12/15/2026",
       "date": {
-        "start": "2026-12-01",
-        "end": "2026-12-31",
-        "precision": "month"
+        "start": "2026-12-15",
+        "end": "2026-12-15",
+        "precision": "exact",
+        "yearInferred": false
       },
       "updates": "11.05 转移到项目组跟进",
       "sourceRow": 12,
@@ -338,13 +339,13 @@
       "references": [],
       "sourceStatus": "In Progress Yellow",
       "status": "WIP",
-      "releaseText": "FY26Q4",
+      "releaseText": "Jan,2027",
       "date": {
-        "start": "2026-11-01",
+        "start": "2027-01-01",
         "end": "2027-01-31",
-        "precision": "quarter"
+        "precision": "month"
       },
-      "updates": "[CNSCO-3604] MSK WMS | WMS正在完成包装， OMS发起取消成功，实际WMS未取消 - JIRA 11/05 long term 方案保证系统的状态和MSK一致 11/10 MSK准备方案",
+      "updates": "[CNSCO-3604] MSK WMS | WMS正在完成包装， OMS发起取消成功，实际WMS未取消 - JIRA 11/05 long term 方案保证系统的状态和MSK一致 11/10 MSK准备方案 ，方案Review时间11/23",
       "sourceRow": 1,
       "sourceTable": 2,
       "placeholder": false
@@ -362,13 +363,13 @@
       ],
       "sourceStatus": "In Progress Yellow",
       "status": "WIP",
-      "releaseText": "ETA:FY26Q4",
+      "releaseText": "FY27Q1",
       "date": {
-        "start": "2026-11-01",
-        "end": "2027-01-31",
+        "start": "2027-02-01",
+        "end": "2027-04-30",
         "precision": "quarter"
       },
-      "updates": "PDCA: CNSCO-3582 f73d0e34-5223-3728-b1ad-22756ec23157 System Jira 11/05 ISS 跟进 Review的优化方向 ，更新优化方案 11/10 ISS反馈此项优先级降低",
+      "updates": "PDCA: CNSCO-3582 f73d0e34-5223-3728-b1ad-22756ec23157 System Jira 11/05 ISS 跟进 Review的优化方向 ，更新优化方案 11/10 基于Rowan当前带宽，ISS反馈此项优先级降低",
       "sourceRow": 2,
       "sourceTable": 2,
       "placeholder": false
@@ -386,13 +387,13 @@
       ],
       "sourceStatus": "In Progress Yellow",
       "status": "WIP",
-      "releaseText": "ETA:FY26Q4",
+      "releaseText": "FY26Q4",
       "date": {
         "start": "2026-11-01",
         "end": "2027-01-31",
         "precision": "quarter"
       },
-      "updates": "11/05 待跟进",
+      "updates": "本周更新： 了解SSOT项目的技术方案，画出数据流中间的节点和路径图，并且做成表格。也了解了项目组对于backup 方案的建议。 下一步： 沟通 Contigency plan",
       "sourceRow": 3,
       "sourceTable": 2,
       "placeholder": false
@@ -410,13 +411,13 @@
       ],
       "sourceStatus": "In Progress Yellow",
       "status": "WIP",
-      "releaseText": "ETA:FY26Q4",
+      "releaseText": "Dec,2026",
       "date": {
-        "start": "2026-11-01",
-        "end": "2027-01-31",
-        "precision": "quarter"
+        "start": "2026-12-01",
+        "end": "2026-12-31",
+        "precision": "month"
       },
-      "updates": "11/05 确认目前业务与上线时的数据增长量，按当前业务数据的3-5倍进行优化 CNSCO-3560 f73d0e34-5223-3728-b1ad-22756ec23157 System Jira Next ： LiSHI 输出优化方案",
+      "updates": "11/05 确认目前业务与上线时的数据增长量，按当前业务数据的3-5倍进行优化 CNSCO-3560 f73d0e34-5223-3728-b1ad-22756ec23157 System Jira Next ： LiSHI 输出优化方案,11/18提供方案Review",
       "sourceRow": 4,
       "sourceTable": 2,
       "placeholder": false
@@ -434,13 +435,13 @@
       ],
       "sourceStatus": "In Progress Yellow",
       "status": "WIP",
-      "releaseText": "ETA:FY26Q4",
+      "releaseText": "Dec，2026",
       "date": {
-        "start": "2026-11-01",
-        "end": "2027-01-31",
-        "precision": "quarter"
+        "start": "2026-12-01",
+        "end": "2026-12-31",
+        "precision": "month"
       },
-      "updates": "MSK：已对齐提前时间以及 补传提示链路 SF : 已对齐提前时间以及 补传提示链路 ISS: 已对齐GATEWAY 接口设计和示例 Portal： 补充 Portal 补传提示链路方案 Next： 整合Solution方案，进行Review",
+      "updates": "MSK：已对齐提前时间以及 补传提示链路 SF : 已对齐提前时间以及 补传提示链路 ISS: 已对齐GATEWAY 接口设计和示例 Portal： 补充 Portal 补传提示链路方案 Next： 整合Solution方案，并与Rrowan沟通架构方案",
       "sourceRow": 5,
       "sourceTable": 2,
       "placeholder": false
@@ -458,11 +459,12 @@
       ],
       "sourceStatus": "In Progress Yellow",
       "status": "WIP",
-      "releaseText": "ETA:FY26Q4",
+      "releaseText": "12/15",
       "date": {
-        "start": "2026-11-01",
-        "end": "2027-01-31",
-        "precision": "quarter"
+        "start": "2026-12-15",
+        "end": "2026-12-15",
+        "precision": "exact",
+        "yearInferred": true
       },
       "updates": "10/26 Liu Yao 内部Review方案，待约会补充监控和配置方案. QUICK FIX: omni的生产配置在凌晨操作 NEXT: 根据Review 反馈， Liu Yao更新项目方案",
       "sourceRow": 6,
@@ -488,7 +490,7 @@
         "end": "2027-01-31",
         "precision": "quarter"
       },
-      "updates": "10/26 Liu Yao 内部Review方案，待约会补充监控和配置方案. Quick Fix： Omni 余额对帐脚本推迟30分钟。 NEXT: 根据Review 反馈， Liu Yao更新项目方案",
+      "updates": "10/26 Liu Yao 内部Review方案，待约会补充监控和配置方案. Quick Fix： Omni 余额对帐脚本推迟30分钟。优化对帐性能 NEXT:性能优化已经完成 ，讨论AI实现这些问题暂时没有明确方案，无法给到时间",
       "sourceRow": 7,
       "sourceTable": 2,
       "placeholder": false
@@ -506,11 +508,11 @@
       ],
       "sourceStatus": "In Progress Yellow",
       "status": "WIP",
-      "releaseText": "ETA:FY26Q4",
+      "releaseText": "Jan,2027",
       "date": {
-        "start": "2026-11-01",
+        "start": "2027-01-01",
         "end": "2027-01-31",
-        "precision": "quarter"
+        "precision": "month"
       },
       "updates": "10/26 全量SFS配置监控【Li Shi 输出全是配置初步的版本】 Quick fix: 在SFS Rollout 增加Checklist NEXT: Lishi提供的配置清单 ，讨论监控方案",
       "sourceRow": 8,
@@ -546,7 +548,7 @@
       "group": "enhancements",
       "kind": "PDCA",
       "name": "SF WMS | LM3FT0S-4780 产品价格在SF WMS 未按生效价格打印标签",
-      "owner": "Jacky Zhong",
+      "owner": "Kevin Wang",
       "ba": "",
       "qa": "",
       "references": [
@@ -570,7 +572,7 @@
       "group": "enhancements",
       "kind": "PDCA",
       "name": "SF Logistic | 小程序和小红书无物流签收记录，申请退货超出售后时效",
-      "owner": "Jacky Zhong",
+      "owner": "Yiling Li",
       "ba": "",
       "qa": "",
       "references": [
@@ -602,11 +604,12 @@
       ],
       "sourceStatus": "In Progress Yellow",
       "status": "WIP",
-      "releaseText": "ETA: FY26Q4",
+      "releaseText": "12/30",
       "date": {
-        "start": "2026-11-01",
-        "end": "2027-01-31",
-        "precision": "quarter"
+        "start": "2026-12-30",
+        "end": "2026-12-30",
+        "precision": "exact",
+        "yearInferred": true
       },
       "updates": "11/05 业务 确认ROI, 可以推进项目 Next： BRD下周一进行Review",
       "sourceRow": 1,
@@ -626,10 +629,10 @@
       ],
       "sourceStatus": "In Progress Yellow",
       "status": "WIP",
-      "releaseText": "12/15",
+      "releaseText": "12/23",
       "date": {
-        "start": "2026-12-15",
-        "end": "2026-12-15",
+        "start": "2026-12-23",
+        "end": "2026-12-23",
         "precision": "exact",
         "yearInferred": true
       },
@@ -651,10 +654,10 @@
       ],
       "sourceStatus": "In Progress Yellow",
       "status": "WIP",
-      "releaseText": "11/12",
+      "releaseText": "11/16",
       "date": {
-        "start": "2026-11-12",
-        "end": "2026-11-12",
+        "start": "2026-11-16",
+        "end": "2026-11-16",
         "precision": "exact",
         "yearInferred": true
       },
