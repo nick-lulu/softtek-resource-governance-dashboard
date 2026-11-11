@@ -19,3 +19,8 @@ const ignoredChild=C.reconcile({...master,projects:[{domain:'Corporate',name:'Se
 const withOps={...onepage,domains:[...onepage.domains,{name:'SCM Ops',status:'ready',complete:true,asOf:'2026-11-11'}]};
 assert.equal(C.reconcile({...master,projects:[{domain:'SCM Ops',name:'Alpha',references:['CSCOP-1']}]},withOps).rows[0].state,'review');
 console.log('PASS master-to-One-Page checks: exact matches, missing projects, name/reference conflicts, ownership, unavailable sources and partial reference coverage.');
+const fullPages={...onepage,domains:C.DOMAINS.map(name=>({name,status:'ready',complete:true,asOf:'2026-11-11'}))};
+const jira={...master,sourceType:'jira',projects:[{id:'CSCOP-99',domain:'Unmapped domain',name:'New Jira issue'}]};
+assert.equal(C.reconcile(jira,fullPages).rows[0].state,'missing','an unassigned Jira issue absent from all five verified One Pages is missing without inventing an owning domain');
+assert.equal(C.reconcile(jira,onepage).rows[0].state,'unverified','incomplete source coverage cannot prove absence across all five domains');
+assert.equal(C.reconcile({...jira,projects:[{id:'CSCOP-1',domain:'Unmapped domain',name:'Alpha'}]},fullPages).rows[0].state,'review','unresolved multi-domain ownership is not a missing project');
