@@ -1,0 +1,2377 @@
+{
+  "sourceUrl": "https://lululemon.atlassian.net/wiki/spaces/CSNCAS/pages/6178078750/Tech+SCM+Ops+FY26",
+  "title": "Tech SCM Ops | FY26",
+  "version": 399,
+  "updatedAt": "2026-11-11T06:41:39.335Z",
+  "snapshotDate": "2026-11-11",
+  "wuhanScope": 14,
+  "records": [
+    {
+      "key": "t1-r1",
+      "group": "wuhan",
+      "kind": "PDCA",
+      "name": "WuHan DC SF Action Items Follow-up | SFWMS 发货单无法创建无手机号订单",
+      "owner": "Jacky Zhong",
+      "ba": "",
+      "qa": "E2E",
+      "references": [
+        "CSCOP-1215"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "11/18",
+      "date": {
+        "start": "2026-11-18",
+        "end": "2026-11-18",
+        "precision": "exact",
+        "yearInferred": true
+      },
+      "updates": "11/09 sf收到问题评估上线时间,采用不发版上线 11/10 SF日常监控进行检查， 计划在本周完成SIT，下周QA进行E2E后上线",
+      "sourceRow": 1,
+      "sourceTable": 1,
+      "placeholder": false
+    },
+    {
+      "key": "t1-r2",
+      "group": "wuhan",
+      "kind": "PDCA",
+      "name": "WuHan DC SF Action Items Follow-up | Service Center交接单展示定制内容",
+      "owner": "Elyne Chang",
+      "ba": "",
+      "qa": "E2E",
+      "references": [
+        "CSCOP-1219"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "Dec",
+      "date": {
+        "start": "2026-12-01",
+        "end": "2026-12-31",
+        "precision": "month"
+      },
+      "updates": "11/09 sf收到需求评估上线时间",
+      "sourceRow": 2,
+      "sourceTable": 1,
+      "placeholder": false
+    },
+    {
+      "key": "t1-r3",
+      "group": "wuhan",
+      "kind": "PDCA",
+      "name": "DC To Store | WH DC的Alo到货预通知里未在周一推送到Portal",
+      "owner": "Jacky Zhong",
+      "ba": "Kimi Zou",
+      "qa": "E2E",
+      "references": [
+        "CSCOP-1129",
+        "CSCOP-1151"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "12/7 -12/15",
+      "date": {
+        "start": "2026-12-07",
+        "end": "2026-12-15",
+        "precision": "window",
+        "yearInferred": true
+      },
+      "updates": "CNSCO-3555 f73d0e34-5223-3728-b1ad-22756ec23157 System Jira 11/05 Short Term 增加对三个门店的ALO时间更新到周五。 计划在下一次CAB后上线 NEXT: 下周与SF WMS对齐 方案细节，SF方案需要Tech Signoff。",
+      "sourceRow": 3,
+      "sourceTable": 1,
+      "placeholder": false
+    },
+    {
+      "key": "t1-r4",
+      "group": "wuhan",
+      "kind": "PDCA",
+      "name": "WuHan DC SF Action Items Follow-up | Debranding reasoncode dropdown",
+      "owner": "Jacky Zhong",
+      "ba": "",
+      "qa": "N/A",
+      "references": [
+        "CSCOP-1159"
+      ],
+      "sourceStatus": "IN PROGRESS Yellow",
+      "status": "WIP",
+      "releaseText": "Nov 30, 2026",
+      "date": {
+        "start": "2026-11-30",
+        "end": "2026-11-30",
+        "precision": "exact"
+      },
+      "updates": "11.05 sf计划11月底完成, 提供方案示例图",
+      "sourceRow": 4,
+      "sourceTable": 1,
+      "placeholder": false
+    },
+    {
+      "key": "t1-r5",
+      "group": "wuhan",
+      "kind": "PDCA",
+      "name": "WuHan DC SF Action Items Follow-up | Pullback超品",
+      "owner": "Jacky Zhong",
+      "ba": "Kimi Zou",
+      "qa": "N/A",
+      "references": [
+        "CSCOP-1162"
+      ],
+      "sourceStatus": "IN PROGRESS Yellow",
+      "status": "WIP",
+      "releaseText": "11/21/2026",
+      "date": {
+        "start": "2026-11-21",
+        "end": "2026-11-21",
+        "precision": "exact",
+        "yearInferred": false
+      },
+      "updates": "11.05 SF正在准备on going变更的当前方案， 并在周一进行对齐",
+      "sourceRow": 5,
+      "sourceTable": 1,
+      "placeholder": false
+    },
+    {
+      "key": "t1-r6",
+      "group": "wuhan",
+      "kind": "PDCA",
+      "name": "WuHan DC SF Action Items Follow-up | TransferNum 合单号逻辑",
+      "owner": "Jacky Zhong",
+      "ba": "",
+      "qa": "E2E",
+      "references": [
+        "CSCOP-1161"
+      ],
+      "sourceStatus": "IN PROGRESS Yellow",
+      "status": "WIP",
+      "releaseText": "Dec,2026",
+      "date": {
+        "start": "2026-12-01",
+        "end": "2026-12-31",
+        "precision": "month"
+      },
+      "updates": "11.05 30人天，SF正在准备on going变更的当前方案， 并在周一进行对齐",
+      "sourceRow": 6,
+      "sourceTable": 1,
+      "placeholder": false
+    },
+    {
+      "key": "t1-r7",
+      "group": "wuhan",
+      "kind": "PDCA",
+      "name": "WuHan DC SF Action Items Follow-up | Personalization定制退货校验",
+      "owner": "Jacky Zhong",
+      "ba": "",
+      "qa": "N/A",
+      "references": [
+        "CSCOP-1203"
+      ],
+      "sourceStatus": "IN PROGRESS Yellow",
+      "status": "WIP",
+      "releaseText": "11/21/2026",
+      "date": {
+        "start": "2026-11-21",
+        "end": "2026-11-21",
+        "precision": "exact",
+        "yearInferred": false
+      },
+      "updates": "11.05 SF正在准备on going变更的当前方案， 并在周一进行对齐",
+      "sourceRow": 7,
+      "sourceTable": 1,
+      "placeholder": false
+    },
+    {
+      "key": "t1-r8",
+      "group": "wuhan",
+      "kind": "PDCA",
+      "name": "WuHan DC SF Action Items Follow-up | 退货异常的视频切片打点",
+      "owner": "Jacky Zhong",
+      "ba": "",
+      "qa": "N/A",
+      "references": [
+        "CSCOP-1202"
+      ],
+      "sourceStatus": "IN PROGRESS Yellow",
+      "status": "WIP",
+      "releaseText": "11/30/2026",
+      "date": {
+        "start": "2026-11-30",
+        "end": "2026-11-30",
+        "precision": "exact",
+        "yearInferred": false
+      },
+      "updates": "11.05 SF正在准备on going变更的当前方案， 并在周一进行对齐",
+      "sourceRow": 8,
+      "sourceTable": 1,
+      "placeholder": false
+    },
+    {
+      "key": "t1-r9",
+      "group": "wuhan",
+      "kind": "PDCA",
+      "name": "WuHan DC SF Action Items Follow-up | 增加库位和跟踪号盘点精度",
+      "owner": "Jacky Zhong",
+      "ba": "",
+      "qa": "N/A",
+      "references": [
+        "CSCOP-1204"
+      ],
+      "sourceStatus": "IN PROGRESS Yellow",
+      "status": "WIP",
+      "releaseText": "11/21/2026",
+      "date": {
+        "start": "2026-11-21",
+        "end": "2026-11-21",
+        "precision": "exact",
+        "yearInferred": false
+      },
+      "updates": "11.05 SF正在准备on going变更的当前方案， 并在周一进行对齐",
+      "sourceRow": 9,
+      "sourceTable": 1,
+      "placeholder": false
+    },
+    {
+      "key": "t1-r10",
+      "group": "wuhan",
+      "kind": "PDCA",
+      "name": "WuHan DC SF Action Items Follow-up | 合箱不采集SN需求",
+      "owner": "Jacky Zhong",
+      "ba": "",
+      "qa": "",
+      "references": [
+        "CSCOP-1205"
+      ],
+      "sourceStatus": "Complete",
+      "status": "Complete",
+      "releaseText": "11/5/2026",
+      "date": {
+        "start": "2026-11-05",
+        "end": "2026-11-05",
+        "precision": "exact",
+        "yearInferred": false
+      },
+      "updates": "11.05 SF正在准备on going变更的当前方案， 并在周一进行对齐",
+      "sourceRow": 10,
+      "sourceTable": 1,
+      "placeholder": false
+    },
+    {
+      "key": "t1-r11",
+      "group": "wuhan",
+      "kind": "PDCA",
+      "name": "WuHan DC SF Action Items Follow-up | EC出库发货备注",
+      "owner": "Liz Liu",
+      "ba": "Kimi Zou",
+      "qa": "TUAT",
+      "references": [
+        "CSCOP-1158"
+      ],
+      "sourceStatus": "TRANSFER Green",
+      "status": "Transferred",
+      "releaseText": "FY27 Q1",
+      "date": {
+        "start": "2027-02-01",
+        "end": "2027-04-30",
+        "precision": "quarter"
+      },
+      "updates": "11.05 转移到项目组跟进，与communication tool是一个事",
+      "sourceRow": 11,
+      "sourceTable": 1,
+      "placeholder": false
+    },
+    {
+      "key": "t1-r12",
+      "group": "wuhan",
+      "kind": "PDCA",
+      "name": "WuHan DC SF Action Items Follow-up | PKL增加FOH/BOH字段",
+      "owner": "Shi Li",
+      "ba": "",
+      "qa": "E2E",
+      "references": [
+        "CSCOP-1157"
+      ],
+      "sourceStatus": "TRANSFER Green",
+      "status": "Transferred",
+      "releaseText": "预计12月中",
+      "date": {
+        "start": "2026-12-01",
+        "end": "2026-12-31",
+        "precision": "month"
+      },
+      "updates": "11.05 转移到项目组跟进",
+      "sourceRow": 12,
+      "sourceTable": 1,
+      "placeholder": false
+    },
+    {
+      "key": "t1-r13",
+      "group": "wuhan",
+      "kind": "PDCA",
+      "name": "WuHan DC SF Action Items Follow-up | FOH/BOH 接口限制每次20个订单",
+      "owner": "Liz Liu",
+      "ba": "",
+      "qa": "N/A",
+      "references": [
+        "CSCOP-1160"
+      ],
+      "sourceStatus": "TRANSFER Green",
+      "status": "Transferred",
+      "releaseText": "11/21/2026",
+      "date": {
+        "start": "2026-11-21",
+        "end": "2026-11-21",
+        "precision": "exact",
+        "yearInferred": false
+      },
+      "updates": "11.05 转移到项目组跟进",
+      "sourceRow": 13,
+      "sourceTable": 1,
+      "placeholder": false
+    },
+    {
+      "key": "t2-r1",
+      "group": "enhancements",
+      "kind": "PDCA",
+      "name": "MSK WMS | WMS正在打包出库， OMS发起取消显示成功，实际WMS出库",
+      "owner": "Jacky Zhong",
+      "ba": "Maggie Guo",
+      "qa": "",
+      "references": [],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "FY26Q4",
+      "date": {
+        "start": "2026-11-01",
+        "end": "2027-01-31",
+        "precision": "quarter"
+      },
+      "updates": "[CNSCO-3604] MSK WMS | WMS正在完成包装， OMS发起取消成功，实际WMS未取消 - JIRA 11/05 long term 方案保证系统的状态和MSK一致 11/10 MSK准备方案",
+      "sourceRow": 1,
+      "sourceTable": 2,
+      "placeholder": false
+    },
+    {
+      "key": "t2-r2",
+      "group": "enhancements",
+      "kind": "PDCA",
+      "name": "ISS | EC发货单推送WMS KAFKA 消息延迟",
+      "owner": "Jacky Zhong",
+      "ba": "Rowan Wu",
+      "qa": "",
+      "references": [
+        "CSCOP-1207"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "ETA:FY26Q4",
+      "date": {
+        "start": "2026-11-01",
+        "end": "2027-01-31",
+        "precision": "quarter"
+      },
+      "updates": "PDCA: CNSCO-3582 f73d0e34-5223-3728-b1ad-22756ec23157 System Jira 11/05 ISS 跟进 Review的优化方向 ，更新优化方案 11/10 ISS反馈此项优先级降低",
+      "sourceRow": 2,
+      "sourceTable": 2,
+      "placeholder": false
+    },
+    {
+      "key": "t2-r3",
+      "group": "enhancements",
+      "kind": "PDCA",
+      "name": "Databricks 故障 SSOT 应急方案优化",
+      "owner": "Ryan Xu",
+      "ba": "Ada",
+      "qa": "",
+      "references": [
+        "CSCOP-1208"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "ETA:FY26Q4",
+      "date": {
+        "start": "2026-11-01",
+        "end": "2027-01-31",
+        "precision": "quarter"
+      },
+      "updates": "11/05 待跟进",
+      "sourceRow": 3,
+      "sourceTable": 2,
+      "placeholder": false
+    },
+    {
+      "key": "t2-r4",
+      "group": "enhancements",
+      "kind": "PDCA",
+      "name": "Transportation Portal | Daily Delivery Tracking 页面加载超时",
+      "owner": "Jacky Zhong",
+      "ba": "Li Shi",
+      "qa": "",
+      "references": [
+        "CSCOP-1211"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "ETA:FY26Q4",
+      "date": {
+        "start": "2026-11-01",
+        "end": "2027-01-31",
+        "precision": "quarter"
+      },
+      "updates": "11/05 确认目前业务与上线时的数据增长量，按当前业务数据的3-5倍进行优化 CNSCO-3560 f73d0e34-5223-3728-b1ad-22756ec23157 System Jira Next ： LiSHI 输出优化方案",
+      "sourceRow": 4,
+      "sourceTable": 2,
+      "placeholder": false
+    },
+    {
+      "key": "t2-r5",
+      "group": "enhancements",
+      "kind": "PDCA",
+      "name": "DC to Store | WMS门店收货报告数据更新延迟通知",
+      "owner": "Jacky Zhong",
+      "ba": "Benting Ma HouQincheng Zhu",
+      "qa": "",
+      "references": [
+        "CSCOP-1118"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "ETA:FY26Q4",
+      "date": {
+        "start": "2026-11-01",
+        "end": "2027-01-31",
+        "precision": "quarter"
+      },
+      "updates": "MSK：已对齐提前时间以及 补传提示链路 SF : 已对齐提前时间以及 补传提示链路 ISS: 已对齐GATEWAY 接口设计和示例 Portal： 补充 Portal 补传提示链路方案 Next： 整合Solution方案，进行Review",
+      "sourceRow": 5,
+      "sourceTable": 2,
+      "placeholder": false
+    },
+    {
+      "key": "t2-r6",
+      "group": "enhancements",
+      "kind": "PDCA",
+      "name": "Omni Fulfillment | Omni配置SFS新门店配置时商品库存暴露为0",
+      "owner": "Jacky Zhong",
+      "ba": "Liu Yao",
+      "qa": "",
+      "references": [
+        "CSCOP-1124"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "ETA:FY26Q4",
+      "date": {
+        "start": "2026-11-01",
+        "end": "2027-01-31",
+        "precision": "quarter"
+      },
+      "updates": "10/26 Liu Yao 内部Review方案，待约会补充监控和配置方案. QUICK FIX: omni的生产配置在凌晨操作 NEXT: 根据Review 反馈， Liu Yao更新项目方案",
+      "sourceRow": 6,
+      "sourceTable": 2,
+      "placeholder": false
+    },
+    {
+      "key": "t2-r7",
+      "group": "enhancements",
+      "kind": "PDCA",
+      "name": "Omni Fulfillment | Omni 未能完成WOS的库存保留数的消费",
+      "owner": "Jacky Zhong",
+      "ba": "Liu Yao",
+      "qa": "",
+      "references": [
+        "CSCOP-1121"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "ETA:FY26Q4",
+      "date": {
+        "start": "2026-11-01",
+        "end": "2027-01-31",
+        "precision": "quarter"
+      },
+      "updates": "10/26 Liu Yao 内部Review方案，待约会补充监控和配置方案. Quick Fix： Omni 余额对帐脚本推迟30分钟。 NEXT: 根据Review 反馈， Liu Yao更新项目方案",
+      "sourceRow": 7,
+      "sourceTable": 2,
+      "placeholder": false
+    },
+    {
+      "key": "t2-r8",
+      "group": "enhancements",
+      "kind": "PDCA",
+      "name": "Omni Portal | 新门店缺少Reservation Days 配置，库存暴露率不正确。",
+      "owner": "Jacky Zhong",
+      "ba": "Li Shi",
+      "qa": "",
+      "references": [
+        "CSCOP-1119"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "ETA:FY26Q4",
+      "date": {
+        "start": "2026-11-01",
+        "end": "2027-01-31",
+        "precision": "quarter"
+      },
+      "updates": "10/26 全量SFS配置监控【Li Shi 输出全是配置初步的版本】 Quick fix: 在SFS Rollout 增加Checklist NEXT: Lishi提供的配置清单 ，讨论监控方案",
+      "sourceRow": 8,
+      "sourceTable": 2,
+      "placeholder": false
+    },
+    {
+      "key": "t2-r9",
+      "group": "enhancements",
+      "kind": "PDCA",
+      "name": "SF logistics | 客服订单备注显示在顺丰电子面单上",
+      "owner": "Liz Liu",
+      "ba": "Kim Zou",
+      "qa": "",
+      "references": [
+        "CSCOP-1122"
+      ],
+      "sourceStatus": "TRANSFER Green",
+      "status": "Transferred",
+      "releaseText": "FY27 Q1",
+      "date": {
+        "start": "2027-02-01",
+        "end": "2027-04-30",
+        "precision": "quarter"
+      },
+      "updates": "10/26 Kimi Zou 跟进优化方案 NEXT: 需组织SF会议对齐方案，与communication tool是一个事",
+      "sourceRow": 9,
+      "sourceTable": 2,
+      "placeholder": false
+    },
+    {
+      "key": "t2-r10",
+      "group": "enhancements",
+      "kind": "PDCA",
+      "name": "SF WMS | LM3FT0S-4780 产品价格在SF WMS 未按生效价格打印标签",
+      "owner": "Jacky Zhong",
+      "ba": "",
+      "qa": "",
+      "references": [
+        "CSCOP-1123"
+      ],
+      "sourceStatus": "TRANSFER Green",
+      "status": "Transferred",
+      "releaseText": "FY27 Q1",
+      "date": {
+        "start": "2027-02-01",
+        "end": "2027-04-30",
+        "precision": "quarter"
+      },
+      "updates": "11.05 转移到Data Team跟进监控事项 NEXT: 目前无计划时间，优先级降低",
+      "sourceRow": 10,
+      "sourceTable": 2,
+      "placeholder": false
+    },
+    {
+      "key": "t2-r11",
+      "group": "enhancements",
+      "kind": "PDCA",
+      "name": "SF Logistic | 小程序和小红书无物流签收记录，申请退货超出售后时效",
+      "owner": "Jacky Zhong",
+      "ba": "",
+      "qa": "",
+      "references": [
+        "CSCOP-1125"
+      ],
+      "sourceStatus": "TRANSFER Green",
+      "status": "Transferred",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "10/26 Digital Team 需要与业务侧对齐采用ShipConfrim 计算订单售后时效，更新用户条款 NEXT: 目前无计划时间，优先级降低",
+      "sourceRow": 11,
+      "sourceTable": 2,
+      "placeholder": false
+    },
+    {
+      "key": "t3-r1",
+      "group": "enhancements",
+      "kind": "CR",
+      "name": "Helios | Itinerary verification enhancement",
+      "owner": "Jacky Zhong",
+      "ba": "Allen xing",
+      "qa": "",
+      "references": [
+        "CSCOP-1082"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "ETA: FY26Q4",
+      "date": {
+        "start": "2026-11-01",
+        "end": "2027-01-31",
+        "precision": "quarter"
+      },
+      "updates": "11/05 业务 确认ROI, 可以推进项目 Next： BRD下周一进行Review",
+      "sourceRow": 1,
+      "sourceTable": 3,
+      "placeholder": false
+    },
+    {
+      "key": "t3-r2",
+      "group": "enhancements",
+      "kind": "CR",
+      "name": "Helios｜Helios embedded XXL JOB update",
+      "owner": "Jacky Zhong",
+      "ba": "Allen xing",
+      "qa": "",
+      "references": [
+        "CSCOP-953"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "12/15",
+      "date": {
+        "start": "2026-12-15",
+        "end": "2026-12-15",
+        "precision": "exact",
+        "yearInferred": true
+      },
+      "updates": "11/05 本周业务对齐 测试用例 ， 业务进行Review 测试报告，不进行Smoke testing Next： 上线时间12/15",
+      "sourceRow": 2,
+      "sourceTable": 3,
+      "placeholder": false
+    },
+    {
+      "key": "t3-r3",
+      "group": "enhancements",
+      "kind": "CR",
+      "name": "Helios | 商务卡报表上是否可显示审批加签人。自选审批人，审批人名称和costcenter",
+      "owner": "Jacky Zhong",
+      "ba": "Allen xing",
+      "qa": "",
+      "references": [
+        "CSCOP-1084"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "11/12",
+      "date": {
+        "start": "2026-11-12",
+        "end": "2026-11-12",
+        "precision": "exact",
+        "yearInferred": true
+      },
+      "updates": "10/26 已与业务对齐配置需求， Helios提供配置示例 Next： 与Esther 确认最后配置方式。",
+      "sourceRow": 3,
+      "sourceTable": 3,
+      "placeholder": false
+    },
+    {
+      "key": "wuhan-pending-14",
+      "group": "wuhan",
+      "kind": "PDCA",
+      "name": "Case 14 · Details pending",
+      "owner": "Not provided",
+      "ba": "",
+      "qa": "",
+      "references": [],
+      "sourceStatus": "Blank source row",
+      "status": "Unconfirmed",
+      "releaseText": "Not provided",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "Source row 14 is blank. Case identity, status, owner and release target need to be supplied. Excluded from confirmed project and status counts.",
+      "sourceRow": 14,
+      "sourceTable": 1,
+      "placeholder": true
+    },
+    {
+      "key": "operation-6-1",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "9/22业务反馈Transportation Portal - Daily Delivery Tracking发现数据缺失 INC6752981",
+      "application": "Transportation Portal",
+      "owner": "Hand, SF",
+      "business": "Yuan Zhao， Pinkie Diao",
+      "priority": "P2",
+      "impact": "报表展示数据不准确",
+      "dependency": "",
+      "references": [
+        "INC6752981"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "2026-11-13",
+      "date": {
+        "start": "2026-11-13",
+        "end": "2026-11-13",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： Portal此前已与和SF LSP沟通，部分ATA数据没有传，反馈是SF云塔配置有问题，待SF修复处理 解决方案 ： 待SF修复处理完成后，11/2已开始测试验证，反馈11/10晚已推送数据，portal配合跑job同步数据并核验。Xilan Deng跟进数据核验，预计本周五11/13核验完成",
+      "sourceRow": 1,
+      "sourceTable": 6,
+      "archive": false,
+      "placeholder": false
+    },
+    {
+      "key": "operation-6-2",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "10/14 业务反馈DC Inventory Inquiry Portal查询部分产品主数据字段为Dummy INC6754548",
+      "application": "DC Inventory Inquiry Portal",
+      "owner": "Hand, MDM,VT, Data team",
+      "business": "Ashley Lu",
+      "priority": "P2",
+      "impact": "影响用户查询报表数据",
+      "dependency": "",
+      "references": [
+        "INC6754548"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "2026-12-01",
+      "date": {
+        "start": "2026-12-01",
+        "end": "2026-12-01",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： 经过与MDM, portal, ISS和Data team协同排查<上游在同步主数据时，在根据 season code取最新的一条数据，标记为 is_lastest 的数据。 由于 Dummy中给出的season_code 比所有正常数据都新， 所以 这个 is_lastest 被标记在了 dummy上。DC Inventory Inquiry Portal的当前查询条件是查找is_lastest=1的数据， 故在Inventory inquiry是拿的paimon表 拉取 主数据时也将Dummy做为了最新数据 解决方案 ： Portal侧paimon表query数据增加筛选逻辑，过滤dummy=1的数据后--暂排计划在12.1发版",
+      "sourceRow": 2,
+      "sourceTable": 6,
+      "archive": false,
+      "placeholder": false
+    },
+    {
+      "key": "operation-6-3",
+      "group": "operations",
+      "kind": "Incident/Problem",
+      "name": "8/20门店无法登陆Omni Portal CN PROD - Store Omni Portal APP PRB0055066 CNSCO-3420",
+      "application": "Omni Portal",
+      "owner": "Hand, DevOps, L2",
+      "business": "Carrie, Nelson",
+      "priority": "P1",
+      "impact": "门店无法登录APP处理，订单超时拒单",
+      "dependency": "",
+      "references": [
+        "PRB0055066",
+        "CNSCO-3420"
+      ],
+      "sourceStatus": "In Progress Yellow",
+      "status": "WIP",
+      "releaseText": "2026-11-18",
+      "date": {
+        "start": "2026-11-18",
+        "end": "2026-11-18",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： 2026年08月18日 webgateway 上线迁移中包含当前域名,迁移完成后f5，dns解析切换到了101.133.170.119。期间门店SFS关闭，故未门店未发现该问题。 2026年08月20日 SFS开启，由于门店使用的是 windows dns （12|13）没有切换，解析地址依然是47.101.130.188，导致门店无法访问 解决方案 ： 2026年08月20日 15:00左右Devops修正dns后，门店访问恢复 Follow-ups ： Incident priority定义align with EHC--8/24会议align Ticket escalate/call out流程align with EHC--8/24会议align 7/13 新门店上线OMS事故复盘--Li Shi Junyun已汇总PPT待约Biz team会议同步 PRB0055066 8/24会议Jack Julius Li Shi就RCA达成一致，跟进后续修复计划Due Date 11/18 长期优化 --Jack Wang跟进 Hand 域名规范化整改：内网改用 omni-portal.lululemonint.cn 并解析内网地址，公网暴露API该用 lllext.cn 。Refer to: DIP - Domains, DNS and Services Exposure DevOps 消除DNS双重维护，坚持单一权威DNS原则 在变更流程中增加DNS一致性检查 建立公网与内网DNS自动巡检和告警机制",
+      "sourceRow": 3,
+      "sourceTable": 6,
+      "archive": false,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-1",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "11/5 2笔B2B订单订单创建预占成功后，审核提示库存不足 INC6790733",
+      "application": "Omni",
+      "owner": "Baison, OMS",
+      "business": "Amelia, Zoe",
+      "priority": "P1",
+      "impact": "无法审核订单推送仓库发货",
+      "dependency": "",
+      "references": [
+        "INC6790733"
+      ],
+      "sourceStatus": "done Green",
+      "status": "Complete",
+      "releaseText": "2026-11-05",
+      "date": {
+        "start": "2026-11-05",
+        "end": "2026-11-05",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： 核查是现有审单逻辑 - 合单场景下库存校验问题： 本次涉及2个订单，且2个订单关联的活动预占单不同（活动预占单A+B），涉及的SKU也不同（8+12共20个SKU），订单创建时各自关联的活动预占单有库存，故创建并预占成功 在人工审核时，勾选了2个订单同时审核，触发OMS合单审核场景，此时审核只针对其中1个活动预占单内的库存校验。示例：20个SKU都校验的是活动预占单A中的SKU，部分SKU属于活动预占单B，故审核失败 解决方案 ： 分开审核2笔订单后审核成功已推送仓库 不同活动预占单关联的订单，在审核时分开审单；同一个活动预占单关联的订单可以一起审单--11/5 已与EFS伙伴同步并确认",
+      "sourceRow": 1,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-2",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "Scuba11/2 上新库存断联动恢复时间11/3 00:00，0点后恢复库存联动，其中抖音平台在库存同步0成功后依然产生了多比订单 INC6786492",
+      "application": "Omni",
+      "owner": "VT, Baison,GEC",
+      "business": "Cindy, Piwa",
+      "priority": "P1",
+      "impact": "产生超卖",
+      "dependency": "",
+      "references": [
+        "INC6786492"
+      ],
+      "sourceStatus": "done Green",
+      "status": "Complete",
+      "releaseText": "2026-11-03",
+      "date": {
+        "start": "2026-11-03",
+        "end": "2026-11-03",
+        "precision": "exact"
+      },
+      "updates": "当前进展 ： 本次上新前已与业务和GEC伙伴align, 预留了安全库存 在11/3邮件获取了业务confirm后，GEC商品支持的伙伴在14:42针对缺货库存做了手工的释放（160027623 释放 44件，160027613 释放2件），目前看除了4单Tmall订单由于地址问题待客服与顾客确认，已轮巡成功 在11/3 15:30与GEC 抖音支持的伙伴会议同步核查详情，GEC 抖音支持的伙伴将同步0后平台仍能下单的情况提给抖音平台咨询，反馈是抖音平台回流 Next Step ： Kimi跟进TP与抖音平台的沟通--邮件跟进 SOP完善--done SCM ops协助核查比例、库存、凌晨手工释放--done",
+      "sourceRow": 2,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-3",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "11/1发货单T20261101090207在OMS显示推送武汉仓库成功，但武汉仓库反馈没有收到 INC6788874",
+      "application": "WMS3PL SFWMS",
+      "owner": "VT, SF, OMS",
+      "business": "SF Ops",
+      "priority": "P2",
+      "impact": "仓库未收到发货单，影响发货时效",
+      "dependency": "",
+      "references": [
+        "INC6788874"
+      ],
+      "sourceStatus": "TRANSFER Green CSCOP-1215",
+      "status": "Transferred",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因 ： WHDC收到的发货单推送消息会校验mobile/tele字段，T20261101090207中mobile/tele均为null，故校验失败反馈报错给ISS。过OMS排查确认是固定电话不上传，从上线至今逻辑未调整。以往昆山和广州仓库不会看这个字段，所以未反馈过此类问题，实际这两个字段没任何作用 解决方案 ： 目前3个方案 OMS调整字段都传输--需OMS, MSK同步调整 OMS只针对顺丰做传递--仅OMS修改 SF调整校验逻辑与MSK一致--仅SF修改",
+      "sourceRow": 3,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-4",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "DC to store portal -门店库存报告刷新时间的时间制非24h制，到货详情是24h制 INC6778618",
+      "application": "DC to store portal",
+      "owner": "Hand",
+      "business": "Vida Tian",
+      "priority": "P3",
+      "impact": "业务对更新时间不清晰",
+      "dependency": "",
+      "references": [
+        "INC6778618"
+      ],
+      "sourceStatus": "done Green",
+      "status": "Complete",
+      "releaseText": "2026-11-05",
+      "date": {
+        "start": "2026-11-05",
+        "end": "2026-11-05",
+        "precision": "exact"
+      },
+      "updates": "解决方案 ： 时间统一更新为24h制 处理进展 ： 已提交CHG0128587 已过CAB 11/5发版--已发版",
+      "sourceRow": 4,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-5",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "11/4客服反馈在OMS取消发货单成功，但仓库实际发货完成，系统链路消息无异常，只能客服介入拦截追回 INC6790401",
+      "application": "WMS3PL MSKWMS",
+      "owner": "MSK, OMS",
+      "business": "SF Ops",
+      "priority": "P2",
+      "impact": "被取消的订单实际发货",
+      "dependency": "",
+      "references": [
+        "INC6790401"
+      ],
+      "sourceStatus": "TRANSFER Green",
+      "status": "Transferred",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因 ： OMS发起取消时， MSK WMS正在完成包装， 取消到达MSK没有被取消（5单全部都是KSDC的订单） 解决方案 ： MSK 在发运截点加了一道validation, ，有进来取消的request且会反馈取消成功的情况， 则不允许发运成功， MSK 监控机制也会加一个报表alert，会拉取如果已经反馈取消成功但是已发运的订单， 就发alert并通知客服进行拦截。 当前状态： MSK 目前测试环境测试 ， 已完成部署到生产环境 Follow up ： 这类订单在OMNI/北美也是取消状态，处理过程中要看下如何确保订单状态在多个系统中的一致性",
+      "sourceRow": 5,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-6",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "T20261103000812发货单推送WHDC晚问题 INC6786900",
+      "application": "WMS3PL SFWMS",
+      "owner": "VT, Baison, SF",
+      "business": "SF Ops",
+      "priority": "P2",
+      "impact": "发货单取消比确认先推送，导致取消失败，造成被取消的订单实际发货",
+      "dependency": "",
+      "references": [
+        "INC6786900"
+      ],
+      "sourceStatus": "TRANSFER Green CSCOP-1127",
+      "status": "Transferred",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因 ： 经与Omni、ISS技术协同核实，T20261103000812情况如下： 发货单确认推送：2026-11-03 00:05:21 发货单取消撤回：2026-11-03 00:13:31 链路是omni->kafka->iss->wms 发货单确认推送：实际Omni在2026-11-03 00:05:23.889 推送到kafka ISS侧11/03 0:05 - 0:50间有kafka消费延迟，导致ISS 于 0:50消费并发送至WMS--延迟根因 WMS在2026-11-03 00:50:01收到发货单 解决方案 ： ISS针对消费延迟问题，后续对kafka消费配置做优化：调整kafka消费的配置参数和测试",
+      "sourceRow": 6,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-7",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "11/2晚B2B订单创建完成换货退单后审核不了，显示：无法获取库存数据，OMS请求Omni接口返回无库存 SKU：155100182 158644709 155100181 155100180 INC6786471",
+      "application": "Omni",
+      "owner": "Baison, OMS",
+      "business": "Amelia, Sophia",
+      "priority": "P1",
+      "impact": "无法审核订单推送仓库发货",
+      "dependency": "",
+      "references": [
+        "INC6786471"
+      ],
+      "sourceStatus": "done Green",
+      "status": "Complete",
+      "releaseText": "2026-11-03",
+      "date": {
+        "start": "2026-11-03",
+        "end": "2026-11-03",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： 核查是OMS现有逻辑校验的问题，本次退换货单涉及2步操作 创建时已经预占成功，活动预占单里面的库存已经被成功预占 审核时再次校验这个活动预占单里剩余的库存，库存之前已经被预占在换货单中，故审核失败 解决方案 ： OMS先对这5单协助做推送，去掉再次校验这一步，让订单可以成功推送给仓库--已完成 OMS对于这个场景从系统层面优化校验逻辑 Next Step： 已转给OMS team跟进优化--11/3",
+      "sourceRow": 7,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-8",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "11/2 portal shows 0 inventory for all DC OH INC6784413",
+      "application": "Product Portal - Inventory Segmentation Inventory Segmentation",
+      "owner": "VT, Data team, Line zone, Baison",
+      "business": "Saya Xu",
+      "priority": "P1",
+      "impact": "报表展示DC数据为0，业务无法查看报表",
+      "dependency": "",
+      "references": [
+        "INC6784413"
+      ],
+      "sourceStatus": "done Green",
+      "status": "Complete",
+      "releaseText": "2026-11-02",
+      "date": {
+        "start": "2026-11-02",
+        "end": "2026-11-02",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： 大促期间DC在通宵作业，业务通知10月30日 - 11月1日这三天关闭了DC 库存的余额文件同步，故Report 没有收到昨天晚上的DC库存余额更新DC OH的数据 解决方案 ： 11/2晚上DC会开启余额文件的同步， 明天的Report就显示正常DC OH数据 11/3上午验证portal数据已正常展示",
+      "sourceRow": 8,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-9",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "Transportation Portal Report MSK反馈重推的到店时间未更新 INC6780826",
+      "application": "Transportation Portal",
+      "owner": "Hand",
+      "business": "Yuan Zhao",
+      "priority": "P2",
+      "impact": "报表展示数据不准确",
+      "dependency": "",
+      "references": [
+        "INC6780826"
+      ],
+      "sourceStatus": "done Green",
+      "status": "Complete",
+      "releaseText": "2026-11-02",
+      "date": {
+        "start": "2026-11-02",
+        "end": "2026-11-02",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： Hand排查是portal上缺少到店信息的数据是因为MSK推送的lsp里数据没有actual_arrival_date 解决方案 ： 业务联系MSK运输team确认数据情况及处理",
+      "sourceRow": 9,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-10",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "HSBC Bank PGP key Expiry date: 2026-11-10 INC6739374",
+      "application": "Helios",
+      "owner": "Helios, HSBC",
+      "business": "Lei Xu",
+      "priority": "P2",
+      "impact": "Key过期后影响用户报销付款流程",
+      "dependency": "",
+      "references": [
+        "INC6739374"
+      ],
+      "sourceStatus": "done Green",
+      "status": "Complete",
+      "releaseText": "2026-10-28",
+      "date": {
+        "start": "2026-10-28",
+        "end": "2026-10-28",
+        "precision": "exact"
+      },
+      "updates": "处理进展 ： 10/27晚会议与HSBC global沟通，已成功更换QA环境，并约会10/28 18点验证生产环境 10/28晚会议已成功更换Prod环境，协同业务验证单据审批付款流程正常",
+      "sourceRow": 10,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-11",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "Transportation Portal - Daily Delivery Tracking页面加载非常慢报错查询超时 INC6772467",
+      "application": "Transportation Portal",
+      "owner": "Hand",
+      "business": "Yuan Zhao",
+      "priority": "P1",
+      "impact": "业务无法查看报表",
+      "dependency": "",
+      "references": [
+        "INC6772467"
+      ],
+      "sourceStatus": "done Green",
+      "status": "Complete",
+      "releaseText": "2026-10-27",
+      "date": {
+        "start": "2026-10-27",
+        "end": "2026-10-27",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： 界面初始化加载时需同时渲染 16 个筛选条件下拉框，导致页面并发触发 16 次后端接口请求。由于相关查询字段目前缺乏数据库索引支持，导致接口响应延迟较高，严重影响了页面的首屏加载速度与用户体验 解决方案 ： 针对高频查询及核心筛选字段进行数据库性能优化，重点为 wms_order_number、atd 和 in_store_date 这 3 个关键字段添加索引，以降低查询耗时，提升接口响应效率 10/27已走Emergency change: CHG0127886 发版，持续观察",
+      "sourceRow": 11,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-12",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "Transportation Portal - shipping list 重量数据带千位符处理异常 INC6761994",
+      "application": "Transportation Portal",
+      "owner": "Hand, MSK",
+      "business": "Yuan Zhao",
+      "priority": "P2",
+      "impact": "报表展示数据不准确",
+      "dependency": "",
+      "references": [
+        "INC6761994"
+      ],
+      "sourceStatus": "done Green",
+      "status": "Complete",
+      "releaseText": "2026-10-23",
+      "date": {
+        "start": "2026-10-23",
+        "end": "2026-10-23",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： MSK同步的 Shipping list中数据， 当一个调拔单的 箱数总毛重 超过1000 KG时，同步的文件中的数据带有千位符。DC Ops上传的原始数据并没有千位符， 是通过MSK系统同步ISS中的文件发生了转换 解决方案 ： 10/23 MSK已调整生产环境重量格式，不会显示千分位符号，后续持续监控",
+      "sourceRow": 12,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-13",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "10/19 17点上新，在断联动情况下，Scuba仍然出现了超卖，SKU集中在159400003、159399988、159400007 INC6762355",
+      "application": "Omni",
+      "owner": "",
+      "business": "Zita Wang",
+      "priority": "P1",
+      "impact": "Scuba产生较多超卖",
+      "dependency": "",
+      "references": [
+        "INC6762355"
+      ],
+      "sourceStatus": "DONE #D3F1A7 true",
+      "status": "Complete",
+      "releaseText": "Not provided",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因： 在10/19 16点-10/20 0点的断联动库存分配中，OC渠道 私域平台（.CN/WMP/RMP）三端断联动库存配置+DY+Tmall+JD，实际库存分配总和>100% 解决方案 ： Jerry已与业务沟通，后续做断联动配置时按照各平台总和100%的比例配置分库存 --当前除159400003仍有100单左右的缺货，另外2个基本已履约",
+      "sourceRow": 13,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-14",
+      "group": "operations",
+      "kind": "Incident/Problem",
+      "name": "10/11晚21点后 Omni Fulfillment 部分有库存的SKU库存同步0一段时间后恢复 INC6751604 PRB0055222",
+      "application": "Omni",
+      "owner": "Baison",
+      "business": "Andy Li",
+      "priority": "P1",
+      "impact": "部分直播中商品库存直接降至0，wk37上新商品的预约/预热链接下架",
+      "dependency": "SFS Batch 8上线前配置",
+      "references": [
+        "INC6751604",
+        "PRB0055222"
+      ],
+      "sourceStatus": "TRANSFER Green CSCOP-1124",
+      "status": "Transferred",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因： 10月11日晚21:00至21:05期间，Omni因新开一批门店需要调整仓库配置。在调整时需要先禁用库存组配置后添加新开门店仓。禁用期间Omni收到履约订单履约的SKU因找不到对应的履约单元，对外的库存暴露更新为0导致前端渠道显示售罄 解决方案 ： Baison提供方案，如果SFS开放库存，那对于已经上架的商品是如何做库存增量的方案，而不是可用数变0之后的再次重新暴露 后续再有类似门店新增，将在零晨2点进行操作，避开业务高峰",
+      "sourceRow": 14,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-15",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "业务发现小程序和小红书超过30天的武汉仓发货订单仍可以发起退货, 实际发现在官网小程序和小红书中，订单的物流状态为已发货 INC6751924",
+      "application": "SF Logistic",
+      "owner": "WMP, RMP",
+      "business": "Jinni Yu",
+      "priority": "",
+      "impact": "客户超期（WMP>30天，RMP>7天）仍能发起售后",
+      "dependency": "",
+      "references": [
+        "INC6751924"
+      ],
+      "sourceStatus": "TRANSFER Green CSCOP-1125",
+      "status": "Transferred",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因： WMP和RMP之前没有查询武汉仓月结账号的快递的权限，因此无法获取武汉仓发货的签收状态，导致WMP和RMP中订单的签收状态不对，进而发生客户超期（WMP>30天，RMP>7天）仍能发起售后 解决方案 ： 小红书渠道 和微信小程序 渠道申请 武汉顺丰物流月结账号授权， 授权后通过定时任务修复历史数据 Long term : 小红书渠道 和微信小程序 通过 物流信息 来关联售后状态，当SF外部数据异常将影响售后时效？建议采用官网逻辑，通过数据接口的Ship Confirm来计算售后时间",
+      "sourceRow": 15,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-16",
+      "group": "operations",
+      "kind": "Incident/Problem",
+      "name": "客服订单备注显示在顺丰小程序电子面单上，涉及昆山和广州MSK仓库 INC6751889 PRB0055227",
+      "application": "SF Logistic",
+      "owner": "SF, OMS",
+      "business": "",
+      "priority": "",
+      "impact": "顾客可以看到顺丰小程序电子面单上客服的订单备注",
+      "dependency": "",
+      "references": [
+        "INC6751889",
+        "PRB0055227"
+      ],
+      "sourceStatus": "TRANSFER Green CSCOP-1122",
+      "status": "Transferred",
+      "releaseText": "2026-10-10",
+      "date": {
+        "start": "2026-10-10",
+        "end": "2026-10-10",
+        "precision": "exact"
+      },
+      "updates": "根本原因： OMS - Omni发货单推送接口包含商家备注字段入参 解决方案 ： OMS提交 Emergency change 对发货单推送优化， 发货单商家备注字段入参置空 OMS - Omni发货单推送接口包含 商家备注 字段入参 Before: 原先发货单推送商家备注需下发下游系统， 客服对于订单的内部备注内容， 会按链路流转到Omni-iss-WMS-SF After: 发货单推送商家备注宇段置为空值。字段保留并传空值。 本次优化仅做这一个逻确点调整，其它逻确均无变动",
+      "sourceRow": 16,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-17",
+      "group": "operations",
+      "kind": "Incident/Problem",
+      "name": "9/20 SFS 9/15新品库存暴露产生订单到店 INC6720544 PRB0055165",
+      "application": "SFS, Omni Portal/Omni",
+      "owner": "Hand, Baison",
+      "business": "Carrie, Nelson",
+      "priority": "P1",
+      "impact": "影响SFS门店订单，新品外放至线上售卖",
+      "dependency": "",
+      "references": [
+        "INC6720544",
+        "PRB0055165"
+      ],
+      "sourceStatus": "TRANSFER Green CSCOP-1121",
+      "status": "Transferred",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因： Omni WOS消费没有在对账JOB执行前消费完(库存保留数的程序因为数据量大而未能在有效时间内完成，导致对账的数据有缺失导致部分数据未被处理到) 解决方案 ： Omni定时任务时间往后推迟半小时 新品sku手工导入Blackout list防止订单再次下发 长期优化 ： Baison, Hand准备完整方案，包括预警和预防 WOS拉完整数据的优化 全量的监控 --Baison 9/28初版方案review，预计10/20约会review方案更新",
+      "sourceRow": 17,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-18",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "Omni Operation Portal中Reservation Days配置界面存在store缺失 INC6718411",
+      "application": "SFS, Omni Portal/Omni Operation Portal",
+      "owner": "Hand, MDM",
+      "business": "Carrie, Nelson",
+      "priority": "P1",
+      "impact": "12家门店未进行Reservation Days的配置，以默认14天计算门店SFS库存保留数，从而门店的库存暴露率过少，影响SFS订单的转化率",
+      "dependency": "",
+      "references": [
+        "INC6718411"
+      ],
+      "sourceStatus": "TRANSFER Green CSCOP-1119",
+      "status": "Transferred",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因： 门店 Reservation Days通过 MDM 计算后更新，MDM拉取门店ID的补货类型计算门店的Reservation Days。 由于未能初始化新门店的Reservation Days。故WOS默认以14天做为Reservation Days计算12家门店的库存保留数。 优化方案： Workaround：手动更新影响门店的Reservation Days数据--9/24 go live Long term： SFS Rollout Checklist补Reservation Days的强制检查 MDM恢复NA-PLIM中门店的补货类型计算Reservation Days机制 SFS对于门店，库存，订单所有配置的设计监控清单 监控预警：通过 Datalake, 根据 SFS Store list 比对 MDM 的Store Reservation Days 配置是否存在",
+      "sourceRow": 18,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-19",
+      "group": "operations",
+      "kind": "Incident/Problem",
+      "name": "9/4-9/6 日DC to Store Portal的今日收货：大仓到货的的实收箱数大于应收 INC6701098 PRB0055118",
+      "application": "DC to store portal",
+      "owner": "Hand, VT",
+      "business": "门店/EHC",
+      "priority": "P3",
+      "impact": "影响所有门店看报告准确性",
+      "dependency": "",
+      "references": [
+        "INC6701098",
+        "PRB0055118"
+      ],
+      "sourceStatus": "TRANSFER Green CSCOP-1118",
+      "status": "Transferred",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因： MSK当天出货量大并于20:00重新上传PKL文件。 原先ISS对于PKL有轮询机制，可以支持最晚21:00将PKL推送给DC2Store 目前ISS切换到Kafka推送PKL后，链路为MSKDC → OSS → ISS → Kafka → DC to Store。当前Kafka仅在18:15推送数据给到下游。故DC2STORE未能收到，需要ISS增加轮询机制 解决方案 ： 9/7 10:30 ISS找DevOps执行xxljob重推，9/4-9/6 portal数据已更新 后续优化 ： ISS优化定时任务时间以处理上游MSK 21点前重新上传pkl/shp/alo文件--已提CHG0119252待发版优化，期间ISS check每天的文件时间防止有更新的文件遗漏",
+      "sourceRow": 19,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-20",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "8/1 门店反馈收到收到瑜伽滚轴，SFS订单包含了blackout list的商品 INC6642702",
+      "application": "Omni Portal/Omni",
+      "owner": "Hand, Baison",
+      "business": "Nelson",
+      "priority": "P1",
+      "impact": "影响SFS门店订单，受限商品外放至线上售卖",
+      "dependency": "CHG0111506",
+      "references": [
+        "INC6642702"
+      ],
+      "sourceStatus": "done Green",
+      "status": "Complete",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因 ： Omni 在7/31晚 CHG0111506 发版mybatis plus漏洞修复升级，分页查询接口中total字段返回错误造成 blackout 查询接口异常；WOS 每日常规拉取黑名单（包含超大件、低 ROI 等品类）、核算商品保留库存时，无法调取明细数据，核算逻辑报错致使受限商品外放至线上售卖 解决方案 ： 1.临时应急方案 Hand 在8/1 16点前手工导入数据，将需屏蔽的 83505 个 SKU 录入黑名单，屏蔽有效期至 8 月 2 日 2.永久修复方案 Baison在8/1 22点走emergency change CHG0112542 修复不兼容的代码，确保total字段正常返回 --8/3 Ops协同Baison Hand分析根因及监控优化，Baison计划针对核心业务接口增加专项监控 a.redis tls 开启涉及服务20+ b.服务部署过程识别到漏洞，需修复 c.出问题是受MP 2.x->3.5 版本升级导致分页插件未正确生效导致 total为0 （无黑名单商品） d.测试力度/意识不足，仅开发自己做了API测试，未发现分页失效 会议结论： 1.对黑名单暴露API增加特定规则的监控； 2.发现紧急发版只更新了2个服务，让Omni排查确认其他做了MP升级是否还存在分页插件未正确生效导致 total为0 或分页失效风险； 3.Omni后续做服务较多的发版需要考虑QA团队的验证 --8/4： 1.Jiarui跟进integration.lululemon.portal.blackout.list监控实现确认，基于SLS+Arms，评估Omni 作为API提供方 及 ISS作为API调用方的监控实现 --8/5： 1.从AP提供方做监控能力构建，request给Omni 2.其他做MP版本升级的服务，Omni团队排查是否还存在分页插件未正确生效导致 total为0 或分页失效风险中 --8/6 1.Baison计划采用方式二：黑名单返回代码段增加逻辑判断，对count==0增加定制日志打印，如 黑名单商品为0 and log_level: error--8/28已增加日志打印 2.其他做MP版本升级的服务，排查已完成无影响",
+      "sourceRow": 20,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-21",
+      "group": "operations",
+      "kind": "Incident/Problem",
+      "name": "Service Portal CN PROD-导出过去7天收货报告 system occurred error PRB0054809",
+      "application": "DC to store portal",
+      "owner": "Hand",
+      "business": "门店/EHC",
+      "priority": "P1",
+      "impact": "影响所有门店导出报告",
+      "dependency": "",
+      "references": [
+        "PRB0054809"
+      ],
+      "sourceStatus": "done Green",
+      "status": "Complete",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因： 用户点击导出时，调用后端接口，后端接口处理时逻辑较为复杂导致内存打满，进而提示前端报错 优化方案： 已于6/10发版重新分配函数内存 Charley Comments：给出AS-IS 高峰的数据量，并按其他3-5倍提高查询性能，考虑自动扩缩容 --记录CR跟进 CNSCO-3181 f73d0e34-5223-3728-b1ad-22756ec23157 System Jira --9/2 Hand邮件反馈：目前portal暂时未发现这个导出还会出现报错，评估认为当前的配置已足够 --9/9 Ops邮件跟进: 目前 QUERY 的是否有优化空间， query的效率如何 用户导出Report会导出时数据的内存占用，是否超过内存的80% 目标是还是满足后续1年的数据增长，导出时不会出现OOM的情况",
+      "sourceRow": 21,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-22",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "LM3FT0S-4780（Metal Vent Tech Short Sleeve BLK/BLK L）产品价格在SF WMS显示为550 ，实物上的价格标签为650 INC6752876",
+      "application": "SF WMS",
+      "owner": "SF",
+      "business": "",
+      "priority": "",
+      "impact": "产品价格标签未按生效价格打印标签",
+      "dependency": "",
+      "references": [
+        "INC6752876"
+      ],
+      "sourceStatus": "DONE #D3F1A7 true",
+      "status": "Complete",
+      "releaseText": "2026-10-13",
+      "date": {
+        "start": "2026-10-13",
+        "end": "2026-10-13",
+        "precision": "exact"
+      },
+      "updates": "根本原因： 运营并未将改价的SKU已邮件形式发给SF，导致SF在发货前未重新打印价格标签。这个属于运营问题，目前DC operation团队已经加强对SF的管理 运营优化 ： SF WMS补充对于 inbound的s每个款色进行价格检查， 确认与SF WMS的系统中的生效价格是否一致 监控优化 ： price recon现在datalake监控， 补充有SF WMS的数据到监控范围内 对于生效改价的SKU， 通过Print log检查DC是否打印新的价格标签的记录",
+      "sourceRow": 22,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-23",
+      "group": "operations",
+      "kind": "Incident/Problem",
+      "name": "8/28 DC Operation portal - DC inventory inquiry SKU数量与DC实际库存不一致。Omni 存在负库存导致可用库存数据不准确 INC6687257 PRB0055100",
+      "application": "Omni",
+      "owner": "Baison",
+      "business": "Ashley Lu",
+      "priority": "P2",
+      "impact": "影响库存数据报告准确性",
+      "dependency": "",
+      "references": [
+        "INC6687257",
+        "PRB0055100"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-09-08",
+      "date": {
+        "start": "2026-09-08",
+        "end": "2026-09-08",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ：8/4晚上Omni rabbit mq down了，导致booktransfer单据重复消费，造成锁定数负数 短期方案 ： Baison手动修正该SKU数据，portal数据正确展示0 Baison排查所有此类单据影响数据，手动修正 长期方案 ： 修改接口负库存返回数据为0 增加运维监控，检查负库存数据 9/2 Baison update： 幂等问题预计9/3完成开发，周五完成内测，具体发版时间待与QA确认测试完成时间确定 运维监控目前在寻求Devops协助，暂未确定时间 Daily手工检查是否有负锁定数据 9/9 Baison update： 幂等问题开发已完成，SIT&QA已完成，已于昨晚9/8晚完成发版 qty_lock监控已完成配置 近期Daily手工检查均无负锁定数据",
+      "sourceRow": 23,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-24",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "9/1 财务反馈8月份发票认证总公司未同步 INC6693165",
+      "application": "Helios",
+      "owner": "Helios",
+      "business": "Sarah Li",
+      "priority": "P2",
+      "impact": "影响Tax team 8月份的发票认证工作",
+      "dependency": "",
+      "references": [
+        "INC6693165"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-09-02",
+      "date": {
+        "start": "2026-09-02",
+        "end": "2026-09-02",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： 在认证数据同步任务完成后的后置处理中，执行更新发票认证数据（CertReceiptMapper.java表）时，与数据库中的其他并发事务发生了行锁死锁。MySQL 检测到死锁并回滚了当前事务，导致了同步任务失败 任务执行时间过长，导致更新任务状态失败 解决方案 ： 代码中增加 try-catch，防止异常影响主任务流程 对失败原因进行截断处理，避免因数据过长导致更新失败 执行SQL语句，处理未同步的数据 9/1晚已走Emergency change： CHG0117672 修复，9/2中午任务执行后发票已正常勾选",
+      "sourceRow": 24,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-25",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "8/26有几笔报销单报表导出的金额和付款界面的金额不一致 INC6683323",
+      "application": "Helios",
+      "owner": "Helios",
+      "business": "Xu Lei， Esther",
+      "priority": "P2",
+      "impact": "影响报表数据准确性，影响月底结账",
+      "dependency": "",
+      "references": [
+        "INC6683323"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-08-28",
+      "date": {
+        "start": "2026-08-28",
+        "end": "2026-08-28",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ：禁用收款方银行账号后，状态未同步至报表系统，导致新建同一账号后在报表这边遗留有重复、有效的收款方银行账号。报表视图因为维度表重复导致最终数据重复 解决方案 ：Helos后台检查单据和付款台页面是一致的，单据可正常做付款操作。待RCA后做fix 8/26 Helios准备change log紧急发版修复代码，8/28财务导数据验证完成",
+      "sourceRow": 25,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-26",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "User在单据提交过程中，因发票内容中含有“SPAM” ，系统强管控误识别为“SPA” ，导致提交失败 INC6576306",
+      "application": "Helios",
+      "owner": "Helios",
+      "business": "Rebecca Wu",
+      "priority": "P3",
+      "impact": "影响部分发票校验",
+      "dependency": "",
+      "references": [
+        "INC6576306"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-08-27",
+      "date": {
+        "start": "2026-08-27",
+        "end": "2026-08-27",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ：目前系统是用关键字做的强管控校验，by关键字模糊匹配 短期方案 ：特殊词汇弱管控--6/29 完成生产环境配置 长期方案 ：产品添加白名单的方式对特殊词汇做敏感词校验排除--2608迭代发版 8/20已发版，QA环境待业务确认后配置生产环境，预计本周完成 8/27晚生产环境发票敏感词白名单&审批流已调整",
+      "sourceRow": 26,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-27",
+      "group": "operations",
+      "kind": "Incident/Problem",
+      "name": "7/8 Odette Yip的company code变为459 INC6601401 PRB0054993",
+      "application": "Helios",
+      "owner": "Helios, MDM",
+      "business": "",
+      "priority": "P1",
+      "impact": "1.人员主数据company code错误，影响MDM和Helios同步数据 2.Helios中财务无法对于459公司单据做付款",
+      "dependency": "",
+      "references": [
+        "INC6601401",
+        "PRB0054993"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-08-19",
+      "date": {
+        "start": "2026-08-19",
+        "end": "2026-08-19",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ：北美确认上游数据取值逻辑之前取的是manager自己的company code，5/22之后改成了super org 解决方案 ： 7/17 Morgan update：与业务业务讨论后确认：lv1&2的company code要求北美改回manager本人的company code，已邮件要求北美提供estimated timeline 7/30 Morgan update：北美对于company code和location id的fix schedule 8/12 move to production变更为8/19上线 8/19 已Go live并导出数据核对vs MDM Helios暂无问题，Ops人工check 1-2周无问题后关闭",
+      "sourceRow": 27,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-28",
+      "group": "operations",
+      "kind": "CR",
+      "name": "Hi Team，帮忙看下BPO审批人的审批界面中能否新增搜索或者筛选“员工类型”，这样可以分出兼职和全职员工的SP单子 INC6648598",
+      "application": "Helios",
+      "owner": "Helios",
+      "business": "Cherry Chen",
+      "priority": "P3",
+      "impact": "",
+      "dependency": "",
+      "references": [
+        "INC6648598"
+      ],
+      "sourceStatus": "TRANAFER Green",
+      "status": "Unconfirmed",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "8/13：经前期需求评估，allen 给出一个解决方案：需要在BPO审核页面增加一个字段。目前cherry是认可此方案，待业务提intake 流程确认人天后部署生产环境，此方案无需发版过CAB --记录CR跟进，业务提Intake，Iris jin跟进",
+      "sourceRow": 28,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-29",
+      "group": "operations",
+      "kind": "CR",
+      "name": "Hi Team，费用明细报表里能添加两列信息吗？SSC员工的部门名称和部门ID，现在费用明细报表里，SSC员工部门全是SSC，ID也是同一个。比如第一行Sherry Yang, 期望显示的部门是Technology， ID是S0042 INC6650420",
+      "application": "Helios",
+      "owner": "Helios",
+      "business": "Cherry Chen",
+      "priority": "P3",
+      "impact": "",
+      "dependency": "",
+      "references": [
+        "INC6650420"
+      ],
+      "sourceStatus": "TRANAFER Green",
+      "status": "Unconfirmed",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "8/7 Hongyu Update：由于单据里没有defaultdepartment字段，实际部门无法体现在报表里。要添加得在SP表单增加成本中心以及成本中心编码，此方案cherry已认可，Nana 提出需要先在QA环境配置，财务侧需要测试对OOP单据是否有影响 --记录CR跟进，业务提Intake，Iris jing跟进",
+      "sourceRow": 29,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-30",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "税收编码问题：6/17 ER00222663 包含电费的发票选不到Transportation-Other，但是 ER00193093 是5/3自动审核通过的一笔充电此类费用 INC6567204",
+      "application": "Helios",
+      "owner": "Helios",
+      "business": "Esther Sun",
+      "priority": "P1",
+      "impact": "User发票选不到正确的分类，影响发票提交审批",
+      "dependency": "",
+      "references": [
+        "INC6567204"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-06-25",
+      "date": {
+        "start": "2026-06-25",
+        "end": "2026-06-25",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： ER00193093中电费的税收编码在系统允许的白名单里，新的这笔ER00222663 包含电费的发票税收编码不在系统允许的白名单里 已解决 ：6/23 Helios已配置该税收编码，发票已审批 长期优化 ： 根据税局最新的税务编码与系统配置好的编码做对比差异，提供给业务生产环境的梳理清单 --已6/25 业务&Helios会议已对齐，上传清单至Confluence page，并邮件更新给业务",
+      "sourceRow": 30,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-31",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "5/29 Odette Yip的ER00212295没有出现在Helios的未付款单据，财务无法对于这笔单据做付款 INC6533124",
+      "application": "Helios",
+      "owner": "Helios, MDM",
+      "business": "Lei Xu",
+      "priority": "P1",
+      "impact": "1.财务无法对于这笔单据做付款 2.人员主数据存在汇报线人员数据混乱，存在此类问题单据再次出现的隐患",
+      "dependency": "",
+      "references": [
+        "INC6533124"
+      ],
+      "sourceStatus": "DONE Green",
+      "status": "Complete",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因 ：5/29 协同Helios MDM 及业务 call会讨论，根本原因是MDM主数据存在个别Manager下汇报线人员混乱，该Ticket是Workday出现Line manager汇报线的下属company code是450/400的情况，导致Helios取到的company code不对 已解决 ：6/3 Helios通过付款公司授权的方式协助财务完成单据ER00212295付款并验证 长期优化 ： 1.Daily MDM检查并手工修正数据下发至Helios--until 6/25 2.MDM与Global team沟通修复NA Databricks bug--6/26 Update：目前为止北美给过来的数据还存在问题，已验证mdm和db的数据是一致的，但db、mdm和workday的数据存在差异，Morgan与北美沟通跟进后续修复。Helios已在6/29拉一版数据Check无新增数据异常，后续Daily Recon持续关注",
+      "sourceRow": 31,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-32",
+      "group": "operations",
+      "kind": "CR",
+      "name": "调整DC to store portal-退仓详情表-退仓总览的“待退仓总件数”的逻辑：将当前展示所有待PB数据 改为 只展示历史3个月待PB数据",
+      "application": "DC to store portal",
+      "owner": "Hand, CAP",
+      "business": "Vida Tian",
+      "priority": "P3",
+      "impact": "使得业务/门店对报告数据的理解达成一致",
+      "dependency": "",
+      "references": [],
+      "sourceStatus": "TRANAFER Green",
+      "status": "Unconfirmed",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "方案： 【当前是展示历史所有待PB 的数据】改成【只获取历史3个月待PB 的数据】，和退仓详情表保持展示的逻辑一致 7/17 Vida确认该需求 --记录CR跟进，已与Domain Owner/交付团队沟通",
+      "sourceRow": 32,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-33",
+      "group": "operations",
+      "kind": "CR",
+      "name": "当天/7天vs30天收货报告逻辑差异 INC6521788",
+      "application": "DC to store portal",
+      "owner": "Hand",
+      "business": "Jessica Zhu",
+      "priority": "P1",
+      "impact": "1.影响所有门店看报告准确性 2.对报告的理解差异导致的Gap Ticket量明显增加",
+      "dependency": "",
+      "references": [
+        "INC6521788"
+      ],
+      "sourceStatus": "TRANAFER Green",
+      "status": "Unconfirmed",
+      "releaseText": "ETA 2026-07-21",
+      "date": {
+        "start": "2026-07-21",
+        "end": "2026-07-21",
+        "precision": "exact"
+      },
+      "updates": "根本原因： 报告的数据展示逻辑不同 优化方案： 优化Report展示逻辑：7天收货和30天收货， 按箱子的shipment 识别收货--计划6月底完成开发，7月上线 --记录CR跟进，已与Domain Owner/交付团队沟通 CNSCO-3171 f73d0e34-5223-3728-b1ad-22756ec23157 System Jira",
+      "sourceRow": 33,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-34",
+      "group": "operations",
+      "kind": "CR",
+      "name": "在收货报告报表中「是否存在异常状态产品」字段： 对于EPC Movement 的 to disposition=intransit 的无法正常识别并标记为异常",
+      "application": "DC to store portal",
+      "owner": "Hand",
+      "business": "Jessica Zhu",
+      "priority": "P1",
+      "impact": "导致门店看不到风险，无法及时处理收货",
+      "dependency": "",
+      "references": [],
+      "sourceStatus": "TRANAFER Green",
+      "status": "Unconfirmed",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因： 部分EPC异常状态无法判别:in transit商品无法拿到库存异动信息。对于魔法收入中in_transit 状态的EPC不能全部识别问题，项目data spike 时未考虑清楚 优化方案： 部分EPC异常状态无法判别:in transit商品无法拿到库存异动信息在Carton Receiving roll-out后没有继续出现，暂时判断之前的case为孤立情况 Charley Comments：Hand提供分析说明 --6/17 Hand与idcloud沟通邮件中Edward Pan跟进与业务的沟通，目前Hand未收到需求暂无跟进 --记录CR跟进，已与Domain Owner/交付团队沟通 CNSCO-3236 f73d0e34-5223-3728-b1ad-22756ec23157 System Jira",
+      "sourceRow": 34,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-35",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "1.业务上传Jun PBlist选错Pb week （选了Jul) 2.同一天将May FP PB数据上传了2遍（Jun SMD PB list也包含May FP 数据） INC6541914",
+      "application": "Pullback Portal",
+      "owner": "Cap, Hand",
+      "business": "Vida&Lunice Chen",
+      "priority": "P1",
+      "impact": "1.导致退仓详情表May FP 数据未展示在PB week: Jun SMD 里 2.导致datalake端数据同步失败",
+      "dependency": "",
+      "references": [
+        "INC6541914"
+      ],
+      "sourceStatus": "TRANAFER Green",
+      "status": "Unconfirmed",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因： 业务操作失误 解决方案： 问题1：6/4下午EC-CHG0104685发版JUL PB Week的数据更新为JUN PB Week。涉及更新的表包括： Portal 端：Pullback 主表、DataLake 同步表、日志表（Log）、Tracking List 表、Delete Record 表、Historical 表 DataLake 端：Data Team，将 dws.base_pullback_list_inventory_store_mii 和 base_pullback_list_inventory_store_di 表中的七月份数据的PB Week 更新为JUN WK1 FY26 问题2：已告知product team业务重新上传下Jun SMD PB list (不包含May FP），6/4重新run job 同步给datalake即可 业务操作问题已出现多次，需要考虑优化 --记录CR跟进，已与Domain Owner/交付团队沟通 [CNSCO-3359] Enhancement|Pullback Portal|退仓日历| 业务上传Jun PB list选错Pb week ，第二天生成的退仓总数时发现Total QTY比预计有差异 - JIRA",
+      "sourceRow": 35,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-36",
+      "group": "operations",
+      "kind": "CR",
+      "name": "历史退仓详情表包含了Jul数据 INC6599196 7/8 业务希望往期应该只展示已过去的退仓清单，不应该包含正在进行的退仓",
+      "application": "DC to store portal-退仓详情表",
+      "owner": "Cap, Hand",
+      "business": "Vida Tian",
+      "priority": "P3",
+      "impact": "不影响门店正常做PB",
+      "dependency": "",
+      "references": [
+        "INC6599196"
+      ],
+      "sourceStatus": "TRANAFER Green",
+      "status": "Unconfirmed",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因： 经过Portal和数据的伙伴结合代码+项目Solution/PRD，确认当前页面展示的逻辑：全量展示应退SKU，故页面展示了Jul的数据 --记录CR跟进，已与Domain Owner/交付团队沟通 [CNSCO-3358] Enhancement|DC to Store Portal|退仓详情表| 往期退仓详情表包含了门店退仓详情（Jul）的退仓SKU - JIRA",
+      "sourceRow": 36,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-37",
+      "group": "operations",
+      "kind": "Incident/CR",
+      "name": "MDM数据库磁盘空间告警 - MDM同步Tupu的人选信息到Avature INC6578313",
+      "application": "Tupu/Avature",
+      "owner": "Inspire",
+      "business": "P&C",
+      "priority": "P2",
+      "impact": "影响了系统的正常运行与稳定性",
+      "dependency": "",
+      "references": [
+        "INC6578313"
+      ],
+      "sourceStatus": "TRANAFER Green",
+      "status": "Unconfirmed",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因 ： 目前Tupu 系统会将候选人的简历相关信息下发给 MDM。MDM 接收后，将相关信息存入数据库中，并将数据转发给 CN Avature。Tupu下发的简历并非传统文件（二进制文件流），MDM当前采用直接将文件存入数据库的方式进行处理。随着数据量的持续增长，该方式已导致数据库磁盘空间严重不足（当前磁盘空间使用率85%），影响了系统的正常运行与稳定性。 优化方案 ： 对现有逻辑进行改造，核心方向为： 将简历文件从数据库存储迁移至Aliyun OSS（对象存储服务），不再占用数据库磁盘空间。确保Tupu、MDM与CN Avature之间的数据同步逻辑完整。 本次改造涉及的主要内容： Security Team Review Solution 实时链路改造（含OSS上传、落库、异常处理） 下游读取/发送兼容改造 DB变更 历史数据迁移至OSS SIT测试（单测、联调、SIT报告等） TUAT支持 Golive与数据核对支持及后续监控 --记录CR跟进，已与Domain Owner/交付团队沟通 CNSCO-3268 f73d0e34-5223-3728-b1ad-22756ec23157 System Jira",
+      "sourceRow": 37,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-38",
+      "group": "operations",
+      "kind": "Incident/Problem",
+      "name": "7/11开始多家门店反馈DC to store portal - 门店收货&售卖信息 - 门店库存报告 中的库存数据与门店实际库存及iCloud中的库存不一致 INC6607805 PRB0054944",
+      "application": "DC to store portal",
+      "owner": "Hand",
+      "business": "门店/EHC",
+      "priority": "P2",
+      "impact": "影响门店查看报告数据准确性",
+      "dependency": "",
+      "references": [
+        "INC6607805",
+        "PRB0054944"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-07-20",
+      "date": {
+        "start": "2026-07-20",
+        "end": "2026-07-20",
+        "precision": "exact"
+      },
+      "updates": "根本原因： 未定位到根因，转 PRB0054944 跟进RCA Hand排查反馈由于 MDM 表 masterdata_product_style_cn 中的 create_dt 和 update_dt 字段类型发生变更，导致 4_omni_e3plus.sql 任务执行失败，并造成了数据遗漏 create_dt TIMESTAMP(3) -> create_dt TIMESTAMP(6) update_dt TIMESTAMP(3)-> update_dt TIMESTAMP(6) 解决方案： 7/13晚Hand 手动拉取全量库存数据并同步，同步完之后数据一致，门店反馈无问题，且在Omni系统以及数据库抽查数据与Portal展示一致。 --7/15 协助定位问题，发现JOB上周9号有频繁的的失败，任务挂掉后自启，CDC有可能漏掉Checkpoint之间的增量数据，当前配置的是5分钟。Hand检查当前JOB正常运行中",
+      "sourceRow": 38,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-39",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "GA人员被误纳入SPC增强数据处理范围，按SPC默认逻辑补充成本中心，导致数据异常及同步报错 INC6501193",
+      "application": "Helios",
+      "owner": "Helios",
+      "business": "Nana Wu",
+      "priority": "P1",
+      "impact": "影响人员审批线，尤其是Global审批线",
+      "dependency": "",
+      "references": [
+        "INC6501193"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-06-30",
+      "date": {
+        "start": "2026-06-30",
+        "end": "2026-06-30",
+        "precision": "exact"
+      },
+      "updates": "根本原因： SPC增强数据逻辑有误，增强数据在coding的时候没有按照solution正向筛选，而是反向的从所有的人员里面去反选 已发版： 5/19 Emergency change修正SPC增强数据的逻辑(优化后逻辑与原业务解决方案逻辑保持一致) 处理中 GA历史数据 直属领导为自己、历史逻辑导致的增强数据展示问题--已处理 审批层级置空未生效--EBS会传输审批金额权限为null的数据到Helios，当前这部分数据Helios不会同步到系统，因为无法判断这部分数据的有效性，6/18与EBS核对这部分的数据是有效的需要同步，Helios评估需优化下同步逻辑，放行这部分数据--已于6/30发版",
+      "sourceRow": 39,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-40",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "0702 employee recon alert发现Helios和MDM有异常数据，MDM active Helios查不到数据 INC6592301",
+      "application": "Helios",
+      "owner": "Helios, MDM",
+      "business": "",
+      "priority": "P2",
+      "impact": "影响MDM “审批权限金额”为空的新员工同步至Helios,新增的员工无法正常登录Helios做报销。已阻断数据数量25条",
+      "dependency": "#3中6/30 Helios针对“审批权限金额”支持传空的需求",
+      "references": [
+        "INC6592301"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-07-03",
+      "date": {
+        "start": "2026-07-03",
+        "end": "2026-07-03",
+        "precision": "exact"
+      },
+      "updates": "根本原因： Helios针对“审批权限金额”支持传空的需求（0630发版），支持了【员工更新接口】，未兼容【员工新增接口】。目前MDM新增人员数据已正常同步到Helios中间件，中间件同步给Helios前端数据失败，导致查不到新增的员工数据 解决方案： Helios针对“审批权限金额”支持传空的优化，兼容【员工新增接口】：中间件向产品发送员工数据时，针对审批层级为空分场景传值。 场景1:更新数据场景，传[null]（当前生产环境逻辑）； 场景2:新增数据场景，传空 --7/3 20点Emergency Change发版修复",
+      "sourceRow": 40,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-41",
+      "group": "operations",
+      "kind": "CR",
+      "name": "ER00200763, ER00201344 Hello 2笔单据，2026/05/04（FY26P04）早上 完成财务审核，但Oracle入账时间是 2026/05/03（FY26P03） INC6501193",
+      "application": "Helios",
+      "owner": "Helios",
+      "business": "Esther Sun",
+      "priority": "P3",
+      "impact": "时差导致在最后一天操作时财务入账Period和北美不一致",
+      "dependency": "",
+      "references": [
+        "INC6501193"
+      ],
+      "sourceStatus": "TRANAFER Green",
+      "status": "Unconfirmed",
+      "releaseText": "2026-06-15",
+      "date": {
+        "start": "2026-06-15",
+        "end": "2026-06-15",
+        "precision": "exact"
+      },
+      "updates": "根本原因： GL DATE由于EBS系统时间与CN时间存在时差导致差异展示的DATE不一致 短期 ：财务review EBS accrual file, 是否已在EBS存在journal 长期 ：Helios评估报表层面在记账日期能否精确到日/分/时/秒+是否字段auto check （Y/N） Helios技术评估可行 --6/15 Nana希望 邮件写一下方案，给Esther和candy确认是否要做，做的话提Intake 6/16 进入CR，Esther已提Intake RITM1943658待TPMO分配",
+      "sourceRow": 41,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-42",
+      "group": "operations",
+      "kind": "CR",
+      "name": "Helios 1.0 支持200单，但是因SPC上线后报销单据数量增加，财务支付批次量超过500笔，故批次卡住 INC6527073",
+      "application": "Helios",
+      "owner": "Helios",
+      "business": "Lei Xu",
+      "priority": "P3",
+      "impact": "无法支持财务>200笔的批量支付需求，需要拆分多笔",
+      "dependency": "",
+      "references": [
+        "INC6527073"
+      ],
+      "sourceStatus": "TRANAFER Green",
+      "status": "Unconfirmed",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "已发版： 5/17 EC-CHG0101200发版将Helios扩容中间件由2G->4G内存允许业务每个批次500笔 业务预期希望每个批次批量支付1000-1500笔，Helios评估目前产品上限是1000，需要中间件扩容，Helios测试环境验证中 生产单据数量参考： 26年以来支付的OOP单据，SPC项目4月初项目上线后支付单量有2~3倍的增量 Jan 415 Feb 1103 Mar 1750 Apr 3562 May 2580 --6/17 推进 Intake, 对于 Finance 的应用 考虑增加 gateway service (类似于ISS）， 做为对外数据的控制 6/23 转CR至交付团队，Iris确认1000上限的具体情况Helios/硬件上限",
+      "sourceRow": 42,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-43",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "4月的发票认证和勾选问题：上传了共408张分公司发票，233在未同步发票里，175张在未满足勾选里 INC6459623",
+      "application": "Helios",
+      "owner": "Helios",
+      "business": "Nana Wu",
+      "priority": "P1",
+      "impact": "影响月初财务报账",
+      "dependency": "",
+      "references": [
+        "INC6459623"
+      ],
+      "sourceStatus": "DONE Green",
+      "status": "Complete",
+      "releaseText": "2026-05-21",
+      "date": {
+        "start": "2026-05-21",
+        "end": "2026-05-21",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ：Job无重试，切换次数耗尽；新字体；税局异常返回 已发版 1.优化Job执行逻辑，加入retry，次数1，retry 还是失败后，记入异常记录； 2.切换逻辑优化，降低不同税号切换频率，同税号发票数据串行处理（后期关注下处理时效） 3.建Helios、企享云、Lululemon OPS、业务微信群，问题及时对接，提高问题解决效率 优化方案： 新字体定期识别，Helios提前更新字体库",
+      "sourceRow": 43,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-44",
+      "group": "operations",
+      "kind": "CR",
+      "name": "业务需求：ASM代理RM审批报销单 INC6455787",
+      "application": "Helios",
+      "owner": "Helios",
+      "business": "Esther Sun",
+      "priority": "P3",
+      "impact": "",
+      "dependency": "",
+      "references": [
+        "INC6455787"
+      ],
+      "sourceStatus": "Cancel",
+      "status": "Unconfirmed",
+      "releaseText": "Not provided",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "6/8 Helios 产品评估反馈无法添加",
+      "sourceRow": 44,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-45",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "7/9 门店反馈 DC to store portal - 退仓详情表数据与iCloud中的库存不一致 INC6603529",
+      "application": "DC to store portal",
+      "owner": "Hand, Data team",
+      "business": "门店/EHC",
+      "priority": "P2",
+      "impact": "影响门店查看报告数据准确性",
+      "dependency": "",
+      "references": [
+        "INC6603529"
+      ],
+      "sourceStatus": "done Green",
+      "status": "Complete",
+      "releaseText": "2026-07-10",
+      "date": {
+        "start": "2026-07-10",
+        "end": "2026-07-10",
+        "precision": "exact"
+      },
+      "updates": "根本原因： Report底数据：base_inventory_balance_store_mii表中的部分库存情况和ID CLOUD不一致 原因是在6/24 11:00到下午run数据表的任务失败，有告警后Data team做了修复并配置过滤器，导致job执行影响到了部分数据 解决方案： 7/10下午 Ops 拉会Hand, CAP, Data teamcall会， 协助定位问题。会上确认该表由Data team维护，数据来源于omni: rm-uf64sa540vr9akc11.mysql.rds.aliyuncs.com:3306/prod_e3plus_stock 表: stk_stock_account Data team 已于7/10下午调整job后重新跑数据修复完成，Portal也已同步为最新数据",
+      "sourceRow": 45,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-46",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "Service Portal CN PROD-导出过去7天收货报告 system occurred error INC6548608",
+      "application": "DC to store portal",
+      "owner": "Hand",
+      "business": "门店/EHC",
+      "priority": "P2",
+      "impact": "影响部分门店导出报告",
+      "dependency": "INC6603529 衍生问题",
+      "references": [
+        "INC6548608"
+      ],
+      "sourceStatus": "done Green",
+      "status": "Complete",
+      "releaseText": "2026-07-02",
+      "date": {
+        "start": "2026-07-02",
+        "end": "2026-07-02",
+        "precision": "exact"
+      },
+      "updates": "根本原因： 部分箱子有问题，比如箱号4202205204，这个箱子是大仓发往45153的，但是应该从45153转到45014了，箱贴没销毁干净，导致45014扫到了这个箱贴，由于因为这个箱子是没有45154的pkl的，没有sku明细，导致报错 优化方案： 与业务确认没有sku明细的数据也需要导出，Change已于7/2发版",
+      "sourceRow": 46,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-47",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "6/8收货报告未更新 PRB0054799 INC6549829 CNENG-9616",
+      "application": "DC to store portal",
+      "owner": "VT, DevOps",
+      "business": "门店/EHC",
+      "priority": "P1",
+      "impact": "影响所有门店看报告的及时性和准确性",
+      "dependency": "",
+      "references": [
+        "PRB0054799",
+        "INC6549829"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-07-08",
+      "date": {
+        "start": "2026-07-08",
+        "end": "2026-07-08",
+        "precision": "exact"
+      },
+      "updates": "根本原因： 初步排查：6/8消费global kafka中午十点多开始速度非常慢，VT与Global Kafka和网络的同事分析消费比较慢的问题，怀疑出现问题是由于中国区和global网络环境导致 方案&进度 ： ISS 6月初已在代码中增加了超时时间，近期未再次出现问题 7/8 Devops结论：Global Kafka 只有公网 IP，国内访问需要配置加速。如果要加速的话，再提 China Cloud Resource Request 工单",
+      "sourceRow": 47,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-48",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "5/25&6/1 当天收货报告数据延迟 PRB0054762 INC6525279 INC6537320",
+      "application": "DC to store portal",
+      "owner": "Hand, VT",
+      "business": "Jessica Zhu",
+      "priority": "P1",
+      "impact": "影响所有门店看报告的及时性和准确性",
+      "dependency": "",
+      "references": [
+        "PRB0054762",
+        "INC6525279",
+        "INC6537320"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-06-08",
+      "date": {
+        "start": "2026-06-08",
+        "end": "2026-06-08",
+        "precision": "exact"
+      },
+      "updates": "根本原因和方案 ： 5/18上午延迟 - 慢SQL：Hand侧对Portal慢SQL优化的之前已经走Emergency change发版 5/25 & 6/1下午延迟 - Kafka数据堆积：异动数据量多，偶发性的Kafka数据积压和延迟，且周一白天会有大量非中国区的cycle counting的数据，容易造成积压 VT代码优化&QA压测，已分别于6/4&6/8发版按6倍优化并调整参数",
+      "sourceRow": 48,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-49",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "SFS Weekly Report未正常推送邮件 PRB0054558 INC6359569",
+      "application": "Omni Operation Portal",
+      "owner": "VT, Data team",
+      "business": "Carrie Chen",
+      "priority": "P3",
+      "impact": "影响业务查收SFS周报的及时性和对数据情况的visibility",
+      "dependency": "",
+      "references": [
+        "PRB0054558",
+        "INC6359569"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "TBD",
+      "date": {
+        "start": null,
+        "end": null,
+        "precision": "pending"
+      },
+      "updates": "根本原因： Report任务会自动比对计算结果和datalake报表的sfs数据，数据不一致则不会发出邮件 优化方案： Support model 与 Data Team align--Jacky与Data Team沟通确认支持流程 VT基于review情况完善方案，并且将Aligned支持流程后补充到方案，明确监控识别R&R，确保业务对数据的Vis --6/17 转为 Ops Improvement ，与Data Team确认 SLA 以及 R&R, 对于Data Team的引起的问题，通过Incident 跟进和统计",
+      "sourceRow": 49,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-50",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "退仓总览和退仓详情表的名称展示的不一样 总览pb week: JUN WEEK1 退仓详情Pb week: JUN Summer MD 由 INC6541914 衍生",
+      "application": "DC to store portal-退仓详情表",
+      "owner": "Cap, Hand",
+      "business": "Vida Tian",
+      "priority": "P3",
+      "impact": "不影响门店正常做PB，但是两边页面展示的Pb week不一样 业务希望名称一致",
+      "dependency": "No.17衍生问题",
+      "references": [
+        "INC6541914"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-07-02",
+      "date": {
+        "start": "2026-07-02",
+        "end": "2026-07-02",
+        "precision": "exact"
+      },
+      "updates": "根本原因： 总览中PB week不会被转换，详情表中里面对于JUN和DEC的PB week会做转换 JUN -> SUMMER MD DEC -> WINTER MD Charley Comments：以BUG来处理 --Hand已于7/2发版",
+      "sourceRow": 50,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-51",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "客服反馈6/13多笔缺货订单，查询发现6/13中午期间天猫至OMS链路中部分订单出现“下载时间”延迟异常，导致订单未能在库存仍可用时及时发起预占 INC6563640",
+      "application": "Omni Fulfillment",
+      "owner": "Baison, OMS",
+      "business": "",
+      "priority": "P1",
+      "impact": "部分订单在OMS审单分单预占失败，产生实际缺货，截至6/17，仍有17单处于缺货轮巡处理中",
+      "dependency": "",
+      "references": [
+        "INC6563640"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-06-17",
+      "date": {
+        "start": "2026-06-17",
+        "end": "2026-06-17",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： 经OMS与天猫平台联合排查，问题原因为店铺授权到期后重新授权，导致订单推送出现延迟。影响2026-06-13 00:49:02 至 2026-06-13 13:06:01期间支付的订单 优化方案 ： OMS增加店铺授权到期时间的提前校验机制，提前操作店铺授权",
+      "sourceRow": 51,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-52",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "SFS Batch 7 新门店SFS订单预占门店库存成功，订单在OMS审单失败，无法派至门店 INC6608643",
+      "application": "Omni Portal",
+      "owner": "Hand, OMS, Ops",
+      "business": "",
+      "priority": "P1",
+      "impact": "影响门店接单和订单履约",
+      "dependency": "",
+      "references": [
+        "INC6608643"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-07-13",
+      "date": {
+        "start": "2026-07-13",
+        "end": "2026-07-13",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： OMS未提前在OMS中维护新门店信息，导致有新门店的订单预占了，但是下不到门店 解决方案 ： 1.OMS维护新门店信息，涉及新门店的系统审单派单流程恢复 2.OMS操作受影响订单发货单撤回 3.Ops与Hand协同确认门店手工派单明细 4.Ops操作手工派单至门店，Hand提醒门店发货",
+      "sourceRow": 52,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-53",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "7/6 DC to store portal - 奥莱到货预通知折扣价更新不及时，需要展示该商品的实时折扣价 INC6597440",
+      "application": "DC to store portal",
+      "owner": "Hand",
+      "business": "Jessica Zhu",
+      "priority": "P1",
+      "impact": "折扣价未更新不及时，影响数据准确性",
+      "dependency": "",
+      "references": [
+        "INC6597440"
+      ],
+      "sourceStatus": "done Green",
+      "status": "Complete",
+      "releaseText": "2026-07-09",
+      "date": {
+        "start": "2026-07-09",
+        "end": "2026-07-09",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ：在当前的系统逻辑中，产品的价格(包括折扣价)是在『预到货通知』获取的时候从MDM捕获的，但是实际业务上，在补货完成之后，存在价格update的可能性的，未考虑到价格更新的场景 优化方案 ： 针对新增页面「奥莱到货预通知」、针对吊牌价、折扣价、新价格生效日期以及新价格变更为实时查询，保证价格实时性 --CHG0108672已于7/9发版",
+      "sourceRow": 53,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-54",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "6/29 DC反馈部分新品到达仓库发现缺少MDM价格数据，MDM未收到RMS推送的SKU Price INC6588171",
+      "application": "MDM/RMS/DC/Buying team",
+      "owner": "MDM， RMS",
+      "business": "DC， Buying team",
+      "priority": "P2",
+      "impact": "WMS 无法及时获取MDM SKU Price",
+      "dependency": "",
+      "references": [
+        "INC6588171"
+      ],
+      "sourceStatus": "done Green",
+      "status": "Complete",
+      "releaseText": "2026-07-15",
+      "date": {
+        "start": "2026-07-15",
+        "end": "2026-07-15",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： 7/6与RMS确认涉及SKU location均不在MDM数据获取的45096 7/8 RMS反馈发现11.6k sku's that needs to be ranged to location 45096 解决方案 ： 7/13 RMS处理Ticket涉及15个SKU并成功同步CN MDM，已同步DC确认 7/15 RMS ranged 11.6k sku's to location 45096，CN MDM验证收到11670 SKU Price并成功同步，信息已告知DC Team",
+      "sourceRow": 54,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-55",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "7/6 DC 反馈部分SKU WMS未收到最新SKU price INC6597314",
+      "application": "MDM/RMS/DC/Buying team",
+      "owner": "MDM， RMS",
+      "business": "DC， Buying team",
+      "priority": "P2",
+      "impact": "影响WMS获取MDM SKU Price",
+      "dependency": "",
+      "references": [
+        "INC6597314"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-07-08",
+      "date": {
+        "start": "2026-07-08",
+        "end": "2026-07-08",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： 与RMS确认涉及SKU location 是45103不在MDM数据获取的45096，并已和Buyer team确认涉及 SKUs 不属于China Range 范围内的 --7/8已邮件/Ticket 反馈结果给DC",
+      "sourceRow": 55,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-56",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "7/31 宝尊客服反馈 1.49单小程序订单，快递拒单,拒单原因:快递面单获取出错 2.100+单Tmall SFS订单审单失败 INC6640821",
+      "application": "Omni Fulfillment",
+      "owner": "Baison, Softtek",
+      "business": "宝尊",
+      "priority": "P2",
+      "impact": "影响EC订单审单履约",
+      "dependency": "CHG0111506",
+      "references": [
+        "INC6640821"
+      ],
+      "sourceStatus": "Done Green",
+      "status": "Complete",
+      "releaseText": "2026-07-31",
+      "date": {
+        "start": "2026-07-31",
+        "end": "2026-07-31",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： Omni 在7/31晚 CHG0111506 发版开启redis tls，服务重启导致获取面单失败(WMS/Omni Portal） 解决方案 ： 1.OMS 7/31 10点左右协助打回订单重新审单 2.Softtek 7/31 15点前协助手工操作Tmall SFS受影响订单手工派单 --8/3 Ops协同Baison Hand分析根因及优化措施，发版涉及多个服务需要考虑先后顺序，并在change log中维护",
+      "sourceRow": 56,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    },
+    {
+      "key": "operation-7-57",
+      "group": "operations",
+      "kind": "Incident",
+      "name": "B2B订单审核显示库存不足，SKU已在活动预占单的做了预占 INC6549961",
+      "application": "Omni Fulfillment",
+      "owner": "Baison",
+      "business": "Jony Li",
+      "priority": "P1",
+      "impact": "B2B订单SKU预占不成功，产生实际缺货",
+      "dependency": "",
+      "references": [
+        "INC6549961"
+      ],
+      "sourceStatus": "DONE Green",
+      "status": "Complete",
+      "releaseText": "2026-08-04",
+      "date": {
+        "start": "2026-08-04",
+        "end": "2026-08-04",
+        "precision": "exact"
+      },
+      "updates": "根本原因 ： Omni 系统在创建活动预占单的系统校验逻辑中，缺少针对库存表中不存在的SKU（没有任何库存记录）的校验逻辑 优化方案 ： 1.Omni 系统补充活动预占单的库存校验逻辑--已于8/4 CAB后发版 2.更新库存查询和活动预占单操作指引--Done",
+      "sourceRow": 57,
+      "sourceTable": 7,
+      "archive": true,
+      "placeholder": false
+    }
+  ]
+}
