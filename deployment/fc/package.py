@@ -13,6 +13,7 @@ parser.add_argument('--revision', required=True)
 args = parser.parse_args()
 repo = Path(__file__).resolve().parents[2]
 output = Path(args.output).resolve()
+subprocess.run(['node', str(repo / 'deployment/q4/test-portfolio-master.cjs')], check=True)
 subprocess.run([sys.executable, str(repo / 'deployment/q4/package.py'),
                 '--output', str(output / 'validated'), '--revision', args.revision], check=True)
 site = output / 'validated/q4-planning-server/site'
