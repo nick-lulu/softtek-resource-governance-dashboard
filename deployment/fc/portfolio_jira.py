@@ -27,6 +27,7 @@ class JiraService:
         self.onepage = json.loads((root / 'assets/confluence-onepage-data.json').read_text(encoding='utf8'))
         self.lock = threading.Lock()
         self.busy = False
+        self.worker = None
         self.last_attempt = None
         self.synced_at = None
         self.error = None
@@ -105,15 +106,23 @@ class JiraService:
             with self.lock:
                 self.busy = False
 
-    def read(self, refresh=True):
+    def read(self, refresh=True, wait=False):
         with self.lock:
             now = self.clock()
             if refresh and self.configured and not self.busy and (self.last_attempt is None or now - self.last_attempt >= 60):
                 self.last_attempt = now
                 self.busy = True
-                threading.Thread(target=self._sync, daemon=True).start()
+                self.worker = threading.Thread(target=self._sync, daemon=True)
+                self.worker.start()
             result = copy.deepcopy(self.data)
             result['sync'] = {'state': 'not_configured' if not self.configured else 'updating' if self.busy else 'stale' if self.error else 'live' if self.synced_at else 'snapshot',
                               'syncedAt': self.synced_at, 'error': self.error,
                               'refreshSeconds': 60, 'onePageAsOf': self.onepage.get('snapshotDate')}
-            return result
+            worker = self.worker if self.busy else None
+        # FC may freeze an instance after the HTTP request ends. Keep the API
+        # invocation alive while fetching; the browser renders its cache first
+        # and requests this endpoint independently of initial page rendering.
+        if wait and worker:
+            worker.join(50)
+            return self.read(refresh=False)
+        return result

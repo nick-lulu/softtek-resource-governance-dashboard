@@ -2,7 +2,8 @@
 function schedule(ms){clearTimeout(timer);timer=setTimeout(poll,ms);}
 async function poll(){
  if(busy||document.hidden){schedule(60000);return;}
- busy=true;const abort=new AbortController(),timeout=setTimeout(()=>abort.abort(),8000);
+ busy=true;const abort=new AbortController(),timeout=setTimeout(()=>abort.abort(),55000);
+ onUpdate({...latest,sync:{...latest.sync,state:'updating'}});
  try{
   const r=await fetch('/api/v1/portfolio/jira',{cache:'no-store',signal:abort.signal});
   if(!r.ok)throw Error();const next=await r.json();

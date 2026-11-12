@@ -3,7 +3,9 @@
 The FC backend exposes `GET /api/v1/portfolio/jira`. The page first renders its
 published snapshot, then checks this same-origin endpoint every 60 seconds while
 visible. A backend worker reads the fixed Jira filter with complete pagination.
-Requests return immediately from the last good cache; errors never replace it.
+The page renders the published cache immediately. Its independent API request
+waits for an in-flight refresh (up to 50 seconds), keeping FC active until the
+upstream read finishes. Fresh backend cache hits return immediately; errors never replace it.
 One Page matching uses the published Confluence snapshot, not a live Confluence pull.
 
 Set the following **FC environment variables**, without committing their values:

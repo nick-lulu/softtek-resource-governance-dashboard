@@ -36,7 +36,7 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         target = unquote(urlsplit(self.path).path)
         if target == '/api/v1/portfolio/jira':
-            body = json.dumps(JIRA.read(refresh=self.command != 'HEAD'), ensure_ascii=False, allow_nan=False).encode('utf8')
+            body = json.dumps(JIRA.read(refresh=self.command != 'HEAD', wait=self.command != 'HEAD'), ensure_ascii=False, allow_nan=False).encode('utf8')
             self.send_response(200)
             self.send_header('Content-Type', 'application/json; charset=utf-8')
             self.send_header('Cache-Control', 'no-store')
