@@ -8,9 +8,11 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 from timesheet import TimesheetService
+from portfolio_jira import JiraService
 
 ROOT = Path(__file__).resolve().parent / 'site'
 TIMESHEET = TimesheetService(ROOT)
+JIRA = JiraService(ROOT)
 FILES = {}
 for path in ROOT.rglob('*'):
     if not path.is_file():
@@ -33,6 +35,17 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         target = unquote(urlsplit(self.path).path)
+        if target == '/api/v1/portfolio/jira':
+            body = json.dumps(JIRA.read(refresh=self.command != 'HEAD'), ensure_ascii=False, allow_nan=False).encode('utf8')
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json; charset=utf-8')
+            self.send_header('Cache-Control', 'no-store')
+            self.send_header('X-Content-Type-Options', 'nosniff')
+            self.send_header('Content-Length', str(len(body)))
+            self.end_headers()
+            if self.command != 'HEAD':
+                self.wfile.write(body)
+            return
         if target in ('/api/v1/timesheet/status', '/api/v1/timesheet/actuals'):
             data = TIMESHEET.read(fetch=target.endswith('/actuals') and self.command != 'HEAD')
             body = json.dumps(data, ensure_ascii=False, allow_nan=False).encode('utf8')

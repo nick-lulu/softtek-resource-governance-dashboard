@@ -19,7 +19,7 @@ subprocess.run([sys.executable, str(repo / 'deployment/q4/package.py'),
 site = output / 'validated/q4-planning-server/site'
 archive = output / 'Q4-Planning-FC.zip'
 with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as package:
-    for name in ['server.py', 'app.py', 'bootstrap', 'timesheet.py']:
+    for name in ['server.py', 'app.py', 'bootstrap', 'timesheet.py', 'portfolio_jira.py']:
         data = (repo / 'deployment/fc' / name).read_bytes().replace(b'\r\n', b'\n')
         info = zipfile.ZipInfo(name)
         info.create_system = 3
