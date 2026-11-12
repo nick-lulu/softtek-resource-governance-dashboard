@@ -83,7 +83,9 @@ class JiraTests(unittest.TestCase):
     def test_missing_configuration_does_not_fetch(self):
         service = JiraService(self.root, {}, fetch_page=lambda _: self.fail('must not fetch'))
         self.assertEqual(service.read()['sync']['state'], 'not_configured')
-        self.assertIn('created <= "2026-10-22"', JQL)
+        self.assertIn('created >= "2026-01-01"', JQL)
+        self.assertIn('created < "2027-01-01"', JQL)
+        self.assertNotIn('2026-10-22', JQL)
 
 
 if __name__ == '__main__':

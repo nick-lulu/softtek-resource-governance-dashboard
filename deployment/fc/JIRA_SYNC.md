@@ -13,8 +13,9 @@ Set the following **FC environment variables**, without committing their values:
 - `ATLASSIAN_EMAIL`: authorized Jira API account
 - `ATLASSIAN_API_TOKEN`: Jira read token for that account
 
-The upstream hostname and JQL are fixed in `portfolio_jira.py`. The cutoff remains
-2026-10-22, so later-created issues are outside this filter. Assignee-domain rules
+The upstream hostname and JQL are fixed in `portfolio_jira.py`. Only calendar-year
+2026 issues are included: created >= 2026-01-01 AND created < 2027-01-01,
+excluding Cancelled, Closed and Done. Assignee-domain rules
 and explicit exclusions (CSCOP-1067) come from `jira-master-data.json`.
 Only issue key, Summary, assignee name, status, issue type and creation/update dates
 are returned. Tokens, emails, descriptions and comments are not included.

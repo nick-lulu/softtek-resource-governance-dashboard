@@ -8,9 +8,10 @@ import threading
 import time
 from datetime import datetime, timezone, timedelta
 from urllib.request import Request, HTTPRedirectHandler, build_opener
+from urllib.parse import quote
 
 HOST = 'https://lululemon.atlassian.net'
-JQL = 'project IN (CSCOP) AND created >= "2026-01-01" AND created <= "2026-10-22" AND status NOT IN (Cancelled, Closed, Done)'
+JQL = 'project IN (CSCOP) AND status NOT IN (Cancelled, Closed, Done) AND created >= "2026-01-01" AND created < "2027-01-01"'
 
 
 class NoRedirect(HTTPRedirectHandler):
@@ -74,6 +75,8 @@ class JiraService:
                              'url': HOST + '/browse/' + key})
         result.update(projects=projects, sourceCount=len(issues), displayCount=len(projects),
                       asOf=datetime.now(timezone(timedelta(hours=8))).date().isoformat(), jql=JQL,
+                      sourceUrl=HOST + '/issues?jql=' + quote(JQL),
+                      scope='Created during calendar year 2026: 2026-01-01 inclusive to 2027-01-01 exclusive; status NOT IN (Cancelled, Closed, Done).',
                       complete=True, status='ready')
         return result
 
