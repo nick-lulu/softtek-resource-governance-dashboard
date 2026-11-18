@@ -16,3 +16,34 @@
 .master-source-links{margin:0 0 16px;color:#26715f;font-size:12px}.master-domain>h3{margin-bottom:6px}.master-section .filters{flex-wrap:wrap}
 
 .master-domain-summary{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:16px 0}.master-domain-button{background:#fff;border:1px solid #dae6df;border-radius:8px;padding:14px;text-align:left;color:#264d3e;cursor:pointer}.master-domain-button span,.master-domain-button strong,.master-domain-button small{display:block}.master-domain-button strong{font-size:21px;color:#956b1d;margin:5px 0}.master-domain-button small{font-size:11px;color:#61766c}@media(max-width:850px){.master-domain-summary{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){.master-domain-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.inventory-card {
+ display: flex;
+ flex-direction: column;
+ gap: 12px;
+ min-width: 0;
+}
+.inventory-card h3 { min-height: 2.6em; margin: 0; }
+.inventory-total, .inventory-split button {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 4px;
+ border-radius: 8px;
+ padding: 12px;
+ text-align: left;
+ cursor: pointer;
+}
+.inventory-total { width: 100%; border: 1px solid #173f3e; background: #173f3e; color: #fff; }
+.inventory-total span { font-size: 12px; color: #d5e9e0; }
+.inventory-total strong { font-size: 38px; line-height: 1.1; }
+.inventory-split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.inventory-split button { padding: 8px; border: 1px solid #dce8e1; background: #f4f8f5; color: #325b4b; }
+.inventory-split button:last-child { background: #fff5e9; color: #82521d; border-color: #eedcc4; }
+.inventory-split span { font-size: 12px; white-space: nowrap; }
+.inventory-split strong { font-size: 22px; line-height: 1.2; }
+.inventory-card button:focus-visible { outline: 2px solid #286d5a; outline-offset: 2px; }
+.inventory-card button:disabled { cursor: default; opacity: .6; }
+.inventory-details article { border: 1px solid #dbe6df; border-radius: 8px; padding: 16px; margin-top: 10px; }
+.inventory-details h3 { font-size: 15px; margin: 10px 0; }
+.inventory-details a { font-size: 12px; }

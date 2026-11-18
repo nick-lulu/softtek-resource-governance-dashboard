@@ -23,5 +23,31 @@ function reconcile(master,onepage){
  });
  return {ready:true,rows,asOf:master.asOf,ignoredNonJiraRows:(master.ignoredNonJiraRows||0)+ignored.length,counts:Object.fromEntries(['present','missing','review','unverified'].map(s=>[s,rows.filter(r=>r.state===s).length]))};
 }
-return {DOMAINS,normalize,references,reconcile};
+function inventory(master, onepage, domain, model = reconcile(master, onepage)) {
+ const hasOnePage = (onepage.domains || []).some(page =>
+  page.name === domain && page.status === 'ready' && page.complete && page.asOf
+ );
+ const seen = new Set();
+ const present = [];
+ const missing = [];
+ const isCscop = id => /^CSCOP-\d+$/.test(id);
+ for (const project of onepage.projects || []) {
+  if (project.domain !== domain) continue;
+  for (const id of references(project).filter(isCscop)) {
+   if (seen.has(id)) continue;
+   seen.add(id);
+   present.push({...project, inventoryId: id, inventorySource: 'One Page'});
+  }
+ }
+ for (const project of model.rows) {
+  if (project.domain !== domain || project.state !== 'missing') continue;
+  for (const id of project.references.filter(isCscop)) {
+   if (seen.has(id)) continue;
+   seen.add(id);
+   missing.push({...project, inventoryId: id, inventorySource: 'Missing'});
+  }
+ }
+ return {present, missing, total: seen.size, hasOnePage, ready: model.ready && hasOnePage};
+}
+return {DOMAINS,normalize,references,reconcile,inventory};
 });
