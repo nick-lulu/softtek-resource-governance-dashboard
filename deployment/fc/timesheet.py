@@ -17,7 +17,13 @@ from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from urllib.request import Request, HTTPRedirectHandler, build_opener
 
 PERIOD = {'startDate': '2026-11-01', 'endDate': '2027-01-31', 'label': 'FY26 Q4'}
+PROJECT_MONTHS = {
+    month: {'startDate': month + '-01', 'endDate': month + '-' + last_day, 'label': month}
+    for month, last_day in (('2026-11', '30'), ('2026-12', '31'), ('2027-01', '31'))
+}
 HOURS_PER_MD = Decimal('8')
+TOTALS_REFRESH_SECONDS = 60
+UNNUMBERED_PROJECT_CSCOP = {'operation resource pool': 'CSCOP-1139'}
 ALIASES = {'nicole_yu': 'nichole_yu', 'eunice_bi': 'bi_yu',
            'xian_wang': 'wang_xian', 'ping_yang': 'yang_ping',
            'daisy': 'daisy_tang', 'dasiy': 'daisy_tang', 'ayla_hou': 'ayla',
@@ -56,13 +62,14 @@ class TimesheetService:
         self.env = os.environ if environ is None else environ
         self.clock, self.fetcher = clock, fetcher
         self.lock = threading.Lock()
+        self.token_lock = threading.Lock()
+        self.project_cache = {}
         self.snapshot = None
         self.last_success = None
         self.deadline = 0
         self.error = None
         self.token = None
         self.token_deadline = 0
-        self.generation = 0
         self.roster = {}
         source = site / 'assets/resource-list-data.json'
         if source.exists():
@@ -73,6 +80,7 @@ class TimesheetService:
                         continue
                     key = canonical(resource.get('key') or resource['name'])
                     self.roster[key] = resource['name']
+        self.project_locks = {key: threading.Lock() for key in self.roster}
 
     def config(self):
         url = self.env.get('TIMESHEET_API_URL', '').strip()
@@ -154,6 +162,96 @@ class TimesheetService:
         self.token, self.token_deadline = token, self.clock() + max(0, float(expires) - 60)
         return token
 
+    def softtek_hours(self, config, path, payload):
+        for attempt in range(2):
+            with self.token_lock:
+                token = self.softtek_token(config)
+            try:
+                return self.softtek_post(config, path, payload, token)
+            except SourceError as exc:
+                if str(exc) != 'source_authentication_failed' or attempt:
+                    raise
+                with self.token_lock:
+                    if self.token == token:
+                        self.token = None
+
+    def project_summary(self, config, email, project_map, period):
+        payload = {'email': email, 'startDate': period['startDate'], 'endDate': period['endDate']}
+        rows = self.softtek_hours(config, '/open-api/v1/hours/project-summary', payload)
+        if not isinstance(rows, list):
+            raise SourceError('invalid_project_summary')
+        projects = {}
+        for row in rows:
+            if not isinstance(row, dict):
+                raise SourceError('invalid_project_summary')
+            project_no, name = row.get('projectNo'), row.get('projectName')
+            value = row.get('totalHours')
+            if project_no is None:
+                project_no = ''
+            if not isinstance(project_no, str) or not isinstance(name, str) or not (project_no.strip() or name.strip()):
+                raise SourceError('invalid_project_summary')
+            if isinstance(value, bool) or not isinstance(value, (int, float, Decimal)):
+                raise SourceError('invalid_actual_hours')
+            project_no = project_no.strip().upper()
+            normalized_name = name.strip().casefold()
+            if project_no:
+                cscop = project_no if re.fullmatch(r'CSCOP-\d+', project_no) else project_map.get(project_no)
+            else:
+                cscop = UNNUMBERED_PROJECT_CSCOP.get(normalized_name)
+            key = ('id', cscop or project_no) if cscop or project_no else ('name', normalized_name)
+            project = projects.setdefault(key, {'cscop': cscop, 'projectNo': project_no,
+                                               'projectName': '', 'actualHours': Decimal(0)})
+            if project_no and not project['projectNo']:
+                project['projectNo'] = project_no
+                project['projectName'] = name.strip()
+            project['projectName'] = project['projectName'] or name.strip()
+            project['actualHours'] += number(value)
+        return [{**project, 'actualHours': float(number(project['actualHours'])),
+                 'actualMD': float(project['actualHours'] / HOURS_PER_MD)}
+                for project in projects.values()]
+
+    def read_projects(self, resource_key, fetch=True, month=None):
+        period = PROJECT_MONTHS[month] if month else PERIOD
+        base = {'schemaVersion': 1, 'resourceKey': resource_key, 'period': period,
+                'hoursPerMD': int(HOURS_PER_MD), 'projects': [], 'lastSuccessfulSyncAt': None}
+        if resource_key not in self.roster:
+            return {**base, 'status': 'unknown_resource'}
+        try:
+            config, pending = self.config()
+            if pending or config['provider'] != 'softtek':
+                return {**base, 'status': pending or 'not_configured'}
+            email = next((email for email, key in config['mapping'].items()
+                          if canonical(key) == resource_key), None)
+            if not email:
+                return {**base, 'status': 'resource_mapping_required'}
+            raw_map = json.loads(self.env.get('TIMESHEET_PROJECT_MAP', '{}'))
+            if not isinstance(raw_map, dict):
+                raise ValueError
+            project_map = {}
+            for project_no, cscop in raw_map.items():
+                if not project_no.strip() or not isinstance(cscop, str) or not re.fullmatch(r'CSCOP-\d+', cscop.strip(), re.I):
+                    raise ValueError
+                project_map[project_no.strip().upper()] = cscop.strip().upper()
+        except (ValueError, TypeError, SourceError):
+            return {**base, 'status': 'invalid_configuration'}
+        cache_key = (resource_key, month, email, config['url'], tuple(sorted(project_map.items())))
+        with self.project_locks[resource_key]:
+            cached = self.project_cache.get(cache_key)
+            if not fetch:
+                return {**base, **(cached[1] if cached else {'status': 'pending'})}
+            if cached and self.clock() < cached[0]:
+                return {**base, **cached[1]}
+            try:
+                payload = {'status': 'ready', 'projects': self.project_summary(config, email, project_map, period),
+                           'lastSuccessfulSyncAt': datetime.now(timezone.utc).isoformat()}
+                interval = config['ttl']
+            except SourceError:
+                payload = ({**cached[1], 'status': 'stale'} if cached and cached[1].get('lastSuccessfulSyncAt')
+                           else {'status': 'unavailable'})
+                interval = 30
+            self.project_cache[cache_key] = (self.clock() + interval, payload)
+            return {**base, **payload}
+
     def pull_softtek(self, config):
         result = []
         emails = sorted(config['mapping'])
@@ -163,15 +261,7 @@ class TimesheetService:
                 raise SourceError('source_refresh_timeout')
             batch = emails[offset:offset + 100]
             payload = {'emails': batch, 'startDate': PERIOD['startDate'], 'endDate': PERIOD['endDate']}
-            for attempt in range(2):
-                try:
-                    rows = self.softtek_post(config, '/open-api/v1/hours/summary', payload,
-                                              self.softtek_token(config))
-                    break
-                except SourceError as exc:
-                    if str(exc) != 'source_authentication_failed' or attempt:
-                        raise
-                    self.token = None
+            rows = self.softtek_hours(config, '/open-api/v1/hours/summary', payload)
             if not isinstance(rows, list) or len(rows) != len(batch):
                 raise SourceError('incomplete_source_snapshot')
             seen = set()
@@ -287,25 +377,23 @@ class TimesheetService:
         base = {'schemaVersion': 1, 'period': PERIOD, 'hoursPerMD': 8,
                 'statusBasis': config['basis'] if config else None,
                 'lastSuccessfulSyncAt': self.last_success,
-                'refreshMode': 'on-request' if config and config['provider'] == 'softtek' else 'read-through',
-                'refreshIntervalSeconds': 60 if config and config['provider'] == 'softtek' else config['ttl'] if config else None,
+                'refreshMode': 'read-through',
+                'refreshIntervalSeconds': TOTALS_REFRESH_SECONDS if config and config['provider'] == 'softtek' else config['ttl'] if config else None,
                 'rosterResourceCount': len(self.roster),
                 'configuredResourceCount': len(config['mapping']) if config else 0}
         if pending:
             return {**base, 'status': pending, 'resources': [], 'matchedResourceCount': 0,
                     'unmatchedResourceCount': 0}
-        generation = self.generation
         with self.lock:
-            fresh_request = config['provider'] == 'softtek' and not self.error and generation == self.generation
-            if fetch and (fresh_request or self.clock() >= self.deadline):
+            if fetch and self.clock() >= self.deadline:
                 try:
                     snapshot = self.pull(config)
                     # Replace the cumulative totals atomically, never add snapshots.
                     self.snapshot = snapshot
                     self.last_success = datetime.now(timezone.utc).isoformat()
                     self.error = None
-                    self.deadline = self.clock() + config['ttl']
-                    self.generation += 1
+                    interval = TOTALS_REFRESH_SECONDS if config['provider'] == 'softtek' else config['ttl']
+                    self.deadline = self.clock() + interval
                 except SourceError as exc:
                     self.error = str(exc)
                     self.deadline = self.clock() + 30

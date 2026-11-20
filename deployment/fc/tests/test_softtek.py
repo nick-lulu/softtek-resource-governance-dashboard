@@ -36,15 +36,17 @@ class SofttekTests(unittest.TestCase):
             return {'access_token': 'private-token', 'expires_in': 3600}
         return [{'email': 'nick@example.com', 'totalHours': self.hours}]
 
-    def test_prod_conversion_identity_and_each_request_is_fresh(self):
+    def test_prod_conversion_identity_and_refresh_interval(self):
         first = self.service.read()
         self.assertEqual(first['statusBasis'], 'filled')
-        self.assertEqual(first['refreshMode'], 'on-request')
+        self.assertEqual(first['refreshMode'], 'read-through')
         self.assertEqual(first['resources'][0]['actualMD'], 4)
         self.assertEqual(first['resources'][0]['resourceKey'], 'nick_han')
         self.assertEqual(first['configuredResourceCount'], 1)
         self.assertEqual(first['rosterResourceCount'], 2)
         self.hours = Decimal('24')  # Corrections reduce the next snapshot.
+        self.assertEqual(self.service.read()['resources'][0]['actualMD'], 4)
+        self.now = 60
         self.assertEqual(self.service.read()['resources'][0]['actualMD'], 3)
         self.assertEqual(sum(p.endswith('/token') for p, _, _ in self.calls), 1)
         self.assertEqual(sum(p.endswith('/summary') for p, _, _ in self.calls), 2)
@@ -84,6 +86,7 @@ class SofttekTests(unittest.TestCase):
         def fail(*args):
             raise SourceError('source_unavailable')
         self.service.softtek_post = fail
+        self.now = 60
         stale = self.service.read()
         self.assertEqual(stale['status'], 'stale')
         self.assertEqual(stale['resources'][0]['actualMD'], 0)

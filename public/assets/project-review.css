@@ -1,0 +1,14 @@
+.project-review { margin: 16px 0; }
+.project-review h3 { margin: 0 0 6px; color: #142f3f; }
+.project-review p { margin: 0 0 8px; color: #52636f; font-size: 13px; }
+.project-review p:empty { display: none; }
+.project-review-scroll { max-width: 100%; overflow: auto; }
+.project-review .project-review-scroll table { width: 100%; min-width: 570px; border-collapse: collapse; }
+.project-review .project-review-scroll th,
+.project-review .project-review-scroll td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e3eae5; }
+.project-review .project-review-scroll thead th { background: #edf3ef; color: #496675; }
+.project-review .project-review-scroll tbody th { background: transparent; white-space: nowrap; color: #37586b; }
+.project-review .project-review-scroll td:first-child { min-width: 0; }
+.project-review .project-review-scroll thead th:nth-child(n+4),
+.project-review .project-review-scroll tbody td:nth-child(n+4) { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.project-review small { display: block; color: #52636f; }

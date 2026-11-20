@@ -6,8 +6,8 @@ import os
 import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import unquote, urlsplit
-from timesheet import TimesheetService
+from urllib.parse import parse_qs, unquote, urlsplit
+from timesheet import PROJECT_MONTHS, TimesheetService
 from portfolio_jira import JiraService
 
 ROOT = Path(__file__).resolve().parent / 'site'
@@ -33,8 +33,20 @@ class Handler(BaseHTTPRequestHandler):
     def do_HEAD(self):
         self.do_GET()
 
+    def timesheet_response(self, data, status=200):
+        body = json.dumps(data, ensure_ascii=False, allow_nan=False).encode('utf8')
+        self.send_response(status)
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Cache-Control', 'no-store')
+        self.send_header('X-Content-Type-Options', 'nosniff')
+        self.send_header('Content-Length', str(len(body)))
+        self.end_headers()
+        if self.command != 'HEAD':
+            self.wfile.write(body)
+
     def do_GET(self):
-        target = unquote(urlsplit(self.path).path)
+        request = urlsplit(self.path)
+        target = unquote(request.path)
         if target == '/api/v1/portfolio/jira':
             body = json.dumps(JIRA.read(refresh=self.command != 'HEAD', wait=self.command != 'HEAD'), ensure_ascii=False, allow_nan=False).encode('utf8')
             self.send_response(200)
@@ -48,15 +60,20 @@ class Handler(BaseHTTPRequestHandler):
             return
         if target in ('/api/v1/timesheet/status', '/api/v1/timesheet/actuals'):
             data = TIMESHEET.read(fetch=target.endswith('/actuals') and self.command != 'HEAD')
-            body = json.dumps(data, ensure_ascii=False, allow_nan=False).encode('utf8')
-            self.send_response(200)
-            self.send_header('Content-Type', 'application/json; charset=utf-8')
-            self.send_header('Cache-Control', 'no-store')
-            self.send_header('X-Content-Type-Options', 'nosniff')
-            self.send_header('Content-Length', str(len(body)))
-            self.end_headers()
-            if self.command != 'HEAD':
-                self.wfile.write(body)
+            self.timesheet_response(data)
+            return
+        if target == '/api/v1/timesheet/projects':
+            query = parse_qs(request.query, keep_blank_values=True)
+            keys = query.get('resourceKey', [])
+            if len(keys) != 1 or keys[0] not in TIMESHEET.roster:
+                self.timesheet_response({'error': 'unknown_resource'}, 404)
+                return
+            months = query.get('month', [])
+            if months and (len(months) != 1 or months[0] not in PROJECT_MONTHS):
+                self.timesheet_response({'error': 'invalid_month'}, 400)
+                return
+            self.timesheet_response(TIMESHEET.read_projects(
+                keys[0], fetch=self.command != 'HEAD', month=months[0] if months else None))
             return
         if target == '/':
             self.send_response(302)
